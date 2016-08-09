@@ -1,0 +1,96 @@
+Pre and postcopulatory inbreeding adjustment
+===================================================================
+
+Introduction
+-------------------------------------------------------------------
+
+- Polyandry has been widely hypothesised to adjust inbreeding, but theory showing the connection between polyandry and inbreeding behaviour remains poorly developed. Experimental and observational studies have found some support for the idea that inbreeding can be precopulatory or postcopulatory
+
+- Invoking precopulatory or postcopulatory inbreeding adjustment to explain polyandry has always been a bit ad hoc -- here is no modelling to predict when inbreeding adjustment should be pre versus postcopulatory in advance for any particular system
+
+- Which type of inbreeding adjustment mechanism evolves is likely to depend on the costs associated with precopulatory and postcopulatory inbreeding adjustment, and with the cost of multiple mating and associated constraints on mate availability. This links back to other evolutionary theory in which selection on other adaptive mechanisms, and therefore their evolution, is balanced by costs (surely can find a few key papers here). 
+  
+  - It is also relevant that postcopulatory inbreeding adjustment cannot be adaptive if there is no polyandry, but recent modelling (Duthie et al Evolution) shows that polyandry evolution can be expressed as a threshold trait, making variation associated with postcopulatory inbreeding adjustment potentially more visible to selection. 
+  - Nevertheless, postcopulatory inbreeding adjustment inherently requires two potential costs, while precopulatory adjustment only requires one -- the magnitude of each should be relevant in pushing selection to either postcopulatory inbreeding adjustment or precopulatory inbreeding adjusment -- both would seem unlikely to be under selection simultaneously if there are associated costs because each would likely be redundant, and therefore desired inbreeding could be accomplished with one or the other without paying all costs. 
+ - It is therefore necessary to see how costs might or might not interact to drive selection on pre and postcopulatory inbreeding adjustment.
+ - It will be necessary to address the idea of conditionally dependent inbreeding avoidance -- either we need to explain why we do not do this, or do it. But if we do it, it needs to also be justified, and we need to avoid losing the theory because of the confounding processes going on in the model.
+
+- In the case of inbreeding, it is especially important to model the distribution of kinship in the population because evolution of inbreeding behaviour is highly sensitive to population size and available relatives, which will be dependent upon history of individual fitness (something like that -- cite Duthie and Reid AmNat).
+
+- We model the evolution of precopulatory and postcopulatory inbreeding adjustment, and evolution of polyandry given associated costs of all three. We focus specifically on how strong selection will be on each given varying costs and inbreeding depression. We need to decide and explain here *why* we're doing all of the Model and Results below. If we end up with a sort of roadmap showing the parameter values under which pre versus postcopulatory selection on inbreeding adjustment is predicted, for example, I think we need to make its utlitiy clear. I think that the below, for example, are reasonable goals:
+  1. We simply want empiricists to be able to make predictions about inbreeding adjustment mechanisms a priori instead of post-hoc. Perhaps we're not really interested in the theory per se (i.e., conceptual, ideally mathematical, clarity concerning *why* predictions are logically linked with assumptions of parameter values), just that some sort of framework is established to make predictions, and perhaps to serve as a conduit between empirical predictions and future theory.
+  2. We really do want to develop theory to logically connect the assumptions of our model with clear predictions -- this would be a bit tricker given the complexity of the model, but I believe it would be possible if we narrow our focus a bit to a specific theoretical development (e.g., impact of relative cost values) and emphasise why an IBM is needed for it (e.g., to consider distribution of kin). Intuitively, some simplifying assumptions would probably lead to an elegant and intuitive mathematical prediction relating all the different costs, so we'll want to avoid having readers wonder why we didn't do this instead.
+  3. Something else entirely -- perhaps to look at a specific mechanism of interest and see under what conditions selection favours it. This was an early idea, but I don't think we've decided to go in this direction.
+
+Model
+-------------------------------------------------------------------
+
+- A general overview of what the model is doing, which will look a lot like Duthie and Reid (AmNat) and Duthie et al. (Evolution). Maybe we can just shorten by referring to these papers, or, better yet, just say that we used the polyinbreed model in the code: https://github.com/bradduthie/PolyInbreed
+
+- Need a very brief overview of individual attributes and what they do. In this paragraph, we can emphasise the costs that go along with blocks of loci underlying [PRECOP INBREEDING], [POLYANDRY], and [POSTCOP INBREEDING]. As in the Evolution paper, I believe that the costs should go on the traits -- this is such a complex model, we really should embrace individual complexity and focus on a quantitative genetic approach with costs on traits.
+
+- General explanation of life-cycle and how mate choice is enacted, with an explanation of inbreeding depression (\beta) in offspring viability. Immigration should be modelled again, but in this case, probably with preserved covariance among all three traits.
+
+- Focus on what the simulation parameters will be and why. The goal here, I believe, will be to pick some reasonable values to get a general idea of the importance of different costs:
+
+  1. Constraints on mate availability: Here I think is where we need to especially careful. Do we really want situations where initial male availability is greater than additional male availability? On the one hand, this seems unnecessary because selection for polyandry never really happened in our previous manuscript, but given costs on pre and postcopulatory inbreeding adjustment, we cannot assume that this will be the case -- e.g., if the cost of precopulatory inbreeding adjustment is very high, and the cost of polyandry and postcopulatory inbreeding adjustment is very low. This is partly why I am more tempted to just stick with the null S{100,100} and queing S{Q,100} system -- these are two reasonable and biologically relevant constraint types that we can probably learn a lot from if we're otherwise more interested in interacting costs. If we try to have many different constraints in the model, this thing could become a mess that loses focus.
+
+  2. Costs are relatively straightforward, compared to constraints. I believe that these should be on the traits themselves (as opposed to alleles), and maybe pick 3-4 values of each cost: cpre, cpol, cpost. Perhaps something like 0, 0.02, 0.05 -- null, low, and high?
+
+  3. Likewise, I believe that three values of \beta should do, corresponding to null, low, and high inbreeding depression. From experience now, I suspect that \beta = 0, 1, and 3 would be just fine. 
+
+  4. I don't think that we need 100 replicates of each set of parameter combinations for this one -- partly because we're not so much interested in precision for different parameter combinations, and are more interested in the change in allele values over time (which should say something interesting about the process of evolution of pre and postcopulatory selection, and of polyandry). We'll want to show plots of changing allele values over time, and I think that 20 replicates will be sufficient to do this and get a full story of what's going on. Further, I believe that 5000 generations should still be fine.
+
+  5. So with, say, 2 constraints, 3 \times 3 = 9 costs, 3 inbreeding depression slopes, and 20 replicates each, we have 2 \times 9 \times 3 \times 20 = 1080 replicates total. Conservatively, this is about two weeks of time on the cluster -- possibly much less.
+
+  6. I see the analysis of this model being different than that of the previous two IBMs. It seems like we're less interested in 'will selection drive it to evolve', and therefore less interested in looking at means of allele values across different parameter combinations. Rather, I think we'll be focused more on the relative allele values of precopulatory and postcopulatory allele values especially, across different costs and inbreeding depression slopes -- and perhaps the values too of polyandry allele values. We'll probably be less interested in the precise differences, and more intersted in whether or not different parameter combinations emerge with a clear 'winner' in terms of whether selection drives precopulatory, postcopulatory, neither, or both types of inbreeding adjustment. I see a figure or table that maps out -- somehow -- all three costs, or perhaps even all parameter combinations, and identifies what happens qualitatively with inbreeeding strategy and polyandry. 
+
+
+Results
+-------------------------------------------------------------------
+
+Figures and tables to include:
+
+  1. Table or figure qualitatively mapping out where each of the following parameter values occurs:
+
+    - Selection for both precopulatory and postcopulatory inbreeding adjustment
+
+    - Selection for precopulatory but not postcopulatory inbreeding adjustment
+
+    - Selection for postcopulatory but not precopulatory inbreeding adjustment
+
+    - Selection for neither precopulatory nor postcopulatory inbreeding adjustment
+
+  2. One figure summarising allele end frequency distributions -- I'm not sure if it will be necessary to show all of them, as this isn't quite where we're going with this manuscript, but it would be a good idea to help readers see some of the stochastic variation associated with different parameter combinations. Some of this stochastic variation will need to be represented or explained in Table or Figure 1.
+
+  3. One figure summarising change in allele values over time -- I think this will be helpful to show readers the dynamics of alleles and traits, as the timing of pre versus postcopulatory selection will likely matter, especially because selection on postcopulatory inbreeding adjustment is contingent upon polyandry.
+
+  4. Perhaps a paper showing the distributions of kinship, maybe across different parameter combinations? This would depend on immigrant number, of course, but we could check to what extent this differs among different parameter combinations at a given immigration rate. If the difference is substantial, it might be worth showing, especially because we're going to probably want to make an argument that kinship distribution is important.
+
+
+Discussion
+-------------------------------------------------------------------
+
+- Need a general overview of what we did at all? Perhaps not necessary, depending on the length of the manuscript.
+
+- I see this as, possibly, a much more empirically driven paper, actually, in that I don't think we're really trying to address a theoretical problem per se so much as an empirical knowledge gap that can be addressed by modelling. In other words, I don't think that we're trying to develop theory so much as do a lot of modelling to provide context for previous and future experimental and observational studies. I suspect that theoreticians might not get much use out of this model, but empiricists just wanting a prediction might find it useful. I'm not sure whether or not this is a good thing, as it could dissuade the integration of theory and empirical work more than it bridgest the two, but perhaps some sort of road map to inbreeding predictions is needed upon which future bridges can be built. Future theoretical work could address *why* certain patterns are predicted more clearly; future empirical work could organise different study systems in a way that is coherent with predictions.
+
+  - A consequence of the above, I think, would be that we need to really hit the mark with all of the different empirical studies of inbreeding adjustment in the literature, and perhaps see if they match well with the predictions suggested in Table 1.
+
+  - Many such studies will probably not have measured relative costs, so we'll need to think carefully about what types of systems will have high and low costs of precopulatory and postcopulatory inbreeding adjustment, and polyandry. We'll need to also emphasise the need to measure relative costs, assuming that our results find that they are important.
+
+- Perhaps we should also have a shorter section putting this study in the context of the limited prior theory, and suggest ways that future theory could fill in the gaps to understand the details of our model predictions more clearly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
