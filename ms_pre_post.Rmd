@@ -1,0 +1,67 @@
+---
+title: "Evolution of precopulatory and postcopulatory inbreeding behaviour"
+author: "A. Bradley Duthie et al."
+date: "May 27, 2016"
+output:
+  word_document:
+    fig_caption: yes
+    pandoc_args:
+    - --csl
+    - evolution.csl
+  pdf_document:
+    fig_caption: yes
+  html_document: default
+linestretch: 1
+---
+
+
+******************************
+
+```{r, echo=FALSE}
+figscale <- 1.0; # Change the scale of a figure
+```
+
+
+Abstract
+===================================================
+
+
+
+Introduction
+===================================================
+
+
+
+******************************-
+
+Model
+===================================================
+
+
+
+******************************
+
+
+Results
+------------------------------------------------
+
+
+
+******************************
+
+Discussion
+===================================================
+
+
+Acknowledgements
+----------------------------------------------
+
+This work was funded by a European Research Council Starting Grant to JMR. 
+
+**************************
+
+
+References
+----------------------------------------------
+
+
