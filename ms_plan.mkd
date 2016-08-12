@@ -4,16 +4,16 @@ Pre and postcopulatory inbreeding adjustment
 Introduction
 -------------------------------------------------------------------
 
-- Polyandry has been widely hypothesised to adjust inbreeding, but theory showing the connection between polyandry and inbreeding behaviour remains poorly developed. Experimental and observational studies have found some support for the idea that inbreeding can be precopulatory or postcopulatory
+- Polyandry has been widely hypothesised to adjust inbreeding, but theory showing the connection between polyandry and inbreeding behaviour remains poorly developed. Experimental and observational studies have found some support for the idea that inbreeding can be precopulatory or postcopulatory.
 
-- Invoking precopulatory or postcopulatory inbreeding adjustment to explain polyandry has always been a bit ad hoc -- here is no modelling to predict when inbreeding adjustment should be pre versus postcopulatory in advance for any particular system
+- Invoking precopulatory or postcopulatory inbreeding adjustment to explain polyandry has always been a bit ad hoc -- here is no modelling to predict when inbreeding adjustment should be pre versus postcopulatory in advance for any particular system.
 
 - Which type of inbreeding adjustment mechanism evolves is likely to depend on the costs associated with precopulatory and postcopulatory inbreeding adjustment, and with the cost of multiple mating and associated constraints on mate availability. This links back to other evolutionary theory in which selection on other adaptive mechanisms, and therefore their evolution, is balanced by costs (surely can find a few key papers here). 
   
   - It is also relevant that postcopulatory inbreeding adjustment cannot be adaptive if there is no polyandry, but recent modelling (Duthie et al Evolution) shows that polyandry evolution can be expressed as a threshold trait, making variation associated with postcopulatory inbreeding adjustment potentially more visible to selection. 
   - Nevertheless, postcopulatory inbreeding adjustment inherently requires two potential costs, while precopulatory adjustment only requires one -- the magnitude of each should be relevant in pushing selection to either postcopulatory inbreeding adjustment or precopulatory inbreeding adjusment -- both would seem unlikely to be under selection simultaneously if there are associated costs because each would likely be redundant, and therefore desired inbreeding could be accomplished with one or the other without paying all costs. 
  - It is therefore necessary to see how costs might or might not interact to drive selection on pre and postcopulatory inbreeding adjustment.
- - It will be necessary to address the idea of conditionally dependent inbreeding avoidance -- either we need to explain why we do not do this, or do it. But if we do it, it needs to also be justified, and we need to avoid losing the theory because of the confounding processes going on in the model.
+ - It will be necessary to address the idea of *conditionally dependent inbreeding avoidance* -- either we need to explain why we do not do this, or do it. But if we do it, it needs to also be justified, and we need to avoid losing the theory because of the confounding processes going on in the model.
 
 - In the case of inbreeding, it is especially important to model the distribution of kinship in the population because evolution of inbreeding behaviour is highly sensitive to population size and available relatives, which will be dependent upon history of individual fitness (something like that -- cite Duthie and Reid AmNat).
 
@@ -80,11 +80,6 @@ Discussion
   - Many such studies will probably not have measured relative costs, so we'll need to think carefully about what types of systems will have high and low costs of precopulatory and postcopulatory inbreeding adjustment, and polyandry. We'll need to also emphasise the need to measure relative costs, assuming that our results find that they are important.
 
 - Perhaps we should also have a shorter section putting this study in the context of the limited prior theory, and suggest ways that future theory could fill in the gaps to understand the details of our model predictions more clearly.
-
-
-
-
-
 
 
 
