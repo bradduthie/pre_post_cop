@@ -35,7 +35,7 @@ void Inbreed(int mc, int M, int Imm, int Clu, double *RES, double Beta1, int rep
     int Kind, int xlen, int prP, double ImmSD, int wpe, int poe, int epe, 
     double poadj, double epadj, double wpadj, double Scost, double Pcost, 
     double Ecost, int conSt, int snap, int PostSel, int msel, int EpRestr, 
-    int WpRestr, int condk, int PreSel, int wpVsep, int PreserC){
+    int WpRestr, int condk, int PreSel, int wpVsep, int PreserC, int zallele){
 
     /* =========================================================================*/
     /* =========================================================================*/
@@ -132,7 +132,7 @@ void Inbreed(int mc, int M, int Imm, int Clu, double *RES, double Beta1, int rep
     for(i=0; i<TotAlleles; i++){
         GenArch[i][0] = l; /* Row zero is denotes the locus */
         GenArch[i][1] = a; /* Row one denotes the allele */
-        GenArch[i][2] = randnorm(0,1); /* Row two denotes some allele value */ 
+        GenArch[i][2] = randnorm(0,ImmSD); /* Row two denotes some allele value */ 
         if((alleles[l]-1)==a){ /*Need -1 bc count one less than label (a) */ 
             l++;
             a = 0;
@@ -164,26 +164,53 @@ void Inbreed(int mc, int M, int Imm, int Clu, double *RES, double Beta1, int rep
         ID[i][7] = 0;                      /* Coefficient of inbreeding (F) */
         ID[i][8] = -1;                     /* Mate selection (-1 no mate yet) */
         ID[i][9] = 0;                      /* Within (0) or extra-pair (1) ? */
-        for(j=0; j<Nloci; j++){ /* This loop builds starting individual genomes */
-            /* Note below, all 0 alleles are made at the start */
-            a1[0] = floor(randunif()*(alleles[j]-1));
-            a1[1] = floor(randunif()*(alleles[j]-1));
-            ID[i][((4*j)+10)] = a1[0]; /* Adds first allele at locus */
-            ID[i][((4*j)+11)] = a1[1]; /* Adds second allele at locus */
-            suc = 0; /* Triggers break below when allele values are added */
-            for(k=0; k<TotAlleles; k++){ /*Adds norm distr. vals */
-                if(j==GenArch[k][0] && a1[0]==GenArch[k][1]){
-                    ID[i][((4*j)+12)] = GenArch[k][2];
-                    suc++; 
+        switch(zallele){ /* Are we randomising initial values (1) or not (0)? */
+            case 1: /* This will put the random values at both places of the loci block */
+                for(j=0; j<Nloci; j++){ /* This loop builds starting individual genomes */
+                    /* Note below, all 0 alleles are made at the start */
+                    a1[0] = floor(randunif()*(alleles[j]-1));
+                    a1[1] = floor(randunif()*(alleles[j]-1));
+                    suc = 0; /* Triggers break below when allele values are added */
+                    for(k=0; k<TotAlleles; k++){ /*Adds norm distr. vals */
+                        if(j==GenArch[k][0] && a1[0]==GenArch[k][1]){
+                            ID[i][((4*j)+10)] = GenArch[k][2];
+                            ID[i][((4*j)+12)] = GenArch[k][2];
+                            suc++; 
+                        }
+                        if(j==GenArch[k][0] && a1[1]==GenArch[k][1]){
+                            ID[i][((4*j)+11)] = GenArch[k][2];
+                            ID[i][((4*j)+13)] = GenArch[k][2];
+                            suc++;
+                        }
+                        if(suc==2){ /* Avoids looping needlessly */
+                            break; /* And breaks when both alleles are found */
+                        } /* The individual is now complete */
+                    }
                 }
-                if(j==GenArch[k][0] && a1[1]==GenArch[k][1]){
-                    ID[i][((4*j)+13)] = GenArch[k][2];
-                    suc++;
+                break;
+            default: /* This will put the random values only at the 3rd or 4th pos */
+                for(j=0; j<Nloci; j++){ /* This loop builds starting individual genomes */
+                    /* Note below, all 0 alleles are made at the start */
+                    a1[0] = floor(randunif()*(alleles[j]-1));
+                    a1[1] = floor(randunif()*(alleles[j]-1));
+                    ID[i][((4*j)+10)] = a1[0]; /* Adds first allele at locus */
+                    ID[i][((4*j)+11)] = a1[1]; /* Adds second allele at locus */
+                    suc = 0; /* Triggers break below when allele values are added */
+                    for(k=0; k<TotAlleles; k++){ /*Adds norm distr. vals */
+                        if(j==GenArch[k][0] && a1[0]==GenArch[k][1]){
+                            ID[i][((4*j)+12)] = GenArch[k][2];
+                            suc++; 
+                        }
+                        if(j==GenArch[k][0] && a1[1]==GenArch[k][1]){
+                            ID[i][((4*j)+13)] = GenArch[k][2];
+                            suc++;
+                        }
+                        if(suc==2){ /* Avoids looping needlessly */
+                            break; /* And breaks when both alleles are found */
+                        } /* The individual is now complete */
+                    }
                 }
-                if(suc==2){ /* Avoids looping needlessly */
-                    break; /* And breaks when both alleles are found */
-                } /* The individual is now complete */
-            }
+                break;
         }
         Ind++; /* Move on to the next individual number */
     }
@@ -684,8 +711,10 @@ void Inbreed(int mc, int M, int Imm, int Clu, double *RES, double Beta1, int rep
         evol = fopen(evolres,"a+");
         fprintf(evol,"%d\t%f\t%f\t%f\t%f\t%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",pidcmb,Beta1,
             Scost,Pcost,Ecost,i,RES[0],RES[1],RES[2],RES[3],RES[4],RES[5],RES[6],RES[7]);
+        /*
         printf("%d  %d  %f  %f  %f  %f  %f  %f  %f\n",
             rep,i,Scost,Pcost,Ecost,RES[0],RES[1],RES[2],RES[6]);
+        */
         fclose(evol);
 
         /* ==========================================================*/

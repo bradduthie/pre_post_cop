@@ -18,7 +18,7 @@ int main(void){
 
     int    mc, M, Imm, Clu, rep, i, j, xlen, Pedi, prP, conSt, snap, msel, condk;
     int    Active, Neutral, load, gen, muSt, Kind, EpRestr, WpRestr, PreSel, PostSel;
-    int    PreserC, wpVsep;
+    int    PreserC, wpVsep, zallele;
     double Beta1, alpha, mu, *RES, ImmSD, poadj, epadj, wpadj, Scost, Pcost, Ecost;
     double poe, wpe, epe;
 
@@ -50,6 +50,7 @@ int main(void){
     PreSel  = 1;      /* Allow pre-copulatory mate selection for EPMs (0: no, 1:yes)      */
     PostSel = 1;      /* Allow post-copulatory mate selection for EPMs (0: no, 1: yes)    */
     PreserC = 0;      /* Preserve among-individual trait correlations in immigrants       */
+    zallele = 1;      /* Initial alleles at 0 (0) or randomly drawn from N(0,ImmSD) (1)   */
     /* ===================================================================================*/
     /* Genome attributes of individuals                                                   */
     /* ===================================================================================*/
@@ -66,7 +67,7 @@ int main(void){
     /* ===================================================================================*/
     /* Simulation details                                                                 */
     /* ===================================================================================*/
-    rep        = 40;    /* Simulations run                                                */
+    rep        = 4;     /* Simulations run                                                */
     Pedi       = 0;     /* Print last rep's pedigree? (0:no, 1:yes) WARNING: 200Mb file   */
     snap       = 1;     /* Last 2 gens pedigree for all reps printed? (0:no, 1:yes)       */
     msel       = 1;     /* Last 2 gens print mate selection of females? (0:no, 1:yes)     */
@@ -79,12 +80,10 @@ int main(void){
     i    = 0; /* Loops through different replicate simulations */
     prP  = 0; /* Indicator for actually printing the pedigree */
 
-    /* 
     Scost = randunif()*0.05;
     Pcost = randunif()*0.05;
     Ecost = randunif()*0.05;
-    */
-
+    
     while(i < rep){
         if(i == rep-1 && Pedi == 1){ /* If it's the last rep, and should print pedigree */
             prP = 1;                 /* Switch this variable so pedigree will print */
@@ -96,15 +95,13 @@ int main(void){
         /* The function below is the main simulation function from Inbreed.c */
         Inbreed(mc,M,Imm,Clu,RES,Beta1,i,Active,Neutral,load,alpha,gen,muSt,mu,Kind,xlen,
             prP,ImmSD,wpe,poe,epe,poadj,epadj,wpadj,Scost,Pcost,Ecost,conSt,snap,PostSel,
-            msel,EpRestr,WpRestr,condk,PreSel,wpVsep,PreserC);
+            msel,EpRestr,WpRestr,condk,PreSel,wpVsep,PreserC,zallele);
 
         FREE_1ARRAY(RES); /* Free the RES array after printing is finished */
         /* Below increases the selection coefficients for the next loop */
         i++;
 
-        if(i == 9 || i == 19 || i == 29){
-            Beta1 += 1;
-        }
+        Beta1 += 1;
     }
     return 0;
 }
