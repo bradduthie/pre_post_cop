@@ -1,13 +1,24 @@
-Relevant notes and references
+Relevant notes
 ===================================================================
-
-\cite{Bretman2009} Bretman et al. find that females can decide how much sperm to store in a spermatheca, and that unrelated males ''contribute more sperm to storage and have correspondingly higher paternity success''.
-
-\cite{Hosken1999} Hosken and Blanckenhorn comment on the relationship between multiple mating and the costs and benefits of inbreeding and genetic diversity. The focal idea is that the relationship between both inbreeding and fitness, and genetic diversity and fitness, should be sigmoidal. Thereby and the inflection point of the function, we have a non-additive relationship such that -- in general terms -- f(y+x) != f(y)+f(x). Authors suggest that this can be predictable, making multiple mating beneficial in small new populations where relatedness is high and genetic diversity is low, but costly for big populations where the opposite is true.
 
 I'm becoming less inclined to continue with the current pre-copulatory versus post-copulatory approach to modelling. Another problem with this approach is that it assumes that both pre-copulatory and post-copulatory inbreeding behaviour will both start out in the same place -- random mating. This will almost *never* happen in nature. Species aren't going to be randomly mating at some point in their history, then have some sort of condition strike in which it becomes an effective race for selection to either act on post-copulatory inbreeding avoidance or pre-copulatory inbreeding avoidance. Almost certainly, how selection acts on each will differ with the constraints and potential pre-adaptations of each system. If there is any question to ask here, it must surely be whether or not one type of inbreeding adjustment can *invade* the other established type. Can precopulatory inbreeding avoidance invade in a system in which postcopulatory inbreeding avoidance already exists? This will probably (somewhat boringly) depend on the relative costs of each, but it makes a whole lot more sense to ask it this way rather than assuming each invades the null system simultaneously (note that this was not a problem for the inbreeding and polyandry manuscript, as one inbreeding strategy consistently evolved and was affected only by inbreeding depression).
 
 Rather than starting everything off at zero, these simulations would be better off starting the system in one state, such as a magnitude of inbreeding depression that we know (based on previous modelling) leads to specific trait values of precopulatory inbreeding avoidance. Then, we could see if there is selection for postcopulatory inbreeding avoidance given the known state of precopulatory inbreeding avoidance. Another alternative would be to randomise the initial conditions, but this seems a bit weird -- then if initial conditions do matter, it would be difficult to see how, and to judge which initial conditions are plausible and implausible. Overall though, I don't see how we're going to get at some realistic map of what is expected and what is not. 
+
+Update 15 AUG: I have committed and started running new code that randomises allele values for initial individuals. I'm still not sure that this is the best route given the above reasoning, but it is worth checking to see if the results are markedly different from simulations in which values are initialised at zero.
+
+Relevant references
+===================================================================
+
+\cite{Bretman2009} Bretman et al. find that female field crickets can decide how much sperm to store in a spermatheca, and that unrelated males ''contribute more sperm to storage and have correspondingly higher paternity success''.
+
+\cite{Hosken1999} Hosken and Blanckenhorn comment on the relationship between multiple mating and the costs and benefits of inbreeding and genetic diversity. The focal idea is that the relationship between both inbreeding and fitness, and genetic diversity and fitness, should be sigmoidal. Thereby and the inflection point of the function, we have a non-additive relationship such that -- in general terms -- f(y+x) != f(y)+f(x). Authors suggest that this can be predictable, making multiple mating beneficial in small new populations where relatedness is high and genetic diversity is low, but costly for big populations where the opposite is true.
+
+\cite{Tregenza2002} This study (on crickets) claims to be the first to find that polyandry helps females avoid the negative fitness consequences of inbreeding. A key hypothesis here is that males have higher reproductive success when they mate with non-relatives. 
+
+\cite{Olsson1996a} These female sand lizards appear to accept all copulations, then allocate paternity after mating. Note that they looked at deviation from random mating, not the raw kinship differences. Suggests that females may not avoid, or be able to avoid (e.g., through pre-mating level kin discrimination) inbreeding, but post-copulation, inbreeding avoidance is readily accomplished.
+
+\cite{Gasparini2011} The authors artificially inseminate female guppies with equal amounts of sperm from full-siblings and unrelated males. They find that fertilisation success was higher in non-relatives. This study was also unique in getting at the mechanism of paternity bias, which apperas to be differential sperm velocity (speed?) in the female's ovarian fluid.
 
 
 Pre and postcopulatory inbreeding adjustment
