@@ -311,7 +311,7 @@ setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
 evo_nc <- read.table(file="evo_no_cost.txt", header=FALSE);
 # -----------  BETA = 0  -------------------------------------------------#
 setEPS(); # postscript below for final publication?
-cairo_ps("evo_no_cost_B0",family="Arial",height=7,width=7);
+cairo_ps("evo_no_cost_B0.eps",family="Arial",height=7,width=7);
 evo <- evo_nc[evo_nc[,2]==0,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -350,7 +350,7 @@ dev.off();
 
 # -----------  BETA = 1  -------------------------------------------------#
 setEPS(); # postscript below for final publication?
-cairo_ps("evo_no_cost_B1",family="Arial",height=7,width=7);
+cairo_ps("evo_no_cost_B1.eps",family="Arial",height=7,width=7);
 evo <- evo_nc[evo_nc[,2]==1,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -389,7 +389,7 @@ dev.off();
 
 # -----------  BETA = 2  -------------------------------------------------#
 setEPS(); # postscript below for final publication?
-cairo_ps("evo_no_cost_B2",family="Arial",height=7,width=7);
+cairo_ps("evo_no_cost_B2.eps",family="Arial",height=7,width=7);
 evo <- evo_nc[evo_nc[,2]==2,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -428,7 +428,7 @@ dev.off();
 
 # -----------  BETA = 3  -------------------------------------------------#
 setEPS(); # postscript below for final publication?
-cairo_ps("evo_no_cost_B3",family="Arial",height=7,width=7);
+cairo_ps("evo_no_cost_B3.eps",family="Arial",height=7,width=7);
 evo <- evo_nc[evo_nc[,2]==3,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
