@@ -1,3 +1,90 @@
+Simulations Run
+===================================================================
+
+Below is a summary of the three sets of simulations that have been run to date, and their corresponding files. **In all simulations**:
+
+- Three traits evolve simultaneously
+  - Precopulatory inbreeding avoidance/preference (10 diploid loci = 20 alleles)
+  - Postcopulatory inbreeding avoidance/preference (10 diploid loci = 20 alleles)
+  - Tendency for polyandry (10 diploid loci = 20 alleles)
+- 5 immigrants per generation
+- 8 offspring produced per female
+- 5000 generations total per replicate
+- Alleles mutate with a Pr of 0.001
+- Perfect kin recognition
+- Carrying capacity of 100 females and 100 males
+- Four magnitudes of inbreeding depressoin (\beta = {1, 2, 3, 4})
+
+No cost simulations over time 
+------------------------------------------------------------------
+
+- 120 replicate simulations total (120 more in process)
+
+  - 10 replicates across 4 levels of \beta (0, 1, 2, 3) each
+  
+- Used to show null expectation of trait evolution over generations
+
+- Figures: 
+
+  - evo_no_cost_B0.eps 
+
+  - evo_no_cost_B1.eps 
+
+  - evo_no_cost_B2.eps
+
+  - evo_no_cost_B3.eps, 
+
+Random cost simulations with initial trait values of zero
+------------------------------------------------------------------
+
+- 400 replicate simulations total 
+
+  - 100 replicates across all 4 levels of \beta (0, 2, 3) each
+
+- Cost of each of the three traits is drawn from a random uniform distribution [0, 0.05]
+
+  - For each set of randomised cost, each of the four \beta values are simulated
+
+  - This allows direct comparison of a set of costs across \beta, if desired
+
+- Initial allele values (and therefore trait values) are always set to zero
+
+- End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference (\beta=0) or avoidance (\beta=1) is **defined specifically by having mean trait values >= 1 (\beta=0) or <= 1 (\beta=1)**:
+
+  - Pre and post: Both **pre and postcopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
+
+  - Pre not post: Only **precopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
+
+  - Post not pre: Only **precopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
+  
+  - Neither: Neither pre nor postcopulatory inbreeding preference or avoidance evolve
+
+- Figures show 3D plots of randomised costs with points colour-coated to reflect each of the four above conditoins:
+
+  - EC_Beta_0.eps
+
+  - EC_Beta_0.eps
+
+  - EC_Beta_0.eps
+
+  - EC_Beta_0.eps
+
+- End trait values associated with polyandry after 5000 generations are evaluated. Evolution of polyandry is **defined specifically by having a mean polyandry trait value >= 1**:
+
+- Figures show 3D plots of randomised costs with points colour-coated to reflect whether or not polyandry evolved:
+
+  - PO_Beta_0.eps
+
+  - PO_Beta_0.eps
+
+  - PO_Beta_0.eps
+
+  - PO_Beta_0.eps
+
+
+  
+
+
 Relevant notes
 ===================================================================
 
