@@ -1,3 +1,134 @@
+<h1>Simulations Run</h1>
+
+<p>Below is a summary of the three sets of simulations that have been run to date, and their corresponding files. <strong>In all simulations</strong>:</p>
+
+<ul>
+<li>Three traits evolve simultaneously
+<ul>
+<li>Precopulatory inbreeding avoidance/preference (10 diploid loci = 20 alleles)</li>
+<li>Postcopulatory inbreeding avoidance/preference (10 diploid loci = 20 alleles)</li>
+<li>Tendency for polyandry (10 diploid loci = 20 alleles)</li>
+</ul></li>
+<li>5 immigrants per generation</li>
+<li>8 offspring produced per female</li>
+<li>5000 generations total per replicate</li>
+<li>Alleles mutate with a Pr of 0.001</li>
+<li>Perfect kin recognition</li>
+<li>Carrying capacity of 100 females and 100 males</li>
+<li>Four magnitudes of inbreeding depression (\beta = {1, 2, 3, 4})</li>
+</ul>
+
+<h2>No cost simulations over time </h2>
+
+<ul>
+<li>120 replicate simulations total (120 more in process)
+<ul>
+<li>10 replicates across 4 levels of \beta (0, 1, 2, 3) each</li>
+</ul></li>
+<li>Used to show null expectation of trait evolution over generations</li>
+<li>Figures: 
+<ul>
+<li>evo<em>no</em>cost<em>B0.eps </li>
+<li>evo<em>no</em>cost</em>B1.eps </li>
+<li>evo<em>no</em>cost<em>B2.eps</li>
+<li>evo<em>no</em>cost</em>B3.eps </li>
+</ul></li>
+</ul>
+
+<h2>Random cost simulations with initial trait values of zero</h2>
+
+<ul>
+<li>400 replicate simulations total 
+<ul>
+<li>100 replicates across all 4 levels of \beta (0, 2, 3) each</li>
+</ul></li>
+<li>Cost of each of the three traits is drawn from a random uniform distribution [0, 0.05]
+<ul>
+<li>For each set of randomised cost, each of the four \beta values are simulated</li>
+<li>This allows direct comparison of a set of costs across \beta, if desired</li>
+</ul></li>
+<li>Initial allele values (and therefore trait values) are always set to zero</li>
+<li>End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference (\beta=0) or avoidance (\beta=1) is <strong>defined specifically by having mean trait values >= 1 (\beta=0) or &lt;= 1 (\beta=1)</strong>:
+<ul>
+<li>Pre and post: Both <strong>pre and postcopulatory</strong> inbreeding preference (\beta=0) or avoidance (\beta=1) evolve</li>
+<li>Pre not post: Only <strong>precopulatory</strong> inbreeding preference (\beta=0) or avoidance (\beta=1) evolve</li>
+<li>Post not pre: Only <strong>precopulatory</strong> inbreeding preference (\beta=0) or avoidance (\beta=1) evolve</li>
+<li>Neither: Neither pre nor postcopulatory inbreeding preference or avoidance evolve</li>
+</ul></li>
+<li>Figures show 3D plots of randomised costs with points colour-coated to reflect each of the four above conditoins:
+<ul>
+<li>EC<em>Beta</em>0.eps</li>
+<li>EC<em>Beta</em>1.eps</li>
+<li>EC<em>Beta</em>2.eps</li>
+<li>EC<em>Beta</em>3.eps</li>
+</ul></li>
+<li>End trait values associated with polyandry after 5000 generations are evaluated. Evolution of polyandry is <strong>defined specifically by having a mean polyandry trait value >= 1</strong>:</li>
+<li>Figures show 3D plots of randomised costs with points colour-coated to reflect whether or not polyandry evolved:
+<ul>
+<li>PO<em>Beta</em>0.eps</li>
+<li>PO<em>Beta</em>1.eps</li>
+<li>PO<em>Beta</em>2.eps</li>
+<li>PO<em>Beta</em>3.eps</li>
+</ul></li>
+</ul>
+
+<h2>Random cost simulations with initial trait values random normal N(0,1)</h2>
+
+<ul>
+<li>400 replicate simulations total 
+<ul>
+<li>100 replicates across all 4 levels of \beta (0, 2, 3) each</li>
+</ul></li>
+<li>Cost of each of the three traits is drawn from a random uniform distribution [0, 0.05]
+<ul>
+<li>For each set of randomised cost, each of the four \beta values are simulated</li>
+<li>This allows direct comparison of a set of costs across \beta, if desired</li>
+</ul></li>
+<li>Initial allele values (and therefore trait values) drawn from random normal N(0,1)</li>
+<li>End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference (\beta=0) or avoidance (\beta=1) is <strong>defined specifically by having mean trait values >= 1 (\beta=0) or &lt;= 1 (\beta=1)</strong>:
+<ul>
+<li>Pre and post: Both <strong>pre and postcopulatory</strong> inbreeding preference (\beta=0) or avoidance (\beta=1) evolve</li>
+<li>Pre not post: Only <strong>precopulatory</strong> inbreeding preference (\beta=0) or avoidance (\beta=1) evolve</li>
+<li>Post not pre: Only <strong>precopulatory</strong> inbreeding preference (\beta=0) or avoidance (\beta=1) evolve</li>
+<li>Neither: Neither pre nor postcopulatory inbreeding preference or avoidance evolve</li>
+</ul></li>
+<li>Figures show 3D plots of randomised costs with points colour-coated to reflect each of the four above conditoins:
+<ul>
+<li>EC<em>Beta</em>0<em>z1.eps</li>
+<li>EC<em>Beta</em>1</em>z1.eps</li>
+<li>EC<em>Beta</em>2<em>z1.eps</li>
+<li>EC<em>Beta</em>3</em>z1.eps</li>
+</ul></li>
+<li>End trait values associated with polyandry after 5000 generations are evaluated. Evolution of polyandry is <strong>defined specifically by having a mean polyandry trait value >= 1</strong>:</li>
+<li>Figures show 3D plots of randomised costs with points colour-coated to reflect whether or not polyandry evolved:
+<ul>
+<li>PO<em>Beta</em>0<em>z1.eps</li>
+<li>PO<em>Beta</em>1</em>z1.eps</li>
+<li>PO<em>Beta</em>2<em>z1.eps</li>
+<li>PO<em>Beta</em>3</em>z1.eps</li>
+</ul></li>
+</ul>
+
+<h1>Relevant notes</h1>
+
+<p>I'm becoming less inclined to continue with the current pre-copulatory versus post-copulatory approach to modelling. Another problem with this approach is that it assumes that both pre-copulatory and post-copulatory inbreeding behaviour will both start out in the same place -- random mating. This will almost <em>never</em> happen in nature. Species aren't going to be randomly mating at some point in their history, then have some sort of condition strike in which it becomes an effective race for selection to either act on post-copulatory inbreeding avoidance or pre-copulatory inbreeding avoidance. Almost certainly, how selection acts on each will differ with the constraints and potential pre-adaptations of each system. If there is any question to ask here, it must surely be whether or not one type of inbreeding adjustment can <em>invade</em> the other established type. Can precopulatory inbreeding avoidance invade in a system in which postcopulatory inbreeding avoidance already exists? This will probably (somewhat boringly) depend on the relative costs of each, but it makes a whole lot more sense to ask it this way rather than assuming each invades the null system simultaneously (note that this was not a problem for the inbreeding and polyandry manuscript, as one inbreeding strategy consistently evolved and was affected only by inbreeding depression).</p>
+
+<p>Rather than starting everything off at zero, these simulations would be better off starting the system in one state, such as a magnitude of inbreeding depression that we know (based on previous modelling) leads to specific trait values of precopulatory inbreeding avoidance. Then, we could see if there is selection for postcopulatory inbreeding avoidance given the known state of precopulatory inbreeding avoidance. Another alternative would be to randomise the initial conditions, but this seems a bit weird -- then if initial conditions do matter, it would be difficult to see how, and to judge which initial conditions are plausible and implausible. Overall though, I don't see how we're going to get at some realistic map of what is expected and what is not. </p>
+
+<p>Update 15 AUG: I have committed and started running new code that randomises allele values for initial individuals. I'm still not sure that this is the best route given the above reasoning, but it is worth checking to see if the results are markedly different from simulations in which values are initialised at zero.</p>
+
+<h1>Relevant references</h1>
+
+<p>\cite{Bretman2009} Bretman et al. find that female field crickets can decide how much sperm to store in a spermatheca, and that unrelated males ''contribute more sperm to storage and have correspondingly higher paternity success''.</p>
+
+<p>\cite{Hosken1999} Hosken and Blanckenhorn comment on the relationship between multiple mating and the costs and benefits of inbreeding and genetic diversity. The focal idea is that the relationship between both inbreeding and fitness, and genetic diversity and fitness, should be sigmoidal. Thereby and the inflection point of the function, we have a non-additive relationship such that -- in general terms -- f(y+x) != f(y)+f(x). Authors suggest that this can be predictable, making multiple mating beneficial in small new populations where relatedness is high and genetic diversity is low, but costly for big populations where the opposite is true.</p>
+
+<p>\cite{Tregenza2002} This study (on crickets) claims to be the first to find that polyandry helps females avoid the negative fitness consequences of inbreeding. A key hypothesis here is that males have higher reproductive success when they mate with non-relatives. </p>
+
+<p>\cite{Olsson1996a} These female sand lizards appear to accept all copulations, then allocate paternity after mating. Note that they looked at deviation from random mating, not the raw kinship differences. Suggests that females may not avoid, or be able to avoid (e.g., through pre-mating level kin discrimination) inbreeding, but post-copulation, inbreeding avoidance is readily accomplished.</p>
+
+<p>\cite{Gasparini2011} The authors artificially inseminate female guppies with equal amounts of sperm from full-siblings and unrelated males. They find that fertilisation success was higher in non-relatives. This study was also unique in getting at the mechanism of paternity bias, which apperas to be differential sperm velocity (speed?) in the female's ovarian fluid.</p>
+
 <h1>Pre and postcopulatory inbreeding adjustment</h1>
 
 <h2>Introduction</h2>
@@ -11,7 +142,6 @@
 <li>It is also relevant that postcopulatory inbreeding adjustment cannot be adaptive if there is no polyandry, but recent modelling (Duthie et al Evolution) shows that polyandry evolution can be expressed as a threshold trait, making variation associated with postcopulatory inbreeding adjustment potentially more visible to selection. </li>
 <li>Nevertheless, postcopulatory inbreeding adjustment inherently requires two potential costs, while precopulatory adjustment only requires one -- the magnitude of each should be relevant in pushing selection to either postcopulatory inbreeding adjustment or precopulatory inbreeding adjusment -- both would seem unlikely to be under selection simultaneously if there are associated costs because each would likely be redundant, and therefore desired inbreeding could be accomplished with one or the other without paying all costs. </li>
 <li>It is therefore necessary to see how costs might or might not interact to drive selection on pre and postcopulatory inbreeding adjustment.</li>
-<li>It will be necessary to address the idea of conditionally dependent inbreeding avoidance -- either we need to explain why we do not do this, or do it. But if we do it, it needs to also be justified, and we need to avoid losing the theory because of the confounding processes going on in the model.</li>
 </ul></li>
 <li><p>In the case of inbreeding, it is especially important to model the distribution of kinship in the population because evolution of inbreeding behaviour is highly sensitive to population size and available relatives, which will be dependent upon history of individual fitness (something like that -- cite Duthie and Reid AmNat).</p></li>
 <li><p>We model the evolution of precopulatory and postcopulatory inbreeding adjustment, and evolution of polyandry given associated costs of all three. We focus specifically on how strong selection will be on each given varying costs and inbreeding depression. We need to decide and explain here <em>why</em> we're doing all of the Model and Results below. If we end up with a sort of roadmap showing the parameter values under which pre versus postcopulatory selection on inbreeding adjustment is predicted, for example, I think we need to make its utlitiy clear. I think that the below, for example, are reasonable goals:</p>
