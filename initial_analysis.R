@@ -467,6 +467,171 @@ dev.off();
 
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX  Plots over time -- no cost rand initial traits XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+rm(list=ls()); 
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
+
+evo_nc <- read.table(file="evo_no_cost_z1.txt", header=FALSE);
+# -----------  BETA = 0  -------------------------------------------------#
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_no_cost_B0_z1.eps",family="Arial",height=7,width=7);
+evo <- evo_nc[evo_nc[,2]==0,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+par(mar=c(5,5,1,1));
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",
+     xlab="Generation",ylab="Allele value",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==4999));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==4999));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==4999));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==4999));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==4999));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==4999));
+polygon(y=c(lPO,rev(uPO)),x=c(1:5000,5000:1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:5000,5000:1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:5000,5000:1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+polygon(y=c(yleg,rev(yleg+2.25)),x=c(xleg,rev(xleg)),border="black",col="grey80", lwd=2);
+legend("topleft", inset=0.025, bty="n", cex=0.95, 
+       title=expression(paste("Evolving trait (",beta==0,")")),
+       c("Pre-copulatory inbreeding", "Tendency for polyandry", "Post-copulatory inbreeding"),
+       fill=c("blue", "red", "black"));
+dev.off();
+
+# -----------  BETA = 1  -------------------------------------------------#
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_no_cost_B1_z1.eps",family="Arial",height=7,width=7);
+evo <- evo_nc[evo_nc[,2]==1,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+par(mar=c(5,5,1,1));
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",
+     xlab="Generation",ylab="Allele value",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==4999));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==4999));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==4999));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==4999));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==4999));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==4999));
+polygon(y=c(lPO,rev(uPO)),x=c(1:5000,5000:1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:5000,5000:1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:5000,5000:1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+polygon(y=c(yleg,rev(yleg+2.25)),x=c(xleg,rev(xleg)),border="black",col="grey80", lwd=2);
+legend("topleft", inset=0.025, bty="n", cex=0.95, 
+       title=expression(paste("Evolving trait (",beta==1,")")),
+       c("Pre-copulatory inbreeding", "Tendency for polyandry", "Post-copulatory inbreeding"),
+       fill=c("blue", "red", "black"));
+dev.off();
+
+# -----------  BETA = 2  -------------------------------------------------#
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_no_cost_B2_z1.eps",family="Arial",height=7,width=7);
+evo <- evo_nc[evo_nc[,2]==2,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+par(mar=c(5,5,1,1));
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",
+     xlab="Generation",ylab="Allele value",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==4999));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==4999));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==4999));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==4999));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==4999));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==4999));
+polygon(y=c(lPO,rev(uPO)),x=c(1:5000,5000:1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:5000,5000:1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:5000,5000:1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+polygon(y=c(yleg,rev(yleg+2.25)),x=c(xleg,rev(xleg)),border="black",col="grey80", lwd=2);
+legend("topleft", inset=0.025, bty="n", cex=0.95, 
+       title=expression(paste("Evolving trait (",beta==2,")")),
+       c("Pre-copulatory inbreeding", "Tendency for polyandry", "Post-copulatory inbreeding"),
+       fill=c("blue", "red", "black"));
+dev.off();
+
+# -----------  BETA = 3  -------------------------------------------------#
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_no_cost_B3_z1.eps",family="Arial",height=7,width=7);
+evo <- evo_nc[evo_nc[,2]==3,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+par(mar=c(5,5,1,1));
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",
+     xlab="Generation",ylab="Allele value",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==4999));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==4999));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==4999));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==4999));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==4999));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==4999));
+polygon(y=c(lPO,rev(uPO)),x=c(1:5000,5000:1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:5000,5000:1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:5000,5000:1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+polygon(y=c(yleg,rev(yleg+2.25)),x=c(xleg,rev(xleg)),border="black",col="grey80", lwd=2);
+legend("topleft", inset=0.025, bty="n", cex=0.95, 
+       title=expression(paste("Evolving trait (",beta==3,")")),
+       c("Pre-copulatory inbreeding", "Tendency for polyandry", "Post-copulatory inbreeding"),
+       fill=c("blue", "red", "black"));
+dev.off();
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX      Now look at 3D scatters of polyandry   XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
