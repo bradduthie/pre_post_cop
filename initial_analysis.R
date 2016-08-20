@@ -1175,6 +1175,107 @@ dev.off();
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
+rm(list=ls()); 
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX Multi-panel figure of randomised inbreeding     XXX XXX XXX #
+# XXX XXX XXX costs with fixed polyandry costs                XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+# Random inbreeding traits with a fixed pcost of zero
+evo_rand_pc_00 <- read.table(file="evo_rand_pc_00.txt", header=FALSE);
+ela_rand_pc_00 <- evo_rand_pc_00[evo[,6]==4999,];
+write.table(x=ela_rand_pc_00, file="ela_rand_pc_00.txt", col.names=FALSE, row.names=FALSE);
+
+# -----------  BETA = 0  -------------------------------------------------#
+ela_rand_pc_00 <- read.table(file="ela_rand_pc_00.txt", header=FALSE);
+
+elaB0 <- ela_rand_pc_00[ela_rand_pc_00[,2]==0,];
+resB0 <- rep(x=0, times=dim(elaB0)[1]);
+for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
+   if(elaB0[i,7] >= 1 & elaB0[i,9] >= 1){
+       resB0[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB0[i,7] >= 1 & elaB0[i,9] < 1){
+       resB0[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB0[i,7] < 1 & elaB0[i,9] >= 1){
+       resB0[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB0[i,7] < 1 & elaB0[i,9] < 1){
+       resB0[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB0 <- rep(x=0, times=dim(elaB0)[1]);
+for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
+   if(elaB0[i,8] >= 1){
+       polB0[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB0[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB0[,3], y=elaB0[,5], cex=1.9, lwd=2, col=polB0, pch=21, bg=resB0,
+     xlab="Cost of pre-cop inbreeding preference",
+     ylab="Cost of post-cop inbreeding preference");
+
+
+
+# -----------  BETA = 1  -------------------------------------------------#
+elaB1 <- ela_rand_pc_00[ela_rand_pc_00[,2]==1,];
+resB1 <- rep(x=0, times=dim(elaB1)[1]);
+for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
+   if(elaB1[i,7] <= -1 & elaB1[i,9] <= -1){
+       resB1[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB1[i,7] <= -1 & elaB1[i,9] > -1){
+       resB1[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB1[i,7] > -1 & elaB1[i,9] <= -1){
+       resB1[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB1[i,7] > -1 & elaB1[i,9] > -1){
+       resB1[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB1 <- rep(x=0, times=dim(elaB1)[1]);
+for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
+   if(elaB1[i,8] >= 1){
+       polB1[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB1[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB1[,3], y=elaB1[,5], cex=1.9, lwd=2, col=polB1, pch=21, bg=resB1,
+     xlab="Cost of pre-cop inbreeding preference",
+     ylab="Cost of post-cop inbreeding preference");
+
+
+
+
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX  OLDER ANALYSES, PROBABLY NOT TO BE USED IN THE MANUSCRIPT  XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
 
 #==========================================================================
 
