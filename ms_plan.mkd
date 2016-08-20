@@ -13,71 +13,71 @@ Below is a summary of the three sets of simulations that have been run to date, 
 - Alleles mutate with a Pr of 0.001
 - Perfect kin recognition
 - Carrying capacity of 100 females and 100 males
-- Four magnitudes of inbreeding depression (\beta = {1, 2, 3, 4})
+- Four magnitudes of inbreeding depression ($\beta$ = {1, 2, 3, 4})
 
 No cost simulations over time 
 ------------------------------------------------------------------
 
 - 120 replicate simulations total (120 more in process)
-  - 10 replicates across 4 levels of \beta (0, 1, 2, 3) each
+  - 10 replicates across 4 levels of $\beta$ (0, 1, 2, 3) each
 - Used to show null expectation of trait evolution over generations
 - Figures: 
-  - evo_no_cost_B0.eps 
-  - evo_no_cost_B1.eps 
-  - evo_no_cost_B2.eps
-  - evo_no_cost_B3.eps 
+  - evo\_no\_cost\_B0.eps
+  - evo\_no\_cost\_B1.eps 
+  - evo\_no\_cost\_B2.eps
+  - evo\_no\_cost\_B3.eps 
 
 Random cost simulations with initial trait values of zero
 ------------------------------------------------------------------
 
 - 400 replicate simulations total 
-  - 100 replicates across all 4 levels of \beta (0, 2, 3) each
+  - 100 replicates across all 4 levels of $\beta$ (0, 1, 2, 3) each
 - Cost of each of the three traits is drawn from a random uniform distribution [0, 0.05]
-  - For each set of randomised cost, each of the four \beta values are simulated
-  - This allows direct comparison of a set of costs across \beta, if desired
+  - For each set of randomised cost, each of the four $\beta$ values are simulated
+  - This allows direct comparison of a set of costs across $\beta$, if desired
 - Initial allele values (and therefore trait values) are always set to zero
-- End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference (\beta=0) or avoidance (\beta=1) is **defined specifically by having mean trait values >= 1 (\beta=0) or <= 1 (\beta=1)**:
-  - Pre and post: Both **pre and postcopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
-  - Pre not post: Only **precopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
-  - Post not pre: Only **precopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
+- End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) is **defined specifically by having mean trait values >= 1 ($\beta$=0) or <= 1 ($\beta$=1)**:
+  - Pre and post: Both **pre and postcopulatory** inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) evolve
+  - Pre not post: Only **precopulatory** inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) evolve
+  - Post not pre: Only **precopulatory** inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) evolve
   - Neither: Neither pre nor postcopulatory inbreeding preference or avoidance evolve
 - Figures show 3D plots of randomised costs with points colour-coated to reflect each of the four above conditoins:
-  - EC_Beta_0.eps
-  - EC_Beta_1.eps
-  - EC_Beta_2.eps
-  - EC_Beta_3.eps
+  - EC\_Beta\_0.eps
+  - EC\_Beta\_1.eps
+  - EC\_Beta\_2.eps
+  - EC\_Beta\_3.eps
 - End trait values associated with polyandry after 5000 generations are evaluated. Evolution of polyandry is **defined specifically by having a mean polyandry trait value >= 1**:
 - Figures show 3D plots of randomised costs with points colour-coated to reflect whether or not polyandry evolved:
-  - PO_Beta_0.eps
-  - PO_Beta_1.eps
-  - PO_Beta_2.eps
-  - PO_Beta_3.eps
+  - PO\_Beta\_0.eps
+  - PO\_Beta\_1.eps
+  - PO\_Beta\_2.eps
+  - PO\_Beta\_3.eps
 
 Random cost simulations with initial trait values random normal N(0,1)
 ------------------------------------------------------------------
 
 - 400 replicate simulations total 
-  - 100 replicates across all 4 levels of \beta (0, 2, 3) each
+  - 100 replicates across all 4 levels of $\beta$ (0, 1, 2, 3) each
 - Cost of each of the three traits is drawn from a random uniform distribution [0, 0.05]
-  - For each set of randomised cost, each of the four \beta values are simulated
-  - This allows direct comparison of a set of costs across \beta, if desired
+  - For each set of randomised cost, each of the four $\beta$ values are simulated
+  - This allows direct comparison of a set of costs across $\beta$, if desired
 - Initial allele values (and therefore trait values) drawn from random normal N(0,1)
-- End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference (\beta=0) or avoidance (\beta=1) is **defined specifically by having mean trait values >= 1 (\beta=0) or <= 1 (\beta=1)**:
-  - Pre and post: Both **pre and postcopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
-  - Pre not post: Only **precopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
-  - Post not pre: Only **precopulatory** inbreeding preference (\beta=0) or avoidance (\beta=1) evolve
+- End trait values associated with inbreeding after 5000 generations are evaluated. Evolution of pre and postcopulatory inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) is **defined specifically by having mean trait values >= 1 ($\beta$=0) or <= 1 ($\beta$=1)**:
+  - Pre and post: Both **pre and postcopulatory** inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) evolve
+  - Pre not post: Only **precopulatory** inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) evolve
+  - Post not pre: Only **precopulatory** inbreeding preference ($\beta$=0) or avoidance ($\beta$=1) evolve
   - Neither: Neither pre nor postcopulatory inbreeding preference or avoidance evolve
 - Figures show 3D plots of randomised costs with points colour-coated to reflect each of the four above conditoins:
-  - EC_Beta_0_z1.eps
-  - EC_Beta_1_z1.eps
-  - EC_Beta_2_z1.eps
-  - EC_Beta_3_z1.eps
+  - EC\_Beta\_0\_z1.eps
+  - EC\_Beta\_1\_z1.eps
+  - EC\_Beta\_2\_z1.eps
+  - EC\_Beta\_3\_z1.eps
 - End trait values associated with polyandry after 5000 generations are evaluated. Evolution of polyandry is **defined specifically by having a mean polyandry trait value >= 1**:
 - Figures show 3D plots of randomised costs with points colour-coated to reflect whether or not polyandry evolved:
-  - PO_Beta_0_z1.eps
-  - PO_Beta_1_z1.eps
-  - PO_Beta_2_z1.eps
-  - PO_Beta_3_z1.eps
+  - PO\_Beta\_0\_z1.eps
+  - PO\_Beta\_1\_z1.eps
+  - PO\_Beta\_2\_z1.eps
+  - PO\_Beta\_3\_z1.eps
 
 
 Relevant notes
@@ -133,7 +133,7 @@ Model
 
 - Need a very brief overview of individual attributes and what they do. In this paragraph, we can emphasise the costs that go along with blocks of loci underlying [PRECOP INBREEDING], [POLYANDRY], and [POSTCOP INBREEDING]. As in the Evolution paper, I believe that the costs should go on the traits -- this is such a complex model, we really should embrace individual complexity and focus on a quantitative genetic approach with costs on traits.
 
-- General explanation of life-cycle and how mate choice is enacted, with an explanation of inbreeding depression (\beta) in offspring viability. Immigration should be modelled again, but in this case, probably with preserved covariance among all three traits.
+- General explanation of life-cycle and how mate choice is enacted, with an explanation of inbreeding depression ($\beta$) in offspring viability. Immigration should be modelled again, but in this case, probably with preserved covariance among all three traits.
 
 - Focus on what the simulation parameters will be and why. The goal here, I believe, will be to pick some reasonable values to get a general idea of the importance of different costs:
 
@@ -141,11 +141,11 @@ Model
 
   2. Costs are relatively straightforward, compared to constraints. I believe that these should be on the traits themselves (as opposed to alleles), and maybe pick 3-4 values of each cost: cpre, cpol, cpost. Perhaps something like 0, 0.02, 0.05 -- null, low, and high?
 
-  3. Likewise, I believe that three values of \beta should do, corresponding to null, low, and high inbreeding depression. From experience now, I suspect that \beta = 0, 1, and 3 would be just fine. 
+  3. Likewise, I believe that three values of $\beta$ should do, corresponding to null, low, and high inbreeding depression. From experience now, I suspect that $\beta$ = 0, 1, and 3 would be just fine. 
 
   4. I don't think that we need 100 replicates of each set of parameter combinations for this one -- partly because we're not so much interested in precision for different parameter combinations, and are more interested in the change in allele values over time (which should say something interesting about the process of evolution of pre and postcopulatory selection, and of polyandry). We'll want to show plots of changing allele values over time, and I think that 20 replicates will be sufficient to do this and get a full story of what's going on. Further, I believe that 5000 generations should still be fine.
 
-  5. So with, say, 2 constraints, 3 \times 3 = 9 costs, 3 inbreeding depression slopes, and 20 replicates each, we have 2 \times 9 \times 3 \times 20 = 1080 replicates total. Conservatively, this is about one week on the cluster -- possibly less. It might just be worth doing 40 replicates, actually.
+  5. So with, say, 2 constraints, 3 $\times$ 3 = 9 costs, 3 inbreeding depression slopes, and 20 replicates each, we have 2 $\times$ 9 $\times$ 3 $\times$ 20 = 1080 replicates total. Conservatively, this is about one week on the cluster -- possibly less. It might just be worth doing 40 replicates, actually.
 
   6. I see the analysis of this model being different than that of the previous two IBMs. It seems like we're less interested in 'will selection drive it to evolve', and therefore less interested in looking at means of allele values across different parameter combinations. Rather, I think we'll be focused more on the relative allele values of precopulatory and postcopulatory allele values especially, across different costs and inbreeding depression slopes -- and perhaps the values too of polyandry allele values. We'll probably be less interested in the precise differences, and more intersted in whether or not different parameter combinations emerge with a clear 'winner' in terms of whether selection drives precopulatory, postcopulatory, neither, or both types of inbreeding adjustment. I see a figure or table that maps out -- somehow -- all three costs, or perhaps even all parameter combinations, and identifies what happens qualitatively with inbreeeding strategy and polyandry. 
 
