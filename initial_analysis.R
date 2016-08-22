@@ -1185,12 +1185,27 @@ setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
 
 # Random inbreeding traits with a fixed pcost of zero
 evo_rand_pc_00 <- read.table(file="evo_rand_pc_00.txt", header=FALSE);
-ela_rand_pc_00 <- evo_rand_pc_00[evo[,6]==4999,];
+ela_rand_pc_00 <- evo_rand_pc_00[evo_rand_pc_00[,6]==4999,];
 write.table(x=ela_rand_pc_00, file="ela_rand_pc_00.txt", col.names=FALSE, row.names=FALSE);
 
-# -----------  BETA = 0  -------------------------------------------------#
-ela_rand_pc_00 <- read.table(file="ela_rand_pc_00.txt", header=FALSE);
+evo_rand_pc_01 <- read.table(file="evo_rand_pc_01.txt", header=FALSE);
+ela_rand_pc_01 <- evo_rand_pc_01[evo_rand_pc_01[,6]==4999,];
+write.table(x=ela_rand_pc_01, file="ela_rand_pc_01.txt", col.names=FALSE, row.names=FALSE);
 
+# ------------------------------------------------------------------------#
+# ------------------------------------------------------------------------#
+# ------------------------------------------------------------------------#
+
+ela_rand_pc_00 <- read.table(file="ela_rand_pc_00.txt", header=FALSE);
+ela_rand_pc_01 <- read.table(file="ela_rand_pc_01.txt", header=FALSE);
+
+par(mfrow=c(4,3), mar=c(0.5,0.5,0.5,0.5), oma=c(5,5,1,1));
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 0  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+
+# -----------  P-cost = 0 ---------------
 elaB0 <- ela_rand_pc_00[ela_rand_pc_00[,2]==0,];
 resB0 <- rep(x=0, times=dim(elaB0)[1]);
 for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
@@ -1216,12 +1231,48 @@ for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
    }
 }
 plot(x=elaB0[,3], y=elaB0[,5], cex=1.9, lwd=2, col=polB0, pch=21, bg=resB0,
-     xlab="Cost of pre-cop inbreeding preference",
+     xlab="", xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
      ylab="Cost of post-cop inbreeding preference");
 
+# -----------  P-cost = 0.01 ------------
+elaB0 <- ela_rand_pc_01[ela_rand_pc_01[,2]==0,];
+resB0 <- rep(x=0, times=dim(elaB0)[1]);
+for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
+   if(elaB0[i,7] >= 1 & elaB0[i,9] >= 1){
+       resB0[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB0[i,7] >= 1 & elaB0[i,9] < 1){
+       resB0[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB0[i,7] < 1 & elaB0[i,9] >= 1){
+       resB0[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB0[i,7] < 1 & elaB0[i,9] < 1){
+       resB0[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB0 <- rep(x=0, times=dim(elaB0)[1]);
+for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
+   if(elaB0[i,8] >= 1){
+       polB0[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB0[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB0[,3], y=elaB0[,5], cex=1.9, lwd=2, col=polB0, pch=21, bg=resB0,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
 
 
+
+
+
+
+
+
+# ------------------------------------------------------------------------#
 # -----------  BETA = 1  -------------------------------------------------#
+# ------------------------------------------------------------------------#
 elaB1 <- ela_rand_pc_00[ela_rand_pc_00[,2]==1,];
 resB1 <- rep(x=0, times=dim(elaB1)[1]);
 for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
