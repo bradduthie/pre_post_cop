@@ -161,7 +161,9 @@ Results
 
 Figures and tables to include:
 
-  1. Table or figure qualitatively mapping out where each of the following parameter values occurs:
+  1. Figure showing composite of 10 replicates with all combinations of zero and 0.02 cost values, showing the dynamics over generations.
+
+  2. Figure showing random combinations of mating and fertilisation costs, with set polyandry costs of 0, 0.01, and 0.02 -- and 4 beta values. This table will show end results:
 
     - Selection for both precopulatory and postcopulatory inbreeding adjustment
 
@@ -171,11 +173,6 @@ Figures and tables to include:
 
     - Selection for neither precopulatory nor postcopulatory inbreeding adjustment
 
-  2. One figure summarising allele end frequency distributions -- I'm not sure if it will be necessary to show all of them, as this isn't quite where we're going with this manuscript, but it would be a good idea to help readers see some of the stochastic variation associated with different parameter combinations. Some of this stochastic variation will need to be represented or explained in Table or Figure 1.
-
-  3. One figure summarising change in allele values over time -- I think this will be helpful to show readers the dynamics of alleles and traits, as the timing of pre versus postcopulatory selection will likely matter, especially because selection on postcopulatory inbreeding adjustment is contingent upon polyandry.
-
-  4. Perhaps a paper showing the distributions of kinship, maybe across different parameter combinations? This would depend on immigrant number, of course, but we could check to what extent this differs among different parameter combinations at a given immigration rate. If the difference is substantial, it might be worth showing, especially because we're going to probably want to make an argument that kinship distribution is important.
 
 
 Discussion
