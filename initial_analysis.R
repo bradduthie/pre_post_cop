@@ -1616,9 +1616,9 @@ mtext(text=expression(paste(beta==1)),side=4,outer=TRUE,at=0.625, cex=1.75, line
 mtext(text=expression(paste(beta==2)),side=4,outer=TRUE,at=0.375, cex=1.75, line=1.25);
 mtext(text=expression(paste(beta==3)),side=4,outer=TRUE,at=0.125, cex=1.75, line=1.25);
 
-mtext(text=expression(paste("Cost of mating strategy (",c[M],")")),side=1,outer=TRUE,at=0.5, cex=1.75, line = 3.25);
+mtext(text=expression(paste("Cost of inbreeding mating strategy (",c[M],")")),side=1,outer=TRUE,at=0.5, cex=1.75, line = 3.25);
 
-mtext(text=expression(paste("Cost of fertilisation strategy (",c[F],")")), side=2, outer=TRUE, at=0.5, cex=1.75, line = 2.25);
+mtext(text=expression(paste("Cost of inbreeding fertilisation strategy (",c[F],")")), side=2, outer=TRUE, at=0.5, cex=1.75, line = 2.25);
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
