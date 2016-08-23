@@ -1192,14 +1192,21 @@ evo_rand_pc_01 <- read.table(file="evo_rand_pc_01.txt", header=FALSE);
 ela_rand_pc_01 <- evo_rand_pc_01[evo_rand_pc_01[,6]==4999,];
 write.table(x=ela_rand_pc_01, file="ela_rand_pc_01.txt", col.names=FALSE, row.names=FALSE);
 
+evo_rand_pc_02 <- read.table(file="evo_rand_pc_02.txt", header=FALSE);
+ela_rand_pc_02 <- evo_rand_pc_02[evo_rand_pc_02[,6]==4999,];
+write.table(x=ela_rand_pc_02, file="ela_rand_pc_02.txt", col.names=FALSE, row.names=FALSE);
+
 # ------------------------------------------------------------------------#
 # ------------------------------------------------------------------------#
 # ------------------------------------------------------------------------#
+
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
 
 ela_rand_pc_00 <- read.table(file="ela_rand_pc_00.txt", header=FALSE);
 ela_rand_pc_01 <- read.table(file="ela_rand_pc_01.txt", header=FALSE);
+ela_rand_pc_02 <- read.table(file="ela_rand_pc_02.txt", header=FALSE);
 
-par(mfrow=c(4,3), mar=c(0.5,0.5,0.5,0.5), oma=c(5,5,1,1));
+par(mfrow=c(4,3), mar=c(0.5,0.5,0.5,0.5), oma=c(5,5,3,3));
 
 # ------------------------------------------------------------------------#
 # -----------  BETA = 0  -------------------------------------------------#
@@ -1232,7 +1239,11 @@ for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
 }
 plot(x=elaB0[,3], y=elaB0[,5], cex=1.9, lwd=2, col=polB0, pch=21, bg=resB0,
      xlab="", xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
-     ylab="Cost of post-cop inbreeding preference");
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+axis(side=2, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+     #labels=c("0","","0.02","", "0.04",""));
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="A", cex=2.00, pos=1, col="white");
 
 # -----------  P-cost = 0.01 ------------
 elaB0 <- ela_rand_pc_01[ela_rand_pc_01[,2]==0,];
@@ -1262,17 +1273,45 @@ for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
 plot(x=elaB0[,3], y=elaB0[,5], cex=1.9, lwd=2, col=polB0, pch=21, bg=resB0,
      xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
      ylab="Cost of post-cop inbreeding preference", yaxt="n");
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="B", cex=2.00, pos=1, col="white");
 
-
-
-
-
-
-
+# -----------  P-cost = 0.02 ------------
+elaB0 <- ela_rand_pc_02[ela_rand_pc_02[,2]==0,];
+resB0 <- rep(x=0, times=dim(elaB0)[1]);
+for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
+   if(elaB0[i,7] >= 1 & elaB0[i,9] >= 1){
+       resB0[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB0[i,7] >= 1 & elaB0[i,9] < 1){
+       resB0[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB0[i,7] < 1 & elaB0[i,9] >= 1){
+       resB0[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB0[i,7] < 1 & elaB0[i,9] < 1){
+       resB0[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB0 <- rep(x=0, times=dim(elaB0)[1]);
+for(i in 1:dim(elaB0)[1]){ # Doing this as a loop just to show the logic
+   if(elaB0[i,8] >= 1){
+       polB0[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB0[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB0[,3], y=elaB0[,5], cex=1.9, lwd=2, col=polB0, pch=21, bg=resB0,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="C", cex=2.00, pos=1, col="white");
 
 # ------------------------------------------------------------------------#
 # -----------  BETA = 1  -------------------------------------------------#
 # ------------------------------------------------------------------------#
+
+# -----------  P-cost = 0 ---------------
 elaB1 <- ela_rand_pc_00[ela_rand_pc_00[,2]==1,];
 resB1 <- rep(x=0, times=dim(elaB1)[1]);
 for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
@@ -1298,13 +1337,288 @@ for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
    }
 }
 plot(x=elaB1[,3], y=elaB1[,5], cex=1.9, lwd=2, col=polB1, pch=21, bg=resB1,
-     xlab="Cost of pre-cop inbreeding preference",
-     ylab="Cost of post-cop inbreeding preference");
+     xlab="", xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+axis(side=2, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+     #labels=c("0","","0.02","", "0.04","")); 
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="D", cex=2.00, pos=1, col="white");
 
+# -----------  P-cost = 0.01 ------------
+elaB1 <- ela_rand_pc_01[ela_rand_pc_01[,2]==1,];
+resB1 <- rep(x=0, times=dim(elaB1)[1]);
+for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
+   if(elaB1[i,7] <= -1 & elaB1[i,9] <= -1){
+       resB1[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB1[i,7] <= -1 & elaB1[i,9] > -1){
+       resB1[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB1[i,7] > -1 & elaB1[i,9] <= -1){
+       resB1[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB1[i,7] > -1 & elaB1[i,9] > -1){
+       resB1[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB1 <- rep(x=0, times=dim(elaB1)[1]);
+for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
+   if(elaB1[i,8] >= 1){
+       polB1[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB1[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB1[,3], y=elaB1[,5], cex=1.9, lwd=2, col=polB1, pch=21, bg=resB1,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="E", cex=2.00, pos=1, col="white");
 
+# -----------  P-cost = 0.02 ------------
+elaB1 <- ela_rand_pc_02[ela_rand_pc_02[,2]==1,];
+resB1 <- rep(x=0, times=dim(elaB1)[1]);
+for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
+   if(elaB1[i,7] <= -1 & elaB1[i,9] <= -1){
+       resB1[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB1[i,7] <= -1 & elaB1[i,9] > -1){
+       resB1[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB1[i,7] > -1 & elaB1[i,9] <= -1){
+       resB1[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB1[i,7] > -1 & elaB1[i,9] > -1){
+       resB1[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB1 <- rep(x=0, times=dim(elaB1)[1]);
+for(i in 1:dim(elaB1)[1]){ # Doing this as a loop just to show the logic
+   if(elaB1[i,8] >= 1){
+       polB1[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB1[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB1[,3], y=elaB1[,5], cex=1.9, lwd=2, col=polB1, pch=21, bg=resB1,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="F", cex=2.00, pos=1, col="white");
 
+# ------------------------------------------------------------------------#
+# -----------  BETA = 2  -------------------------------------------------#
+# ------------------------------------------------------------------------#
 
+# -----------  P-cost = 0 ---------------
+elaB2 <- ela_rand_pc_00[ela_rand_pc_00[,2]==2,];
+resB2 <- rep(x=0, times=dim(elaB2)[1]);
+for(i in 1:dim(elaB2)[1]){ # Doing this as a loop just to show the logic
+   if(elaB2[i,7] <= -1 & elaB2[i,9] <= -1){
+       resB2[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB2[i,7] <= -1 & elaB2[i,9] > -1){
+       resB2[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB2[i,7] > -1 & elaB2[i,9] <= -1){
+       resB2[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB2[i,7] > -1 & elaB2[i,9] > -1){
+       resB2[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB2 <- rep(x=0, times=dim(elaB2)[1]);
+for(i in 1:dim(elaB2)[1]){ # Doing this as a loop just to show the logic
+   if(elaB2[i,8] >= 1){
+       polB2[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB2[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB2[,3], y=elaB2[,5], cex=1.9, lwd=2, col=polB2, pch=21, bg=resB2,
+     xlab="", xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+axis(side=2, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+     #labels=c("0","","0.02","", "0.04","")); 
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="G", cex=2.00, pos=1, col="white");
 
+# -----------  P-cost = 0.01 ------------
+elaB2 <- ela_rand_pc_01[ela_rand_pc_01[,2]==2,];
+resB2 <- rep(x=0, times=dim(elaB2)[1]);
+for(i in 1:dim(elaB2)[1]){ # Doing this as a loop just to show the logic
+   if(elaB2[i,7] <= -1 & elaB2[i,9] <= -1){
+       resB2[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB2[i,7] <= -1 & elaB2[i,9] > -1){
+       resB2[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB2[i,7] > -1 & elaB2[i,9] <= -1){
+       resB2[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB2[i,7] > -1 & elaB2[i,9] > -1){
+       resB2[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB2 <- rep(x=0, times=dim(elaB2)[1]);
+for(i in 1:dim(elaB2)[1]){ # Doing this as a loop just to show the logic
+   if(elaB2[i,8] >= 1){
+       polB2[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB2[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB2[,3], y=elaB2[,5], cex=1.9, lwd=2, col=polB2, pch=21, bg=resB2,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="H", cex=2.00, pos=1, col="white");
+
+# -----------  P-cost = 0.02 ------------
+elaB2 <- ela_rand_pc_02[ela_rand_pc_02[,2]==2,];
+resB2 <- rep(x=0, times=dim(elaB2)[1]);
+for(i in 1:dim(elaB2)[1]){ # Doing this as a loop just to show the logic
+   if(elaB2[i,7] <= -1 & elaB2[i,9] <= -1){
+       resB2[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB2[i,7] <= -1 & elaB2[i,9] > -1){
+       resB2[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB2[i,7] > -1 & elaB2[i,9] <= -1){
+       resB2[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB2[i,7] > -1 & elaB2[i,9] > -1){
+       resB2[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB2 <- rep(x=0, times=dim(elaB2)[1]);
+for(i in 1:dim(elaB2)[1]){ # Doing this as a loop just to show the logic
+   if(elaB2[i,8] >= 1){
+       polB2[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB2[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB2[,3], y=elaB2[,5], cex=1.9, lwd=2, col=polB2, pch=21, bg=resB2,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="I", cex=2.00, pos=1, col="white");
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 3  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+
+# -----------  P-cost = 0 ---------------
+elaB3 <- ela_rand_pc_00[ela_rand_pc_00[,2]==3,];
+resB3 <- rep(x=0, times=dim(elaB3)[1]);
+for(i in 1:dim(elaB3)[1]){ # Doing this as a loop just to show the logic
+   if(elaB3[i,7] <= -1 & elaB3[i,9] <= -1){
+       resB3[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB3[i,7] <= -1 & elaB3[i,9] > -1){
+       resB3[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB3[i,7] > -1 & elaB3[i,9] <= -1){
+       resB3[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB3[i,7] > -1 & elaB3[i,9] > -1){
+       resB3[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB3 <- rep(x=0, times=dim(elaB3)[1]);
+for(i in 1:dim(elaB3)[1]){ # Doing this as a loop just to show the logic
+   if(elaB3[i,8] >= 1){
+       polB3[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB3[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB3[,3], y=elaB3[,5], cex=1.9, lwd=2, col=polB3, pch=21, bg=resB3,
+     xlab="", xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+axis(side=2, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+     #labels=c("0","","0.02","", "0.04","")); 
+axis(side=1, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="J", cex=2.00, pos=1, col="white");
+
+# -----------  P-cost = 0.01 ------------
+elaB3 <- ela_rand_pc_01[ela_rand_pc_01[,2]==3,];
+resB3 <- rep(x=0, times=dim(elaB3)[1]);
+for(i in 1:dim(elaB3)[1]){ # Doing this as a loop just to show the logic
+   if(elaB3[i,7] <= -1 & elaB3[i,9] <= -1){
+       resB3[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB3[i,7] <= -1 & elaB3[i,9] > -1){
+       resB3[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB3[i,7] > -1 & elaB3[i,9] <= -1){
+       resB3[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB3[i,7] > -1 & elaB3[i,9] > -1){
+       resB3[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB3 <- rep(x=0, times=dim(elaB3)[1]);
+for(i in 1:dim(elaB3)[1]){ # Doing this as a loop just to show the logic
+   if(elaB3[i,8] >= 1){
+       polB3[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB3[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB3[,3], y=elaB3[,5], cex=1.9, lwd=2, col=polB3, pch=21, bg=resB3,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+axis(side=1, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="K", cex=2.00, pos=1, col="white");
+
+# -----------  P-cost = 0.02 ------------
+elaB3 <- ela_rand_pc_02[ela_rand_pc_02[,2]==3,];
+resB3 <- rep(x=0, times=dim(elaB3)[1]);
+for(i in 1:dim(elaB3)[1]){ # Doing this as a loop just to show the logic
+   if(elaB3[i,7] <= -1 & elaB3[i,9] <= -1){
+       resB3[i] <- "purple"; # Pre and post-copulatory evolved
+   }
+   if(elaB3[i,7] <= -1 & elaB3[i,9] > -1){
+       resB3[i] <- "blue"; # Pre but not post-copulatory evolved
+   }
+   if(elaB3[i,7] > -1 & elaB3[i,9] <= -1){
+       resB3[i] <- "orange"; # Post but not pre-copulatory evolved
+   }
+   if(elaB3[i,7] > -1 & elaB3[i,9] > -1){
+       resB3[i] <- "grey80"; # Neither pre nor post evolved
+   }
+}
+polB3 <- rep(x=0, times=dim(elaB3)[1]);
+for(i in 1:dim(elaB3)[1]){ # Doing this as a loop just to show the logic
+   if(elaB3[i,8] >= 1){
+       polB3[i] <- "red"; # Pre and post-copulatory evolved
+   }else{
+       polB3[i] <- "black"; # Pre but not post-copulatory evolved
+   }
+}
+plot(x=elaB3[,3], y=elaB3[,5], cex=1.9, lwd=2, col=polB3, pch=21, bg=resB3,
+     xlab="",xaxt="n", cex.lab=1.5, cex.axis = 1.5, 
+     ylab="Cost of post-cop inbreeding preference", yaxt="n");
+axis(side=1, cex.axis=1.75, at=c(0, 0.01, 0.02, 0.03, 0.04, 0.05));#, 
+polygon(x=c(-0.05, -0.05, 0.005, 0.005), y=c(0.045, 0.055, 0.055, 0.045), col="black");
+text(x=0.00175, y=0.051, labels="L", cex=2.00, pos=1, col="white");
+
+mtext(text=expression(paste(c[P]==0.00)),side=3,outer=TRUE,at=0.175, cex=1.75, line=-0.25);
+mtext(text=expression(paste(c[P]==0.01)),side=3,outer=TRUE,at=0.500, cex=1.75, line=-0.25);
+mtext(text=expression(paste(c[P]==0.02)),side=3,outer=TRUE,at=0.825, cex=1.75, line=-0.25);
+
+mtext(text=expression(paste(beta==0)),side=4,outer=TRUE,at=0.850, cex=1.75, line=1.25);
+mtext(text=expression(paste(beta==1)),side=4,outer=TRUE,at=0.625, cex=1.75, line=1.25);
+mtext(text=expression(paste(beta==2)),side=4,outer=TRUE,at=0.375, cex=1.75, line=1.25);
+mtext(text=expression(paste(beta==3)),side=4,outer=TRUE,at=0.125, cex=1.75, line=1.25);
+
+mtext(text=expression(paste("Cost of mating strategy (",c[M],")")),side=1,outer=TRUE,at=0.5, cex=1.75, line = 3.25);
+
+mtext(text=expression(paste("Cost of fertilisation strategy (",c[F],")")), side=2, outer=TRUE, at=0.5, cex=1.75, line = 2.25);
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
