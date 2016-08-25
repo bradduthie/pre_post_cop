@@ -3,9 +3,9 @@ title: "Evolution of precopulatory and postcopulatory inbreeding behaviour"
 author: "A. Bradley Duthie et al."
 date: "August 24, 2016"
 output:
-  html_document: default
   pdf_document:
     fig_caption: yes
+  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
@@ -71,12 +71,20 @@ Inbreeding depression
 
 The viability of a focal female $i$'s offspring ($\Psi_{\textrm{off}}$) decreases as a function of the kinship coefficient between $i$ and the sire of her offspring $j$ ($k_{ij}$), and a log-linear slope of inbreeding depression $\beta$,
 \begin{equation}
-\Psi_{off} = e^{-\beta k_{ij}}
+\Psi_{\textrm{off}} = e^{-\beta k_{ij}}
 \end{equation}
-The slope $\beta$ models the number of haploid lethal equivalents that exist in the gametes of $i$ and $j$, and which might combine to become homozygous in offspring and reduce viability. Equation 1 assumes that each deleterious recessive allele affects offspring viability independently, meaning that every deleterious recessive allele added will have a multiplicative affect on decreasing viability [@Morton1956; Mills1994], causing the log-linear relationship between parent kinship and inbreeding depression. We assume that inbreeding depression always decreases offspring viability, $\beta \geq 0$ (i.e., no outbreeding depression). Therefore, because $k_{ij}$ is constrained to values between zero and one, the product of $-\beta$ and $k_{ij}$ must be a value less than or equal to zero, $-\beta \times \k_{ij} leq 0$. Values of $\Psi_{off}$ must therefore be between zero and one. We can therefore define $\Psi_{off}$ as the probability that an offspring is viable, and sample its realised viability using a Bernoulli trial.
+The slope $\beta$ models the number of haploid lethal equivalents that exist in the gametes of $i$ and $j$, and which might combine to become homozygous in offspring and reduce viability. Equation 1 assumes that each deleterious recessive allele affects offspring viability independently, meaning that every deleterious recessive allele added will have a multiplicative affect on decreasing viability [@Morton1956; @Mills1994], causing the log-linear relationship between parent kinship and inbreeding depression. We assume that inbreeding depression always decreases offspring viability, $\beta \geq 0$ (i.e., no outbreeding depression). Therefore, because $k_{ij}$ is constrained to values between zero and one, the product of $-\beta$ and $k_{ij}$ must be a value less than or equal to zero, $-\beta \times k_{ij} \leq 0$. Values of $\Psi_{\textrm{off}}$ must therefore be between zero and one. We can therefore define $\Psi_{\textrm{off}}$ as the probability that an offspring is viable, and sample its realised viability using a Bernoulli trial.
 
 Immigration
 ----------------------------------------------
+
+After offspring viability is realised, $\rho$ adult immigrants are added to the focal population. The coefficient of kinship between an immigrant and all other individuals (including native individuals and other immigrants) always equals zero ($k_{ij}=0$). Because kinship coefficient values are calculated directly from the pedigree of the focal population, the addition of immigrants thereby introduces non-kin into the population at a consistent rate and prevents the mean kinship coefficient of the population from asymptoting to a value of 1 over generations. If the focal population was instead closed ($\rho=0$), then all alleles would quickly be expected to become identical-by-descent among descendants of the ancestral population. To avoid having immigrants affect the evolution of tendency for polyandry ($P_{p}$), inbreeding mating strategy ($M_{p}$), and inbreeding fertilisation strategy ($F_{p}$), immigrants are always male and can therefore be chosen based on their kinship values of zero but not actively affect reproductive decisions through the expression of $P_{p}$, $M_{p}$, or $F_{p}$. To further avoid having immigrants affect evolutionary dynamics, allele values underlying tendency for polyandry ($P_{a}$), inbreeding mating strategy ($M_{a}$), and inbreeding fertilisation strategy ($F_{a}$) are randomly sampled from normal distributions with means and standard deviations of $P_{a}$, $M_{a}$, and $F_{a}$ values equal to the means and standard deviations of those in the focal population at the time of immigration. Overall, this model of immigration effectively assumes that the focal population receives immigrants from other nearby populations that are subject to the same selection on $P_{p}$, $M_{p}$, and $F_{p}$.
+
+Density regulation
+----------------------------------------------
+
+
+
 
 
 ******************************
@@ -84,7 +92,6 @@ Immigration
 
 Results
 ===================================================
-
 
 
 ******************************
