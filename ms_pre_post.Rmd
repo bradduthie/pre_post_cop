@@ -69,9 +69,14 @@ The probability that an offspring of a focal female $i$ is fertilised by one of 
 Inbreeding depression
 ----------------------------------------------
 
+The viability of a focal female $i$'s offspring ($\Psi_{\textrm{off}}$) decreases as a function of the kinship coefficient between $i$ and the sire of her offspring $j$ ($k_{ij}$), and a log-linear slope of inbreeding depression $\beta$,
+\begin{equation}
+\Psi_{off} = e^{-\beta k_{ij}}
+\end{equation}
+The slope $\beta$ models the number of haploid lethal equivalents that exist in the gametes of $i$ and $j$, and which might combine to become homozygous in offspring and reduce viability. Equation 1 assumes that each deleterious recessive allele affects offspring viability independently, meaning that every deleterious recessive allele added will have a multiplicative affect on decreasing viability [@Morton1956; Mills1994], causing the log-linear relationship between parent kinship and inbreeding depression. We assume that inbreeding depression always decreases offspring viability, $\beta \geq 0$ (i.e., no outbreeding depression). Therefore, because $k_{ij}$ is constrained to values between zero and one, the product of $-\beta$ and $k_{ij}$ must be a value less than or equal to zero, $-\beta \times \k_{ij} leq 0$. Values of $\Psi_{off}$ must therefore be between zero and one. We can therefore define $\Psi_{off}$ as the probability that an offspring is viable, and sample its realised viability using a Bernoulli trial.
 
-
-
+Immigration
+----------------------------------------------
 
 
 ******************************
