@@ -89,6 +89,8 @@ Rather than starting everything off at zero, these simulations would be better o
 
 Update 15 AUG: I have committed and started running new code that randomises allele values for initial individuals. I'm still not sure that this is the best route given the above reasoning, but it is worth checking to see if the results are markedly different from simulations in which values are initialised at zero.
 
+Update as a result of meeting on 26 Aug: 
+
 Relevant references
 ===================================================================
 
@@ -127,7 +129,7 @@ Introduction
   3. Something else entirely -- perhaps to look at a specific mechanism of interest and see under what conditions selection favours it. This was an early idea, but I don't think we've decided to go in this direction.
 
 Model **PARAGRAPH STRUCTURE AS FOR THE MANUSCRIPT**
--------------------------------------------------------------------
+------------------------------------------------------------------- 
 
 *Use the subscripts for polyandry (P; self-evident), pre-copulatory inbreeding strategy (M; for mating strategy), and postcopulatory inbreeding strategy (F: for fertilisation strategy). Early on, it will be useful to more broadly define and distinguish between 'mating strategy' (pre-copulatory inbreeding strategy) and 'fertilisation strategy' (post-copulatory inbreeding strategy). Throughout, we can now refer to 'mating' and 'fertilisation'.*
 
