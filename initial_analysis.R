@@ -134,8 +134,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_corrs02_B0.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
 c_WP_EP <- rep(x=0, times=gens);
@@ -160,8 +160,6 @@ text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-200, y=0.88, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -373,8 +371,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_corrs02_B1.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
 c_WP_EP <- rep(x=0, times=gens);
@@ -399,8 +397,6 @@ text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-200, y=0.88, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -612,8 +608,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_corrs02_B2.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
 c_WP_EP <- rep(x=0, times=gens);
@@ -638,8 +634,6 @@ text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-200, y=0.88, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -851,8 +845,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_corrs02_B3.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
 c_WP_EP <- rep(x=0, times=gens);
@@ -877,8 +871,6 @@ text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-200, y=0.88, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -1107,8 +1099,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_combs02_B0.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -1140,8 +1132,6 @@ text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-100, y=3.0, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -1407,8 +1397,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_combs02_B1.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -1440,8 +1430,6 @@ text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-100, y=3.0, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -1702,8 +1690,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_combs02_B2.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -1735,8 +1723,6 @@ text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-100, y=3.0, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
@@ -2001,8 +1987,8 @@ setEPS(); # postscript below for final publication?
 cairo_ps("evo_combs02_B3.eps",family="Arial",height=8,width=5.5);
 par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
-evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,];
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -2034,8 +2020,6 @@ text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-100, y=3.0, label="A", cex=2, pos=4);
-points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
-points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
