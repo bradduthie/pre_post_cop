@@ -1,10 +1,1100 @@
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# READ THESE PROGRAMS IN FOR SHOWING END CORRELATIONS LATER               #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+#http://musicroamer.com/blog/2011/01/16/r-tips-and-tricks-modified-pairs-plot/
+panel.cor.scale <- function(x, y, digits=2, prefix="", cex.cor){
+	usr <- par("usr"); on.exit(par(usr))
+	par(usr = c(0, 1, 0, 1))
+	r = (cor(x, y,use="pairwise"))
+	txt <- format(c(r, 0.123456789), digits=digits)[1]
+	txt <- paste(prefix, txt, sep="")
+	if(missing(cex.cor)) cex <- 0.8/strwidth(txt)
+	text(0.5, 0.5, txt, cex = cex * abs(r))
+}
+
+panel.cor <- function(x, y, digits=2, prefix="", cex.cor){
+	usr <- par("usr"); on.exit(par(usr))
+	par(usr = c(0, 1, 0, 1))
+	r = (cor(x, y,use="pairwise"))
+	txt <- format(c(r, 0.123456789), digits=digits)[1]
+	txt <- paste(prefix, txt, sep="")
+	if(missing(cex.cor)) cex <- 0.8/strwidth(txt)
+	text(0.5, 0.5, txt, cex = cex )
+}
+
+panel.hist <- function(x, ...){
+	usr <- par("usr"); on.exit(par(usr))
+	par(usr = c(usr[1:2], 0, 1.5) )
+	h <- hist(x, plot = FALSE)
+	breaks <- h$breaks; nB <- length(breaks)
+	y <- h$counts; y <- y/max(y)
+	rect(breaks[-nB], 0, breaks[-1], y, col="grey70", ...)
+}
+
+pairs.panels <- function (x,y,smooth=TRUE,scale=FALSE){
+	if(smooth){
+		if (scale) {
+			pairs(x,
+			diag.panel  = panel.hist,
+			upper.panel = panel.cor.scale,
+			lower.panel = panel.smooth)
+		}
+		else{
+			pairs(x,
+				diag.panel  = panel.hist,
+				upper.panel = panel.cor,
+				lower.panel = panel.smooth)
+		}
+	}else{ 
+		if(scale){
+			pairs(x,
+				diag.panel=panel.hist,
+				upper.panel=panel.cor.scale)
+			}else{pairs(x,
+				diag.panel=panel.hist,
+				upper.panel=panel.cor)
+			}
+	} #end of else (smooth)
+} #end of function
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX Multi-panel figure plotting correlations        XXX XXX XXX #
+# XXX XXX XXX *after* 10000 generations                       XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+rm(list=ls()); 
+library(scatterplot3d);
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
+
+gens      <- 9999;
+
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+# ------------------------------------------------------------------------#
+# -----------  BETA = 0  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 0;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_corrs02_B0.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val & evB[,6]==gens,]; 
+WP  <- evo[,6];
+PO  <- evo[,7];
+EP  <- evo[,8];
+plot(x=WP,y=PO,lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+
+
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.97, label="A", cex=2, pos=4);
+points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+
+
+
+
+
+
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX Multi-panel figure of correlations betweeen     XXX XXX XXX #
+# XXX XXX XXX over 10000 generations                          XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+rm(list=ls()); 
+library(scatterplot3d);
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
+
+gens      <- 9999;
+# ------------------------------------------------------------------------#
+# -----------  BETA = 0  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 0;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_corrs02_B0.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="A", cex=2, pos=4);
+points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.00,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Correlation between mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 1  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 1;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_corrs02_B1.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="A", cex=2, pos=4);
+points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.00,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Correlation between mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 2  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 2;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_corrs02_B2.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="A", cex=2, pos=4);
+points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.00,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Correlation between mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 3  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 3;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_corrs02_B3.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="A", cex=2, pos=4);
+points(y=c(-8,4),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+points(y=c(4,-8),x=c(0,10000),type="l",lwd=5); # XXX TODO XXX REMOVE THIS #
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F00.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.00,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P00_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M00_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=2,at=c(-0.5,0,0.5,1), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s/evo_M02_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+xxx <- 1:(gens+1);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=2,ylim=c(-1,1),col="black",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=2,col="green",lty="dashed");
+points(x=xxx,y=c_PO_EP,type="l",lwd=2,col="orange",lty="dotted");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=0, y=-0.6, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.775, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
+text(x=0, y=-0.95, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
+text(x=-200, y=0.88, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Correlation between mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+
 rm(list=ls()); 
 library(scatterplot3d);
 setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX Multi-panel figure of traits over genreations   XXX XXX XXX #
-# XXX XXX XXX with fixed polyandry costs, random other costs  XXX XXX XXX #
+# XXX XXX XXX combinations of costs = {0, 0.02}               XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
 gens      <- 9999;
