@@ -1007,7 +1007,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="A", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1033,7 +1033,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="B", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1059,7 +1059,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="C", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1085,7 +1085,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="D", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1111,7 +1111,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="E", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1137,7 +1137,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="F", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1163,7 +1163,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="G", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1189,7 +1189,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="H", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1231,7 +1231,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="A", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1257,7 +1257,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="B", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1283,7 +1283,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="C", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1309,7 +1309,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="D", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1335,7 +1335,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="E", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1361,7 +1361,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="F", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1387,7 +1387,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="G", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1413,7 +1413,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="H", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1454,7 +1454,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="A", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1480,7 +1480,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="B", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1506,7 +1506,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="C", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1532,7 +1532,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="D", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1558,7 +1558,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="E", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1584,7 +1584,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="F", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1610,7 +1610,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="G", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1636,7 +1636,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="H", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1677,7 +1677,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="A", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1703,7 +1703,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="B", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1729,7 +1729,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="C", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1755,7 +1755,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="D", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1781,7 +1781,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=18, label="E", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1807,7 +1807,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="F", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1833,7 +1833,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="G", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -1859,7 +1859,7 @@ text(x=-25, y=-14, label=expression(paste(c[M]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=18, label="H", cex=2, pos=4);
-rho1 <- as.character(round(cor(WP,PO),digits=3));
+rho1 <- as.character(round(cor(PO,WP),digits=3));
 text(x=-1, y=18, label=expression(paste("r = ")), cex=1.6, pos=4);
 text(x=2, y=18, label=rho1, cex=1.6, pos=4);
 rm(evo_cc_02);
@@ -2768,13 +2768,6 @@ mtext(expression(paste("End mean tendency for polyandry allele value (",P[a],")"
 	outer=TRUE,side=2,line=2.5,cex=1.2);
 dev.off();
 
-
-
-
-
-
-
-
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX CORRELATIONS BETWEEN F[a] and P[a]  XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
@@ -2797,7 +2790,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2823,7 +2816,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2849,7 +2842,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2875,7 +2868,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2901,7 +2894,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2927,7 +2920,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2953,7 +2946,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -2979,7 +2972,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3021,7 +3014,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3047,7 +3040,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3073,7 +3066,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3099,7 +3092,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3125,7 +3118,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3151,7 +3144,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3177,7 +3170,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3203,7 +3196,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3244,7 +3237,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3270,7 +3263,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3296,7 +3289,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3322,7 +3315,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3348,7 +3341,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3374,7 +3367,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3400,7 +3393,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3426,7 +3419,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3467,7 +3460,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3493,7 +3486,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3519,7 +3512,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3545,7 +3538,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3571,7 +3564,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3597,7 +3590,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3623,7 +3616,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3649,7 +3642,7 @@ plot(x=PO,y=EP,lwd=2,ylim=c(-20,20),xlim=c(-25,10),col="black",xaxt="n",yaxt="n"
 mod <- lm(EP~PO);
 a   <- mod$coefficients[1];
 b   <- mod$coefficients[2];
-xxx <- seq(from=min(WP),to=max(WP), by=0.01);
+xxx <- seq(from=min(PO),to=max(PO), by=0.01);
 yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
@@ -3670,6 +3663,17 @@ mtext(expression(paste("End mean inbreeding fertilisation strategy allele value 
 mtext(expression(paste("End mean tendency for polyandry allele value (",P[a],")")),
 	outer=TRUE,side=1,line=2.5,cex=1.2);
 dev.off();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
