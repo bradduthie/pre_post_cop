@@ -94,15 +94,35 @@ Update as a result of meeting on 26 Aug:
 Relevant references
 ===================================================================
 
+Empirical evidence of pre-copulatory inbreeding avoidance
+-------------------------------------------------------------------
+
+
+
+Emprical evidence of postcopulatory inbreeding avoidance
+-------------------------------------------------------------------
+
+\cite{Olsson1996a} These female sand lizards appear to accept all copulations, then allocate paternity after mating. Note that they looked at deviation from random mating, not the raw kinship differences. Suggests that females may not avoid, or be able to avoid (e.g., through pre-mating level kin discrimination) inbreeding, but post-copulation, inbreeding avoidance is readily accomplished.
+
+\cite{Pizzari2004} Pizzari et al. use an experiment with red junglefowl (Gallus gallus), mating females with either non-relative or full siblings. They find that the number of sperm arriving to a female's eggs is lower for full siblings than it is for non-relatives after controlling for order of oviposition and social familiarity. Interestingly, female's postcopulatory inbreeding avoidance doesn't increase the risk of producing fertilised eggs.
+
+\cite{Firman2008} Firman and Simmons use an experiment with house mice to show evidence for post-copulatory inbreeding avoidance, and specifically that the advantage of non-relative males versus full-sib males is independent of the order in which mating occurs.
+
 \cite{Bretman2009} Bretman et al. find that female field crickets can decide how much sperm to store in a spermatheca, and that unrelated males ''contribute more sperm to storage and have correspondingly higher paternity success''.
+
+\cite{Gasparini2011} The authors artificially inseminate female guppies with equal amounts of sperm from full-siblings and unrelated males. They find that fertilisation success was higher in non-relatives. This study was also unique in getting at the mechanism of paternity bias, which apperas to be differential sperm velocity (speed?) in the female's ovarian fluid.
+
+\cite{Tuni2013} Found evidence of inbreeding avoidance through the postcopulatory mechanism of biased sperm storage in black field crickets (Teleogryllus commodus). Tuni et al. concluded that females are able to control which males' sperm is transferred to the spermatheca. 
+
+\cite{Firman2015} Use an experiment with house mice in which female mice are fertilised in vitro with the mixed sperm of sibling and non-sibling males. They find a bias toward fertilisation by non-related males, but the fertilisation success of male sperm was not affected by sperm swimming success (e.g., as in Gasparini2011). The authors concluded that the cause of the bias in fertilisation success was sperm selection by the egg through the secretion of gametic proteins.
+
+
+Relevant theory on pre or postcopulatory inbreeding adjustment
+-------------------------------------------------------------------
 
 \cite{Hosken1999} Hosken and Blanckenhorn comment on the relationship between multiple mating and the costs and benefits of inbreeding and genetic diversity. The focal idea is that the relationship between both inbreeding and fitness, and genetic diversity and fitness, should be sigmoidal. Thereby and the inflection point of the function, we have a non-additive relationship such that -- in general terms -- f(y+x) != f(y)+f(x). Authors suggest that this can be predictable, making multiple mating beneficial in small new populations where relatedness is high and genetic diversity is low, but costly for big populations where the opposite is true.
 
 \cite{Tregenza2002} This study (on crickets) claims to be the first to find that polyandry helps females avoid the negative fitness consequences of inbreeding. A key hypothesis here is that males have higher reproductive success when they mate with non-relatives. 
-
-\cite{Olsson1996a} These female sand lizards appear to accept all copulations, then allocate paternity after mating. Note that they looked at deviation from random mating, not the raw kinship differences. Suggests that females may not avoid, or be able to avoid (e.g., through pre-mating level kin discrimination) inbreeding, but post-copulation, inbreeding avoidance is readily accomplished.
-
-\cite{Gasparini2011} The authors artificially inseminate female guppies with equal amounts of sperm from full-siblings and unrelated males. They find that fertilisation success was higher in non-relatives. This study was also unique in getting at the mechanism of paternity bias, which apperas to be differential sperm velocity (speed?) in the female's ovarian fluid.
 
 
 Pre and postcopulatory inbreeding adjustment
