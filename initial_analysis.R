@@ -975,8 +975,6 @@ mtext(expression(paste("End mean inbreeding fertilisation strategy allele value 
 dev.off();
 
 
-
-
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX CORRELATIONS BETWEEN M[a] and P[a]  XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
@@ -1160,7 +1158,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10,20), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -1384,7 +1382,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -1607,7 +1605,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -1830,7 +1828,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -2057,7 +2055,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10,20), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -2281,7 +2279,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -2504,7 +2502,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -2727,7 +2725,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -2769,11 +2767,6 @@ mtext(expression(paste("End mean inbreeding mating strategy allele value (",M[a]
 mtext(expression(paste("End mean tendency for polyandry allele value (",P[a],")")),
 	outer=TRUE,side=2,line=2.5,cex=1.2);
 dev.off();
-
-
-
-
-
 
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
@@ -2959,7 +2952,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10,20), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -3183,7 +3176,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -3406,7 +3399,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -3629,7 +3622,7 @@ yyy <- a + xxx * b;
 points(x=xxx,y=yyy,type="l",lwd=3);
 abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-10,0,10,20), cex.axis=1.5);
-axis(side=1,at=c(-10,0,10), cex.axis=1.5);
+axis(side=1,at=c(-20,-10,0,10), cex.axis=1.5);
 text(x=-25, y=-14, label=expression(paste(c[M]==0.00)),cex=1.25, pos=4);
 text(x=-25, y=-17, label=expression(paste(c[P]==0.02)),cex=1.25, pos=4);
 text(x=-25, y=-20, label=expression(paste(c[F]==0.02)),cex=1.25, pos=4);
@@ -3673,25 +3666,15 @@ mtext(expression(paste("End mean tendency for polyandry allele value (",P[a],")"
 dev.off();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX Multi-panel figure of correlations betweeen     XXX XXX XXX #
 # XXX XXX XXX over 10000 generations                          XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
 rm(list=ls()); 
@@ -4658,7 +4641,7 @@ library(scatterplot3d);
 setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
-# XXX XXX XXX Multi-panel figure of traits over genreations   XXX XXX XXX #
+# XXX XXX XXX Multi-panel figure of traits over generations   XXX XXX XXX #
 # XXX XXX XXX combinations of costs = {0, 0.02}               XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
@@ -5852,6 +5835,1221 @@ dev.off();
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX SAME THING BELOW, BUT FOR THE KNOCK-OUT OF FERTILISATION TRAITS XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+rm(list=ls()); 
+library(scatterplot3d);
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX Multi-panel figure of traits over generations   XXX XXX XXX #
+# XXX XXX XXX combinations of costs = {0, 0.02}               XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+gens      <- 9999;
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 0  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 0;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_combs02_B0_ko.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="A", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 1  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 1;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_combs02_B1_ko.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="A", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 2  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 2;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_combs02_B2_ko.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="A", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# ------------------------------------------------------------------------#
+# -----------  BETA = 3  -------------------------------------------------#
+# ------------------------------------------------------------------------#
+beta_val <- 3;
+setEPS(); # postscript below for final publication?
+cairo_ps("evo_combs02_B3_ko.eps",family="Arial",height=8,width=5.5);
+par(mfrow=c(4,2),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="A", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="C", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="D", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F00_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="E", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P00_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="F", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M00_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+xleg <- seq(from=0,to=2250,by=1);
+yleg <- rep(2,length(xleg));
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="G", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="res_c02s_ko/evo_M02_P02_F02_ko.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+mPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+sPO <- tapply(X=evo[,8],INDEX=evo[,6],FUN=sd);
+sEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
+lPO <- mPO - sPO / sqrt(sum(evo[,6]==gens));
+uEP <- mEP + sEP / sqrt(sum(evo[,6]==gens));
+lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lPO,rev(uPO)),x=c(1:(gens+1),(gens+1):1),border=NA,col="thistle");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+polygon(y=c(lEP,rev(uEP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="grey70");
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-6.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=0, y=-7.25, label=expression(paste(c[P]==0.02)),cex=1, pos=4);
+text(x=0, y=-8.5, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="H", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+
+
+
+
 
 
 
