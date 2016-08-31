@@ -97,9 +97,14 @@ Relevant references
 Empirical evidence of pre-copulatory inbreeding avoidance
 -------------------------------------------------------------------
 
+\cite{Banks2013} Banks and Lindenmayer show that dispersal of male agile antechinus (Antechinus agilis) is affected by the inbreeding risk on the patch to which they arrive. Settlement by males was less likely for patches with female relatives. 
+
+\cite{Kingma2013} Kingma et al. look at extra-pair paternity in purple-crowned fairy wrens (Malurus coronatus) in an observational study. In these wrens, inbreeding depression is severe, and extra-pair mating is rare for females that are paired to non-kin. But females that are paired with kin take extra-pair males at a much higher rate, suggesting inbreeding avoidance.
+
+\cite{Brouwer2011} Brouwer et al. look at red-winged fairy wrens (Malurus elegans), which cooperatively breed, in an observational study. The authors found that the proportion of extra-pair paternity increased with an increase in relatedness between a focal female and her social pair, and the authors infer strong inbreeding avoidance especially when pairing is between first order relatives.  
 
 
-Emprical evidence of postcopulatory inbreeding avoidance
+Empirical evidence of postcopulatory inbreeding avoidance
 -------------------------------------------------------------------
 
 \cite{Olsson1996a} These female sand lizards appear to accept all copulations, then allocate paternity after mating. Note that they looked at deviation from random mating, not the raw kinship differences. Suggests that females may not avoid, or be able to avoid (e.g., through pre-mating level kin discrimination) inbreeding, but post-copulation, inbreeding avoidance is readily accomplished.
