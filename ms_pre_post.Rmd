@@ -28,14 +28,16 @@ Introduction
 ===================================================
 
 <!--- TODO: GENERAL PARAGRAPH INTRODUCING THE SCOPE AND KEY QUESTION --->
-Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the viabilities and genotypes of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016].
+Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the viabilities and genotypes of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016]. For example, the number of mates that an individual has is a fundamental reproductive decision that can directly and indirectly affect an individual's fitness, and potentially alter the distribution of genotypes and patterns of inheritence within focal populations [e.g., @Cornell2007; @Diaz2010; @Okada2015; @Roberts2015a]. The number of mates that an individual chooses, and its expression of mate choice with respect to the potential mates available, might be affected by a mate's genetic quality or complementarity [@Parker2006; @Mays2008]. 
 
+However, --- something something something patterns of outcomes between mate quality and number fundamentally complex ---.
+
+
+<!--- TODO: PARAGRAGH ON EVOLUTION OF POLYANDRY --->
 
 <!--- TODO: PARAGRAGH ON EVOLUTION OF PRE-COPULATORY INBREEDING AVOIDANCE --->
 
 <!--- TODO: PARAGRAGH ON EVOLUTION OF POST-COPULATORY INBREEDING AVOIDANCE --->
-
-<!--- TODO: PARAGRAGH ON EVOLUTION OF POLYANDRY --->
 
 <!--- TODO: PARAGRAGH ON IDEA THAT POSTCOP SELECTION COULD DRIVE SELECTION FOR POLYANDRY --->
 
