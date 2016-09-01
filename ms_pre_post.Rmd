@@ -28,12 +28,14 @@ Introduction
 ===================================================
 
 <!--- TODO: GENERAL PARAGRAPH INTRODUCING THE SCOPE AND KEY QUESTION --->
+Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the viabilities and genotypes of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016].
 
-<!--- TODO: PARAGRAGH ON EVOLUTION OF POLYANDRY --->
 
 <!--- TODO: PARAGRAGH ON EVOLUTION OF PRE-COPULATORY INBREEDING AVOIDANCE --->
 
 <!--- TODO: PARAGRAGH ON EVOLUTION OF POST-COPULATORY INBREEDING AVOIDANCE --->
+
+<!--- TODO: PARAGRAGH ON EVOLUTION OF POLYANDRY --->
 
 <!--- TODO: PARAGRAGH ON IDEA THAT POSTCOP SELECTION COULD DRIVE SELECTION FOR POLYANDRY --->
 
@@ -41,7 +43,7 @@ Introduction
 
 <!--- TODO: PARAGRAGH ON COSTS OF POLYANDRY, MATING, AND FERTILISATION STRATEGIES --->
 
-
+<!--- TODO: OVERVIEW OF THE POINT OF THE MODELLING --->
 Here we apply a model of female and male reproductive interactions and associated inbreeding depression in offspring viability to quantify evolution of three separate traits including female tendency for polyandry, female pre-copulatory inbreeding strategy (mating strategy), and female post-copulatory inbreeding strategy (fertilisation strategy). We use *in silico* experiments to test the hypotheses that, given inbreeding depression in offspring viability, evolution of post-copulatory inbreeding avoidance causes selection for evolution of polyandry, and that pre-copulatory but not post-copulatory inbreeding avoidance will evolve when pre-copulatory inbreeding avoidance is less costly than the combined cost of post-copulatory inbreeding avoidance and polyandry, while post-copulatory but not pre-copulatory inbreeding avoidance will evolve when pre-copulatory inbreeding avoidance is more costly than the combined costs of post-copulatory inbreeding avoidance and polyandry. We thereby provide a framework for predicting evolution of pre-copulatory and post-copulatory inbreeding avoidance across reproductive systems with different relative costs and different magnitudes of inbreeding depression in offspring viability.
 
 
