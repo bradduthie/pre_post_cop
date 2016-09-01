@@ -53,7 +53,8 @@ Random cost simulations with initial trait values of zero
   - PO\_Beta\_2.eps
   - PO\_Beta\_3.eps
 
-Random cost simulations with initial trait values random normal N(0,1)
+
+NO LONGER USING: Random cost simulations with initial trait values random normal N(0,1)
 ------------------------------------------------------------------
 
 - 400 replicate simulations total 
@@ -94,6 +95,11 @@ Update as a result of meeting on 26 Aug:
 Relevant references
 ===================================================================
 
+Reviews of the inbreeding avoidance literature
+-------------------------------------------------------------------
+
+
+
 Empirical evidence of pre-copulatory inbreeding avoidance
 -------------------------------------------------------------------
 
@@ -102,6 +108,8 @@ Empirical evidence of pre-copulatory inbreeding avoidance
 \cite{Kingma2013} Kingma et al. look at extra-pair paternity in purple-crowned fairy wrens (Malurus coronatus) in an observational study. In these wrens, inbreeding depression is severe, and extra-pair mating is rare for females that are paired to non-kin. But females that are paired with kin take extra-pair males at a much higher rate, suggesting inbreeding avoidance.
 
 \cite{Brouwer2011} Brouwer et al. look at red-winged fairy wrens (Malurus elegans), which cooperatively breed, in an observational study. The authors found that the proportion of extra-pair paternity increased with an increase in relatedness between a focal female and her social pair, and the authors infer strong inbreeding avoidance especially when pairing is between first order relatives.  
+
+\cite{Fischer2015} Fischer et al. look at the tropical butterfly (Bicyclus anynana), which is a non-social butterfly in which inbreeding depression is very strong. The authors test whether or not butterflies avoid inbreeding via kin recognition, and whether or not butterflies that differentiate between kin and non-kin are more likely to avoid inbreeding. The authors use controlled experiments of female choice between full-sibs and non-relatives. They looked at the mechanism of kin recognition using antennal responses to cuticular hydrocarbons. Overall, they show evidence of inbreeding avoidance and kin recognition.
 
 
 Empirical evidence of postcopulatory inbreeding avoidance
