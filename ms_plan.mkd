@@ -111,6 +111,8 @@ Empirical evidence of pre-copulatory inbreeding avoidance
 
 \cite{Fischer2015} Fischer et al. look at the tropical butterfly (Bicyclus anynana), which is a non-social butterfly in which inbreeding depression is very strong. The authors test whether or not butterflies avoid inbreeding via kin recognition, and whether or not butterflies that differentiate between kin and non-kin are more likely to avoid inbreeding. The authors use controlled experiments of female choice between full-sibs and non-relatives. They looked at the mechanism of kin recognition using antennal responses to cuticular hydrocarbons. Overall, they show evidence of inbreeding avoidance and kin recognition.
 
+\cite{Daniel2015} Daniel and Rodd use Trinidadian guppies (Poecilia reticulata) to test whether or not females recognise kin and avoid inbreeding. Unique to this study, the authors do not use only virgin females, reasoning that theory predicts females not to be choosy with their first mating. Instead, they present choices for both virgin and already mated females. They also conduct separate trials in which males are familiar versus in which males are unfamiliar. In the case of virgin females, they find no evidence of inbreeding avoidance or effect of male familiarity. For non-virgins, however, they find inbreeding avoidance -- most strongly when males are familiar, but also when males are not familiar.
+
 
 Empirical evidence of postcopulatory inbreeding avoidance
 -------------------------------------------------------------------
