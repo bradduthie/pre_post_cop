@@ -95,6 +95,14 @@ Update as a result of meeting on 26 Aug:
 Relevant references
 ===================================================================
 
+Other relevant literature
+-------------------------------------------------------------------
+
+\cite{Danielsson2001} show evidence for antagonistic selection between pre-copulatory and post-copulatory male body size in water striders.
+
+\cite{Andersson2006} Andersson and Simmons review sexual selection and mate choice, focusing on both pre-copulatory and post-copulatory sexual selection. They state that there is little evidence that post-copulatory selection can amplify pre-copulatory selection, but they note that post-copulatory selection can reduce pre-copulatory sexual selection by cancelling out the effects of male-male competition.
+
+
 Reviews of the inbreeding avoidance literature
 -------------------------------------------------------------------
 
@@ -138,6 +146,9 @@ Relevant theory on pre or postcopulatory inbreeding adjustment
 \cite{Hosken1999} Hosken and Blanckenhorn comment on the relationship between multiple mating and the costs and benefits of inbreeding and genetic diversity. The focal idea is that the relationship between both inbreeding and fitness, and genetic diversity and fitness, should be sigmoidal. Thereby and the inflection point of the function, we have a non-additive relationship such that -- in general terms -- f(y+x) != f(y)+f(x). Authors suggest that this can be predictable, making multiple mating beneficial in small new populations where relatedness is high and genetic diversity is low, but costly for big populations where the opposite is true.
 
 \cite{Tregenza2002} This study (on crickets) claims to be the first to find that polyandry helps females avoid the negative fitness consequences of inbreeding. A key hypothesis here is that males have higher reproductive success when they mate with non-relatives. 
+
+\cite{Zeh1996, Zeh1997} Suggest the idea that females might engage in polyandry to shift to post-copulatory selection: ''Here, we propose that accumulation of sperm from several males shifts the arena for sexual selection from the external environment to the female reproductive tract, where interactions at the molecular and cellular levels can provide females with direct mechanisms for assessing genetic compatibility''
+
 
 
 Pre and postcopulatory inbreeding adjustment
