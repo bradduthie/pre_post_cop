@@ -7,6 +7,11 @@ output:
     fig_caption: yes
   html_document: default
   word_document: null
+header-includes:
+- \usepackage{natbib}
+- \usepackage{lineno}
+- \linenumbers
+- \bibliographystyle{amnatnat}
 linestretch: 1
 bibliography: ms_pre_post.bib
 ---
@@ -28,14 +33,16 @@ Introduction
 ===================================================
 
 <!--- TODO: GENERAL PARAGRAPH INTRODUCING THE SCOPE AND KEY QUESTION --->
-Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the genotypes and viabilities of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016]. For example, the frequency at which a focal female mates is a reproductive decision that can directly and indirectly affect her fitness, and potentially alter the distribution of genotypes and patterns of inheritence within a population [e.g., @Cornell2007; @Diaz2010; @Okada2015; @Roberts2015a; @Worthington2016]. Her mating frequency and expression of mate choice might be affected by the genetic quality or complementarity of available potential mates [@Parker1983 @Parker2006], such as when focal females mate multiply (i.e., polyandry) to avoid inbreeding [e.g., @Mays2008; @Brouwer2011; @Kingma2013; @Duthie]. Mate choice might therefore be realised by evolution of multiple, potentially interdependent, behavioural and physiological phenotypes affecting mating frequency and pre-copulatory and post-copulatory inbreeding avoidance. However, no general modelling framework predicts the conditions under which polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance jointly evolve, meaning that there are no formal hypotheses for predicting which of these reproductive decisions should arise across different biological systems.
-
+Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the genotypes and viabilities of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016]. For example, how often a focal female mates is a reproductive decision that can directly and indirectly affect her fitness, and potentially alter the distribution of genotypes and patterns of inheritence within a population [e.g., @Cornell2007; @Diaz2010; @Okada2015; @Roberts2015a; @Worthington2016]. Her mating frequency and expression of mate choice might be affected by the genetic quality or complementarity of available potential mates, and mate choice might occur before or after copulation [@Parker1983; @Parker2006; @Kuijper2012]. Female mate choice might therefore be realised by evolution of multiple, potentially interdependent, behavioural and physiological phenotypes operating in tandem. However, no general modelling framework predicts the conditions under which polyandry, pre-copulatory mate choice, and post-copulatory mate choice evolve together, meaning that there are no formal hypotheses for predicting the relevance of these reproductive decisions across different biological systems.
 
 <!--- TODO: PARAGRAGH ON INBREEDING, PRE-COP, AND POST-COP AVOIDANCE --->
+Inbreeding, defined as breeding between relatives, directly affects inheritence of identical-by-descent alleles and the viability of inbred offspring, meaning that the decision to prefer, avoid, or tolerate (i.e., mate randomly with respect to relatedness) is predicted to have profound effects on individual fitness [@Parker2006; @Kokko2006; @Szulkin2012; @Duthie2015a]. Viability of inbred offspring typically decreases with increasing relatedness between parents [termed 'inbreeding depression'; @Keller2002; @Charlesworth2009]. If inbreeding depression is sufficiently weak, selection for female inbreeding preference is predicted because inbreeding increases the reproductive success of a focal female's male relative, thereby increasing the number of identical-by-descent copies present in her offspring [@Parker1979; @Parker2006; @Kokko2006; @Duthie2015a]. However, if inbreeding depression is moderate to strong, selection for female inbreeding avoidance is predicted [@Duthie]. Female inbreeding strategy can be enacted before or after copulation occurs [e.g., @Tuni2013; @Firman2015; @Daniel2015; @Fischer2015]. However, models of inbreeding do not consider pre-copulatory inbreeding strategy (hereafter 'inbreeding mating strategy') and post-copulatory inbreeding strategy (hereafter 'inbreeding fertilisation strategy') jointly, meaning that it is unclear when selection for either or both strategies is predicted in empirical systems. 
+
+<!--- such as when focal females mate multiply (i.e., polyandry) to avoid inbreeding  [e.g., @Mays2008; @Brouwer2011; @Kingma2013; @Duthie] --->
 
 
 <!--- TODO: PARAGRAGH ON EVOLUTION OF POLYANDRY --->
-
+Critically, evolution of post-copulatory inbreeding avoidance is precluded if females only mate with one male, meaning that evolution of polyandry is intrinsically tied to female inbreeding fertilisation strategy.
 
 
 <!--- TODO: PARAGRAGH ON IDEA THAT POSTCOP SELECTION COULD DRIVE SELECTION FOR POLYANDRY --->
