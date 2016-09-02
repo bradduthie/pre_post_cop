@@ -28,16 +28,15 @@ Introduction
 ===================================================
 
 <!--- TODO: GENERAL PARAGRAPH INTRODUCING THE SCOPE AND KEY QUESTION --->
-Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the viabilities and genotypes of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016]. For example, the number of mates that an individual has is a fundamental reproductive decision that can directly and indirectly affect an individual's fitness, and potentially alter the distribution of genotypes and patterns of inheritence within focal populations [e.g., @Cornell2007; @Diaz2010; @Okada2015; @Roberts2015a]. The number of mates that an individual chooses, and its expression of mate choice with respect to the potential mates available, might be affected by a mate's genetic quality or complementarity [@Parker2006; @Mays2008]. 
+Reproductive decisions expressed among interacting individuals directly affect individual fitnesses and the genotypes and viabilities of resulting offspring, and thereby profoundly affect evolutionary dynamics through the differential inheritence of alleles over generations [@Pizzari2012; @Wright2013; @Wild2014; @Liao2015; @Reid2016]. For example, the frequency at which a focal female mates is a reproductive decision that can directly and indirectly affect her fitness, and potentially alter the distribution of genotypes and patterns of inheritence within a population [e.g., @Cornell2007; @Diaz2010; @Okada2015; @Roberts2015a; @Worthington2016]. Her mating frequency and expression of mate choice might be affected by the genetic quality or complementarity of available potential mates [@Parker1983 @Parker2006], such as when focal females mate multiply (i.e., polyandry) to avoid inbreeding [e.g., @Mays2008; @Brouwer2011; @Kingma2013; @Duthie]. Mate choice might therefore be realised by evolution of multiple, potentially interdependent, behavioural and physiological phenotypes affecting mating frequency and pre-copulatory and post-copulatory inbreeding avoidance. However, no general modelling framework predicts the conditions under which polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance jointly evolve, meaning that there are no formal hypotheses for predicting which of these reproductive decisions should arise across different biological systems.
 
-However, --- something something something patterns of outcomes between mate quality and number fundamentally complex ---.
+
+<!--- TODO: PARAGRAGH ON INBREEDING, PRE-COP, AND POST-COP AVOIDANCE --->
 
 
 <!--- TODO: PARAGRAGH ON EVOLUTION OF POLYANDRY --->
 
-<!--- TODO: PARAGRAGH ON EVOLUTION OF PRE-COPULATORY INBREEDING AVOIDANCE --->
 
-<!--- TODO: PARAGRAGH ON EVOLUTION OF POST-COPULATORY INBREEDING AVOIDANCE --->
 
 <!--- TODO: PARAGRAGH ON IDEA THAT POSTCOP SELECTION COULD DRIVE SELECTION FOR POLYANDRY --->
 
