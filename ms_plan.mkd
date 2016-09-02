@@ -98,7 +98,7 @@ Relevant references
 Other relevant literature
 -------------------------------------------------------------------
 
-\cite{Danielsson2001} show evidence for antagonistic selection between pre-copulatory and post-copulatory male body size in water striders.
+\cite{Danielsson2001} show evidence for antagonistic selection between pre-copulatory and post-copulatory male body size in water striders. Could talk in the discussion about a trade-off between males for quality, but not for compatability (most likely)? See also \cite{Klaus2011}, in which big male cricket have relatively smaller ejaculates. See also \cite{Lupold2014} for a Nature paper.
 
 \cite{Andersson2006} Andersson and Simmons review sexual selection and mate choice, focusing on both pre-copulatory and post-copulatory sexual selection. They state that there is little evidence that post-copulatory selection can amplify pre-copulatory selection, but they note that post-copulatory selection can reduce pre-copulatory sexual selection by cancelling out the effects of male-male competition.
 
