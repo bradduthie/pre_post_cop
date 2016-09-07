@@ -3,14 +3,14 @@ title: "Evolution of precopulatory and postcopulatory inbreeding behaviour"
 author: "A. Bradley Duthie et al."
 date: "August 24, 2016"
 output:
+  pdf_document:
+    fig_caption: yes
+  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
-  pdf_document:
-    fig_caption: yes
-  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
@@ -141,7 +141,6 @@ To test the hypothesis that the existence of an adaptive inbreeding strategy wil
 
 ******************************
 
-
 Results
 ===================================================
 
@@ -165,7 +164,6 @@ Selection given a pre-existing adaptive inbreeding strategy
 
 Figure 4 will show evolution of $M_{p}$ given pre-existing post-copulatory inbreeding avoidance, and Figure 5 will show evolution of $P_{p}$ and $F_{p}$ given pre-existing pre-copulatory inbreeding avoidance.
 
-
 <!--- Get in there that the replicate simulations don't show evidence of alternative states -- one thing happens or does not, though there is some correlation among traits in replicates ---> 
 
 ******************************
@@ -184,6 +182,23 @@ Acknowledgements
 This work was funded by a European Research Council Starting Grant to JMR. 
 
 **************************
+
+Table 1
+----------------------------------------------
+
+
+|-----|---------------------------------------|-------------|---------------|--------------
+| **A** | **Trait**                           | **Allele**  | **Genotype**  | **Phenotype**
+|       | Tendency for polyandry              | $P_{a}$     | $P_{g}$       | $P_{p}$
+|       | Inbreeding mating strategy          | $M_{a}$     | $M_{g}$       | $M_{p}$
+|       | Inbreeding fertilisation strategy   | $F_{a}$     | $F_{g}$       | $F_{p}$
+|       |                                     |             |               |
+| **B** | **Description**                     | **Parameter**  | | **Defaut value(s)**
+
+
+
+
+
 
 
 References
