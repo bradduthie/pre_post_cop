@@ -617,6 +617,81 @@ mtext(expression(paste("Mean allele value")),
 dev.off();
 #==========================================================================
 
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+rm(list=ls()); 
+
+setwd("~/Dropbox/DuthieManu/pre_post_cop/Initial_Results");
+gens      <- 9999;
+
+# ------------------------------------------------------------------------#
+beta_val <- 3;
+setEPS(); # postscript below for final publication?
+cairo_ps("figures/evo_combs02_B3_ko_FP-5.eps",family="Arial",height=6,width=4);
+par(mfrow=c(2,1),oma=c(5,5,1,1), mar=c(0.5,0.5,0.5,0.5));
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="p_f_ko_5/evo_PF_ko_5.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0,];
+evo <- evB[evB[,2]==beta_val,];
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",
+     xlab="",ylab="Allele value",cex.lab=2,cex.axis=1.5,yaxt="n");
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=rep(x=-5,times=length(xxx)),type="l",lwd=2,col="black");
+points(x=xxx,y=rep(x=1,times=length(xxx)),type="l",lwd=2,col="red");
+abline(h=0,lwd=0.8,lty="dotted");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+text(x=0, y=-8.50, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
+text(x=-100, y=3.0, label="A", cex=2, pos=4);
+# ------------------------------------------------------------------------#
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0,];
+evo <- evB[evB[,2]==beta_val,]; 
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+sWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=sd);
+xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
+len <- dim(evo)[1];
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-9,4),col="blue",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5);
+axis(side=2,at=c(-8,-4,0,4), cex.axis=1.5);
+axis(side=1,at=c(0,2000,4000,6000,8000), cex.axis=1.5);
+points(x=xxx,y=rep(x=-5,times=length(xxx)),type="l",lwd=2,col="black");
+points(x=xxx,y=rep(x=1,times=length(xxx)),type="l",lwd=2,col="red");
+uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
+lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
+polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=0, y=-8.50, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
+text(x=-100, y=3.0, label="B", cex=2, pos=4);
+rm(evo_cc_02);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+dev.off();
+#==========================================================================
+
+
+
+
+
+
+
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
