@@ -69,7 +69,7 @@ Here we apply a model of female and male reproductive interactions and associate
 Model
 ===================================================
 
-We track interactions among discrete individuals in a small focal population that persists over multiple generations. Individuals within this population are either female or male, and can be related to each other if they share a common ancestor. We record the coefficient of kinship ($k$), defined as the probability that a randomly selected homologous allele from each individual is identical-by-descent [@Lynch1998], between all pairs of individuals in each generation using the population pedigree [see @Boyce1983; @Duthie]. At the start of each generation, each female pays up to three independent costs of (1) tendency to engage in polyandry ($c_{P}$), (2) mating strategy with respect to inbreeding ($c_{M}$), and (3) fertilisation strategy with respect to inbreeding ($c_{F}$). The number of males that a focal female mates with ($N_{males}$) is determined by the effects of 20 alleles ($P_{a}$) across 10 diploid loci that combine additively to determine her genotype ($P_{g}$), and ultimately her phenotype for tendency to engage in polandry ($P_{p}$). A focal female's choice of mate(s) is affected by 20 alleles ($M_{a}$) across 10 diploid loci that combine additively to affect her genotype ($M_{g}$) and phenotype ($M_{p}$) for pre-copulatory inbreeding avoidance or preference, and kinship between the focal female and her potential mates. Similarly, after mating has occurred, post-copulatory fertilisation of a focal female's $n$ total offspring is affected by 20 alleles ($F_{a}$) across 10 diploid loci that combine additively to affect the genotype ($F_{g}$) and phenotype ($F_{p}$) of the degree to which fertilisation success is affected by kinship. After fertilisation, the viability of a focal female's $n$ offspring is decreased by inbreeding depression ($\beta$), and surviving offspring become adults. After inbreeding depression in offspring, $\rho$ adult male immigrants arrive in the population, then density effects reduce the entire population down to female ($K_{f}$) and male ($K_{m}$) carrying capacity. Over generations, we record mean values of alleles underlying polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy.
+We track interactions among discrete individuals in a small focal population that persists over multiple generations (Key individual traits, parameter values, and variables are described in Table 1). Individuals within this population are either female or male, and can be related to each other if they share a common ancestor. We record the coefficient of kinship ($k$), defined as the probability that a randomly selected homologous allele from each individual is identical-by-descent [@Lynch1998], between all pairs of individuals in each generation using the population pedigree [see @Boyce1983; @Duthie]. At the start of each generation, each female pays up to three independent costs of (1) tendency to engage in polyandry ($c_{P}$), (2) mating strategy with respect to inbreeding ($c_{M}$), and (3) fertilisation strategy with respect to inbreeding ($c_{F}$). The number of males that a focal female mates with ($N_{males}$) is determined by the effects of 20 alleles ($P_{a}$) across 10 diploid loci that combine additively to determine her genotype ($P_{g}$), and ultimately her phenotype for tendency to engage in polandry ($P_{p}$). A focal female's choice of mate(s) is affected by 20 alleles ($M_{a}$) across 10 diploid loci that combine additively to affect her genotype ($M_{g}$) and phenotype ($M_{p}$) for pre-copulatory inbreeding avoidance or preference, and kinship between the focal female and her potential mates. Similarly, after mating has occurred, post-copulatory fertilisation of a focal female's $n$ total offspring is affected by 20 alleles ($F_{a}$) across 10 diploid loci that combine additively to affect the genotype ($F_{g}$) and phenotype ($F_{p}$) of the degree to which fertilisation success is affected by kinship. After fertilisation, the viability of a focal female's $n$ offspring is decreased by inbreeding depression ($\beta$), and surviving offspring become adults. After inbreeding depression in offspring, $\rho$ adult male immigrants arrive in the population, then density effects reduce the entire population down to female ($K_{f}$) and male ($K_{m}$) carrying capacity. Over generations, we record mean values of alleles underlying polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy.
 
 Costs
 ----------------------------------------------
@@ -194,14 +194,58 @@ Table 1
 |       | Inbreeding fertilisation strategy   | $F_{a}$     | $F_{g}$       | $F_{p}$
 |       |                                     |             |               |
 | **B** | **Description**                     | **Parameter**  | | **Defaut value(s)**
+|       | Cost of tendency for polyandry                 | $c_{P}$        | | $0$, $0.02$
+|       | Cost of inbreeding mating strategy             | $c_{M}$        | | $0$, $0.02$
+|       | Cost of inbreeding fertilisation strategy      | $c_{F}$        | | $0$, $0.02$
+|       | Focal female's number of offspring             | $n$            | | $8$
+|       | Log-linear slope of inbreeding depression      | $\beta$        | | $3$
+|       | Adult male immigrants per generation           | $\rho$         | | $5$
+|       | Female carrying capacity                       | $K_{f}$        | | $100$
+|       | Male carrying capacity                         | $K_{m}$        | | $100$
+|       | Mutation rate of alleles                       | $\mu$          | | $0.001$
+|       | Standard deviation of mutation effect size     | $\mu_{SD}$     | | $\sqrt{1/20}$
+|       |                                                |                | |
+| **C** | **Description**                                                   | | | **Variable**
+|       | Coefficient of kinship                                            | | | $k$
+|       | Focal female's number of mates                                    | | | $N_{males}$
+|       | Female $i$'s perceived absolute mate quality of male $j$          | | | $Q^{m}_{ij}$
+|       | Female $i$'s perceived relative mate quality of male $j$          | | | $q^{m}_{ij}$
+|       | Female $i$'s perceived absolute fertilisation quality of male $j$ | | | $Q^{f}_{ij}$
+|       | Female $i$'s perceived relative fertilisation quality of male $j$ | | | $q^{f}_{ij}$
+|       | Viability of a focal female's offspring                           | | | $\Psi_{off}$
 
 
 
 
+![Full caption to go here](Initial_Results/figures/evo_combs02_B3.png)
+
+![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_F.png)
 
 
 
 References
 ----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
