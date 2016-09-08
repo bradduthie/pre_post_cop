@@ -147,12 +147,19 @@ Results
 Selection for polyandry is driven by inbreeding fertilisation strategy
 ----------------------------------------------
 
-Figure 1 will show a spread of all the results (evo combs02 B3.eps), and be contrasted with the four panel Figure 2 showing results when $F_{p}$ is knocked out (evo combs02 B3 ko F.eps).
+<!--- Figure 1 will show a spread of all the results (evo combs02 B3.eps), and be contrasted with the four panel Figure 2 showing results when $F_{p}$ is knocked out (evo combs02 B3 ko F.eps). --->
+
+We first test our hypothesis that females' ability to bias fertilisation with respect to kinship causes selection for polyandry by comparing simulations in which tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy can all evolve to simulations in which inbreeding fertilisation strategy is fixed to random mating with respect to kinship, as present in Figures 1 and 2, respectively. Figure 1 shows changes in mean allele values of tendency for polyandry ($P_{a}$; red lines and shading), inbreeding mating strategy ($M_{a}$; blue lines and shading), and inbreeding fertilisation strategy ($F_{a}$; black lines and shading) over 10000 generations as calculated across all individuals within a focal population over 40 replicate simulations with identical starting conditions. Solid lines represent the grand mean of replicate mean allele values, and shading around lines shows standard deviations around the mean. Panels A-H show all possible cost combinations for tendency for polyandry ($c_{P}$), inbreeding mating strategy ($c_{M}$), and inbreeding fertilisation strategy ($c_{F}$). Figure 2 shows an equivalent figure with changes in allele values of tendency for polyandry (red lines and shading) and inbreeding mating strategy (blue lines and shading) only. However, in Figure 2, a horizontal black line where mean allele value of inbreeding fertilisation strategy equals zero shows that these allele values have been fixed. Figure 2 has only four panels because costs of inbreeding fertilisation strategy is irrelevant when inbreeding fertilisation strategy alleles have no effect and mating is random (i.e., $F_{p}=0$).
+
+Comparison of Figures 1 and 2 shows that evolution of inbreeding fertilisation strategy facilitates evolution of polyandry, particularly when costs of tendency for polyandry and inbreeding fertilisation strategy are zero. For example, in Figure 2A, tendency for polyandry allele values consistently become negative over generations ($P_{a}<0$; decreasing red line), causing populations to be monandrous. Females in these populations avoid mating with kin ($M_{a}<0$; decreasing blue line), and because these females sample mates with replacement, males that remain after their initial mate choice are more likely to be relatives, causing selection for monandry because females are most likely to succeed in avoiding inbreeding in their initial mate choice [see also @Duthie]. However, Figure 1A shows that when a focal female can also bias the probability that a particular mate sires her offspring, inbreeding fertilisation strategy evolves to inbreeding avoidance ($F_{a}<0$; decreasing black line). Consequently, the ability to bias fertilisation to avoid inbreeding causes polyandry to become adaptive, and positive values of tendency for polyandry alleles increase in frequency ($P_{a}>0$; increasing red line of Figure 1A). Although non-zero costs decrease net selection for both tendency for polyandry and inbreeding fertilisation strategy (see below), across all combinations of costs, tendency for polyandry allele values are more positive when inbreeding fertilisation strategy can also evolve. Evolution of post-copulatory inbreeding avoidance therefore greatly facilitates evolution of polyandry.
+
 
 Selection given relative costs of polyandry and inbreeding strategies
 ----------------------------------------------
 
-Figure 1 will further address hypotheses comparing across different costs.
+Figure 1 shows changes in mean allele values of tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy across all eight possible combinations of costs. We can therefore use Figure 1 to test the hypothesis that inbreeding mating strategy will evolve to inbreeding avoidance ($M_{a}<0$) when mating costs are low ($c_{M}=0$) relative to the costs of tendency for polyandry and inbreeding fertilisation strategy by comparing different cost combinations to the null model in which all costs equal zero (Figure 1A). In Figure 1A, when no phenotypes are costly, inbreeding mating strategy and inbreeding fertilisation strategy evolve to inbreeding avoidance ($M_{a}<0$ and $F_{a}<0$), and females evolve to be polyandrous ($P_{a}>0$). 
+
+
 
 Selection given constraints on evolution
 ----------------------------------------------
@@ -205,22 +212,27 @@ Table 1
 |       | Mutation rate of alleles                       | $\mu$          | | $0.001$
 |       | Standard deviation of mutation effect size     | $\mu_{SD}$     | | $\sqrt{1/20}$
 |       |                                                |                | |
-| **C** | **Description**                                                   | | | **Variable**
-|       | Coefficient of kinship                                            | | | $k$
-|       | Focal female's number of mates                                    | | | $N_{males}$
-|       | Female $i$'s perceived absolute mate quality of male $j$          | | | $Q^{m}_{ij}$
-|       | Female $i$'s perceived relative mate quality of male $j$          | | | $q^{m}_{ij}$
-|       | Female $i$'s perceived absolute fertilisation quality of male $j$ | | | $Q^{f}_{ij}$
-|       | Female $i$'s perceived relative fertilisation quality of male $j$ | | | $q^{f}_{ij}$
-|       | Viability of a focal female's offspring                           | | | $\Psi_{off}$
+| **C** | **Description**                                                   | | **Variable** |
+|       | Coefficient of kinship                                            | | $k$          |
+|       | Focal female's number of mates                                    | | $N_{males}$  |
+|       | Female $i$'s perceived absolute mate quality of male $j$          | | $Q^{m}_{ij}$ |
+|       | Female $i$'s perceived relative mate quality of male $j$          | | $q^{m}_{ij}$ |
+|       | Female $i$'s perceived absolute fertilisation quality of male $j$ | | $Q^{f}_{ij}$ |
+|       | Female $i$'s perceived relative fertilisation quality of male $j$ | | $q^{f}_{ij}$ |
+|       | Viability of a focal female's offspring                           | | $\Psi_{off}$ |
 
 
-
+\vspace{100 mm}
 
 ![Full caption to go here](Initial_Results/figures/evo_combs02_B3.png)
 
 ![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_F.png)
 
+![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_M-0.png)
+
+![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_M-5.png)
+
+![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_FP-5.png)
 
 
 References
