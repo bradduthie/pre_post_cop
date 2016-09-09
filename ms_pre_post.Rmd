@@ -144,7 +144,7 @@ To test the hypothesis that the existence of an adaptive inbreeding strategy wil
 Results
 ===================================================
 
-We present our results by showing mean allele value changes over generations. All Figures 1-5 show changes in mean allele values of tendency for polyandry ($P_{a}$; red lines and shading), inbreeding mating strategy ($M_{a}$; blue lines and shading), and inbreeding fertilisation strategy ($F_{a}$; black lines and shading) over 10000 generations as calculated across all individuals within a focal population over 40 replicate simulations with identical starting conditions. Solid lines represent the grand mean of replicate mean allele values, and shading around lines shows standard deviations around the mean. Panels within figures show different cost combinations for tendency for polyandry ($c_{P}$), inbreeding mating strategy ($c_{M}$), and inbreeding fertilisation strategy ($c_{F}$). Figures have fewer than eight panels if some costs are not relevant because allele values are fixed, and fixed allele values are shown as horizontal lines where line height is set to the value of alleles at fixation. Supporting Information S1 presents correlations of mean allele values across replicate simulations, which were generally weak; we found no evidence suggesting strong evolutionary divergence among replicates with identical starting conditions (e.g., as might be the case if populations stochastically evolved toward inbreeding avoidance through mate choice or fertilisation, but not both), meaning that inspecting grand means of replicate allele values accurately reflects expected evolutionary dynamics over generations.
+We present our results by showing mean allele value changes over generations. Figures 1-5 show changes in mean allele values of tendency for polyandry ($P_{a}$; red lines and shading), inbreeding mating strategy ($M_{a}$; blue lines and shading), and inbreeding fertilisation strategy ($F_{a}$; black lines and shading) over 10000 generations as calculated across all individuals within a focal population over 40 replicate simulations with identical starting conditions. Solid lines represent the grand mean of replicate mean allele values, and shading around lines shows standard deviations around the mean. Panels within figures show different cost combinations for tendency for polyandry ($c_{P}$), inbreeding mating strategy ($c_{M}$), and inbreeding fertilisation strategy ($c_{F}$). Figures have fewer than eight panels if some costs are not relevant because allele values are fixed, and fixed allele values are shown as horizontal lines where line height is set to the value of alleles at fixation. Supporting Information S1 presents correlations of mean allele values across replicate simulations, which were generally weak; we found no evidence suggesting strong evolutionary divergence among replicates with identical starting conditions (e.g., as might be the case if populations stochastically evolved toward inbreeding avoidance through mate choice or fertilisation, but not both), meaning that inspecting grand means of replicate allele values accurately reflects expected evolutionary dynamics over generations.
 
 <!--- Figure 2 shows an equivalent figure with changes in allele values of tendency for polyandry (red lines and shading) and inbreeding mating strategy (blue lines and shading) only. However, in Figure 2, a horizontal black line where mean allele value of inbreeding fertilisation strategy equals zero shows that these allele values have been fixed. Figure 2 has only four panels because costs of inbreeding fertilisation strategy is irrelevant when inbreeding fertilisation strategy alleles have no effect and mating is random (i.e., $F_{p}=0$). --->
 
@@ -153,9 +153,7 @@ Selection for polyandry is driven by inbreeding fertilisation strategy
 
 <!--- Figure 1 will show a spread of all the results (evo combs02 B3.eps), and be contrasted with the four panel Figure 2 showing results when $F_{p}$ is knocked out (evo combs02 B3 ko F.eps). --->
 
-We first test our hypothesis that females' ability to bias fertilisation with respect to kinship causes selection for polyandry by comparing simulations in which tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy can all evolve to simulations in which inbreeding fertilisation strategy is fixed to random mating with respect to kinship, as present in Figures 1 and 2, respectively. 
-
-Comparison of Figures 1 and 2 shows that evolution of inbreeding fertilisation strategy facilitates evolution of polyandry, particularly when costs of tendency for polyandry and inbreeding fertilisation strategy are zero. For example, in Figure 2A, tendency for polyandry allele values consistently become negative over generations ($P_{a}<0$; decreasing red line), causing populations to be monandrous. Females in these populations avoid mating with kin ($M_{a}<0$; decreasing blue line), and because these females sample mates with replacement, males that remain after their initial mate choice are more likely to be relatives, causing selection for monandry because females are most likely to succeed in avoiding inbreeding in their initial mate choice [see also @Duthie]. However, Figure 1A shows that when a focal female can also bias the probability that a particular mate sires her offspring, inbreeding fertilisation strategy evolves to inbreeding avoidance ($F_{a}<0$; decreasing black line). Consequently, the ability to bias fertilisation to avoid inbreeding causes polyandry to become adaptive, and positive values of tendency for polyandry alleles increase in frequency ($P_{a}>0$; increasing red line of Figure 1A). Although non-zero costs decrease net selection for both tendency for polyandry and inbreeding fertilisation strategy (see below), across all combinations of costs, tendency for polyandry allele values are more positive when inbreeding fertilisation strategy can also evolve. Evolution of post-copulatory inbreeding avoidance therefore greatly facilitates evolution of polyandry.
+We first test our hypothesis that females' ability to bias fertilisation with respect to kinship causes selection for polyandry by comparing simulations in which tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy can all evolve to simulations in which inbreeding fertilisation strategy is fixed to random mating with respect to kinship, as present in Figures 1 and 2, respectively. Comparison of Figures 1 and 2 shows that evolution of inbreeding fertilisation strategy facilitates evolution of polyandry, particularly when costs of tendency for polyandry and inbreeding fertilisation strategy are zero. For example, in Figure 2A, tendency for polyandry allele values consistently become negative over generations ($P_{a}<0$; decreasing red line), causing populations to be monandrous. Females in these populations avoid mating with kin ($M_{a}<0$; decreasing blue line), and because these females sample mates with replacement, males that remain after their initial mate choice are more likely to be relatives, causing selection for monandry because females are most likely to succeed in avoiding inbreeding in their initial mate choice [see also @Duthie]. However, Figure 1A shows that when a focal female can also bias the probability that a particular mate sires her offspring, inbreeding fertilisation strategy evolves to inbreeding avoidance ($F_{a}<0$; decreasing black line). Consequently, the ability to bias fertilisation to avoid inbreeding causes polyandry to become adaptive, and positive values of tendency for polyandry alleles increase in frequency ($P_{a}>0$; increasing red line of Figure 1A). Although non-zero costs decrease net selection for both tendency for polyandry and inbreeding fertilisation strategy (see below), across all combinations of costs, tendency for polyandry allele values are more positive when inbreeding fertilisation strategy can also evolve. Evolution of post-copulatory inbreeding avoidance therefore greatly facilitates evolution of polyandry.
 
 
 Selection given relative costs of polyandry and inbreeding strategies
@@ -206,11 +204,10 @@ This work was funded by a European Research Council Starting Grant to JMR.
 
 **************************
 
-
-
 Table 1
 ----------------------------------------------
 
+Individual traits (A), model parameter values (B), and model variables (C) for an individual based model of the evolution of polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy.
 
 |-------|-------------------------------------|-------------|---------------|--------------
 | **A** | **Trait**                           | **Allele**  | **Genotype**  | **Phenotype**
@@ -242,38 +239,19 @@ Table 1
 
 \vspace{100 mm}
 
-![Full caption to go here](Initial_Results/figures/evo_combs02_B3.png)
+![Mean allele values underlying tendency for polyandry (red lines and shading), inbreeding mating strategy (i.e., pre-copulatory choice; blue lines and shading), and inbreeding fertilisation strategy (i.e., post-copulatory choice; black lines and shading), as calculated across all individuals within a population over 10000 generations given strong inbreeding depression. Solid lines represent grand means over 40 replicate populations, and shading around solid lines show standard deviations of allele values around grand means. Negative mean allele values reflect strategies of inbreeding avoidance or tendency for monandry, and positive values reflect strategies of inbreeding preference or tendency for polyandry. Panels A-H show simulations for different combinations of costs for tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy. Dotted horizontal black lines in panels show values of zero on the y-axis.](Initial_Results/figures/evo_combs02_B3.png)
 
-![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_F.png)
+![Mean allele values underlying tendency for polyandry (red lines and shading) and inbreeding mating strategy (i.e., pre-copulatory choice; blue lines and shading), as calculated across all individuals within a population over 10000 generations given strong inbreeding depression when allele values underlying inbreeding fertilisation strategy (i.e., post-copulatory choice) are fixed for random fertilisation among mates (black horizontal lines where y-axes equal zero). Solid lines represent grand means over 40 replicate populations, and shading around solid lines show standard deviations of allele values around grand means. Negative mean allele values reflect strategies of inbreeding avoidance or tendency for monandry, and positive values reflect strategies of inbreeding preference or tendency for polyandry. Panels A-D show simulations for different combinations of costs for tendency for polyandry and inbreeding mating strategy.](Initial_Results/figures/evo_combs02_B3_ko_F.png)
 
-![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_M-0.png)
+![Mean allele values underlying tendency for polyandry (red lines and shading) and inbreeding fertilisation strategy (i.e., post-copulatory choice; black lines and shading), as calculated across all individuals within a population over 10000 generations given strong inbreeding depression when allele values underlying inbreeding mating strategy (i.e., pre-copulatory choice) are fixed for random mating (blue horizontal lines where y-axes equal zero). Solid lines represent grand means over 40 replicate populations, and shading around solid lines show standard deviations of allele values around grand means. Negative mean allele values reflect strategies of inbreeding avoidance or tendency for monandry, and positive values reflect strategies of inbreeding preference or tendency for polyandry. Panels A-D show simulations for different combinations of costs for tendency for polyandry and inbreeding mating strategy.](Initial_Results/figures/evo_combs02_B3_ko_M-0.png)
 
-![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_FP-5.png)
+![Mean allele values underlying inbreeding mating strategy (i.e., pre-copulatory choice; blue lines and shading), as calculated across all individuals within a population over 10000 generations given strong inbreeding depression and the pre-existence of polyandry to avoid inbreeding (tendency for polyandry allele values equal 1, as indicated by horizontal red lines; inbreeding fertilisation strategy values equal -5, as indicated by horizontal black lines). Solid blue lines represent grand means over 40 replicate populations, and blue shading around solid lines shows standard deviations of mean inbreeding mating strategy allele values around grand means. Negative mean allele values reflect a strategy of inbreeding avoidance, and positive values reflect a strategy of inbreeding preference. Panels A and B show replicate simulations in which inbreeding mating strategy is not costly and has a cost of 0.02, respectively. Dotted horizontal black lines in panels show values of zero on the y-axis.](Initial_Results/figures/evo_combs02_B3_ko_FP-5.png)
 
-![Full caption to go here](Initial_Results/figures/evo_combs02_B3_ko_M-5.png)
+![Mean allele values underlying tendency for polyandry (red lines and shading) and inbreeding fertilisation strategy (i.e., post-copulatory choice; black lines and shading), as calculated across all individuals within a population over 10000 generations given strong inbreeding depression and the pre-existence of inbreeding avoidance in mate choice (inbreeding mating strategy values equal -5, as indicated by horizontal blue lines). Solid lines represent grand means over 40 replicate populations, and shading around solid lines show standard deviations of allele values around grand means. Negative mean allele values reflect strategies of inbreeding avoidance or tendency for monandry, and positive values reflect strategies of inbreeding preference or tendency for polyandry. Panels A-D show simulations for different combinations of costs for tendency for polyandry and inbreeding mating strategy. Dotted horizontal black lines in panels show values of zero on they-axis. ](Initial_Results/figures/evo_combs02_B3_ko_M-5.png)
 
 
 References
 ----------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
