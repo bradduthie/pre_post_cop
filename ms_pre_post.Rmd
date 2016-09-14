@@ -210,6 +210,13 @@ Specific mechanisms of post-copulatory inbreeding avoidance are difficult to ide
 Costs of polyandry and inbreeding avoidance
 ----------------------------------------------
 
+Our results show that direct negative selection on phenotypes that increase female promiscuity or choosiness with respect to kinship decrease the strength of selection for tendency for polyandry and inbreeding avoidance (Figure 1). Importantly, the cost of tendency for polyandry only decreased female fitness given tendency for polyandry phenotype values greater than zero ($P_{p}>0$), but the threshold nature of the tendency for polyandry phenotype only resulted in selection against positive tendency for polyandry allele values ($P_{a}$) when the sum over a focal female's $20$ $P_{a}$ alleles was greater than zero because summations less than zero all resulted in equivalent monandrous phenotypes ($P_{p}=0$). Hence, even when tendency for polyandry was costly, selection for more negative $P_{a}$ values weakened as the frequency of negative $P_{a}$ values increased and monandry was assured [@Duthie]. This property of threshold traits 
+  
+
+<!--- Costs of polyandry including threshold trait -> polyandry affected by cost of inbreeding fertilisation strategy -> Polyandry indirectly affected by cost of inbreeding mating strategy through selection on post-copulatory inbreeding avoidance. Cost of inbreeding strategies mostly independent of one another and cost of polyandry.  --->
+
+
+<!--- For example, females with a tendency to engage in polyandry might pay a cost associated with searching or making themselves available to mates, thereby increasing their own risk of predation [e.g., @Rowe1988; @Ronkainen1994; @Koga1998]. Females that are particularly choosy in mating interactions (e.g., especially reluctant to mate with relatives) might pay a cost of increased risk of mating failure, or harm caused by sexual conflict [@Rowe1994; @Kokko2013]. Females that are choosy after mating has occurred might pay an energetic cost associated with physiological or biochemical mechanisms needed to store sperm and successfully bias fertilisation [e.g., @Gasparini2011; @Tuni2013; @Fitzpatrick2014b] --->
 
 
 Constraints on polyandry and inbreeding avoidance
