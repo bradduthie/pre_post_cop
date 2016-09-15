@@ -148,7 +148,7 @@ Selection given constraints on evolution
 
 Figure 3 shows evolution of tendency for polyandry and inbreeding fertilisation strategy when inbreeding mating strategy is fixed so that females must mate randomly (blue line at $M_{a}=0$). For all cost combinations of tendency for polyandry and inbreeding fertilisation strategy (Figure 3 panels A-D), we observed selection for positive values of tendency for polyandry alleles and negative values of inbreeding fertilisation strategy alleles, which we interpret as strong evidence for evolution of polyandry and associated inbreeding avoidance through fertiisation bias. This pattern of evolution contrasts with that observed when inbreeding mating strategy was not fixed, indicating that constraints on evolution of inbreeding mating strategy increased the strength of selection for evolution of polyandry and inbreeding avoidance through fertilisation bias. For example, in Figures 1C,D,G,H, tendency for polyandry allele values are typically less than zero, reflecting evolution of monandry, and inbreeding fertilisation strategy allele values were not as negative as they were in simulations with fixed random mating (Figure 3). In general, when females were unable to avoid mating with relatives given severe inbreeding depression ($\beta=3$), selection for evolution of polyandry and post-copulatory inbreeding avoidance was strengthened.
 
-Figure 2, which we previously contrasted with Figure 1 to test whether or not evolution of inbreeding fertilisation strategy facilitates selection for polyandry, shows evolution of tendency for polyandry and inbreeding mating strategy when inbreeding fertilisation strategy is fixed such that the sire of a focal female's offspring is randomly assigned from her mates according to a fair raffle. In all cost combinations of Figure 2 (panels A-D), tendency for polyandry allele values decreased over generations, reflecting evolution of monandry. However, values of inbreeding mating strategy alleles did not greatly differ over generations when inbreeding fertilisation strategy was fixed, meaning that the effect of fixed inbreeding fertilisation strategy on increasing selection for inbreeding avoidance through mate choice was weak or nelgigible. A weak effect is discernable in the contrast between Figure 2B and Figure 1B, in which the grand mean inbreeding mating strategy allele value is $-0.627$ when inbreeding fertilisation strategy is not fixed (Figure 1B) versus $-1.036$ when it is fixed (Figure 2B) in generation 10000. Values of $-0.627$ versus $-1.036$ correspond to an outbred focal female being $1.157$ versus $1.260$ times more likely to choose a non-relative than a full sibling as a mate, respectively. Therefore, when females were unable to bias fertilisation to avoid inbreeding given severe inbreeding depression ($\beta=3$), selection for evolution of pre-copulatory inbreeding avoidance was not greatly strengthened.
+Figure 2, which we previously contrasted with Figure 1 to test whether or not evolution of inbreeding fertilisation strategy facilitates selection for polyandry, shows evolution of tendency for polyandry and inbreeding mating strategy when inbreeding fertilisation strategy is fixed such that the sire of a focal female's offspring is randomly assigned from her mates according to a fair raffle. In all cost combinations of Figure 2 (panels A-D), tendency for polyandry allele values decreased over generations, reflecting evolution of monandry. However, values of inbreeding mating strategy alleles did not greatly differ over generations when inbreeding fertilisation strategy was fixed, meaning that the effect of fixed inbreeding fertilisation strategy on increasing selection for inbreeding avoidance through mate choice was weak or nelgigible. A weak effect is discernable in the contrast between Figure 2B and Figure 1B, in which the grand mean inbreeding mating strategy allele value is $-0.627$ when inbreeding fertilisation strategy is not fixed (Figure 1B) versus $-1.036$ when it is fixed (Figure 2B) in generation 10000. Because females have 20 alleles with additive effects on inbreeding mating strategy, an average female is therefore expected to have mean inbreeding mating strategy phenotype values of $M_{p} = -0.627 \times 20 = -12.54$ and $M_{p} = -1.036 \times 20 = -20.72$ for not fixed versus fixed inbreeding fertilisation strategy, respectively. These values would cause an outbred focal female to be $2.135$ and $4.180$ times more likely to choose a non-relative than a full sibling as a mate given not fixed fersus fixed inbreeding fertilisation strategy, respectively. Therefore, when females were unable to bias fertilisation to avoid inbreeding given severe inbreeding depression ($\beta=3$), selection for evolution of pre-copulatory inbreeding avoidance was strengthened.
 
 
 Selection given a pre-existing adaptive inbreeding strategy
@@ -186,20 +186,34 @@ A low relative cost for one inbreeding strategy (e.g., pre-copulatory inbreeding
 
 Another type of cost relevant for polyandry and inbreeding strategy is risk of male harm caused by sexual conflict [e.g., @Arnqvist2005a; @Parker2006]. We assumed that males were passive in mating encounters with females, but inbreeding theory predicts that males should benefit from a higher tolerance of inbreeding than females, leading to sexual conflict over inbreeding [@Parker1979; @Parker2006; @Kokko2006; @Duthie2015a]. Females that express the choice to avoid inbreeding when mating might therefore pay a cost of harm caused by coercion expressed by related males. This cost might itself evolve over time as male harm coevolves with female resistance [@Ronn2007; @Perry2011; @Wang2015a], and costs might vary with interactions among male non-relatives and relatives because effects of kin selection are predicted to reduce harm caused by related male suitors [@Rankin2011a]. To predict evolution of polyandry and inbreeding strategy in populations characterised by active males and sexual conflict, consideration of male inbreeding strategy and coevolution between male harm and female resistance might therefore need to be considered explicitly. 
 
-
-
 Constraints on polyandry and inbreeding avoidance
 ----------------------------------------------
 
 Our model assumed that allele values underlying tendency for polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance were all initialised at zero (causing monandry, and random mating and fertilisation with respect to kinship), and phenotypes evolved simultaneously after initialisation. However, these initial conditions are likely to be atypical, as evolution of pre-copulatory and post-copulatory inbreeding avoidance from ancestral random mating and fertilisation is unlikely to occur simultaneously. Rather, initial evolution of one inbreeding strategy (e.g., pre-copulatory inbreeding avoidance) is more likely to occur in the absence of its complementary strategy (e.g., post-copulatory inbreeding avoidance) if the complementary strategy is evolutionarily constrained. Alternatively, initial evolution of one inbreeding strategy might occur in the context of an already established adaptive strategy for avoiding inbreeding. We showed that selection for post-copulatory but not pre-copulatory inbreeding avoidance was strengthened if its complementary strategy was fixed for random choice with respect to kinship, and that selection for post-copulatory but not pre-copulatory inbreeding avoidance was precluded if its complementary strategy was fixed for adaptive inbreeding avoidance.
 
-Multiple studies have found evidence for female pre-copulatory inbreeding avoidance [e.g., @Lihoreau2007; @Kuriwada2011; @Kingma2013], and for post-copulatory inbreeding avoidance [e.g., @Simmons2006; @Bretman2009]. 
 
-Few studies address evolution of both pre-copulatory and post-copulatory inbreeding strategies, but existing empirical studies are consistent with our model predictions. @Liu2014 found evidence for pre-copulatory, but not post-copulatory inbreeding avoidance in an experimental study of cabbage beetles (*Colaphellus bowringi*). In our model, post-copulatory 
+
 
 <!--- Note that females might mate multiply because first need to ensure that they get a mate at all.  \cite{Daniel2015} --->
 
 <!---  Constraints on pre-cop: Limited kin recognition --->
+
+
+
+
+<!---  Concluding paragraph below --->
+
+Studies of multiple species have found evidence for female pre-copulatory inbreeding avoidance [e.g., @Lihoreau2007; @Kuriwada2011; @Kingma2013], and for post-copulatory inbreeding avoidance [e.g., @Simmons2006; @Bretman2009]. Other studies have 
+
+Few studies address evolution of both pre-copulatory and post-copulatory inbreeding strategies, but existing empirical studies are consistent with our model predictions. @Liu2014 found evidence for pre-copulatory, but not post-copulatory inbreeding avoidance in an experimental study of cabbage beetles (*Colaphellus bowringi*). In our model, post-copulatory
+
+However, empirical hypothesis testing typically does not attempt to predict *a priori* whether or not inbreeding avoidance will be enacted before or after copulation, or if both pre-copulatory and post-copulatory inbreeding avoidance will evolve. Here we have shown that evolution of inbreeding strategies and associated polyandry are predicted to affected by direct costs, and constraints and adaptations of 
+
+
+
+<!---     ----------------------------------------------------------------     --->
+
+
 
 
 
