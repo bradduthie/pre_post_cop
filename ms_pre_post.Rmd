@@ -130,7 +130,6 @@ We present our results by showing mean allele value changes over generations. Fi
 Selection for polyandry is driven by inbreeding fertilisation strategy
 ----------------------------------------------
 
-
 We first test our hypothesis that a focal female's ability to bias fertilisation with respect to kinship causes selection for polyandry by comparing simulations in which tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy can all evolve to simulations in which inbreeding fertilisation strategy is fixed to random mating with respect to kinship, as presented in Figures 1 and 2, respectively. Comparison of Figures 1 and 2 shows that evolution of inbreeding fertilisation strategy facilitates evolution of polyandry, particularly when costs of tendency for polyandry and inbreeding fertilisation strategy are zero. For example, in Figure 2A, tendency for polyandry allele values consistently become negative over generations ($P_{a}<0$; decreasing red line), causing populations to be monandrous. Females in these populations avoid mating with kin ($M_{a}<0$; decreasing blue line), and because these females sample mates with replacement, males that remain after their initial mate choice are more likely to be relatives, causing selection for monandry because females are most likely to succeed in avoiding inbreeding in their initial mate choice [see also @Duthie]. However, Figure 1A shows that when a focal female can also bias the probability that a particular mate sires her offspring, inbreeding fertilisation strategy evolves to inbreeding avoidance ($F_{a}<0$; decreasing black line). Consequently, the ability to bias fertilisation to avoid inbreeding causes polyandry to become adaptive, and positive values of tendency for polyandry alleles increase in frequency ($P_{a}>0$; increasing red line of Figure 1A). Although non-zero costs decrease net selection for both tendency for polyandry and inbreeding fertilisation strategy (see below), across all combinations of costs, tendency for polyandry allele values are more positive when inbreeding fertilisation strategy can also evolve. Evolution of post-copulatory inbreeding avoidance therefore greatly facilitates evolution of polyandry.
 
 
@@ -191,6 +190,9 @@ Another type of cost relevant for polyandry and inbreeding strategy is risk of m
 
 Constraints on polyandry and inbreeding avoidance
 ----------------------------------------------
+
+Our model assumed that allele values underlying tendency for polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance were all initialised at zero (causing monandry, and random mating and fertilisation with respect to kinship), and phenotypes evolved simultaneously after initialisation. However, these initial conditions are likely to be atypical, as evolution of pre-copulatory and post-copulatory inbreeding avoidance from ancestral random mating and fertilisation is unlikely to occur simultaneously. Rather, initial evolution of one inbreeding strategy (e.g., pre-copulatory inbreeding avoidance) is more likely to occur in the absence of its complementary strategy (e.g., post-copulatory inbreeding avoidance) if the complementary strategy is evolutionarily constrained. Alternatively, initial evolution of one inbreeding strategy might occur in the context of an already established adaptive strategy for avoiding inbreeding. 
+
 
 
 <!--- start talking abou these now --->
