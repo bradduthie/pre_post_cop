@@ -191,7 +191,13 @@ Another type of cost relevant for polyandry and inbreeding strategy is risk of m
 Constraints on polyandry and inbreeding avoidance
 ----------------------------------------------
 
-Our model assumed that allele values underlying tendency for polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance were all initialised at zero (causing monandry, and random mating and fertilisation with respect to kinship), and phenotypes evolved simultaneously after initialisation. However, these initial conditions are likely to be atypical, as evolution of pre-copulatory and post-copulatory inbreeding avoidance from ancestral random mating and fertilisation is unlikely to occur simultaneously. Rather, initial evolution of one inbreeding strategy (e.g., pre-copulatory inbreeding avoidance) is more likely to occur in the absence of its complementary strategy (e.g., post-copulatory inbreeding avoidance) if the complementary strategy is evolutionarily constrained. Alternatively, initial evolution of one inbreeding strategy might occur in the context of an already established adaptive strategy for avoiding inbreeding. 
+Our model assumed that allele values underlying tendency for polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance were all initialised at zero (causing monandry, and random mating and fertilisation with respect to kinship), and phenotypes evolved simultaneously after initialisation. However, these initial conditions are likely to be atypical, as evolution of pre-copulatory and post-copulatory inbreeding avoidance from ancestral random mating and fertilisation is unlikely to occur simultaneously. Rather, initial evolution of one inbreeding strategy (e.g., pre-copulatory inbreeding avoidance) is more likely to occur in the absence of its complementary strategy (e.g., post-copulatory inbreeding avoidance) if the complementary strategy is evolutionarily constrained. Alternatively, initial evolution of one inbreeding strategy might occur in the context of an already established adaptive strategy for avoiding inbreeding. We showed that selection for post-copulatory but not pre-copulatory inbreeding avoidance was strengthened if its complementary strategy was fixed for random choice with respect to kinship, and that selection for post-copulatory but not pre-copulatory inbreeding avoidance was precluded if its complementary strategy was fixed for adaptive inbreeding avoidance.
+
+Few studies address evolution of both pre-copulatory and post-copulatory inbreeding strategies, but existing empirical studies support our model predictions. For example, @Lui2014 found evidence for pre-copulatory, but not post-copulatory inbreeding avoidance in an experimental study of cabbage beetles (*Colaphellus bowringi*).  
+
+
+
+<!---  Lui    --->
 
 
 
