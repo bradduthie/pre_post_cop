@@ -4,20 +4,20 @@ title: 'Evolution of pre-copulatory and post-copulatory inbreeding behaviour: a 
 author: "A. Bradley Duthie et al."
 date: "August 24, 2016"
 output:
+  pdf_document:
+    fig_caption: yes
+  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
-  pdf_document:
-    fig_caption: yes
-  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
 - \linenumbers
 - \bibliographystyle{amnatnat}
-linestretch: 2
+linestretch: 1
 csl: evolution.csl
 bibliography: ms_pre_post.bib
 ---
@@ -40,7 +40,7 @@ Nah, these are too much. I've decided to increase to 40k generations for the cos
 Abstract
 ===================================================
 
-Inbreeding avoidance has been widely observed through pre-copulatory and post-copulatory mechanisms as a consequence of inbreeding depression in offspring viability. However, no models compare evolution of pre-copulatory and post-copulatory inbreeding avoidance jointly, and given biologically relevant costs of, and constraints on, inbreeding strategies. Critically, evolution of post-copulatory inbreeding avoidance is restricted to females that mate multiply, potentially leading to complex evolutionary dynamics among inbreeding strategies and polyandry. Accordingly, use individual-based modelling to track evolution of polyandry and inbreeding strategies under multiple costs and constraints to address four questions: (1) Will evolution of post-copulatory inbreeding avoidance strengthen selection for polyandry? (2) Will selection for one costly inbreeding strategy be negligible given a non-costly complementary strategy? (3) Will constraints on evolution of one inbreeding strategy increase selection on an alternative strategy? And (4) will selection for one inbreeding strategy be negligible given existence of an already adaptive alternative strategy? We show that evolution of polyandry is greatly facilitated by evolution of post-copulatory inbreeding avoidance. Costs and constraints on pre-copulatory inbreeding avoidance generally affected evolution of post-copulatory inbreeding avoidance, but not vice versa. Our model thereby introduces a novel framework for predicting evolution of both pre-copulatory and post-copulatory inbreeding strategies in empirical systems.
+Inbreeding avoidance has been widely observed through pre-copulatory and post-copulatory mechanisms as a consequence of inbreeding depression in offspring viability. However, no models compare evolution of pre-copulatory and post-copulatory inbreeding avoidance jointly, and given biologically relevant costs of, and constraints on, inbreeding strategies. Critically, evolution of post-copulatory inbreeding avoidance is restricted to females that mate multiply, potentially leading to complex evolutionary dynamics among inbreeding strategies and polyandry. Accordingly, we use individual-based modelling to track evolution of polyandry and inbreeding strategies under multiple costs and constraints to address four questions: (1) Will evolution of post-copulatory inbreeding avoidance strengthen selection for polyandry? (2) Will selection for one costly inbreeding strategy be negligible given a non-costly complementary strategy? (3) Will constraints on evolution of one inbreeding strategy increase selection on an alternative strategy? And (4) will selection for one inbreeding strategy be negligible given existence of an already adaptive alternative strategy? We show that evolution of polyandry is greatly facilitated by evolution of post-copulatory inbreeding avoidance. Costs and constraints on pre-copulatory inbreeding avoidance generally affected evolution of post-copulatory inbreeding avoidance, and vice versa. Our model thereby introduces a novel framework for predicting evolution of both pre-copulatory and post-copulatory inbreeding strategies in empirical systems.
 
 Introduction
 ===================================================
@@ -239,7 +239,7 @@ This work was funded by a European Research Council Starting Grant to JMR.
 
 **************************
 
-\vspace{70 mm}
+\vspace{80 mm}
 
 Table 1
 ----------------------------------------------
