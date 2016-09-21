@@ -396,7 +396,7 @@ setwd("~/Dropbox/DuthieManu/pre_post_cop");
 gens      <- 39999;
 beta_val  <- 3;
 
-evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F00_a.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F00.txt", header=FALSE);
 evgens <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
 evlast <- evgens[evgens[,6]==gens,]; 
 above1 <- which(evlast[,8] == min(evlast[(evlast[,8]-1)>0,8]))[1];
@@ -404,7 +404,7 @@ below1 <- which(evlast[,8] == max(evlast[(evlast[,8]-0)<0,8]))[1];
 simabo <- evlast[above1,1];
 simbel <- evlast[below1,1];
 
-ped_cc_02 <- read.table(file="results/fig2/ped_M00_P02_F00_a.txt", header=FALSE);
+ped_cc_02 <- read.table(file="results/fig2/ped_M00_P02_F00.txt", header=FALSE);
 xxx <- 0:gens;
 
 setEPS(); # postscript below for final publication?
@@ -451,7 +451,7 @@ beta_val <- 3;
 # XXX SUPPORTING INFORMATION FOR P00 M00 F00 SIMULATIONS  XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_M00_P00_F00_a.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig2/evo_M00_P00_F00.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
@@ -540,7 +540,7 @@ dev.off();
 # XXX SUPPORTING INFORMATION FOR P00 M02 F00 SIMULATIONS  XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_M02_P00_F00_a.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig2/evo_M02_P00_F00.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
@@ -629,7 +629,7 @@ dev.off();
 # XXX SUPPORTING INFORMATION FOR P02 M00 F00 SIMULATIONS  XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F00_a.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F00.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
@@ -718,7 +718,7 @@ dev.off();
 # XXX SUPPORTING INFORMATION FOR P02 M00 F00 SIMULATIONS  XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_M00_P00_F02_a.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig2/evo_M00_P00_F02.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
 evo <- evB[evB[,2]==beta_val,]; 
 c_WP_PO <- rep(x=0, times=gens);
