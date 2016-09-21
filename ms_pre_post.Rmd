@@ -1,6 +1,5 @@
 ---
-title: 'Evolution of pre-copulatory and post-copulatory inbreeding behaviour: a computational
-  approach'
+title: 'Evolution of pre-copulatory and post-copulatory inbreeding behaviour'
 author: "A. Bradley Duthie et al."
 date: "August 24, 2016"
 output:
