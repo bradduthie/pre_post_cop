@@ -44,7 +44,7 @@ int main(void){
     ImmSD   = 1.0;    /* SD around the mean for immigrant allelic values                  */
     conSt   = 0;      /* Constrain WP & EP avoidance/preference to be equal? (0:no, 1:yes)*/
     wpVsep  = 1;      /* 0: wpe is soc, epe is poly mates | 1: wpe is pre, epe is postcop */ 
-    condk   = 0;      /* Will females reject EPMs if none better than soc? (1:yes)        */
+    condk   = 0;      /* Will females reject EPMs if none better than soc? (1:yes, 0:no)  */
     EpRestr = 0;      /* Restrict additional mate acces? (0: no, >0: Restriction number   */
     WpRestr = 0;      /* Restrict mate access for WP mates? (0: no, >0: Restriction #     */
     PreSel  = 1;      /* Allow pre-copulatory mate selection for EPMs (0: no, 1:yes)      */
