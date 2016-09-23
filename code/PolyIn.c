@@ -79,10 +79,6 @@ int main(void){
 
     i    = 0; /* Loops through different replicate simulations */
     prP  = 0; /* Indicator for actually printing the pedigree */
-
-    Scost = randunif()*0.05;
-    Pcost = randunif()*0.05;
-    Ecost = randunif()*0.05;
     
     while(i < rep){
         if(i == rep-1 && Pedi == 1){ /* If it's the last rep, and should print pedigree */
