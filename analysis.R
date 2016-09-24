@@ -1104,6 +1104,7 @@ dev.off();
 evo_cc_02 <- read.table(file="results/fig2/evo_M02_P00_F02.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.00 & evo_cc_02[,5]==0.02,];
 evo <- evB[evB[,2]==beta_val,]; 
+evo <- evo[evo[,1]!=289106184,]; # Got 39 out of this one.
 c_WP_PO <- rep(x=0, times=gens);
 c_WP_EP <- rep(x=0, times=gens);
 c_PO_EP <- rep(x=0, times=gens);
@@ -1122,6 +1123,97 @@ sims <- unique(evo_cc_02[,1]);
 # ------------------------------------------------------------------------#
 setEPS(); # postscript below for final publication?
 cairo_ps("figures/SI_M02_P00_E02.eps",family="Arial",height=7,width=7.5);
+par(mfrow=c(2,2),oma=c(5,5,1,4), mar=c(0.5,0.5,0.5,0.5),lwd=1);
+# ----------------------------------------------------------------
+mPo <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+plot(x=xxx,y=mPo,type="l",lwd=2,ylim=c(-50,30),col="red",xaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5,yaxt="n");
+for(i in sims){
+ iter <- evo[evo[,1]==i,8];
+ points(x=xxx,y=iter,type="l",lwd=0.5,col="thistle");
+}
+points(x=xxx,y=mPo,type="l",lwd=2,col="red");
+abline(h=0,lwd=0.8,lty="dotted");
+axis(side=2,at=c(-40,-20,0,20),cex.axis=1.5);
+text(x=-900, y=27.0, label="A", cex=2, pos=4);
+#text(x=0, y=-35.0, label=expression(paste(c[M]==0.00)),cex=1.2, pos=4);
+#text(x=0, y=-42.0, label=expression(paste(c[P]==0.02)),cex=1.2, pos=4);
+#text(x=0, y=-49.0, label=expression(paste(c[F]==0.00)),cex=1.2, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[P]==0.00)),cex=1.5, pos=4);
+# ----------------------------------------------------------------
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-50,30),col="blue",xaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5,yaxt="n");
+for(i in sims){
+ iter <- evo[evo[,1]==i,7];
+ points(x=xxx,y=iter,type="l",lwd=0.5,col="lightblue");
+}
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=-900, y=27.0, label="B", cex=2, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
+# ----------------------------------------------------------------
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+plot(x=xxx,y=mEP,type="l",lwd=2,ylim=c(-50,30),col="black",xaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5,yaxt="n");
+for(i in sims){
+ iter <- evo[evo[,1]==i,9];
+ points(x=xxx,y=iter,type="l",lwd=0.5,col="grey70");
+}
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+axis(side=2,at=c(-40,-20,0,20),cex.axis=1.5);
+axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
+text(x=-900, y=27.0, label="C", cex=2, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+# ----------------------------------------------------------------
+par(lwd=2);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=1,ylim=c(-1,1),col="purple",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=4,at=c(-1,-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=1,col="royalblue4",lty="solid");
+points(x=xxx,y=c_PO_EP,type="l",lwd=1,col="red4",lty="solid");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=-300, y=0.88, label="D", cex=2, pos=4);
+axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+mtext(expression(paste("Mean allele value correlation\t\t\t\t\t\t")),
+	outer=TRUE,side=4,line=2.5,cex=1.5);
+# ------------------------------------------------------------------------#
+dev.off();
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+
+
+
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX SUPPORTING INFORMATION FOR P02 M00 F02 SIMULATIONS  XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.00 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){ # XXX XXX  NOTE: THIS LOOP TAKES A LONG TIME TO RUN XXX #
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+
+xxx  <- 0:gens;
+sims <- unique(evo_cc_02[,1]);
+# ------------------------------------------------------------------------#
+setEPS(); # postscript below for final publication?
+cairo_ps("figures/SI_M00_P02_E02.eps",family="Arial",height=7,width=7.5);
 par(mfrow=c(2,2),oma=c(5,5,1,4), mar=c(0.5,0.5,0.5,0.5),lwd=1);
 # ----------------------------------------------------------------
 mPo <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
@@ -1186,4 +1278,92 @@ mtext(expression(paste("Mean allele value correlation\t\t\t\t\t\t")),
 dev.off();
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# XXX SUPPORTING INFORMATION FOR P02 M00 F02 SIMULATIONS  XXX XXX XXX XXX #
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
+# ------------------------------------------------------------------------#
+evo_cc_02 <- read.table(file="results/fig2/evo_M02_P02_F02.txt", header=FALSE);
+evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.02,];
+evo <- evB[evB[,2]==beta_val,]; 
+c_WP_PO <- rep(x=0, times=gens);
+c_WP_EP <- rep(x=0, times=gens);
+c_PO_EP <- rep(x=0, times=gens);
+for(i in 0:gens){ # XXX XXX  NOTE: THIS LOOP TAKES A LONG TIME TO RUN XXX #
+    use          <- evo[evo[,6]==i,];
+    c_WP_PO[i+1] <- cor(use[,7],use[,8]);
+    c_WP_EP[i+1] <- cor(use[,7],use[,9]);
+    c_PO_EP[i+1] <- cor(use[,8],use[,9]);
+    if(i %% 1000 == 0){
+        print(paste("Generation ",i));
+    }
+}
+
+xxx  <- 0:gens;
+sims <- unique(evo_cc_02[,1]);
+# ------------------------------------------------------------------------#
+setEPS(); # postscript below for final publication?
+cairo_ps("figures/SI_M02_P02_E02.eps",family="Arial",height=7,width=7.5);
+par(mfrow=c(2,2),oma=c(5,5,1,4), mar=c(0.5,0.5,0.5,0.5),lwd=1);
+# ----------------------------------------------------------------
+mPo <- tapply(X=evo[,8],INDEX=evo[,6],FUN=mean);
+plot(x=xxx,y=mPo,type="l",lwd=2,ylim=c(-50,30),col="red",xaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5,yaxt="n");
+for(i in sims){
+ iter <- evo[evo[,1]==i,8];
+ points(x=xxx,y=iter,type="l",lwd=0.5,col="thistle");
+}
+points(x=xxx,y=mPo,type="l",lwd=2,col="red");
+abline(h=0,lwd=0.8,lty="dotted");
+axis(side=2,at=c(-40,-20,0,20),cex.axis=1.5);
+text(x=-900, y=27.0, label="A", cex=2, pos=4);
+#text(x=0, y=-35.0, label=expression(paste(c[M]==0.00)),cex=1.2, pos=4);
+#text(x=0, y=-42.0, label=expression(paste(c[P]==0.02)),cex=1.2, pos=4);
+#text(x=0, y=-49.0, label=expression(paste(c[F]==0.00)),cex=1.2, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[P]==0.02)),cex=1.5, pos=4);
+# ----------------------------------------------------------------
+mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
+plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-50,30),col="blue",xaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5,yaxt="n");
+for(i in sims){
+ iter <- evo[evo[,1]==i,7];
+ points(x=xxx,y=iter,type="l",lwd=0.5,col="lightblue");
+}
+points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
+abline(h=0,lwd=0.8,lty="dotted");
+text(x=-900, y=27.0, label="B", cex=2, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
+# ----------------------------------------------------------------
+mEP <- tapply(X=evo[,9],INDEX=evo[,6],FUN=mean);
+plot(x=xxx,y=mEP,type="l",lwd=2,ylim=c(-50,30),col="black",xaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5,yaxt="n");
+for(i in sims){
+ iter <- evo[evo[,1]==i,9];
+ points(x=xxx,y=iter,type="l",lwd=0.5,col="grey70");
+}
+points(x=xxx,y=mEP,type="l",lwd=2,col="black");
+abline(h=0,lwd=0.8,lty="dotted");
+axis(side=2,at=c(-40,-20,0,20),cex.axis=1.5);
+axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
+text(x=-900, y=27.0, label="C", cex=2, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+# ----------------------------------------------------------------
+par(lwd=2);
+plot(x=xxx,y=c_WP_PO,type="l",lwd=1,ylim=c(-1,1),col="purple",xaxt="n",yaxt="n",
+     xlab="",ylab="",cex.lab=2,cex.axis=1.5, lty="solid");
+axis(side=4,at=c(-1,-0.5,0,0.5,1), cex.axis=1.5);
+points(x=xxx,y=c_WP_EP,type="l",lwd=1,col="royalblue4",lty="solid");
+points(x=xxx,y=c_PO_EP,type="l",lwd=1,col="red4",lty="solid");
+abline(h=0,lwd="0.8",lty="dotted");
+text(x=-300, y=0.88, label="D", cex=2, pos=4);
+axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
+# ------------------------------------------------------------------------#
+mtext(expression(paste("Generation")),
+	outer=TRUE,side=1,line=3.0,cex=1.5);
+mtext(expression(paste("Mean allele value")),
+	outer=TRUE,side=2,line=2.5,cex=1.5);
+mtext(expression(paste("Mean allele value correlation\t\t\t\t\t\t")),
+	outer=TRUE,side=4,line=2.5,cex=1.5);
+# ------------------------------------------------------------------------#
+dev.off();
+# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
