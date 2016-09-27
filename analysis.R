@@ -553,7 +553,7 @@ text(x=0, y=-22.0, label=expression(paste(c[M]==0.00)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="A", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_M02_Pf1_Ff-10.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig3_new/evo_M02_Pf1_Ff-10.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0.02 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0,];
 evo <- evB[evB[,2]==beta_val,]; 
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
@@ -589,7 +589,7 @@ text(x=0, y=-22.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="B", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_Mf-10_P00_F00.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig3_new/evo_Mf-10_P00_F00.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.0,];
 evo <- evB[evB[,2]==beta_val,]; 
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
@@ -626,7 +626,7 @@ text(x=0, y=-22.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="C", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
-evo_cc_02 <- read.table(file="results/fig2/evo_M-10_P00_F02.txt", header=FALSE);
+evo_cc_02 <- read.table(file="results/fig3_new/evo_Mf-10_P00_F02.txt", header=FALSE);
 evB <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0 & evo_cc_02[,5]==0.02,];
 evo <- evB[evB[,2]==beta_val,]; 
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
