@@ -40,7 +40,7 @@ axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=0,lwd=3);
+points(x=1:gens,y=rep(0,length(1:gens)),type="l",lwd=2,col="black");
 uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
 lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
 uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
@@ -53,7 +53,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.0)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.0)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="A", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig2/evo_M00_P00_F00.txt", header=FALSE);
@@ -84,7 +85,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.00)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.00)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="B", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig1/evo_M00_P0025_F00_ko.txt", header=FALSE);
@@ -104,7 +106,7 @@ axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=0,lwd=3);
+points(x=1:gens,y=rep(0,length(1:gens)),type="l",lwd=2,col="black");
 uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
 lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
 uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
@@ -117,7 +119,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.0025)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.0025)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="C", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig1/evo_M00_P0025_F00.txt", header=FALSE);
@@ -148,7 +151,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.0025)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.0025)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="D", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig1/evo_M00_P005_F00_ko.txt", header=FALSE);
@@ -168,7 +172,7 @@ axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=0,lwd=3);
+points(x=1:gens,y=rep(0,length(1:gens)),type="l",lwd=2,col="black");
 uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
 lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
 uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
@@ -181,7 +185,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.005)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.005)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="E", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig1/evo_M00_P005_F00.txt", header=FALSE);
@@ -212,7 +217,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.005)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.005)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="F", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig1/evo_M00_P01_F00_ko.txt", header=FALSE);
@@ -233,7 +239,7 @@ axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=0,lwd=3);
+points(x=1:gens,y=rep(0,length(1:gens)),type="l",lwd=2,col="black");
 uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
 lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
 uPO <- mPO + sPO / sqrt(sum(evo[,6]==gens));
@@ -246,7 +252,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 #points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.01)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.01)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="G", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig1/evo_M00_P01_F00.txt", header=FALSE);
@@ -278,7 +285,8 @@ polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
-text(x=0, y=-22.0, label=expression(paste(c[P]==0.01)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[P]==0.01)),cex=1.5, pos=4);
+text(x=-300, y=11.0, label="H", cex=2, pos=4);
 mtext(expression(paste("Generation")),
 	outer=TRUE,side=1,line=3.0,cex=1.5);
 mtext(expression(paste("Mean allele value")),
@@ -288,6 +296,7 @@ mtext("No post-copulatory choice \t Post-copulatory choice",
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
 dev.off();
+
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
@@ -382,9 +391,9 @@ points(x=xxx,y=mPO,type="l",lwd=2,col="red");
 polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=0,lwd=3);
+points(x=1:gens,y=rep(0,length(1:gens)),type="l",lwd=2,col="black");
 axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
-text(x=0, y=-22.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 #text(x=0, y=-24.0, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-300, y=11.0, label="A", cex=2, pos=4);
@@ -418,7 +427,7 @@ points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
-text(x=0, y=-22.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 #text(x=0, y=-24.0, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-300, y=11.0, label="B", cex=2, pos=4);
@@ -452,12 +461,12 @@ points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 #polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 #points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=0,lwd=3,col="blue");
+points(x=1:gens,y=rep(0,length(1:gens)),type="l",lwd=2,col="blue");
 axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
 axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
 #text(x=0, y=-18.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
-text(x=0, y=-22.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="C", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
@@ -492,7 +501,7 @@ abline(h=0,lwd=0.8,lty="dotted");
 axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
 #text(x=0, y=-18.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
-text(x=0, y=-22.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="D", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
@@ -544,10 +553,10 @@ lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
 polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=-10,lwd=3);
-abline(h=1,lwd=3, cl="red");
+points(x=1:gens,y=rep(-10,length(1:gens)),type="l",lwd=2,col="black");
+points(x=1:gens,y=rep(1,length(1:gens)),type="l",lwd=2,col="red");
 axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
-text(x=0, y=-22.0, label=expression(paste(c[M]==0.00)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[M]==0.00)),cex=1.5, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 #text(x=0, y=-24.0, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-300, y=11.0, label="A", cex=2, pos=4);
@@ -581,9 +590,9 @@ lEP <- mEP - sEP / sqrt(sum(evo[,6]==gens));
 polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=-10,lwd=3);
-abline(h=1,lwd=3, col="red");
-text(x=0, y=-22.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
+points(x=1:gens,y=rep(-10,length(1:gens)),type="l",lwd=2,col="black");
+points(x=1:gens,y=rep(1,length(1:gens)),type="l",lwd=2,col="red");
+text(x=-300, y=-23.0, label=expression(paste(c[M]==0.02)),cex=1.5, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
 #text(x=0, y=-24.0, label=expression(paste(c[F]==0.00)),cex=1, pos=4);
 text(x=-300, y=11.0, label="B", cex=2, pos=4);
@@ -617,12 +626,12 @@ points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 #polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 #points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
-abline(h=-10,lwd=3, col="blue");
+points(x=1:gens,y=rep(-10,length(1:gens)),type="l",lwd=2,col="blue");
 axis(side=2,at=c(-20,-10,0,10), cex.axis=1.5);
 axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
 #text(x=0, y=-18.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
-text(x=0, y=-22.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[F]==0.00)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="C", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
@@ -654,10 +663,11 @@ points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 #polygon(y=c(lWP,rev(uWP)),x=c(1:(gens+1),(gens+1):1),border=NA,col="lightblue");
 #points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 abline(h=0,lwd=0.8,lty="dotted");
+points(x=1:gens,y=rep(-10,length(1:gens)),type="l",lwd=2,col="blue");
 axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
 #text(x=0, y=-18.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
-text(x=0, y=-22.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+text(x=-300, y=-23.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="D", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
@@ -1522,7 +1532,7 @@ for(i in 0:gens){ # XXX XXX  NOTE: THIS LOOP TAKES A LONG TIME TO RUN XXX #
 }
 
 xxx  <- 0:gens;
-sims <- unique(evo);
+sims <- unique(evo[,1]);
 # ------------------------------------------------------------------------#
 setEPS(); # postscript below for final publication?
 cairo_ps("figures/SI_M02_P00_E02.eps",family="Arial",height=7,width=7.5);
@@ -1593,7 +1603,7 @@ dev.off();
 
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
-# XXX SUPPORTING INFORMATION FOR P02 M00 F02 SIMULATIONS  XXX XXX XXX XXX #
+# XXX SUPPORTING INFORMATION FOR P00 M02 F02 SIMULATIONS  XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # ------------------------------------------------------------------------#
 evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F02.txt", header=FALSE);
