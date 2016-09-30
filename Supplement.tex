@@ -1,0 +1,275 @@
+\documentclass[12pt]{article}
+\usepackage[top=1.25in, bottom=1in, left=1.25in, right=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{lineno}
+\usepackage{datetime}
+\setkomafont{\rmfamily\bfseries\boldmath}
+\usepackage{wrapfig,floatrow}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{bm}
+\floatstyle{plain}
+\restylefloat{figure}
+
+
+\newcommand\mydef{\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+
+\def\wl{\par \vspace{\baselineskip}} %defines \wl as a line skip.
+
+\renewcommand{\thesection}{S1.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thepage}{S1-\arabic{page}}
+
+\makeatletter %% With ams
+\def\tagform@#1{\maketag@@@{(S1-\ignorespaces#1\unskip\@@italiccorr)}}
+\makeatother
+
+\makeatletter
+\makeatletter \renewcommand{\fnum@figure}
+{\figurename~S1-\thefigure}
+\makeatother
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\setcitestyle{round,aysep={},yysep={;}}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  \fontsize{18}{16}
+  \textbf{\@title}
+  \vspace{8 mm}
+  \fontsize{12}{14}
+  \@author
+\end{flushleft}\egroup
+}
+\makeatother
+
+%\newlength{\saveparindent} %Makes ragged right alignment for Evolution
+\setlength{\saveparindent}{\parindent} %Does not suppress paragraph indents
+%\raggedright
+\setlength{\parindent}{\saveparindent}
+
+\renewcommand\refname{LITERATURE CITED}
+\newcommand*\mystrut[1]{\vrule width0pt height1pt depth#1\relax}
+\newcommand={\mathrel{\stackrel{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+
+\newenvironment{phv}{\fontfamily{phv}\selectfont}{\phv}
+
+\title{Evolution of pre-copulatory and post-copulatory inbreeding behaviour \\ \vspace{10 mm} {\sffamily\Large\bfseries Supplemental results showing change in allele values over different parameter combinations, and allele values over generations for single replicates}}
+
+
+\author{\\ \textbf{A. Bradley Duthie\textsuperscript{1,2} and Jane M. Reid\textsuperscript{1}}\\ \textit{\textsuperscript{1} Institute of Biological and Environmental Sciences, School of Biological Sciences, Zoology Building, Tillydrone Avenue, University of Aberdeen, Aberdeen AB24 2TZ, United Kingdom \\ \hspace{10 mm} \textsuperscript{2} E-mail: aduthie@abdn.ac.uk}}
+
+
+\date{}
+
+\linenumbers
+\doublespacing
+
+\pagestyle{fancy}
+\lhead{DUTHIE ET AL}
+\rhead{PRE- & POST-COPULATORY (SUPPLEMENT)}
+\renewcommand{\headrulewidth}{0pt}
+
+
+\begin{document}
+
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\sffamily\Large\itshape}}% from \Large
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\sffamily\Large\bfseries}}% from \large
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\sffmaily\large\bfseries}}% from \normalsize
+\makeatother
+
+
+\begin{phv}
+\thispagestyle{empty} % single page disable page number
+
+\maketitle
+
+\vspace{10 mm}
+
+
+\noindent \textbf{Here we present supplemental results from an individual-based model in which alleles underlying polyandry (\bm{$P_{a}$}), pre-copulatory inbreeding strategy (\bm{$M_{a}$}) and post-copulatory inbreeding strategy (\bm{$F_{a}$}) affect phenotypic values for .}
+
+
+\clearpage
+
+
+\vspace*{5 mm}
+
+{\Large Table of Contents}
+
+\hrulefill
+
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{allcombs}: All cost combinations}}{S3}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{extra_MfPf}: All cost combinations}}{S4}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M00_P00_E00}: All cost combinations}}{S5}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M02_P00_E00}: All cost combinations}}{S6}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M00_P02_E00}: All cost combinations}}{S7}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M00_P00_E02}: All cost combinations}}{S8}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M02_P02_E00}: All cost combinations}}{S9}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M02_P00_E02}: All cost combinations}}{S10}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M00_P02_E02}: All cost combinations}}{S11}
+\contentsline {section}{\tocsection {}{}{\small Figure S\ref{SI_M02_P02_E02}: All cost combinations}}{S12}
+
+\hrulefill
+
+\end{phv}
+
+\clearpage
+
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.85]{figures/evo_combs.pdf}
+\end{center}
+\caption{Some new costs}
+\label{allcombs}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/extra_MfPf.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{extra_MfPf}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M00_P00_E00.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M00_P00_E00}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M02_P00_E00.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M02_P00_E00}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M00_P02_E00.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M00_P02_E00}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M00_P00_E02.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M00_P00_E02}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M02_P02_E00.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M02_P02_E00}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M02_P00_E02.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M02_P00_E02}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M00_P02_E02.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M00_P02_E02}
+\end{figure}
+
+\clearpage
+\begin{figure}
+\begin{center}				
+\includegraphics[scale=0.8]{figures/SI_M02_P02_E02.pdf}
+\end{center}
+\caption{A key caveat to the results}
+\label{SI_M02_P02_E02}
+\end{figure}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
