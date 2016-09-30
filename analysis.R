@@ -1047,7 +1047,7 @@ points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 #points(x=xxx,y=mWP,type="l",lwd=2,col="blue");
 #text(x=0, y=-18.0, label=expression(paste(c[M]==0.00)),cex=1, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
-text(x=0, y=-23.0, label=expression(paste(c[F]==0.00)),cex=1.25, pos=4);
+text(x=0, y=-23.0, label=expression(paste(c[F]==0.00)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="A", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
@@ -1084,7 +1084,7 @@ points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 abline(h=0,lwd=0.8,lty="dotted");
 #text(x=0, y=-18.0, label=expression(paste(c[M]==0.02)),cex=1, pos=4);
 #text(x=0, y=-21.0, label=expression(paste(c[P]==0.00)),cex=1, pos=4);
-text(x=0, y=-23.0, label=expression(paste(c[F]==0.02)),cex=1, pos=4);
+text(x=0, y=-23.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
 text(x=-300, y=11.0, label="B", cex=2, pos=4);
 rm(evo_cc_02);
 # ------------------------------------------------------------------------#
@@ -1553,7 +1553,7 @@ text(x=-900, y=27.0, label="A", cex=2, pos=4);
 #text(x=0, y=-35.0, label=expression(paste(c[M]==0.00)),cex=1.2, pos=4);
 #text(x=0, y=-42.0, label=expression(paste(c[P]==0.02)),cex=1.2, pos=4);
 #text(x=0, y=-49.0, label=expression(paste(c[F]==0.00)),cex=1.2, pos=4);
-text(x=0, y=-47.0, label=expression(paste(c[P]==0.00)),cex=1.5, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[P]==0.02)),cex=1.5, pos=4);
 # ----------------------------------------------------------------
 mWP <- tapply(X=evo[,7],INDEX=evo[,6],FUN=mean);
 plot(x=xxx,y=mWP,type="l",lwd=2,ylim=c(-50,30),col="blue",xaxt="n",
@@ -1579,7 +1579,7 @@ abline(h=0,lwd=0.8,lty="dotted");
 axis(side=2,at=c(-40,-20,0,20),cex.axis=1.5);
 axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
 text(x=-900, y=27.0, label="C", cex=2, pos=4);
-text(x=0, y=-47.0, label=expression(paste(c[F]==0.02)),cex=1.5, pos=4);
+text(x=0, y=-47.0, label=expression(paste(c[F]==0.00)),cex=1.5, pos=4);
 # ----------------------------------------------------------------
 par(lwd=2);
 plot(x=xxx,y=c_WP_PO,type="l",lwd=1,ylim=c(-1,1),col="purple",xaxt="n",yaxt="n",
