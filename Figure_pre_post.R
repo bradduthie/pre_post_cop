@@ -39,4 +39,23 @@ text(x=800, y=8.00, labels=paste("Pos_cost = ",cpos), cex=1.25);
 
 
 
+rm(list=ls()); 
+
+setwd("~/Dropbox/DuthieManu/pre_post_cop/presentation");
+
+x  <- seq(from=0, to=1, by=0.0001);
+b0 <- exp(-0 * x);
+b1 <- exp(-1 * x);
+b2 <- exp(-2 * x);
+b3 <- exp(-3 * x);
+setEPS();
+cairo_ps("betas.eps",family="Arial",height=6,width=6);
+par(mar=c(5,5,1,1), lwd=3);
+plot(x=x, y=b0, cex.lab=1.5, cex.axis=1.5, type="l", lwd=3, ylim=c(0,1),
+     ylab=expression(paste("Offspring viability (",Psi[off],")")),
+     xlab=expression(paste("Kinship between parents (",k[ij],")")));
+points(x=x, y=b1, cex.lab=1.5, cex.axis=1.5, type="l", lwd=3)
+points(x=x, y=b2, cex.lab=1.5, cex.axis=1.5, type="l", lwd=3)
+points(x=x, y=b3, cex.lab=1.5, cex.axis=1.5, type="l", lwd=3)
+dev.off();
 

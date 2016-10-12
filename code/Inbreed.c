@@ -711,10 +711,10 @@ void Inbreed(int mc, int M, int Imm, int Clu, double *RES, double Beta1, int rep
         evol = fopen(evolres,"a+");
         fprintf(evol,"%d\t%f\t%f\t%f\t%f\t%d\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\n",pidcmb,Beta1,
             Scost,Pcost,Ecost,i,RES[0],RES[1],RES[2],RES[3],RES[4],RES[5],RES[6],RES[7]);
-        /*
+    
         printf("%d  %d  %f  %f  %f  %f  %f  %f  %f\n",
             rep,i,Scost,Pcost,Ecost,RES[0],RES[1],RES[2],RES[6]);
-        */
+        
         fclose(evol);
 
         /* ==========================================================*/
