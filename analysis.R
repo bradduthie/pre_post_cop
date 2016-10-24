@@ -305,49 +305,81 @@ dev.off();
 # XXX XXX      PLOT FIGURE 2  XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
 
-evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F00_b.txt", header=FALSE);
-evgens <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0,];
+evo_cc_02 <- read.table(file="results/fig2/evo_M00_P02_F00.txt", header=FALSE);
+evgens <- evo_cc_02[evo_cc_02[,3]==0 & evo_cc_02[,4]==0.02 & evo_cc_02[,5]==0.00,];
 evlast <- evgens[evgens[,6]==gens,]; 
-above1 <- which(evlast[,8] == min(evlast[(evlast[,8]-1)>0,8]))[1];
-below1 <- which(evlast[,8] == max(evlast[(evlast[,8]-0)<0,8]))[1];
+above1 <- which(evlast[,8] == min(evlast[(evlast[,8]-0.25)>0,8]))[1];
+below1 <- which(evlast[,8] == max(evlast[(evlast[,8]+0.35)<0,8]))[1];
 simabo <- evlast[above1,1];
 simbel <- evlast[below1,1];
 
-ped_cc_02 <- read.table(file="results/fig2/ped_M00_P02_F00_b.txt", header=FALSE);
+ped_cc_02 <- read.table(file="results/fig2/ped_M00_P02_F00.txt", header=FALSE);
 xxx <- 0:gens;
 
 setEPS(); # postscript below for final publication?
-cairo_ps("figures/Pp_vals.eps",family="Arial",height=11,width=9);
-par(mfrow=c(2,1),mar=c(5,5,1,3));
+cairo_ps("figures/Pp_vals.eps",family="Arial",height=8,width=10);
+par(mfrow=c(2,2),mar=c(1,5,1,3));
+#---------------------------------------------------------------------------
 evo_bel <- evo_cc_02[evo_cc_02[,1]==simbel,8];
-plot(x=xxx,y=evo_bel,type="l",lwd=2,ylim=c(-4.2,4.2),col="red",xaxt="n",
-     xlab=expression(paste("Generation")),
-     ylab=expression(paste("Mean allele value")),
+plot(x=xxx,y=evo_bel,type="l",lwd=2,ylim=c(-6.2,3.2),col="red",xaxt="n",
+     xlab="",ylab=expression(paste("Mean allele value")),
      cex.lab=1.75,cex.axis=1.5,yaxt="n",lty="solid");
 abline(h=0,lty="dotted",lwd=0.8);
 arrows(x0=gens+5000,x1=gens+250,y0=evo_bel[gens],y1=evo_bel[gens],length=0.1,lwd=2);
 evo_bel_end <- as.character(round(x=evo_bel[gens],digits=3))
-axis(side=4,at=evo_bel[gens],labels=evo_bel_end,lwd=2,cex.axis=1.25);
-axis(side=2,at=c(-4,-2,0,2,4), cex.axis=1.5);
-axis(side=1,at=c(0,10000,20000,30000), cex.axis=1.5);
-text(x=-1600,y=4.1,pos=4,labels="A",cex=1.5,col="black");
-
+axis(side=4,at=evo_bel[gens],labels=evo_bel_end,lwd=2,cex.axis=1.5);
+axis(side=2,at=c(-6,-4,-2,0,2,4), cex.axis=1.75);
+text(x=-1600,y=2.85,pos=4,labels="A",cex=2.5,col="black");
+#---------------------------------------------------------------------------
 pedbe     <- ped_cc_02[ped_cc_02[,1]==simbel,];
 pedbe     <- pedbe[pedbe[,3]==0 & pedbe[,4]==1 & pedbe[,8] > 0,]; # Living females
-hist(pedbe[,11],breaks=10,main="",cex.lab=1.75,yaxs="i",xaxs="i",ylim=c(0,22),
+hist(pedbe[,11],breaks=seq(-40,40,by=5),main="",cex.lab=1.75,yaxs="i",xaxs="i",
+     ylim=c(0,27),xlab="",xaxt="n",
+     col="red",cex.axis=1.75,xlim=c(-40,40));
+polygon(x=c(0:50,50:0),y=c(rep(0,51),rep(32,51)),col="grey30");
+hist(pedbe[,11],breaks=seq(-40,40,by=5),main="",cex.lab=1.5,yaxs="i",xaxs="i",
      xlab=expression(paste("Tendency for polyandry phenotype (",P[p],")")),
-     col="red",cex.axis=1.5);
-polygon(x=c(0:10,10:0),y=c(rep(0,11),rep(22,11)),col="grey30");
-hist(pedbe[,11],breaks=10,main="",cex.lab=1.5,yaxs="i",xaxs="i",ylim=c(0,22),
-     xlab=expression(paste("Tendency for polyandry phenotype (",P[p],")")),
-     col="red",add=TRUE);
+     ylim=c(0,32), col="red",add=TRUE,xlim=c(-40,40));
 box();
 abline(v=0,lwd=3);
-text(x=0,y=21,pos=4,labels="Polyandrous",cex=1.5,col="white");
-text(x=-16,y=21,pos=4,labels="B; Monandrous",cex=1.5,col="black");
+text(x=0,y=25.5,pos=4,labels="Polyandrous",cex=1.6,col="white");
+text(x=-31,y=25.5,pos=4,labels="Monandrous",cex=1.6,col="black");
 arrows(x0=mean(pedbe[,11]),x1=mean(pedbe[,11]),y1=0,y0=2,length=0.1,lwd=2)
-evo_bel_phn <- as.character(round(x=mean(pedbe[,11]),digits=3));
-text(x=mean(pedbe[,11])+0.4,y=2.5,labels=evo_bel_phn,cex=0.8);
+evo_bel_phn <- as.character(round(x=mean(pedbe[,11]),digits=2));
+text(x=mean(pedbe[,11])+0.4,y=4.35,labels=evo_bel_phn,cex=1.2,srt=90);
+text(x=-39,y=25,pos=4,labels="B",cex=2.5,col="black");
+#---------------------------------------------------------------------------
+par(mar=c(5,5,1,3));
+#---------------------------------------------------------------------------
+evo_abo <- evo_cc_02[evo_cc_02[,1]==simabo,8];
+plot(x=xxx,y=evo_abo,type="l",lwd=2,ylim=c(-6.2,3.2),col="red",xaxt="n",
+     xlab=expression(paste("Generation")),
+     ylab=expression(paste("Mean allele value")),
+     cex.lab=1.75,cex.axis=1.75,yaxt="n",lty="solid");
+abline(h=0,lty="dotted",lwd=0.8);
+arrows(x0=gens+5000,x1=gens+250,y0=evo_abo[gens],y1=evo_abo[gens],length=0.1,lwd=2);
+evo_abo_end <- as.character(round(x=evo_abo[gens],digits=3))
+axis(side=4,at=evo_abo[gens],labels=evo_abo_end,lwd=2,cex.axis=1.5);
+axis(side=2,at=c(-6,-4,-2,0,2,4), cex.axis=1.75);
+axis(side=1,at=c(0,10000,20000,30000,40000), cex.axis=1.75);
+text(x=-1600,y=2.85,pos=4,labels="C",cex=2.5,col="black");
+#---------------------------------------------------------------------------
+pedab     <- ped_cc_02[ped_cc_02[,1]==simabo,];
+pedab     <- pedab[pedab[,3]==0 & pedab[,4]==1 & pedab[,8] > 0,]; # Living females
+hist(pedab[,11],breaks=seq(-40,40,by=5),main="",cex.lab=1.75,yaxs="i",xaxs="i",
+     xlab=expression(paste("Tendency for polyandry phenotype (",P[p],")")),
+     ylim=c(0,27),col="red",cex.axis=1.75,xlim=c(-40,40));
+polygon(x=c(0:50,50:0),y=c(rep(0,51),rep(32,51)),col="grey30");
+hist(pedab[,11],breaks=seq(-40,40,by=5),main="",cex.lab=1.5,yaxs="i",xaxs="i",
+     xlab=expression(paste("Tendency for polyandry phenotype (",P[p],")")),
+     ylim=c(0,32),col="red",add=TRUE,xlim=c(-40,40));
+box();
+abline(v=0,lwd=3);
+arrows(x0=mean(pedab[,11]),x1=mean(pedab[,11]),y1=0,y0=2,length=0.1,lwd=2)
+evo_abo_phn <- as.character(round(x=mean(pedab[,11]),digits=2));
+text(x=mean(pedab[,11]),y=4.0,labels=evo_abo_phn,cex=1.2,srt=90);
+text(x=-39,y=25,pos=4,labels="D",cex=2.5,col="black");
+#---------------------------------------------------------------------------
 dev.off();
 
 # XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX #
