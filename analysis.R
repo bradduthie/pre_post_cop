@@ -322,7 +322,7 @@ par(mfrow=c(2,2),mar=c(1,5,1,3));
 #---------------------------------------------------------------------------
 evo_bel <- evo_cc_02[evo_cc_02[,1]==simbel,8];
 plot(x=xxx,y=evo_bel,type="l",lwd=2,ylim=c(-6.2,3.2),col="red",xaxt="n",
-     xlab="",ylab=expression(paste("Mean allele value")),
+     xlab="",ylab=expression(paste("Mean allele value (",P[a],")")),
      cex.lab=1.75,cex.axis=1.5,yaxt="n",lty="solid");
 abline(h=0,lty="dotted",lwd=0.8);
 arrows(x0=gens+5000,x1=gens+250,y0=evo_bel[gens],y1=evo_bel[gens],length=0.1,lwd=2);
@@ -354,7 +354,7 @@ par(mar=c(5,5,1,3));
 evo_abo <- evo_cc_02[evo_cc_02[,1]==simabo,8];
 plot(x=xxx,y=evo_abo,type="l",lwd=2,ylim=c(-6.2,3.2),col="red",xaxt="n",
      xlab=expression(paste("Generation")),
-     ylab=expression(paste("Mean allele value")),
+     ylab=expression(paste("Mean allele value (",P[a],")")),
      cex.lab=1.75,cex.axis=1.75,yaxt="n",lty="solid");
 abline(h=0,lty="dotted",lwd=0.8);
 arrows(x0=gens+5000,x1=gens+250,y0=evo_abo[gens],y1=evo_abo[gens],length=0.1,lwd=2);
