@@ -3,14 +3,15 @@ title: "Evolution of pre-copulatory and post-copulatory inbreeding behaviour"
 author: "A. Bradley Duthie et al."
 date: "August 24, 2016"
 output:
-  pdf_document:
-    fig_caption: yes
-  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
+    reference_docx: docx_template.docx
+  pdf_document:
+    fig_caption: yes
+  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
