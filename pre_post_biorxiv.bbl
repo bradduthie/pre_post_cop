@@ -1,4 +1,4 @@
-\begin{thebibliography}{61}
+\begin{thebibliography}{62}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Ak{\c{c}}ay and Roughgarden(2007)}]{Akcay2007}
@@ -58,6 +58,12 @@ Duthie, A.~B., and J.~M. Reid. 2015.
   relatives and the inclusive fitness benefit of inbreeding avoidance}.
 \newblock PLoS One 10:e0125140.
 
+\bibitem[{Duthie and Reid(2016)}]{Duthie2016a}
+---{}---{}---. 2016.
+\newblock {Evolution of inbreeding avoidance and inbreeding preference through
+  mate choice among interacting relatives}.
+\newblock American Naturalist 188:000--000.
+
 \bibitem[{Firman and Simmons(2008)}]{Firman2008}
 Firman, R.~C., and L.~W. Simmons. 2008.
 \newblock {Polyandry facilitates postcopulatory inbreeding avoidance in house
@@ -87,18 +93,11 @@ Foerster, K., K.~Delhey, A.~Johnsen, J.~T. Lifjeld, and B.~Kempenaers. 2003.
   extra-pair matings}.
 \newblock Nature 425:714--717.
 
-\bibitem[{Fr{\`{e}}re et~al.(2010)Fr{\`{e}}re, Kr{\"{u}}tzen, Kopps, Ward,
-  Mann, and Sherwin}]{Frere2010}
-Fr{\`{e}}re, C.~H., M.~Kr{\"{u}}tzen, A.~M. Kopps, P.~Ward, J.~Mann, and W.~B.
-  Sherwin. 2010.
-\newblock {Inbreeding tolerance and fitness costs in wild bottlenose dolphins.}
-\newblock Proceedings of The Royal Society B 277:2667--2673.
-
 \bibitem[{Gasparini and Pilastro(2011)}]{Gasparini2011}
 Gasparini, C., and A.~Pilastro. 2011.
 \newblock {Cryptic female preference for genetically unrelated males is
   mediated by ovarian fluid in the guppy.}
-\newblock Proceedings of The Royal Society B 278:2495--2501.
+\newblock Proceedings of the Royal Society B 278:2495--2501.
 
 \bibitem[{Guillaume and Perrin(2009)}]{Guillaume2009}
 Guillaume, F., and N.~Perrin. 2009.
@@ -109,7 +108,7 @@ Guillaume, F., and N.~Perrin. 2009.
 \bibitem[{Jennions and Petrie(2000)}]{Jennions2000}
 Jennions, M.~D., and M.~Petrie. 2000.
 \newblock {Why do females mate multiply? A review of the genetic benefits}.
-\newblock Biological reviews of the Cambridge Philosophical Society 75:21--64.
+\newblock Biological Reviews 75:21--64.
 
 \bibitem[{Keller and Waller(2002)}]{Keller2002}
 Keller, L.~F., and D.~M. Waller. 2002.
@@ -184,6 +183,22 @@ Liu, X., X.~Tu, H.~He, C.~Chen, and F.~Xue. 2014.
 Lynch, M., and B.~Walsh. 1998.
 \newblock {Genetics and Analysis of Quantitative Traits}.
 \newblock Sinauer, Sunderland.
+
+\bibitem[{Metzger et~al.(2010{\natexlab{\emph{a}}})Metzger, Bernstein,
+  Hoffmeister, and Desouhant}]{Metzger2010}
+Metzger, M., C.~Bernstein, T.~S. Hoffmeister, and E.~Desouhant.
+  2010{\natexlab{\emph{a}}}.
+\newblock {Does kin recognition and sib-mating avoidance limit the risk of
+  genetic incompatibility in a parasitic wasp?}
+\newblock PLoS One 5:1--6.
+
+\bibitem[{Metzger et~al.(2010{\natexlab{\emph{b}}})Metzger, Fischbein, Auguste,
+  Fauvergue, Bernstein, and Desouhant}]{Metzger2010a}
+Metzger, M., D.~Fischbein, A.~Auguste, X.~Fauvergue, C.~Bernstein, and
+  E.~Desouhant. 2010{\natexlab{\emph{b}}}.
+\newblock {Synergy in information use for mate finding: Demonstration in a
+  parasitoid wasp}.
+\newblock Animal Behaviour 79:1307--1315.
 
 \bibitem[{Mills and Smouse(1994)}]{Mills1994}
 Mills, L.~S., and P.~E. Smouse. 1994.
@@ -342,11 +357,6 @@ Wang, S., M.~Cummings, and M.~Kirkpatrick. 2015.
 \newblock {Coevolution of male courtship and sexual conflict characters in
   mosquitofish}.
 \newblock Behavioral Ecology 26:1013--1020.
-
-\bibitem[{Waser et~al.(1986)Waser, Austad, and Keane}]{Waser1986}
-Waser, P.~M., S.~N. Austad, and B.~Keane. 1986.
-\newblock {When should animals tolerate inbreeding?}
-\newblock American Naturalist 128:529--537.
 
 \bibitem[{Zeh and Zeh(1997)}]{Zeh1997}
 Zeh, J.~A., and D.~W. Zeh. 1997.
