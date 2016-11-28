@@ -1,17 +1,19 @@
 ---
-title: "Evolution of pre-copulatory and post-copulatory inbreeding behaviour and associated polyandry"
-author: "A. Bradley Duthie, Greta Bocedi, Ryan R. Germain, Matthew E. Wolak, and Jane M. Reid"
+title: Evolution of pre-copulatory and post-copulatory inbreeding behaviour and associated
+  polyandry
+author: A. Bradley Duthie, Greta Bocedi, Ryan R. Germain, Matthew E. Wolak, and Jane
+  M. Reid
 date: "August 24, 2016"
 output:
+  pdf_document:
+    fig_caption: yes
+  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
     reference_docx: docx_template.docx
-  pdf_document:
-    fig_caption: yes
-  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
@@ -24,6 +26,8 @@ bibliography: ms_pre_post.bib
 
 
 ******************************
+
+<!--- Will most likely need to read and cite \cite{Fisher2016} here (Fisher et al. 2016 Behavioural Ecology -- pre- and post-copulatory competition using network theory --->
 
 Abstract
 ===================================================
