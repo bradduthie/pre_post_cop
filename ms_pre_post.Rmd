@@ -1,19 +1,18 @@
 ---
 title: Evolution of pre-copulatory and post-copulatory inbreeding behaviour and associated
   polyandry
-author: A. Bradley Duthie, Greta Bocedi, Ryan R. Germain, Matthew E. Wolak, and Jane
-  M. Reid
-date: "August 24, 2016"
+author: "A. Bradley Duthie, Ryan R. Germain, and Jane M. Reid"
+date: "December 15, 2016"
 output:
-  pdf_document:
-    fig_caption: yes
-  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
     reference_docx: docx_template.docx
+  pdf_document:
+    fig_caption: yes
+  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
@@ -32,7 +31,8 @@ bibliography: ms_pre_post.bib
 Abstract
 ===================================================
 
-Inbreeding avoidance has been widely hypothesised to evolve through pre-copulatory and post-copulatory mechanisms as a consequence of inbreeding depression in offspring viability. However, no modelling compares evolution of pre-copulatory and post-copulatory inbreeding avoidance jointly, and given biologically relevant costs of inbreeding strategies. Critically, evolution of post-copulatory inbreeding avoidance is restricted to females that mate multiply, potentially leading to complex evolutionary dynamics among inbreeding strategies and polyandry. Accordingly, we use individual-based modelling to track evolution of polyandry and inbreeding strategies under multiple costs and constraints to address three questions: (1) Does evolution of post-copulatory inbreeding avoidance facilitate evolution of costly polyandry? (2) Is evolution of one costly inbreeding strategy inhibited by another non-costly alternative strategy? And (3) is evolution of one inbreeding strategy precluded by existence of another already adaptive strategy? We show that evolution of polyandry is facilitated by post-copulatory inbreeding avoidance. Evolution of relatively low cost inbreeding avoidance strategies was observed, while selection for functionally redundant high cost strategies decreased over generations. Finally, existence of an adaptive inbreeding strategy precluded evolution of post-copulatory, but not pre-copulatory, inbreeding avoidance. Our model thereby introduces a novel framework for predicting evolution of both pre-copulatory and post-copulatory inbreeding strategies in empirical systems.
+Inbreeding avoidance has been widely hypothesised to evolve through pre-copulatory and post-copulatory mechanisms as a consequence of inbreeding depression in offspring viability and female multiple mating (polyandry). However, no theoretical framework exists from which to derive hypothese concerning joint evolution of pre-copulatory and post-copulatory inbreeding avoidance. Evolution of post-copulatory inbreeding avoidance necessitates polyandry, potentially leading to complex evolutionary dynamics among inbreeding strategies and female mating frequency, each of which might be affected by direct negative costs. Hence, we use individual-based modelling to quantify evolution of interacting pre- and post-copulatory inbreeding avoidance and associated polyandry across multiple cost combinations given severe inbreeding depression. We find that evolution of post-copulatory inbreeding avoidance increases selection for polyandry, that selection for costly inbreeding strategies was weak or negligible given a non-costly alternative strategy. Established pre-copulatory inbreeding avoidance generally precluded evolution of polyandry and therefore inbreeding avoidance, but established post-copulatory inbreeding aviodance did not preclude pre-copulatory inbreeding avoidance from evolving. We thereby provide a general framework for understanding evolution of pre- and/or post-copulatory inbreeding avoidance across systems, and conclude that evolution of inbreeding avoidance phenotypes and associated polyandry are predicted to interact and be strongly affected by direct costs.
+
 
 Introduction
 ===================================================
