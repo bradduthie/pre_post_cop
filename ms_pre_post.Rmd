@@ -139,8 +139,6 @@ In all simulations, we recorded mean values of $P_{a}$, $M_{a}$, and $F_{a}$ in 
 
 ******************************
 
-<!--- LEFT OFF HERE ------------------------------------------------------->
-
 
 Results
 ===================================================
@@ -150,14 +148,17 @@ Results
 Does evolution of post-copulatory inbreeding avoidance facilitate evolution of costly polyandry?
 ----------------------------------------------
 
-When post-copulatory inbreeding avoidance alleles ($F_{a}$) were fixed to zero and $F_{p}$ could not evolve, $P_{a}$ values were always negative (Figure 1A,C,E,G). This shows that there is selection against unconditional polyandry even given zero direct cost ($c_{P}=0$; Figure 1A). This is because polyandrous females sampled more males from the available population and were consequently likely to mate with some relatives and hence produce some inbred offspring with low viability [@Duthie2016]. 
+When post-copulatory inbreeding avoidance alleles ($F_{a}$) were fixed to zero, meaning that $F_{p}$ could not evolve, $P_{a}$ alleles underlying polyandry always decreased to negative values over generations (Figure 1A,C,E,G). This shows that despite strong inbreeding depression in offspring viability, there is selection against unconditional polyandry even given zero direct cost ($c_{P}=0$; Figure 1A). This is because values of the $M_{a}$ also evolved to be negative, meaning that females typically avoided inbreeding through their initial mating. Polyandrous females that subsequently sampled more males from the available population were consequently more likely to mate with some relatives and hence produce some inbred offspring with low viability [@Duthie]. 
 
-When post-copulatory inbreeding avoidance was allowed to evolve, mean $P_{a}$ values were substantially higher than in comparable simulations where post-copulatory inbreeding avoidance could not evolve (Figure 1B,D,F,H). Allowing evolution of post-copulatory inbreeding avoidance alongside pre-copulatory inbreeding avoidance therefore facilitated evolution of polyandry. However, $P_{a}$ values were expected to be positive only given a low cost of polyandry ($c_{P} < 0.005$, Figure 1B,D). This implies that, even given strong inbreeding depression in offspring viability, inbreeding avoidance might generally be a weak force driving polyandry evolution.
+<!--- Changed several things back here because alleles cannot evolve ---> 
 
-Strong post-copulatory inbreeding avoidance consistently evolved in all simulations where such evolution was allowed (Figure 1B,D,F,H), even when $P_{a}$ values were expected to be slightly negative (i.e., when there is selection against polyandry, Figure 1F,H). This reflects the threshold nature of phenotypic expression of polygenic polyandry, wherein random sampling of alleles means that polyandry is commonly expressed (i.e., $P_{g}>0$) even when mean $P_{a}$ values are negative (Figure 2). This means that there is commonly opportunity for expression of post-copulatory inbreeding avoidance and associated selection that drives evolution of $F_{a}$ allele values.
+When post-copulatory inbreeding avoidance was allowed to evolve, mean $P_{a}$ values became substantially higher than in comparable simulations where $F_{a}$ values were fixed to zero and post-copulatory inbreeding avoidance could not evolve (Figure 1B,D,F,H). Allowing evolution of post-copulatory inbreeding avoidance alongside pre-copulatory inbreeding avoidance therefore facilitated evolution of polyandry. However, $P_{a}$ values were expected to be positive only given a low cost of polyandry ($c_{P} < 0.005$, Figure 1B,D). This implies that, even given strong inbreeding depression in offspring viability, inbreeding avoidance might generally be a weak force driving polyandry evolution.
 
-Strong pre-copulatory inbreeding avoidance also evolved (i.e., $M_{a}<0$) in all simulations, irrespective of $c_{P}$ and irrespective of whether post-copulatory inbreeding avoidance was allowed to evolve (Figure 1).
+Strong post-copulatory inbreeding avoidance, manifested as very negative $F_{a}$ values, consistently evolved in all simulations where such evolution was allowed (Figure 1B,D,F,H). Evolution of post-copulatory inbreeding avoidance occurred even when $P_{a}$ values were expected to be slightly negative, and hence when there was selection against polyandry, (Figure 1F,H). This reflects the threshold nature of phenotypic expression of polygenic polyandry, wherein random sampling of alleles means that polyandry is commonly expressed (i.e., $P_{g}>0$) even when mean $P_{a}$ values are negative (Figure 2). This means that, even in populations where female reproductive strategy evolves toward monandry, there is still commonly some opportunity for expression of post-copulatory inbreeding avoidance and associated selection that drives evolution of $F_{a}$ allele values.
 
+Strong pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}<0$) in all simulations, irrespective of $c_{P}$ and irrespective of whether post-copulatory inbreeding avoidance was allowed to evolve or hence whether polyandry evolved (Figure 1). This might be expected given strong inbreeding depression in offspring viability, which imposes selection against inbreeding.
+
+<!--- LEFT OFF HERE ------------------------------------------------------->
 
 Is evolution of one costly inbreeding strategy inhibited by another non-costly alternative strategy?
 ----------------------------------------------
