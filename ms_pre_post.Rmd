@@ -189,7 +189,7 @@ Another general inference from our model concerns the dynamics of phenotypes wit
 
 
 
-<!--- Some general conclusions addressing 1) what future theory should be developed, and 2) what future empirical studies need to consider. For 2, need to be aware of both pre- and post-copulatory inbreeding avoidance, potentially, and that the two are not independent, necessarily; cannot find any general theory for what happens when you have this kind of strategy redundancy -- two ways of getting at the same outcome. --->
+<!--- Some general conclusions addressing 1) what future theory should be developed, and 2) what future empirical studies need to consider. For 2, need to be aware of both pre- and post-copulatory inbreeding avoidance, potentially, and that the two are not independent, necessarily; cannot find any general theory for what happens when you have this kind of strategy redundancy -- two ways of getting at the same outcome. See: @Nowak1997, @Edelman2001, @Kitano2004  --->
 
 
 
