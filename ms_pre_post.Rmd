@@ -185,8 +185,6 @@ Strong post-copulatory inbreeding avoidance, manifested as very negative $F_{a}$
 
 Strong pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}<0$) in all simulations, irrespective of $c_{P}$ and irrespective of whether post-copulatory inbreeding avoidance was allowed to evolve or hence whether polyandry evolved (Figure 1). This might be expected given strong inbreeding depression in offspring viability, which imposes selection against inbreeding.
 
-<!--- XXX XXX XXX LEFT OFF HERE XXX XXX XXX --->
-
 How do cost asymmetries affect long-term persistence of reproductive strategies?
 ----------------------------------------------
 
@@ -200,10 +198,15 @@ Evolution of post-copulatory inbreeding avoidance facilitated evolution of polya
 
 <!--- XXX XXX XXX LEFT OFF HERE XXX XXX XXX --->
 
-How is evolution of one inbreeding strategy affected by the existence of another already adaptive strategy?
+How do evolution of pre-copulatory and post-copulatory inbreeding avoidance affect one another?
 ----------------------------------------------
 
-When polyandry alleles ($P_{a}$) were fixed to be positive so that all females were expected to mate multiply and post-copulatory inbreeding allele ($F_{a}$) values were fixed for adaptive inbreeding avoidance, pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}$ values became increasingly negative; Figure 4A). Such evolution still occurred, but to a much smaller degree, when pre-copulatory inbreeding avoidance was costly (Figure 4B). However, after $40000$ generations, $M_{a}$ values were less negative when post-copulatory inbreeding avoidance and polyandry were fixed at non-zero values than when they also evolved from initial values of zero (e.g., compare the blue lines in Figures 4A versus Figure 1A).
+When polyandry alleles ($P_{a}$) were fixed to be positive so that all females were expected to mate multiply and post-copulatory inbreeding allele ($F_{a}$) values were fixed for adaptive inbreeding avoidance, pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}$ values became increasingly negative; Figure 4A). Such evolution still occurred, but to a much smaller degree, when pre-copulatory inbreeding avoidance was costly (Figure 4B). However, after $40000$ generations, $M_{a}$ values were less negative when post-copulatory inbreeding avoidance and polyandry were fixed at non-zero values than when they also evolved from initial values of zero ($-15.45$ vs. $-17.62$; compare the blue lines in Figures 4A versus Figure 1B).
+
+<!--- Mean pre-cop value is -17.62444  in Figure 1B --->
+<!--- Mean pre-cop value is -15.44786  in Figure 4A --->
+
+<!--- I know I've mentioned this too many times, but I'm really not a fan of this kind of quantitative statistic because it doesn't really mean anything in the context of a model like this. At the very least though, I think it's better to put the actual numbers up because ''X% less negative'' just seems very confusing to me. --->
 
 Conversely, when pre-copulatory inbreeding allele ($M_{a}$) values were fixed for adaptive inbreeding avoidance, mean $F_{a}$ allele values did not consistently become negative over generations (Figure 4C,D). However, in this case, mean $P_{a}$ allele values consistently decreased over generations, reflecting selection against polyandry regardless whether or not post-copulatory inbreeding strategy was costly (Figure 4C,D). Consequently, when $c_{F}=0$, $F_{a}$ allele values had no effect because females were almost exclusively monandrous, resulting in high drift of $F_{a}$ values among replicates (illustrated by wide standard errors, Figure 4C). However, when $c_{F}=0.02$, $F_{a}$ values remained near zero to minimise direct costs. This lack of selection for post-copulatory inbreeding avoidance was driven by a lack of polyandry, and therefore an inability of females to bias fertilisation among multiple mates. When pre-copulatory inbreeding avoidance and polyandry were both fixed ($M_{a}=-10$ and $P_{a}=1$), $F_{a}$ allele values evolved to similarly negative means as $M_{a}$ allele values in Figure 4A,B (see Supporting Information). 
 
