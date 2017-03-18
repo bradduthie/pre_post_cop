@@ -1,5 +1,6 @@
 ---
-title: Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance and associated polyandry
+title: Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance
+  and associated polyandry
 author: ''
 date: "19 March 2017"
 output:
