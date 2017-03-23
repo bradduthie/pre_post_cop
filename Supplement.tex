@@ -24,17 +24,17 @@
 
 \def\wl{\par \vspace{\baselineskip}} %defines \wl as a line skip.
 
-\renewcommand{\thesection}{S1.\arabic{section}}
+\renewcommand{\thesection}{S.\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\thepage}{S1-\arabic{page}}
+\renewcommand{\thepage}{S\arabic{page}}
 
 \makeatletter %% With ams
-\def\tagform@#1{\maketag@@@{(S1-\ignorespaces#1\unskip\@@italiccorr)}}
+\def\tagform@#1{\maketag@@@{(S\ignorespaces#1\unskip\@@italiccorr)}}
 \makeatother
 
 \makeatletter
 \makeatletter \renewcommand{\fnum@figure}
-{\figurename~S1-\thefigure}
+{\figurename~S\thefigure}
 \makeatother
 
 \newcommand{\subtitle}[1]{%
@@ -69,10 +69,11 @@
 
 \newenvironment{phv}{\fontfamily{phv}\selectfont}{\phv}
 
-\title{Evolution of pre-copulatory and post-copulatory inbreeding behaviour \\ \vspace{10 mm} {\sffamily\Large\bfseries Supplemental results showing change in allele values over different parameter combinations, and allele values over generations for single replicates}}
+\title{Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance
+  and associated polyandry \\ \vspace{10 mm} {\sffamily\Large\bfseries Supplemental results showing change in allele values over different parameter combinations, and allele values over generations for single replicates}}
 
 
-\author{\\ \textbf{A. Bradley Duthie\textsuperscript{1,2} and Jane M. Reid\textsuperscript{1}}\\ \textit{\textsuperscript{1} Institute of Biological and Environmental Sciences, School of Biological Sciences, Zoology Building, Tillydrone Avenue, University of Aberdeen, Aberdeen AB24 2TZ, United Kingdom \\ \hspace{10 mm} \textsuperscript{2} E-mail: aduthie@abdn.ac.uk}}
+%\author{\\ \textbf{A. Bradley Duthie\textsuperscript{1,2} and Jane M. Reid\textsuperscript{1}}\\ \textit{\textsuperscript{1} Institute of Biological and Environmental Sciences, School of Biological Sciences, Zoology Building, Tillydrone Avenue, University of Aberdeen, Aberdeen AB24 2TZ, United Kingdom \\ \hspace{10 mm} \textsuperscript{2} E-mail: aduthie@abdn.ac.uk}}
 
 
 \date{}
@@ -81,7 +82,7 @@
 \doublespacing
 
 \pagestyle{fancy}
-\lhead{DUTHIE ET AL}
+%\lhead{DUTHIE ET AL}
 \rhead{PRE- \& POST-COPULATORY (SUPPLEMENT)}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -112,7 +113,7 @@
 \vspace{10 mm}
 
 
-\noindent \textbf{Here we present supplemental results from an individual-based model in which alleles underlying polyandry (\bm{$P_{a}$}), pre-copulatory inbreeding strategy (\bm{$M_{a}$}) and post-copulatory inbreeding strategy (\bm{$F_{a}$}) affect evolving phenotypic values for each trait over 40000 generations. The first figure in this supplement shows how \bm{$F_{a}$} alleles change over generations given that \bm{$M_{a}$} alleles are fixed for strong inbreeding avoidance and \bm{$P_{a}$} alleles are fixed for polyandry. Remaining figures show all cost combinations of \bm{$0$} and \bm{$0.02$} for polyandry (\bm{$c_{P}$}), pre-copulatory inbreeding strategy (\bm{$c_{M}$}), and post-copulatory inbreeding strategy (\bm{$c_{F}$}), including a summary among \bm{$40$} replicates and dynamics of individual replicates. Figures also show correlations of mean allele values among replicates.}
+\noindent \textbf{Here we present supplemental results from an individual-based model in which alleles underlying polyandry (\bm{$P_{a}$}), pre-copulatory inbreeding strategy (\bm{$M_{a}$}) and post-copulatory inbreeding strategy (\bm{$F_{a}$}) affect evolving phenotypic values for each trait over 40000 generations. The first figure in this supplement summarises trajectories of allele values across replicate simulations for all cost combinations of \bm{$0$} and \bm{$0.02$} for polyandry (\bm{$c_{P}$}), pre-copulatory inbreeding strategy (\bm{$c_{M}$}), and post-copulatory inbreeding strategy (\bm{$c_{F}$}). The second figure shows how \bm{$F_{a}$} alleles change over generations given that \bm{$M_{a}$} alleles are fixed for strong inbreeding avoidance and \bm{$P_{a}$} alleles are fixed for polyandry. Remaining figures show the dynamics of individual replicate simulations for all trait cost combinations of \bm{$0$} and \bm{$0.02$}; these figures also show correlations of mean allele values among replicates.}
 
 \clearpage
 
@@ -142,25 +143,25 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.82]{figures/evo_combs.pdf}
+\includegraphics[scale=0.82]{figures/evo_combs.png}
 \end{center}
-\caption{Mean allele values underlying tendency for polyandry (red lines and shading), pre-copulatory inbreeding strategy (i.e., blue lines and shading), and post-copulatory inbreeding strategy (i.e., black lines and shading), as calculated across all individuals within a population over 40000 generations given strong inbreeding depression. Solid lines represent grand means over 40 replicate populations, and shading around solid lines show standard deviations of allele values around grand means. Negative mean allele values reflect strategies of inbreeding avoidance or tendency for monandry, and positive values reflect strategies of inbreeding preference or tendency for polyandry. Panels A-H show simulations for different combinations of costs for tendency for polyandry, inbreeding mating strategy, and inbreeding fertilisation strategy. Dotted horizontal black lines in panels show values of zero on the y-axis. Individual replicates for all cost combinations are shown in Figures S\ref{SI_M00_P00_E00}-S\ref{SI_M02_P02_E02}. Dotted horizontal lines show where the y-axis equals zero.}
+\caption{Mean allele values underlying tendency for polyandry (red lines and shading), pre-copulatory inbreeding strategy (blue lines and shading), and post-copulatory inbreeding strategy (black lines and shading), as calculated across all individuals within a population over 40000 generations given strong inbreeding depression. Solid lines represent grand means over 40 replicate populations, and shading around solid lines show standard deviations of allele values around grand means. Negative mean allele values indicate inbreeding avoidance or tendency for monandry, and positive values indicate inbreeding preference or tendency for polyandry. Panels A-H show simulations for different combinations of costs for tendency for polyandry ($c_{P}$), pre-copulatory inbreeding strategy ($c_{M}$), and post-copulatory inbreeding strategy ($c_{F}$). Dotted horizontal black lines in panels show values of zero on the y-axis. Individual replicates for all cost combinations are shown in Figures S\ref{SI_M00_P00_E00}-S\ref{SI_M02_P02_E02}.}
 \label{allcombs}
 \end{figure}
 
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/extra_MfPf.pdf}
+\includegraphics[scale=0.8]{figures/extra_MfPf.png}
 \end{center}
-\caption{Mean allele values underlying post-copulatory inbreeding strategy (i.e., black lines and shading), as calculated across all individuals within a population over 40000 generations given strong inbreeding depression. Solid black lines represent grand means over 40 replicate populations, and grey shading around solid lines show standard errors of allele values around grand means. Negative mean allele values reflect strategies of inbreeding avoidance, and positive values reflect strategies of inbreeding preference. Red and blue horizontal lines reflect fixed polyandry allele values of $P_{a}=1$ and fixed pre-copulatory inbreeding strategy allele values of $M_{a}=-10$, respectively. Panels (A) and (B) show simulations given not costly and costly post-copulatory inbreeding strategy, respectively. Dotted horizontal lines show where the y-axis equals zero.}
+\caption{Mean allele values underlying post-copulatory inbreeding strategy (i.e., black lines and shading), as calculated across all individuals within a population over 40000 generations given strong inbreeding depression. Solid black lines represent grand means over 40 replicate populations, and grey shading around solid lines show standard errors of allele values around grand means. Negative mean allele values indicate strategies of inbreeding avoidance, and positive values indicate strategies of inbreeding preference. Red and blue horizontal lines indicate fixed polyandry allele values of $P_{a}=1$ and fixed pre-copulatory inbreeding strategy allele values of $M_{a}=-10$, respectively. Panels (A) and (B) show simulations given not costly and costly post-copulatory inbreeding strategy, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{extra_MfPf}
 \end{figure}
 
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M00_P00_E00.pdf}
+\includegraphics[scale=0.8]{figures/SI_M00_P00_E00.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}A, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M00_P00_E00}
@@ -169,7 +170,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M02_P00_E00.pdf}
+\includegraphics[scale=0.8]{figures/SI_M02_P00_E00.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}B, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M02_P00_E00}
@@ -178,7 +179,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M00_P02_E00.pdf}
+\includegraphics[scale=0.8]{figures/SI_M00_P02_E00.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}C, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M00_P02_E00}
@@ -187,7 +188,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M00_P00_E02.pdf}
+\includegraphics[scale=0.8]{figures/SI_M00_P00_E02.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}D, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M00_P00_E02}
@@ -196,7 +197,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M02_P02_E00.pdf}
+\includegraphics[scale=0.8]{figures/SI_M02_P02_E00.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}E, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M02_P02_E00}
@@ -205,7 +206,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M02_P00_E02.pdf}
+\includegraphics[scale=0.8]{figures/SI_M02_P00_E02.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}F, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M02_P00_E02}
@@ -214,7 +215,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M00_P02_E02.pdf}
+\includegraphics[scale=0.8]{figures/SI_M00_P02_E02.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}G, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M00_P02_E02}
@@ -223,7 +224,7 @@
 \clearpage
 \begin{figure}
 \begin{center}				
-\includegraphics[scale=0.8]{figures/SI_M02_P02_E02.pdf}
+\includegraphics[scale=0.8]{figures/SI_M02_P02_E02.png}
 \end{center}
 \caption{Mean allele values underlying tendency for polyandry (A; red lines), pre-copulatory inbreeding strategy (B; blue lines), and post-copulatory inbreeding strategy (C; black lines), as calculated across all individuals in 40 replicate simulations with identical starting conditions over 40000 generations and given strong inbreeding depression. Thick lines show grand means of replicates, and thin lines show individual replicates. Panels A-C thereby show the same information as in Figure S\ref{allcombs}H, but with individual replicates replacing standard error around grand mean values. Panel D illustrates among replicate correlations in mean allele values over generations. Purple, dark red, and dark blue lines show correlations between $P_{a}$ \& $M_{a}$, $P_{a}$ \& $F_{a}$, and $M_{a}$ \& $F_{a}$, respectively. Dotted horizontal lines show where the y-axis equals zero.}
 \label{SI_M02_P02_E02}
