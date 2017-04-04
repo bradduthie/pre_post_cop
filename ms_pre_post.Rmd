@@ -4,15 +4,15 @@ title: Evolution of pre-copulatory and post-copulatory strategies of inbreeding 
 author: ''
 date: "23 March 2017"
 output:
+  pdf_document:
+    fig_caption: yes
+  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
     reference_docx: docx_template.docx
-  pdf_document:
-    fig_caption: yes
-  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
@@ -178,7 +178,7 @@ Conversely, when pre-copulatory inbreeding allele ($M_{a}$) values were fixed fo
 Discussion
 ===================================================
 
-Evolution of different reproductive strategies cannot be presumed to occur in isolation from each other in real-world populations. Rather, such evolution is likely to involve multiple interacting phenotypes resulting in the potential for feedback and degeneracy (i.e., functional redundance) among phenotypes under selection. For example, strong inbreeding depression in offspring fitness is widely hypothesised to drive selection for inbreeding avoidance, which could consequently drive selection for polyandry [e.g., @Zeh1997; @Jennions2000; @Tregenza2002]. Evolution of inbreeding avoidance can be driven by selection on both pre-copulatory and post-copulatory mechanisms, so simultaneous evolution of each phenotype is likely to be defined by degeneracy, in addition to any direct costs on phenotypes. We used individual-based modelling to explore evolution of pre-copulatory and post-copulatory inbreeding avoidance and polyandry given (1) hard constraints on evolution of post-copulatory inbreeding avoidance, (2) asymmetric costs of pre-copulatory and post-copulatory inbreeding avoidance, and (3) evolution of one inbreeding avoidance phenotype given the pre-existence the other. We thereby highlight fundamental but theoretically under-developed relationships between evolution of female mating frequency and pre-copulatory versus post-copulatory inbreeding avoidance.
+Evolution of different reproductive strategies cannot be presumed to occur in isolation from each other in real-world populations. Rather, such evolution is likely to involve multiple interacting phenotypes resulting in the potential for feedback and degeneracy (i.e., functional redundance) among phenotypes under selection. For example, strong inbreeding depression in offspring fitness is widely hypothesised to drive selection for inbreeding avoidance, which could consequently drive selection for polyandry [e.g., @Zeh1997; @Jennions2000; @Tregenza2002]. Evolution of inbreeding avoidance can be driven by selection on both pre-copulatory and post-copulatory mechanisms, so simultaneous evolution of each phenotype is likely to be defined by degeneracy, in addition to any direct costs on phenotypes. We used individual-based modelling to explore evolution of pre-copulatory and post-copulatory inbreeding avoidance and polyandry given (1) hard constraints on evolution of post-copulatory inbreeding avoidance, (2) asymmetric costs of pre-copulatory and post-copulatory inbreeding avoidance, and (3) evolution of one inbreeding avoidance phenotype given the pre-existence the other. We thereby highlight fundamental but theoretically under-developed relationships between evolution of female mating frequency and pre-copulatory versus post-copulatory inbreeding avoidance. We present our model and simulation results as a tool for thinking more clearly about reproductive strategies, not for making accurate quantitative predictions in any specific system. While the logic of our model can be usefully applied to constructing hypotheses within and across empirical systems, accurate quantitative prediction would require additional detail and the incorporation of empirical data for model parameterisation.
 
 
 Evolution of polyandry
