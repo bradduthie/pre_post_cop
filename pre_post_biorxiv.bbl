@@ -1,4 +1,4 @@
-\begin{thebibliography}{62}
+\begin{thebibliography}{69}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Ak{\c{c}}ay and Roughgarden(2007)}]{Akcay2007}
@@ -6,10 +6,29 @@ Ak{\c{c}}ay, E., and J.~Roughgarden. 2007.
 \newblock {Extra-pair paternity in birds: Review of the genetic benefits}.
 \newblock Evolutionary Ecology Research 9:855--868.
 
+\bibitem[{Ala-Honkola et~al.(2011)Ala-Honkola, Manier, L{\"{u}}pold, and
+  Pitnick}]{Ala-Honkola2011}
+Ala-Honkola, O., M.~K. Manier, S.~L{\"{u}}pold, and S.~Pitnick. 2011.
+\newblock {No evidence for postcopulatory inbreeding avoidance in Drosophila
+  melanogaster}.
+\newblock Evolution 65:2699--2705.
+
+\bibitem[{Arct et~al.(2015)Arct, Drobniak, and Cicho}]{Arct2015}
+Arct, A., S.~M. Drobniak, and M.~Cicho. 2015.
+\newblock {Genetic similarity between mates predicts extrapair paternity--a
+  meta-analysis of bird studies}.
+\newblock Behavioral Ecology 00:1--10.
+
 \bibitem[{Arnqvist and Rowe(2005)}]{Arnqvist2005a}
 Arnqvist, G., and L.~Rowe. 2005.
 \newblock {Sexual Conflict}.
 \newblock Princeton University Press, Princeton, New Jersey.
+
+\bibitem[{Bateson(1983)}]{Bateson1983}
+Bateson, P. 1983.
+\newblock {Optimal outbreeding}.
+\newblock Pages 257--277 \emph{in} Mate Choice. University Press, Cambridge,
+  Cambridge.
 
 \bibitem[{Bocedi and Reid(2014)}]{Bocedi2014}
 Bocedi, G., and J.~M. Reid. 2014.
@@ -26,7 +45,7 @@ Bretman, A., D.~Newcombe, and T.~Tregenza. 2009.
   Brooks}]{Bussiere2006}
 Bussi{\'{e}}re, L.~F., J.~Hunt, M.~D. Jennions, and R.~Brooks. 2006.
 \newblock {Sexual conflict and cryptic female choice in the black field
-  cricket, \textit{Teleogryllus commodus}}.
+  cricket, Teleogryllus commodus}.
 \newblock Evolution 60:792--800.
 
 \bibitem[{Charlesworth and Charlesworth(1999)}]{Charlesworth1999}
@@ -64,6 +83,11 @@ Duthie, A.~B., and J.~M. Reid. 2015.
   mate choice among interacting relatives}.
 \newblock American Naturalist 188:000--000.
 
+\bibitem[{Edelman and Gally(2001)}]{Edelman2001}
+Edelman, G.~M., and J.~A. Gally. 2001.
+\newblock {Degeneracy and complexity in biological systems}.
+\newblock Proceedings of the National Academy of Sciences 98:13763--13768.
+
 \bibitem[{Firman and Simmons(2008)}]{Firman2008}
 Firman, R.~C., and L.~W. Simmons. 2008.
 \newblock {Polyandry facilitates postcopulatory inbreeding avoidance in house
@@ -97,7 +121,13 @@ Foerster, K., K.~Delhey, A.~Johnsen, J.~T. Lifjeld, and B.~Kempenaers. 2003.
 Gasparini, C., and A.~Pilastro. 2011.
 \newblock {Cryptic female preference for genetically unrelated males is
   mediated by ovarian fluid in the guppy.}
-\newblock Proceedings of the Royal Society B 278:2495--2501.
+\newblock Proceedings. Biological sciences / The Royal Society 278:2495--2501.
+
+\bibitem[{Greeff et~al.(2009)Greeff, Vuuren, Kryger, and Moore}]{Greeff2009}
+Greeff, J.~M., G.~J. J.~V. Vuuren, P.~Kryger, and J.~C. Moore. 2009.
+\newblock {Outbreeding and possibly inbreeding depression in a pollinating fig
+  wasp with a mixed mating system}.
+\newblock Heredity 102:349--356.
 
 \bibitem[{Guillaume and Perrin(2009)}]{Guillaume2009}
 Guillaume, F., and N.~Perrin. 2009.
@@ -108,7 +138,7 @@ Guillaume, F., and N.~Perrin. 2009.
 \bibitem[{Jennions and Petrie(2000)}]{Jennions2000}
 Jennions, M.~D., and M.~Petrie. 2000.
 \newblock {Why do females mate multiply? A review of the genetic benefits}.
-\newblock Biological Reviews 75:21--64.
+\newblock Biological reviews of the Cambridge Philosophical Society 75:21--64.
 
 \bibitem[{Keller and Waller(2002)}]{Keller2002}
 Keller, L.~F., and D.~M. Waller. 2002.
@@ -131,7 +161,8 @@ Kingma, S.~A., M.~L. Hall, and A.~Peters. 2013.
 Koga, T., P.~R.~Y. Backwell, M.~D. Jennions, and J.~H. Christy. 1998.
 \newblock {Elevated predation risk changes mating behaviour and courtship in a
   fiddler crab}.
-\newblock Proceedings of the Royal Society B 265:1385--1390.
+\newblock Proceedings of the Royal Society B: Biological Sciences
+  265:1385--1390.
 
 \bibitem[{Kokko et~al.(2003)Kokko, Brooks, Jennions, and Morley}]{Kokko2003}
 Kokko, H., R.~Brooks, M.~D. Jennions, and J.~Morley. 2003.
@@ -176,7 +207,7 @@ Lihoreau, M., C.~Zimmer, and C.~Rivault. 2007.
 \bibitem[{Liu et~al.(2014)Liu, Tu, He, Chen, and Xue}]{Liu2014}
 Liu, X., X.~Tu, H.~He, C.~Chen, and F.~Xue. 2014.
 \newblock {Evidence for inbreeding depression and pre-copulatory, but not post
-  copulatory inbreeding avoidance in the cabbage beetle \textit{Colaphellus bowringi}.}
+  copulatory inbreeding avoidance in the cabbage beetle Colaphellus bowringi.}
 \newblock PloS one 9:e94389.
 
 \bibitem[{Lynch and Walsh(1998)}]{Lynch1998}
@@ -260,6 +291,12 @@ Reeve, J.~P. 2000.
 \newblock {Predicting long-term response to selection}.
 \newblock Genetical Research 75:83--94.
 
+\bibitem[{Reid(2015)}]{Reid2015a}
+Reid, J.~M. 2015.
+\newblock {What can we really say about relatedness and extrapair paternity: a
+  comment on Arct et al}.
+\newblock Behavioral Ecology 00:1--2.
+
 \bibitem[{Reid et~al.(2015{\natexlab{\emph{a}}})Reid, Arcese, Keller, Germain,
   Duthie, Losdat, Wolak, and Nietlisbach}]{Reid2014}
 Reid, J.~M., P.~Arcese, L.~F. Keller, R.~R. Germain, A.~B. Duthie, S.~Losdat,
@@ -277,8 +314,8 @@ Reid, J.~M., A.~B. Duthie, M.~E. Wolak, and P.~Arcese.
 
 \bibitem[{Roberts et~al.(2015)Roberts, Evison, Baer, and Hughes}]{Roberts2015a}
 Roberts, K.~E., S.~E.~F. Evison, B.~Baer, and W.~O.~H. Hughes. 2015.
-\newblock {The cost of promiscuity: sexual transmission of \textit{Nosema
-  microsporidian} parasites in polyandrous honey bees}.
+\newblock {The cost of promiscuity: sexual transmission of Nosema
+  microsporidian parasites in polyandrous honey bees}.
 \newblock Scientific Reports 5:10982.
 
 \bibitem[{Roberts and Gosling(2003)}]{Roberts2003}
@@ -312,8 +349,8 @@ R{\"{o}}nn, J., M.~Katvala, and G.~Arnqvist. 2007.
 
 \bibitem[{Rowe(1988)}]{Rowe1988}
 Rowe, L. 1988.
-\newblock {Cost of mating for female insects: risk of predation in \textit{Photinus
-  collustrans} (Coleoptera: Lampyridae)}.
+\newblock {Cost of mating for female insects: risk of predation in Photinus
+  collustrans (Coleoptera: Lampyridae)}.
 \newblock American Naturalist 121:139--142.
 
 \bibitem[{Rowe et~al.(1994)Rowe, Arnqvist, Sih, and Krupa}]{Rowe1994}
@@ -335,6 +372,12 @@ Szulkin, M., K.~V. Stopher, J.~M. Pemberton, and J.~M. Reid. 2013.
 \newblock {Inbreeding avoidance, tolerance, or preference in animals?}
 \newblock Trends in Ecology {\&} Evolution 28:205--211.
 
+\bibitem[{Tan et~al.(2012)Tan, L{\o}vlie, Pizzari, and Wigby}]{Tan2012}
+Tan, C. K.~W., H.~L{\o}vlie, T.~Pizzari, and S.~Wigby. 2012.
+\newblock {No evidence for precopulatory inbreeding avoidance in Drosophila
+  melanogaster}.
+\newblock Animal Behaviour 83:1433--1441.
+
 \bibitem[{Tregenza and Wedell(2002)}]{Tregenza2002}
 Tregenza, T., and N.~Wedell. 2002.
 \newblock {Polyandrous females avoid costs of inbreeding}.
@@ -349,7 +392,7 @@ Tuni, C., M.~Beveridge, and L.~W. Simmons. 2013.
 \bibitem[{Varian-Ramos and Webster(2012)}]{Varian-Ramos2012}
 Varian-Ramos, C.~W., and M.~S. Webster. 2012.
 \newblock {Extrapair copulations reduce inbreeding for female red-backed
-  fairy-wrens, \textit{Malurus melanocephalus}}.
+  fairy-wrens, Malurus melanocephalus}.
 \newblock Animal Behaviour 83:857--864.
 
 \bibitem[{Wang et~al.(2015)Wang, Cummings, and Kirkpatrick}]{Wang2015a}
