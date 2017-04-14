@@ -131,14 +131,17 @@
 \newline
 % authors go here:
 \\
-A. Bradley Duthie\textsuperscript{1,*},
-Greta Bocedi\textsuperscript{1},
-Ryan R. Germain\textsuperscript{1},
-Matthew E. Wolak\textsuperscript{1},
-Jane M. Reid\textsuperscript{1}
+A. Bradley Duthie\textsuperscript{1,*}, [...],
+%Greta Bocedi\textsuperscript{1},
+%Ryan R. Germain\textsuperscript{1},
+%Matthew E. Wolak\textsuperscript{1},
+Jane M. Reid\textsuperscript{2}
 \\
 \bigskip
-\bf{1} Institute of Biological and Environmental Sciences, School of Biological Sciences, Zoology Building, Tillydrone Avenue, University of Aberdeen, Aberdeen AB24 2TZ, United Kingdom
+\begin{small}
+\bf{1.} Biological and Environmental Sciences, University of Stirling, Stirling FK9 4LA, United Kingdom \\
+\bf{2.} Institute of Biological and Environmental Sciences, University of Aberdeen, Aberdeen AB24 2TZ, United Kingdom
+\end{small}
 %\\
 %\bf{2} Affiliation B
 \\
@@ -289,14 +292,14 @@ When post-copulatory inbreeding avoidance was allowed to evolve, mean $P_{a}$ va
 
 {\color{Gray}
     \begin{adjustwidth}{-2.2in}{0in}
-    \mysidecaption{0.32}
+    \mysidecaption{0.275}
 { 
         \begin{justify}
-        \vspace{-0.25 mm}
+        \vspace{-14.25 mm}
         \captionof{figures/poly_costs.pdf}
-        {\bf Figure 1:} Mean allele values underlying tendency for polyandry (red), pre-copulatory inbreeding strategy (blue), and post-copulatory inbreeding strategy (black) from simulations where post-copulatory inbreeding strategy is (A, C, E, and G) fixed to zero (i.e., random fertilisation) or (B, D, F, and H) allowed to evolve freely. Costs of polyandry ($c_p$) increase across rows from zero (A and B) to 0.01 (G and H). Mean allele values (solid lines) and associated standard errors (shading) are calculated across all individuals within a population over 40000 generations across 40 replicate populations. Negative mean allele values indicate inbreeding avoidance or tendency for monandry, and positive values indicate inbreeding preference or tendency for polyandry. Dotted lines demarcate mean allele values of zero. 
+        {\bf Figure 1:} Mean allele values underlying tendency for polyandry (red), pre-copulatory inbreeding strategy (blue), and post-copulatory inbreeding strategy (black) from simulations where post-copulatory inbreeding strategy is (A, C, E, and G) fixed to zero (i.e., random fertilisation) or (B, D, F, and H) allowed to evolve freely. Costs of polyandry ($c_p$) increase across rows from zero (A and B) to 0.01 (G and H). Mean allele values (solid lines) and associated standard errors (shading) are calculated across all individuals within a population over 40000 generations across 40 replicate populations. Negative mean allele values indicate inbreeding avoidance or tendency for monandry, and positive values indicate inbreeding preference or tendency for polyandry. Dotted lines demarcate mean allele values of zero.
     \end{justify}{\t}
-}[t]
+}
 {
    \includegraphics[height=18cm]{figures/poly_costs.pdf}%
 }
@@ -309,20 +312,17 @@ Strong post-copulatory inbreeding avoidance, manifested as very negative $F_{a}$
 
 Strong pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}<0$) in all simulations, irrespective of $c_{P}$ and irrespective of whether post-copulatory inbreeding avoidance was allowed to evolve or hence whether polyandry evolved (Figure 1). This might be expected given strong inbreeding depression in offspring viability, which imposes selection against inbreeding.
 
-
-
-
-%{\color{Gray}
-%\begin{adjustwidth}{-2.2in}{0in}
-%\mysidecaption{0.68}
-%{%
-%   \includegraphics[height=10.25cm]{figures/Pp_vals.png}%
-%}%
-%{%
-%   \captionof{figures/Pp_vals.png}\begin{justify}\vspace{0.25 mm} \textbf{Figure 2:} Relationships between (A and C) polyandry allele values and (B and D) monandry and polyandry phenotypes for simulations with default parameter values and zero costs. Red lines in (A) and (C) show mean polyandry allele values across all individuals in a single simulation over 40000 generations. Positive and negative allele values contribute to polyandry and monandry, respectively. In the final generation, mean allele value was below (A) or above (C) zero (demarcated by the dotted line). Nevertheless, due to the threshold nature of expression of the polygenic polyandry phenotype, polyandry and monandry are expressed in both populations. Histograms in (B) and (D) show females' tendency for polyandry phenotypes in the final generation; white and grey shading indicates monandrous and polyandrous females, respectively. Arrows and numbers indicate mean phenotype values. Because each trait includes 10 diploid loci with additive effects, phenotype values are ca 20 times allele values. \end{justify}{\t}%
-%}[t]
-%\end{adjustwidth}
-%}
+{\color{Gray}
+\begin{adjustwidth}{-2.2in}{0in}
+\mysidecaption{0.70}
+{
+   \includegraphics[height=10.25cm]{figures/Pp_vals.pdf}%
+}
+{%
+   \captionof{figures/Pp_vals.png}\begin{justify}\vspace{0.75 mm} \textbf{Figure 2:} Relationships between (A and C) polyandry allele values and (B and D) monandry and polyandry phenotypes for simulations with default parameter values and zero costs. Red lines in (A) and (C) show mean polyandry allele values across all individuals in a single simulation over 40000 generations. Positive and negative allele values contribute to polyandry and monandry, respectively. In the final generation, mean allele value was below (A) or above (C) zero (demarcated by the dotted line). Nevertheless, due to the threshold nature of expression of the polygenic polyandry phenotype, polyandry and monandry are expressed in both populations. Histograms in (B) and (D) show females' tendency for polyandry phenotypes in the final generation; white and grey shading indicates monandrous and polyandrous females, respectively. Arrows and numbers indicate mean phenotype values. Because each trait includes 10 diploid loci with additive effects, phenotype values are ca 20 times allele values.  \end{justify}{\t}%
+}
+\end{adjustwidth}
+}
 
 \subsection*{How do cost asymmetries affect long-term persistence of reproductive strategies?}
 
@@ -332,37 +332,36 @@ However, when both pre-copulatory and post-copulatory inbreeding avoidance could
 
 When pre-copulatory inbreeding avoidance was costly, allowing evolution of cost free post-copulatory inbreeding avoidance greatly facilitated evolution of polyandry (Figure 3A versus 3B). However when post-copulatory inbreeding avoidance was costly, allowing evolution of cost free pre-copulatory inbreeding avoidance caused $P_{a}$ alleles to decrease to very negative values, reducing expression of polyandry (Figure 3C versus 3D; polyandry was cost free in all these simulations). Results for all possible cost combinations of $0$ and $0.02$ are provided in Supporting Information (Figure S9).
 
-%{\color{Gray}
-%\begin{adjustwidth}{-2.2in}{0in}
-%\mysidecaption{0.31}
-%{%
-%   \captionof{figures/rel_costs.png}\begin{justify}\vspace{0.25 mm} \textbf{Figure 3:} Mean allele values underlying tendency for polyandry (red), pre-copulatory inbreeding strategy (blue), and post-copulatory inbreeding strategy (black) when (A and B) costly pre-copulatory inbreeding strategy ($c_{M} = 0.02$) can evolve and post-copulatory inbreeding strategy is (A) fixed for random fertilisation or (B) can also evolve, and when (C and D) costly post-copulatory inbreeding strategy ($c_{F} = 0.02$) can evolve and pre-copulatory inbreeding strategy is (C) fixed for random mating or (D) can also evolve. Mean allele values (solid lines) and associated standard errors (shading) are calculated across all individuals within a population over 40000 generations across 40 replicate populations. Negative mean allele values indicate strategies of inbreeding avoidance or tendency for monandry, and positive values indicate strategies of inbreeding preference or tendency for polyandry. In all panels, polyandry is cost free. \end{justify}{\t}%
-%}
-%{%
-%   \includegraphics[height=14cm]{figures/rel_costs.png}%
-%}%
-%[t]
-%\end{adjustwidth}
-%}
+{\color{Gray}
+\begin{adjustwidth}{-2.2in}{0in}
+\mysidecaption{0.275}
+{%
+   \captionof{figures/rel_costs.png}\begin{justify}\vspace{0.25 mm} \textbf{Figure 3:} Mean allele values underlying tendency for polyandry (red), pre-copulatory inbreeding strategy (blue), and post-copulatory inbreeding strategy (black) when (A and B) costly pre-copulatory inbreeding strategy ($c_{M} = 0.02$) can evolve and post-copulatory inbreeding strategy is (A) fixed for random fertilisation or (B) can also evolve, and when (C and D) costly post-copulatory inbreeding strategy ($c_{F} = 0.02$) can evolve and pre-copulatory inbreeding strategy is (C) fixed for random mating or (D) can also evolve. Mean allele values (solid lines) and associated standard errors (shading) are calculated across all individuals within a population over 40000 generations across 40 replicate populations. Negative mean allele values indicate strategies of inbreeding avoidance or tendency for monandry, and positive values indicate strategies of inbreeding preference or tendency for polyandry. In all panels, polyandry is cost free. \end{justify}{\t}%
+}
+{%
+   \includegraphics[height=13.5cm]{figures/rel_costs.pdf}%
+}%
+\end{adjustwidth}
+}
 
 \subsection*{How do evolution of pre-copulatory and post-copulatory inbreeding avoidance affect one another?}
 
 When polyandry alleles ($P_{a}$) were fixed to be positive so that all females were expected to mate multiply and post-copulatory inbreeding allele ($F_{a}$) values were fixed for adaptive inbreeding avoidance, pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}$ values became increasingly negative; Figure 4A). Such evolution still occurred, but to a much smaller degree, when pre-copulatory inbreeding avoidance was costly (Figure 4B). However, after $40000$ generations, $M_{a}$ values were less negative when post-copulatory inbreeding avoidance and polyandry were fixed at non-zero values than when they also evolved from initial values of zero ($-15.45$ vs. $-17.62$; compare the blue lines in Figures 4A versus Figure 1B). This shows that fixation of post-copulatory inbreeding avoidance weakens selection for pre-copulatory inbreeding avoidance.
 
+{\color{Gray}
+\begin{adjustwidth}{-2.2in}{0in}
+\mysidecaption{0.70}
+{%
+   \includegraphics[height=13.5cm]{figures/fixed_adapt.pdf}%
+}
+{%
+   \captionof{figures/fixed_adapt.png}\begin{justify}\vspace{0.25 mm} \textbf{Figure 4:} Mean allele values underlying tendency for polyandry (red), pre-copulatory inbreeding strategy (blue), and post-copulatory inbreeding strategy (black), given (A and B) fixed polyandry and post-copulatory inbreeding avoidance and (C and D) fixed post-copulatory inbreeding avoidance where the evolving inbreeding strategy is cost-free (A, $c_{M} = 0$; C, $c_{F} = 0$) or costly (B, $c_{M}=0.02$; D, $c_{F}=0.02$). Mean allele values (solid lines) and associated standard errors (shading) are calculated across all individuals within a population over 40000 generations across 40 replicate populations. Negative mean allele values indicate strategies of inbreeding avoidance or tendency for monandry, and positive values indicate strategies of inbreeding preference or tendency for polyandry. \end{justify}{\t}%
+}
+\end{adjustwidth}
+}
+
 Conversely, when pre-copulatory inbreeding allele ($M_{a}$) values were fixed for adaptive inbreeding avoidance, mean $F_{a}$ allele values did not consistently become negative over generations (Figure 4C,D). Fixation of pre-copulatory inbreeding avoidance therefore prevented evolution of post-copulatory inbreeding avoidance. However, in this case, mean $P_{a}$ allele values consistently decreased over generations, reflecting selection against polyandry regardless whether or not post-copulatory inbreeding avoidance was costly (Figure 4C,D). Consequently, when $c_{F}=0$, $F_{a}$ allele values had no effect because females were almost exclusively monandrous, resulting in high drift of $F_{a}$ values among replicates (illustrated by wide standard errors, Figure 4C). However, when $c_{F}=0.02$, $F_{a}$ values remained near zero to minimise direct costs. This lack of selection for post-copulatory inbreeding avoidance was driven by a lack of polyandry, and therefore an inability of females to bias fertilisation among multiple mates. When pre-copulatory inbreeding avoidance and polyandry were both fixed ($M_{a}=-10$ and $P_{a}=1$), $F_{a}$ allele values evolved to similarly negative means as $M_{a}$ allele values in Figure 4A,B (see Supporting Information Figure S10). 
 
-%{\color{Gray}
-%\begin{adjustwidth}{-2.2in}{0in}
-%\mysidecaption{0.31}
-%{%
-%   \captionof{figures/fixed_adapt.png}\begin{justify}\vspace{0.25 mm} \textbf{Figure 4:} Mean allele values underlying tendency for polyandry (red), pre-copulatory inbreeding strategy (blue), and post-copulatory inbreeding strategy (black), given (A and B) fixed polyandry and post-copulatory inbreeding avoidance and (C and D) fixed post-copulatory inbreeding avoidance where the evolving inbreeding strategy is cost-free (A, $c_{M} = 0$; C, $c_{F} = 0$) or costly (B, $c_{M}=0.02$; D, $c_{F}=0.02$). Mean allele values (solid lines) and associated standard errors (shading) are calculated across all individuals within a population over 40000 generations across 40 replicate populations. Negative mean allele values indicate strategies of inbreeding avoidance or tendency for monandry, and positive values indicate strategies of inbreeding preference or tendency for polyandry. \end{justify}{\t}%
-%}
-%{%
-%   \includegraphics[height=14cm]{figures/fixed_adapt.png}%
-%}%
-%[t]
-%\end{adjustwidth}
-%}
 
 \section*{Discussion}
 
@@ -392,10 +391,441 @@ Degeneracy occurs at nearly all biological scales \cite[][]{Edelman2001}, includ
 
 This work was funded by a European Research Council Starting Grant to JMR. Computer simulations were performed using the Maxwell Computing Cluster at the University of Aberdeen.
 
-\begin{small}
-\bibliography{ms_pre_post}
-\bibliographystyle{amnatnat}
-\end{small}
+%\begin{small}
+
+\begin{thebibliography}{73}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Ak{\c{c}}ay \& Roughgarden(2007)}]{Akcay2007}
+Ak{\c{c}}ay, E. \& Roughgarden, J. 2007.
+\newblock {Extra-pair paternity in birds: Review of the genetic benefits}.
+\newblock \textit{Evol. Ecol. Res.} \textbf{9}:855--868.
+
+\bibitem[{Ala-Honkola \textit{et~al.}(2011)Ala-Honkola, Manier, L{\"{u}}pold, and
+  Pitnick}]{Ala-Honkola2011}
+Ala-Honkola, O., Manier, M.~K., L{\"{u}}pold S. \& Pitnick, S. 2011.
+\newblock {No evidence for postcopulatory inbreeding avoidance in \textit{Drosophila
+  melanogaster}}.
+\newblock \textit{Evolution} \textbf{65}:2699--2705.
+
+\bibitem[{Arct \textit{et~al.}(2015)Arct, Drobniak, \& Cicho}]{Arct2015}
+Arct, A., Drobniak, S.~M. \& Cicho, M. 2015.
+\newblock {Genetic similarity between mates predicts extrapair paternity--a
+  meta-analysis of bird studies}.
+\newblock \textit{Behav. Ecol.} \textbf{26}:959--968.
+
+\bibitem[{Arnqvist \& Rowe(2005)}]{Arnqvist2005a}
+Arnqvist, G. \& Rowe, L. 2005.
+\newblock {\textit{Sexual Conflict}}.
+\newblock Princeton University Press, Princeton, New Jersey.
+
+\bibitem[{Atamas \& Bell(2009)}]{Atamas2009}
+Atamas, S.~P. \& Bell, J. 2009.
+\newblock {Degeneracy-driven self-structuring dynamics in selective
+  repertoires}.
+\newblock \textit{Bull. Math. Biol.} \textbf{71}:1349--1365.
+
+\bibitem[{Bateson(1983)}]{Bateson1983}
+Bateson, P. 1983.
+\newblock {Optimal outbreeding}.
+\newblock Pages 257--277 \emph{in} \textit{Mate Choice}. University Press, Cambridge,
+  Cambridge.
+
+\bibitem[{Bocedi \& Reid(2014)}]{Bocedi2014}
+Bocedi, G. \& Reid, J.~M. 2014.
+\newblock {Evolution of female multiple mating: a quantitative model of the
+  ``sexually-selected sperm'' hypothesis}.
+\newblock \textit{Evolution} \textbf{69}:39--58.
+
+\bibitem[{Bretman \textit{et~al.}(2009)Bretman, Newcombe, \& Tregenza}]{Bretman2009}
+Bretman, A., Newcombe, D. \& Tregenza, T. 2009.
+\newblock {Promiscuous females avoid inbreeding by controlling sperm storage}.
+\newblock \textit{Mol. Ecol.} \textbf{18}:3340--3345.
+
+\bibitem[{Bussi{\'{e}}re \textit{et~al.}(2006)Bussi{\'{e}}re, Hunt, Jennions, \&
+  Brooks}]{Bussiere2006}
+Bussi{\'{e}}re, L.~F., Hunt, J., Jennions, M.~D. \& Brooks, R. 2006.
+\newblock {Sexual conflict and cryptic female choice in the black field
+  cricket, \textit{Teleogryllus commodus}}.
+\newblock \textit{Evolution} \textbf{60}:792--800.
+
+\bibitem[{Charlesworth \& Charlesworth(1999)}]{Charlesworth1999}
+Charlesworth, B. \& Charlesworth, D. 1999.
+\newblock {The genetic basis of inbreeding depression}.
+\newblock \textit{Genet. Res.} \textbf{74}:329--340.
+
+\bibitem[{Charlesworth \& Willis(2009)}]{Charlesworth2009}
+Charlesworth, D. \& Willis, J.~H. 2009.
+\newblock {The genetics of inbreeding depression}.
+\newblock \textit{Nat. Rev. Genet.} \textbf{10}:783--796.
+
+\bibitem[{Daniel \& Rodd(2015)}]{Daniel2015}
+Daniel, M.~J. \& Rodd, F.~H. 2015.
+\newblock {Female guppies can recognize kin but only avoid incest when
+  previously mated}.
+\newblock \textit{Behav. Ecol.} \textbf{27}:55--61.
+
+\bibitem[{Duthie \textit{et~al.}(2016)Duthie, Bocedi, \& Reid}]{Duthie}
+Duthie, A.~B., Bocedi G. \& Reid, J.~M. 2016.
+\newblock {When does female multiple mating evolve to adjust inbreeding?
+  Effects of inbreeding depression, direct costs, mating constraints, and
+  polyandry as a threshold trait}.
+\newblock \textit{Evolution} \textbf{70}:1927--1943.
+
+\bibitem[{Duthie \& Reid(2015)}]{Duthie2015a}
+Duthie, A.~B. \& Reid, J.~M. 2015.
+\newblock {What happens after inbreeding avoidance? Inbreeding by rejected
+  relatives and the inclusive fitness benefit of inbreeding avoidance}.
+\newblock \textit{PLoS One} \textbf{10}:e0125140.
+
+\bibitem[{Duthie \& Reid(2016)}]{Duthie2016a}
+Duthie, A.~B. \& Reid, J.~M. 2016.
+\newblock {Evolution of inbreeding avoidance and inbreeding preference through
+  mate choice among interacting relatives}.
+\newblock \textit{Am. Nat.} \textbf{188}:651--667.
+
+\bibitem[{Edelman \& Gally(2001)}]{Edelman2001}
+Edelman, G.~M. \& Gally, J.~A. 2001.
+\newblock {Degeneracy and complexity in biological systems}.
+\newblock \textit{Proc. Natl. Acad. Sci. USA} \textbf{98}:13763--13768.
+
+\bibitem[{Firman \& Simmons(2008)}]{Firman2008}
+Firman, R.~C. \& Simmons, L.~W. 2008.
+\newblock {Polyandry facilitates postcopulatory inbreeding avoidance in house
+  mice}.
+\newblock \textit{Evolution} \textbf{62}:603--611.
+
+\bibitem[{Firman \& Simmons(2015)}]{Firman2015}
+Firman, R.~C. \& Simmons, L.~W. 2015.
+\newblock {Gametic interactions promote inbreeding avoidance in house mice}.
+\newblock \textit{Ecol. Lett.} \textbf{18}:937--943.
+
+\bibitem[{Fischer \textit{et~al.}(2015)Fischer, Karl, Heuskin, Janowitz, \&
+  D{\"{o}}tterl}]{Fischer2015}
+Fischer, K., Karl, I., Heuskin, S., Janowitz, S. \& D{\"{o}}tterl, S. 2015.
+\newblock {Kin recognition and inbreeding avoidance in a butterfly}.
+\newblock \textit{Ethology} \textbf{121}:977--984.
+
+\bibitem[{Fitzpatrick \& Evans(2014)}]{Fitzpatrick2014b}
+Fitzpatrick, J.~L. \& Evans, J.~P. 2014.
+\newblock {Postcopulatory inbreeding avoidance in guppies}.
+\newblock \textit{J. Evol. Biol.} \textbf{27}:2585--2594.
+
+\bibitem[{Foerster \textit{et~al.}(2003)Foerster, Delhey, Johnsen, Lifjeld, \&
+  Kempenaers}]{Foerster2003}
+Foerster, K., Delhey K., Johnsen, A., Lifjeld, J.~T. \& Kempenaers B. 2003.
+\newblock {Females increase offspring heterozygosity and fitness through
+  extra-pair matings}.
+\newblock \textit{Nature} \textbf{425}:714--717.
+
+\bibitem[{Gardner \& Kalinka(2006)}]{Gardner2006}
+Gardner, A. \& Kalinka, A.~T. 2006.
+\newblock {Recombination and the evolution of mutational robustness}.
+\newblock \textit{J. Theor. Biol.} \textbf{241}:707--715.
+
+\bibitem[{Gasparini \& Pilastro(2011)}]{Gasparini2011}
+Gasparini, C. \& Pilastro, A. 2011.
+\newblock {Cryptic female preference for genetically unrelated males is
+  mediated by ovarian fluid in the guppy.}
+\newblock \textit{Proc. Biol. Sci.} \textbf{278}:2495--2501.
+
+\bibitem[{Greeff \textit{et~al.}(2009)Greeff, Vuuren, Kryger \& Moore}]{Greeff2009}
+Greeff, J.~M., Jansen van Vuuren, G.~J., Kryger, P. \& Moore, J.~C. 2009.
+\newblock {Outbreeding and possibly inbreeding depression in a pollinating fig
+  wasp with a mixed mating system}.
+\newblock \textit{Heredity} \textbf{102}:349--356.
+
+\bibitem[{Guillaume \& Perrin(2009)}]{Guillaume2009}
+Guillaume, F. \& Perrin, N. 2009.
+\newblock {Inbreeding load, bet hedging, and the evolution of sex-biased
+  dispersal.}
+\newblock \textit{Am. Nat.} \textbf{173}:536--541.
+
+\bibitem[{Jennions \& Petrie(2000)}]{Jennions2000}
+Jennions, M.~D. \& Petrie, M. 2000.
+\newblock {Why do females mate multiply? A review of the genetic benefits}.
+\newblock \textit{Biol. Rev. Camb. Philos. Soc.} \textbf{75}:21--64.
+
+\bibitem[{Keller \& Waller(2002)}]{Keller2002}
+Keller, L.~F. \& Waller,  D.~M. 2002.
+\newblock {Inbreeding effects in wild populations}.
+\newblock \textit{Trends Ecol. Evol.} \textbf{17}:19--23.
+
+\bibitem[{Kimura(1965)}]{Kimura1965}
+Kimura, M. 1965.
+\newblock {A stochastic model concerning the maintenance of genetic variability
+  in quantitative characters}.
+\newblock \textit{Proc. Natl. Acad. Sci. USA} \textbf{54}:731--736.
+
+\bibitem[{Kingma \textit{et~al.}(2013)Kingma, Hall \& Peters}]{Kingma2013}
+Kingma, S.~A., Hall, M.~L. \& Peters A. 2013.
+\newblock {Breeding synchronization facilitates extrapair mating for inbreeding
+  avoidance}.
+\newblock \textit{Behav. Ecol.} \textbf{24}:1390--1397.
+
+\bibitem[{Koga \textit{et~al.}(1998)Koga, Backwell, Jennions \& Christy}]{Koga1998}
+Koga, T., Backwell, P.~R.~Y., Jennions, M.~D. \& Christy J.~H. 1998.
+\newblock {Elevated predation risk changes mating behaviour and courtship in a
+  fiddler crab}.
+\newblock \textit{Proc. Biol. Sci.} \textbf{265}:1385--1390.
+
+\bibitem[{Kokko \textit{et~al.}(2003)Kokko, Brooks, Jennions \& Morley}]{Kokko2003}
+Kokko, H., Brooks R., Jennions M.~D. \& Morley J. 2003.
+\newblock {The evolution of mate choice and mating biases.}
+\newblock \textit{Proc. Biol. Sci.} \textbf{270}:653--664.
+
+\bibitem[{Kokko \& Mappes(2013)}]{Kokko2013}
+Kokko, H. \& Mappes, J. 2013.
+\newblock {Multiple mating by females is a natural outcome of a null model of
+  mate encounters}.
+\newblock \textit{Entomol. Exp. Appl.} \textbf{146}:26--37.
+
+\bibitem[{Kokko \& Ots(2006)}]{Kokko2006}
+Kokko, H., \& Ots, I. 2006.
+\newblock {When not to avoid inbreeding}.
+\newblock \textit{Evolution} \textbf{60}:467--475.
+
+\bibitem[{Kuriwada \textit{et~al.}(2011)Kuriwada, Kumano, Shiromoto \&
+  Haraguchi}]{Kuriwada2011}
+Kuriwada, T., Kumano, N., Shiromoto, K. \& Haraguchi, D. 2011.
+\newblock {Inbreeding avoidance or tolerance? Comparison of mating behavior
+  between mass-reared and wild strains of the sweet potato weevil}.
+\newblock \textit{Behav. Ecol. Sociobiol.} \textbf{65}:1483--1489.
+
+\bibitem[{Lande(1976)}]{Lande1976}
+Lande, R. 1976.
+\newblock {The maintenance of genetic variability by mutation in a polygenic
+  character with linked loci}.
+\newblock \textit{Genet. Res.} \textbf{36}:221--235.
+
+\bibitem[{Lehtonen \& Kokko(2015)}]{Lehtonen2015}
+Lehtonen, J. \& Kokko, H. 2015.
+\newblock {Why inclusive fitness can make it adaptive to produce less fit
+  extra-pair offspring}.
+\newblock \textit{Proc. Biol. Sci.} \textbf{282}:20142716.
+
+\bibitem[{Levin \& Lubchenco(2008)}]{Levin2008}
+Levin, S.~A. \& Lubchenco, J. 2008.
+\newblock {Resilience, robustness, and marine ecosystem-based management}
+\newblock \textit{BioScience} \textbf{58}:27--32.
+
+\bibitem[{Lihoreau \textit{et~al.}(2007)Lihoreau, Zimmer \& Rivault}]{Lihoreau2007}
+Lihoreau, M., Zimmer, C. \& Rivault, C. 2007.
+\newblock {Kin recognition and incest avoidance in a group-living insect}.
+\newblock \textit{Behav. Ecol.} \textbf{18}:880--887.
+
+\bibitem[{Liu \textit{et~al.}(2014)Liu, Tu, He, Chen \& Xue}]{Liu2014}
+Liu, X., Tu, X., He, H., Chen, C. \& Xue, F. 2014.
+\newblock {Evidence for inbreeding depression and pre-copulatory, but not post
+  copulatory inbreeding avoidance in the cabbage beetle \textit{Colaphellus bowringi}.}
+\newblock \textit{PloS one} \textbf{9}:e94389.
+
+\bibitem[{Lynch \& Walsh(1998)}]{Lynch1998}
+Lynch, M. \& Walsh, B. 1998.
+\newblock {\textit{Genetics and Analysis of Quantitative Traits}}.
+\newblock Sinauer, Sunderland.
+
+\bibitem[{Metzger \textit{et~al.}(2010{\natexlab{\emph{a}}})Metzger, Bernstein,
+  Hoffmeister \& Desouhant}]{Metzger2010}
+Metzger, M., Bernstein, C., Hoffmeister, T.~S. \& Desouhant, E.
+  2010{\natexlab{\emph{a}}}.
+\newblock {Does kin recognition and sib-mating avoidance limit the risk of
+  genetic incompatibility in a parasitic wasp?}
+\newblock \textit{PLoS One} \textbf{5}:1--6.
+
+\bibitem[{Metzger \textit{et~al.}(2010{\natexlab{\emph{b}}})Metzger, Fischbein, Auguste,
+  Fauvergue, Bernstein \& Desouhant}]{Metzger2010a}
+Metzger, M., Fischbein, D., Auguste, A., Fauvergue, X., Bernstein, C., \&
+  Desouhant, E. 2010{\natexlab{\emph{b}}}.
+\newblock {Synergy in information use for mate finding: Demonstration in a
+  parasitoid wasp}.
+\newblock \textit{Anim. Behav.} 79:1307--1315.
+
+\bibitem[{Mills \& Smouse(1994)}]{Mills1994}
+Mills, L.~S. \& Smouse, P.~E. 1994.
+\newblock {Demographic consequences of inbreeding in remnant populations}.
+\newblock \textit{Am. Nat.} \textbf{144}:412--431.
+
+\bibitem[{Morton et~al.(1956)Morton, Crow \& Muller}]{Morton1956}
+Morton, N.~E., Crow, J.~F., \& Muller, H.~J. 1956.
+\newblock {An estimate of the mutational damage in man from data on
+  consanguineous marriages}.
+\newblock \textit{Proc. Natl. Acad. Sci. USA} \textbf{42}:855--863.
+
+\bibitem[{Nowak \textit{et~al.}(1997)Nowak, Boerlijst, Cooke, \& {Maynard
+  Smith}}]{Nowak1997}
+Nowak, M.~A., Boerlijst, M.~C., Cooke, J. \& {Maynard Smith}, J. 1997.
+\newblock {Evolution of genetic redundancy}.
+\newblock \textit{Nature} \textbf{388}:167--171.
+
+\bibitem[{Park \& Friston(2013)}]{Park2013}
+Park, H.~J. \& Friston, K.~J. 2013.
+\newblock {Structural and functional brain networks: from connections to
+  cognition.}
+\newblock \textit{Science} \textbf{342}:1238411.
+
+\bibitem[{Parker(1979)}]{Parker1979}
+Parker, G.~A. 1979.
+\newblock {Sexual selection and sexual conflict}.
+\newblock Pages 123--166 \emph{in} M.~S. Blum \& N.~A. Blum, eds. \textit{Sexual
+  selection and reproductive competition in insects}. Academic Press, Inc, New
+  York.
+
+\bibitem[{Parker(2006)}]{Parker2006}
+Parker, G.~A. 2006.
+\newblock {Sexual conflict over mating and fertilization: an overview}.
+\newblock \textit{Phil. Trans. R. Soc. Lond. B Biol. Sci.} \textbf{361}:235--259.
+
+\bibitem[{Pizzari \textit{et~al.}(2004)Pizzari, L{\o}vlie, \& Cornwallis}]{Pizzari2004}
+Pizzari, T., L{\o}vlie, H. \& Cornwallis, C.~K. 2004.
+\newblock {Sex-specific, counteracting responses to inbreeding in a bird}.
+\newblock \textit{Proc. Biol. Sci.} \textbf{271}:2115--2121.
+
+\bibitem[{Pomiankowski(1987)}]{Pomiankowski1987}
+Pomiankowski, A. 1987.
+\newblock {The costs of choice in sexual selection}.
+\newblock \textit{J. Theor. Biol.} \textbf{128}:195--218.
+
+\bibitem[{Potts \textit{et~al.}(1991)Potts, Manning \& Wakeland}]{Potts1991}
+Potts, W.~K., Manning, C.~J. \& Wakeland, E.~K. 1991.
+\newblock {Mating patterns in seminatural populations of mice influenced by MHC
+  genotype}.
+\newblock \textit{Nature} \textbf{352}:619--621.
+
+\bibitem[{Price \& Friston(2002)}]{Price2002}
+Price, C.~J. \& Friston, K.~J. 2002.
+\newblock {Degeneracy and cognitive anatomy}.
+\newblock \textit{Trends Cogn. Sci.} \textbf{6}:416--421.
+
+\bibitem[{Pusey \& Wolf(1996)}]{Pusey1996}
+Pusey, A., \& Wolf, M. 1996.
+\newblock {Inbreeding avoidance in animals}.
+\newblock \textit{Trends Ecol. Evol.} \textbf{5347}:298--301.
+
+\bibitem[{Reeve(2000)}]{Reeve2000}
+Reeve, J.~P. 2000.
+\newblock {Predicting long-term response to selection}.
+\newblock \textit{Genet. Res.} \textbf{75}:83--94.
+
+\bibitem[{Reid(2015)}]{Reid2015a}
+Reid, J.~M. 2015.
+\newblock {What can we really say about relatedness and extrapair paternity: a
+  comment on Arct \textit{et al}}.
+\newblock \textit{Behav. Ecol.} \textbf{26}:969--970.
+
+\bibitem[{Reid \textit{et~al.}(2015{\natexlab{\emph{a}}})Reid, Arcese, Keller, Germain,
+  Duthie, Losdat, Wolak \& Nietlisbach}]{Reid2014}
+Reid, J.~M., Arcese, P., Keller, L.~F., Germain, R.~R., Duthie, A.~B., Losdat, S.,
+  Wolak, M.~E. \& Nietlisbach, P. 2015{\natexlab{\emph{a}}}.
+\newblock {Quantifying inbreeding avoidance through extra-pair reproduction}.
+\newblock \textit{Evolution} \textbf{69}:59--74.
+
+\bibitem[{Reid \textit{et~al.}(2015{\natexlab{\emph{b}}})Reid, Duthie, Wolak \&
+  Arcese}]{Reid2015}
+Reid, J.~M., Duthie, A.~B., Wolak, M.~E. \& Arcese, P.
+  2015{\natexlab{\emph{b}}}.
+\newblock {Demographic mechanisms of inbreeding adjustment through extra-pair
+  reproduction}.
+\newblock \textit{J. Anim. Ecol.} \textbf{84}:1029--1040.
+
+\bibitem[{Roberts \textit{et~al.}(2015)Roberts, Evison, Baer \& Hughes}]{Roberts2015a}
+Roberts, K.~E., Evison, S.~E.~F., Baer, B. \& Hughes, W.~O.~H. 2015.
+\newblock {The cost of promiscuity: sexual transmission of \textit{Nosema
+  microsporidian} parasites in polyandrous honey bees}.
+\newblock \textit{Sci. Rep.} \textbf{5}:10982.
+
+\bibitem[{Roff(1996)}]{Roff1996}
+Roff, D.~A. 1996.
+\newblock {The evolution of threshold traits in animals}.
+\newblock \textit{Q. Rev. Biol.} \textbf{71}:3--35.
+
+\bibitem[{Roff(1998)}]{Roff1998}
+Roff, D.~A. 1998.
+\newblock {Evolution of threshold traits: the balance between directional
+  selection, drift and mutation}.
+\newblock \textit{Heredity} \textbf{80}:25--32.
+
+\bibitem[{Ronkainen \& Ylonen(1994)}]{Ronkainen1994}
+Ronkainen, H. \& Ylonen, H. 1994.
+\newblock {Behaviour of cyclic bank voles under risk of mustelid predation: Do
+  females avoid copulations?}
+\newblock \textit{Oecologia} \textbf{97}:377--381.
+
+\bibitem[{Rowe(1988)}]{Rowe1988}
+Rowe, L. 1988.
+\newblock {Cost of mating for female insects: risk of predation in \textit{Photinus
+  collustrans} (Coleoptera: Lampyridae)}.
+\newblock \textit{Am. Nat.} \textbf{121}:139--142.
+
+\bibitem[{Rowe \textit{et~al.}(1994)Rowe, Arnqvist, Sih \& Krupa}]{Rowe1994}
+Rowe, L., Arnqvist, G., Sih, A. \& Krupa, J.~J. 1994.
+\newblock {Sexual conflict and the evolutionary ecology of mating patterns:
+  water striders as a model system}.
+\newblock \textit{Trends Ecol. Evol.} \textbf{9}:289--293.
+
+\bibitem[{Simmons \textit{et~al.}(2006)Simmons, Beveridge, Wedell \&
+  Tregenza}]{Simmons2006}
+Simmons, L.~W., Beveridge, M., Wedell, N. \& Tregenza, T. 2006.
+\newblock {Postcopulatory inbreeding avoidance by female crickets only revealed
+  by molecular markers}.
+\newblock \textit{Mol. Ecol.} \textbf{15}:3817--3824.
+
+\bibitem[{Suraci \textit{et~al.}(2017)Suraci, Clinchy \& Zanette}]{Suraci2017}
+Suraci, J.~P., Clinchy, M. \& Zanette, L.~Y. 2017.
+\newblock {Do large carnivores and mesocarnivores have redundant impacts on
+  intertidal prey?}
+\newblock \textit{PLoS One} \textbf{12}:e0170255.
+
+\bibitem[{Szulkin \textit{et~al.}(2013)Szulkin, Stopher, Pemberton \&
+  Reid}]{Szulkin2012}
+Szulkin, M., Stopher, K.~V., Pemberton, J.~M. \& Reid, J.~M. 2013.
+\newblock {Inbreeding avoidance, tolerance, or preference in animals?}
+\newblock \textit{Trends Ecol. Evol.} \textbf{28}:205--211.
+
+\bibitem[{Tan \textit{et~al.}(2012)Tan, L{\o}vlie, Pizzari \& Wigby}]{Tan2012}
+Tan, C. K.~W., L{\o}vlie, H., Pizzari, T. \& Wigby, S. 2012.
+\newblock {No evidence for precopulatory inbreeding avoidance in \textit{Drosophila
+  melanogaster}}.
+\newblock \textit{Anim. Behav.} \textbf{83}:1433--1441.
+
+\bibitem[{Tregenza \& Wedell(2002)}]{Tregenza2002}
+Tregenza, T. \& Wedell, N. 2002.
+\newblock {Polyandrous females avoid costs of inbreeding}.
+\newblock \textit{Nature} \textbf{415}:71--73.
+
+\bibitem[{Tuni \textit{et~al.}(2013)Tuni, Beveridge \& Simmons}]{Tuni2013}
+Tuni, C., Beveridge, M. \& Simmons, L.~W. 2013.
+\newblock {Female crickets assess relatedness during mate guarding and bias
+  storage of sperm towards unrelated males}.
+\newblock \textit{J. Evol. Biol.} \textbf{26}:1261--1268.
+
+\bibitem[{Varian-Ramos \& Webster(2012)}]{Varian-Ramos2012}
+Varian-Ramos, C.~W. \& Webster, M.~S. 2012.
+\newblock {Extrapair copulations reduce inbreeding for female red-backed
+  fairy-wrens, \textit{Malurus melanocephalus}}.
+\newblock \textit{Anim. Behav.} \textbf{83}:857--864.
+
+\bibitem[{Whitacre \& Bender(2010)}]{Whitacre2010}
+Whitacre, J. \& Bender, A. 2010.
+\newblock {Degeneracy: A design principle for achieving robustness and
+  evolvability}.
+\newblock \textit{J. Theor Biol.} \textbf{263}:143--153.
+
+\bibitem[{Whitacre(2010)}]{Whitacre2010a}
+Whitacre, J.~M. 2010.
+\newblock {Degeneracy: a link between evolvability, robustness and complexity
+  in biological systems}.
+\newblock \textit{Theor. Biol. Med. Model.} \textbf{7}:6.
+
+\bibitem[{Zeh \& Zeh(1997)}]{Zeh1997}
+Zeh, J.~A. \& Zeh, D.~W. 1997.
+\newblock {The evolution of polyandry II: post-copulatory defenses against
+  genetic incompatibility}.
+\newblock \textit{Proc. Biol. Sci.} \textbf{264}:69--75.
+
+\end{thebibliography}
+
+%\end{small}
 
 \end{document}
 
