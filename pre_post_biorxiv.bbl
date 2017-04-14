@@ -1,4 +1,4 @@
-\begin{thebibliography}{69}
+\begin{thebibliography}{73}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Ak{\c{c}}ay and Roughgarden(2007)}]{Akcay2007}
@@ -23,6 +23,12 @@ Arct, A., S.~M. Drobniak, and M.~Cicho. 2015.
 Arnqvist, G., and L.~Rowe. 2005.
 \newblock {Sexual Conflict}.
 \newblock Princeton University Press, Princeton, New Jersey.
+
+\bibitem[{Atamas and Bell(2009)}]{Atamas2009}
+Atamas, S.~P., and J.~Bell. 2009.
+\newblock {Degeneracy-driven self-structuring dynamics in selective
+  repertoires}.
+\newblock Bulletin of Mathematical Biology 71:1349--1365.
 
 \bibitem[{Bateson(1983)}]{Bateson1983}
 Bateson, P. 1983.
@@ -117,6 +123,11 @@ Foerster, K., K.~Delhey, A.~Johnsen, J.~T. Lifjeld, and B.~Kempenaers. 2003.
   extra-pair matings}.
 \newblock Nature 425:714--717.
 
+\bibitem[{Gardner and Kalinka(2006)}]{Gardner2006}
+Gardner, A., and A.~T. Kalinka. 2006.
+\newblock {Recombination and the evolution of mutational robustness}.
+\newblock Journal of Theoretical Biology 241:707--715.
+
 \bibitem[{Gasparini and Pilastro(2011)}]{Gasparini2011}
 Gasparini, C., and A.~Pilastro. 2011.
 \newblock {Cryptic female preference for genetically unrelated males is
@@ -199,6 +210,11 @@ Lehtonen, J., and H.~Kokko. 2015.
   extra-pair offspring}.
 \newblock Proceedings of the Royal Society B 282:20142716.
 
+\bibitem[{Levin and Lubchenco(2008)}]{Levin2008}
+Levin, S.~A., and J.~Lubchenco. 2008.
+\newblock {Resilience, robustness, and marine ecosystem-based management}
+  58:27--32.
+
 \bibitem[{Lihoreau et~al.(2007)Lihoreau, Zimmer, and Rivault}]{Lihoreau2007}
 Lihoreau, M., C.~Zimmer, and C.~Rivault. 2007.
 \newblock {Kin recognition and incest avoidance in a group-living insect}.
@@ -242,6 +258,18 @@ Morton, N.~E., J.~F. Crow, and H.~J. Muller. 1956.
   consanguineous marriages}.
 \newblock Proceedings of the National Academy of Sciences 42:855--863.
 
+\bibitem[{Nowak et~al.(1997)Nowak, Boerlijst, Cooke, and {Maynard
+  Smith}}]{Nowak1997}
+Nowak, M.~A., M.~C. Boerlijst, J.~Cooke, and J.~{Maynard Smith}. 1997.
+\newblock {Evolution of genetic redundancy}.
+\newblock Nature 388:167--171.
+
+\bibitem[{Park and Friston(2013)}]{Park2013}
+Park, H.~J., and K.~J. Friston. 2013.
+\newblock {Structural and functional brain networks: from connections to
+  cognition.}
+\newblock Science 342:1238411.
+
 \bibitem[{Parker(1979)}]{Parker1979}
 Parker, G.~A. 1979.
 \newblock {Sexual selection and sexual conflict}.
@@ -253,12 +281,6 @@ Parker, G.~A. 1979.
 ---{}---{}---. 2006.
 \newblock {Sexual conflict over mating and fertilization: an overview}.
 \newblock Philosophical Transactions of the Royal Society B 361:235--259.
-
-\bibitem[{Perry and Rowe(2011)}]{Perry2011}
-Perry, J.~C., and L.~Rowe. 2011.
-\newblock {Sexual conflict and antagonisic coevolution across water strider
-  populations}.
-\newblock Evolution 66:544--557.
 
 \bibitem[{Pizzari et~al.(2004)Pizzari, L{\o}vlie, and Cornwallis}]{Pizzari2004}
 Pizzari, T., H.~L{\o}vlie, and C.~K. Cornwallis. 2004.
@@ -276,15 +298,15 @@ Potts, W.~K., C.~J. Manning, and E.~K. Wakeland. 1991.
   genotype}.
 \newblock Nature 352:619--621.
 
+\bibitem[{Price and Friston(2002)}]{Price2002}
+Price, C.~J., and K.~J. Friston. 2002.
+\newblock {Degeneracy and cognitive anatomy}.
+\newblock Trends in Cognitive Sciences 6:416--421.
+
 \bibitem[{Pusey and Wolf(1996)}]{Pusey1996}
 Pusey, A., and M.~Wolf. 1996.
 \newblock {Inbreeding avoidance in animals}.
 \newblock Trends in Ecology {\&} Evolution 5347:298--301.
-
-\bibitem[{Rankin(2011)}]{Rankin2011a}
-Rankin, D.~J. 2011.
-\newblock {Kin selection and the evolution of sexual conflict}.
-\newblock Journal of Evolutionary Biology 24:71--81.
 
 \bibitem[{Reeve(2000)}]{Reeve2000}
 Reeve, J.~P. 2000.
@@ -318,12 +340,6 @@ Roberts, K.~E., S.~E.~F. Evison, B.~Baer, and W.~O.~H. Hughes. 2015.
   microsporidian parasites in polyandrous honey bees}.
 \newblock Scientific Reports 5:10982.
 
-\bibitem[{Roberts and Gosling(2003)}]{Roberts2003}
-Roberts, S.~C., and L.~M. Gosling. 2003.
-\newblock {Genetic similarity and quality interact in mate choice decisions by
-  female mice}.
-\newblock Nature Genetics 35:103--106.
-
 \bibitem[{Roff(1996)}]{Roff1996}
 Roff, D.~A. 1996.
 \newblock {The evolution of threshold traits in animals}.
@@ -340,12 +356,6 @@ Ronkainen, H., and H.~Ylonen. 1994.
 \newblock {Behaviour of cyclic bank voles under risk of mustelid predation: Do
   females avoid copulations?}
 \newblock Oecologia 97:377--381.
-
-\bibitem[{R{\"{o}}nn et~al.(2007)R{\"{o}}nn, Katvala, and Arnqvist}]{Ronn2007}
-R{\"{o}}nn, J., M.~Katvala, and G.~Arnqvist. 2007.
-\newblock {Coevolution between harmful male genitalia and female resistance in
-  seed beetles}.
-\newblock Proceedings of the National Academy of Sciences 104:10921--10925.
 
 \bibitem[{Rowe(1988)}]{Rowe1988}
 Rowe, L. 1988.
@@ -365,6 +375,12 @@ Simmons, L.~W., M.~Beveridge, N.~Wedell, and T.~Tregenza. 2006.
 \newblock {Postcopulatory inbreeding avoidance by female crickets only revealed
   by molecular markers}.
 \newblock Molecular Ecology 15:3817--3824.
+
+\bibitem[{Suraci et~al.(2017)Suraci, Clinchy, and Zanette}]{Suraci2017}
+Suraci, J.~P., M.~Clinchy, and L.~Y. Zanette. 2017.
+\newblock {Do large carnivores and mesocarnivores have redundant impacts on
+  intertidal prey?}
+\newblock PLoS One 12:e0170255.
 
 \bibitem[{Szulkin et~al.(2013)Szulkin, Stopher, Pemberton, and
   Reid}]{Szulkin2012}
@@ -395,11 +411,17 @@ Varian-Ramos, C.~W., and M.~S. Webster. 2012.
   fairy-wrens, Malurus melanocephalus}.
 \newblock Animal Behaviour 83:857--864.
 
-\bibitem[{Wang et~al.(2015)Wang, Cummings, and Kirkpatrick}]{Wang2015a}
-Wang, S., M.~Cummings, and M.~Kirkpatrick. 2015.
-\newblock {Coevolution of male courtship and sexual conflict characters in
-  mosquitofish}.
-\newblock Behavioral Ecology 26:1013--1020.
+\bibitem[{Whitacre and Bender(2010)}]{Whitacre2010}
+Whitacre, J., and A.~Bender. 2010.
+\newblock {Degeneracy: A design principle for achieving robustness and
+  evolvability}.
+\newblock Journal of Theoretical Biology 263:143--153.
+
+\bibitem[{Whitacre(2010)}]{Whitacre2010a}
+Whitacre, J.~M. 2010.
+\newblock {Degeneracy: a link between evolvability, robustness and complexity
+  in biological systems}.
+\newblock Theoretical Biology and Medical Modelling 7:6.
 
 \bibitem[{Zeh and Zeh(1997)}]{Zeh1997}
 Zeh, J.~A., and D.~W. Zeh. 1997.
