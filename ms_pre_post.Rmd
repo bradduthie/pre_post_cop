@@ -2,7 +2,7 @@
 title: Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance
   and associated polyandry
 author: ''
-date: "5 April 2017"
+date: "28 April 2017"
 output:
   word_document:
     fig_caption: yes
@@ -25,23 +25,6 @@ bibliography: ms_pre_post.bib
 
 
 ******************************
-
-<!--- 
-General notes about this version: 
-
-If we're interested in evolution and not selection (hence the phrasing), and not wanting to assume that the latter strictly implies the former (as of course is sometimes the case in nature), then we really need to put more energy into looking at the assumptions underlying genetic variance, and other things having to do with quantitative genetics. At the moment, we're just assuming that there is pretty much always enough genetic variance on which selection to act. I've assumed we'd be most interested in selection given three reproductive strategy traits, but if we're interested in evolvability of traits, then I think we're ignoring some key things. Hence my previous concerns about the theoretical question really not being entirely clear here.
-
-I think people will have a problem with our approach if it is not clear why our approach is the best one for addressing our key questions. I sometimes see researchers using a population, adaptive dynamic, individual-based, etc., not because it is the appropriate model for addressing their question, but because it's the one with which they are most familiar. As a result, models can become mathematically intractable (should have used an IBM) or conceptually incoherent (should have simplified in some way). We need to be able to make it clear why we are using such a complex individual-based model instead of something else.
-
-My concern with some unusual highlighting of assumptions isn't (of course) that we're going to make some readers less confused. My concern is that we're going to make some readers *more* confused. Theoretically literate readers might be confused by some of the assumptions we keep coming back to, thinking that we're making a biological point about their relative importance that I don't think we are. I don't want to write a paper just that gets through review by playing to people's misconceptions (even if those who hold such misconceptions are the majority) because it rienforces the idea that those misconceptions are justified. If we continue to do this, then writing and publishing good theory will get even more difficult in the future. Increasingly I fear that I am doing my colleagues who work on theory a disservice by writing papers that placating people's concerns rather than articulating why (some, but of course not all) these concerns are misplaced, and hence setting a bad precedent. 
-
-Hence, when we explain why a cost of 0.02 is appropriate, we are giving readers the impression that its value really needed to be justified. I would much prefer to explain why this isn't necessarily the case, and what a cost means in the context of exploring theory, so as to avoid reviewers of other papers point to Duthie et al. (XXXX) and say, ''they justified their cost, so you should have to as well!''. I tend to see the same thing for mutation rates -- the whole point of setting a mutation rate (usually to 0.001, for purely arbitrary reasons) is to introduce a bit of variation and see what happens. The exact rate is inconsequential with respect to most theoretical questions that models address (i.e., changing it might changes outcomes a bit, perhaps even qualitatively, but it would not change how peoples *thinking* and *conceptualisation* of biology would be affected by the model). If a reader is worried about the exact rate of mutation then they probably aren't actually understanding the point of the model.
-
-Honestly, I also think that some of our wording here is a bit insulting to empirical biologists, many of whom are quite capable of reading, understanding, and applying theory. 
-
-The empirical examples almost make this worse. It seems like part of our point in the discussion is that indirection selection on polyandry via post-copulatory inbreeding avoidance is possible, but then we already knew that as a result of the empirical examples. Why did we need this model? We need to explain what it is that the model adds in terms of interpretation and theoretical understanding. Just recreating something already observed in empirical studies isn't particularly helpful.
-
---->
 
 Abstract
 ===================================================
