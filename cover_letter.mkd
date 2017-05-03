@@ -1,0 +1,17 @@
+Dear Professor Ritchie,
+
+Please find attached the manuscript ``Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance and associated polyandry'' by A. Bradley Duthie, Greta Bocedi, Ryan Germain, and Jane M. Reid, which we hope you will consider for publication as a major article in the Journal of Evolutionary Biology. 
+
+Evolution of female multiple mating remains a major puzzle. Recent modelling has shown that polyandry can evolve as an adaptation to avoid inbreeding under highly restricted conditions. However, such modelling has assumed only pre-copulatory inbreeding avoidance, and has not considered how post-copulatory inbreeding avoidance might also drive the evolution of polyandry. Hence, no models consider evolution of polyandry when post-copulatory inbreeding avoidance can evolve, or when polyandry and pre- and post-copulatory inbreeding avoidance can all evolve simultaneously. 
+
+In our manuscript, we present an individual-based model that simulates the evolution of polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance. We address three fundamental questions, finding that (1) evolution of post-copulatory inbreeding avoidance can greatly facilitate evolution of costly polyandry. (2) Asymmetries of direct costs to pre-copulatory versus post-copulatory inbreeding avoidance have strong effects on evolution of each type of inbreeding avoidance, with the lower-cost strategy consistently driving the higher cost strategy to extinction. Finally (3), pre-existing (fixed) adaptive pre-copulatory inbreeding avoidance typically precluded evolution of polyandry and therefore post-copulatory inbreeding avoidance, but a fixed adaptive polyandry and post-copulatory inbreeding avoidance did not preclude evolution of pre-copulatory inbreeding avoidance.
+
+Further, we use our model and simulation results to make general predictions about evolution of polyandry, pre-copulatory inbreeding avoidance, and post-copulatory inbreeding avoidance across taxa. We thereby offer a general framework within which existing empirical results of reproductive strategy observations can be interpreted. We also link the modelling of pre-copulatory and post-copulatory inbreeding avoidance to the conceptually underdeveloped theory of degeneracy (functional redundancy), which occurs across nearly all biological scales.
+
+We believe that our work will be of broad interest to evolutionary biologists working on female reproductive strategies, spanning evolutionary and behavioural ecology. We hope that you will consider our manuscript for publication in the Journal of Evolutionary Biology.
+
+All authors have seen and agree with the contents of the manuscript, and we certify that the submission is original work and is not under review at any other journal.
+
+Sincerely,
+
+Brad Duthie on behalf of all authors
