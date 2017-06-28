@@ -156,22 +156,75 @@ AUTHOR RESPONSE TO SPECIFIC COMMENT 9:
 In this line, we note that disease transmission is a cost 'relevant to mate choice'. We believe this is accurate. However, to improve the clarity, we now generalise 'relevant to mating frequency and mate choice'.
 
 
+--------------------------------------------------------------------------------
+REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR
+--------------------------------------------------------------------------------
 
-
-
-
-Reviewer: 2
-
-Comments to the Author
 This is a very interesting and well written manuscript where the authors have used an individual-based modelling approach to address questions on the evolution of female polyandry together with mechanisms of pre- and post-copulatory inbreeding avoidance. The authors can thereby draw conclusions on when to expect pre- and/or post-copulatory inbreeding avoidance to evolve. The results are interesting. For instance they find that the initial evolution of pre-copulatory avoidance completely precludes the evolution of post-copulatory mechanisms but not vice versa. Although the manuscript is easy to read it has some long passages. I think both the introduction and discussion could be condensed somewhat. I am also not completely happy with the modelling assumptions. I will go more into detail on that below together with some other comments and concerns.
 
-General comments:
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR
+--------------------------------------------------------------------------------
+
+We thank Reviewer 2 for their helpful comments. We have tried to condense the writing in the Introduction and Discussion where possible, and we address their concerns regarding model assumptions below.
+
+
+--------------------------------------------------------------------------------
+REVIEWER 2 GENERAL COMMENT 1 
+--------------------------------------------------------------------------------
 
 1.      The assumed costs in the model are a little bit too phenomenological to my taste. The mechanisms by which these may arise are not at all explained so that the costs are not (or cannot) at all interpreted in a meaningful way. I would have done it differently (and it is currently unclear if it would matter or not). The obvious cost of polyandry is certainly of an increased mating activity, which is also acknowledged on L 546ff. The current model is unclear on what causes the cost of polyandry in the model. Furthermore, the costs of pre- and post-copulatory inbreeding avoidance seem awkward. Now, all females do the same sampling and it is just in the randomness of mating (fertilization) that differs between females. I do not know why this should result in different costs. To me it seems much more natural to let females sample until she finds an appropriate male and let the mating probability depend on the strength of her (genetic) mating bias towards unrelated males and the relatedness of the partner. In that way the number of sampling events would translate into an actual interpretable cost. In the same way, one could model post-copulatory avoidance and here the actual number of unfertilized eggs would translate into a real cost.
 
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO GENERAL COMMENT 1 
+--------------------------------------------------------------------------------
+
+In contrast to Reviewer 2's concern, the biological mechanisms behind these direct costs are explained in the Introduction. We acknowledge that this made the motivation behind our modelling choices a bit unclear (see REVIEWER 1 SPECIFIC COMMENT 4 and our response), and we now also explain the mechanistic interpretation of our cost in the Model subheading Costs (LINE NUMBER).
+
+The cost of polyandry in our model is the same as in Duthie et al. (2016). In the Introduction, we state that ``Polyandrous females can pay costs of mate searching or mating, for example, because these activities increase predation risk (e.g., Rowe, 1988; Ronkainen & Ylonen, 1994; Koga et al., 1998).'' Hence, the realised cost of P_p \times c_P defines a predation risk associated with tendency to engage in polyandry (P_p) and cost of polyandry (c_P).
+
+For pre-copulatory and post-copulatory inbreeding avoidance, we interpreted the costs as follows: ''Females that express pre-copulatory choice and consequent reluctance to mate with relatives might pay costs of increased risk of complete mating failure or harm caused by sexual conflict (Rowe et al., 1994; Kokko & Mappes, 2013). Females that express post-copulatory choice might pay initial energetic costs associated with developing the physiological or biochemical mechanisms needed to store sperm and successfully bias fertilisation (e.g., Gasparini & Pilastro, 2011; Tuni et al., 2013; Fitzpatrick & Evans,
+2014)''. 
+
+Reviewer 2 suggests alternative methods of modelling costs, which we considered in the design of our model. Their suggestions are interesting and would be useful future avenues of research, so we thank Reviewer 2 and now place more emphasis on these ideas in the Discussion (LINE NUMBER). Nevertheless, the way that Reviewer 2 suggests that costs be assigned would make it difficult or impossible to directly compare evolution of pre- and post-copulatory inbreeding avoidance, which is a central focus of our manuscript. If we were to avoid using direct costs and instead allow females to sample males until they find a male of acceptably low kinship, and to also fertilise eggs given acceptably low kinship, 
+
+< MORE NEEDED> 
+
+
+
+
+
+--------------------------------------------------------------------------------
+REVIEWER 2 GENERAL COMMENT 2 
+--------------------------------------------------------------------------------
+
 2.      The model is inconsistent in the sense that inbreeding depression is independent of inbreeding avoidance. If there is no inbreeding avoidance the number and frequency of deleterious recessive alleles would decrease through purging. I acknowledge that the model is still useful as we may not be interested in the intensity of inbreeding depression but I think this fact should be mentioned somewhere in the model description.
 
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO GENERAL COMMENT 2 
+--------------------------------------------------------------------------------
+
+Reviewer 2 appears to suggest that the independence of inbreeding avoidance and inbreeding depression (i.e., no purging) is an assumption of concern. Note that this is not an inconsistency in the model per se because it is a deliberate simplifying assumption we make. We did consider allowing purging in our model, but decided against it for two reasons. First, a related model of biparental inbreeding in a simulated population of the same size showed that purging had little to no effect on realised inbreeding load (this was true even for inbreeding preference, but especially so for inbreeding avoidance), and therefore inbreeding depression across a broad range of parameter values (Duthie and Reid 2016). Hence, effects of inbreeding behaviour on inbreeding load via purging would have been very small, if observable at all. Second, and more importantly for our model, to address our three key questions, we aimed for a consistent (high) magnitude of inbreeding depression -- i.e., we wanted individuals in all of our populations to be subject to the same high magnitude of inbreeding depression given the same inbreeding coefficients. Setting this consistent inbreeding depression allowed us to understand, e.g., the effect of post-copulatory inbreeding avoidance on evolution of polyandry without also having to account for different simulations having different magnitudes of realised inbreeding depression (see also REVIEWER 1 SPECIFIC COMMENT 6 and our response). Hence, given the goals of this study, we believe that controlling the magnitude of inbreeding depression makes our model more useful for delivering theoretical insights than if we instead allowed inbreeding depression to vary with inbreeding avoidance.
+
+We agree that the rationale for this independence of inbreeding depression and inbreeding avoidance is relevant, so we now explain this where other assumptions about inbreeding depression are also introduced (LINE NUMBER).
+
+--------------------------------------------------------------------------------
+REVIEWER 2 GENERAL COMMENT 3
+--------------------------------------------------------------------------------
+
 3.      L527-529: It is not quite clear how large these asymmetries have to be for this effect to be apparent. Thus is this effect only apparent because one cost is set at zero? What if C[M] = 0.01, C[F] = 0.02, for instance? I think a little bit more investigation of the parameter space would be helpful.
+
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO GENERAL COMMENT 3
+--------------------------------------------------------------------------------
+
+How large the asymmetries need to be before the effect is apparent (and by 'apparent', we take the reviewer to mean 'observable' in any given system, empirical or simulated) will naturally be affected by any number of details of the specific system of interest (including, e.g., drift, which could overwhelm selection caused by cost asymmetries causing no effect). Our objective here is to demonstrate that -- all else being equal -- natural selection on, and subsequent evolution of, a costly inbreeding avoidance strategy is reduced when there is a less costly alternative (i.e., this is a potentially influential effect that has not been considered in systems where inbreeding avoidance evolves, but really should be). There is no reason to expect the *magnitude* of the cost asymmetry will affect the *nature* of this effect (of course, it almost certainly will affect the *size* of the effect). And there is nothing special about an absolute cost of zero with respect to this proposed mechanism, as the cost is just a way of controlling direct selection on inbreeding strategies. This is an important point with respect to developing inbreeding theory from our model results, so we now emphasise it (LINE NUMBER), but we also consider the smaller cost asymmetry that Reviewer 2 suggests to show (in supporting information) the same effect in a different area of parameter space.
+
+
+
+
+
+
 
 Minor comments:
 
@@ -182,3 +235,35 @@ L201-203: This approach could have a possible downside. Modelling P as a thresho
 L460: Would it be possible to confirm this more quantitatively rather than just this qualitative comparison (i.e. by a statististcal test) ?
 
 L464-466: ditto
+
+
+
+
+--------------------------------------------------------------------------------
+AUTHOR REFERENCES
+--------------------------------------------------------------------------------
+
+Duthie, A. B., Bocedi, G., & Reid, J. M. (2016). When does female multiple mating evolve to adjust inbreeding? Effects of inbreeding depression, direct costs, mating constraints, and polyandry as a threshold trait. Evolution, 70(9), 1927–1943. https://doi.org/10.1111/evo.13005
+
+Duthie, A. B., & Reid, J. M. (2016). Evolution of inbreeding avoidance and inbreeding preference through mate choice among interacting relatives. American Naturalist, 188(6), 000–000. https://doi.org/10.1086/688919
+
+Fitzpatrick, J. L., & Evans, J. P. (2014). Postcopulatory inbreeding avoidance in guppies. Journal of Evolutionary Biology, 27, 2585–2594. https://doi.org/10.1111/jeb.12545
+
+Gasparini, C., & Pilastro, A. (2011). Cryptic female preference for genetically unrelated males is mediated by ovarian fluid in the guppy. Proceedings. Biological Sciences / The Royal Society, 278(1717), 2495–2501. https://doi.org/10.1098/rspb.2010.2369
+
+Koga, T., Backwell, P. R. Y., Jennions, M. D., & Christy, J. H. (1998). Elevated predation risk changes mating behaviour and courtship in a fiddler crab. Proceedings of the Royal Society B: Biological Sciences, 265(1404), 1385–1390. https://doi.org/10.1098/rspb.1998.0446
+
+Kokko, H., & Mappes, J. (2013). Multiple mating by females is a natural outcome of a null model of mate encounters. Entomologia Experimentalis et Applicata, 146(1), 26–37. https://doi.org/10.1111/j.1570-7458.2012.01296.x
+
+Ronkainen, H., & Ylonen, H. (1994). Behaviour of cyclic bank voles under risk of mustelid predation: Do females avoid copulations? Oecologia, 97(3), 377–381.
+
+Rowe, L. (1988). Cost of mating for female insects: risk of predation in Photinus collustrans (Coleoptera: Lampyridae). American Naturalist, 121(1), 139–142.
+
+Rowe, L. (1994). The costs of mating and mate choice in water striders. Animal Behaviour, 48(5), 1049–1056. https://doi.org/10.1006/anbe.1994.1338
+
+Tuni, C., Beveridge, M., & Simmons, L. W. (2013). Female crickets assess relatedness during mate guarding and bias storage of sperm towards unrelated males. Journal of Evolutionary Biology, 26(6), 1261–1268. https://doi.org/10.1111/jeb.12118
+
+
+
+
+
