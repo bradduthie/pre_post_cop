@@ -1,0 +1,91 @@
+JEB MS JEB-2017-00242
+
+Re: Reject with resubmission allowed
+
+Dear Dr. Duthie,
+
+Thank you for submitting your manuscript "Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance and associated polyandry" (JEB ms JEB-2017-00242) to the Journal of Evolutionary Biology. Your work has now been considered by two reviewers, whose comments are enclosed. As you will see, while both found merit in your manuscript, one of them has raised a number of points that preclude it from being acceptable for publication in its present form. In particular, the assumptions of the model will need additional clarification/justifiaction. Furthermore, both reviewers made a number of additional, minor comments, which also should be addressed.
+
+In light of the reviewers’ comments and my own reading of your manuscript, I cannot recommend your paper for publication and have thus decided to reject it. However, because a revision of your article might render it ultimately acceptable for publication, I would be willing to consider a revised version that adequately addresses the reviewers’ comments. The resubmitted manuscript will be treated as a new submission, and there can of course be no guarantee that the paper will ultimately be published by JEB. It is likely that the new MS will be sent back to at least one of the original reviewers, so please think carefully about the value of resubmission (i.e. can you clarify issues in a way that is likely to satisfy the reviewer).
+
+If you resubmit a revised version, please include a letter in which you describe how you have responded to each of the referees’ comments. Please number the comments and refer to line numbers in the original and revised paper for easy reference. Often a marked-up revision is helpful. Please upload this letter with your other files so it forms part of the PDF.
+
+Please submit the paper on the JEB website (http://mc.manuscriptcentral.com/jeb) as a RESUBMISSION, providing the original ms number. In your Author Center in ScholarOne Manuscripts you will find on the left a list entitled My Manuscripts. Click the Manuscripts with Decisions in this list; in the resulting list you will find this manuscript with on the right under Actions the option Create a Resubmission. By clicking this link you will be guided through the resubmission process.
+
+Sincerely,
+Christoph Haag
+
+***********************************************
+
+
+
+--------------------------------------------------------------------------------
+REVIEWER 1 GENERAL COMMENT 1:
+--------------------------------------------------------------------------------
+
+This study uses individual based simulation modelling to look at the evolution of pre and post copulatory inbreeding avoidance when both are allowed to interact. To do this they compare simulated populations in which both pre and post copulatory inbreeding can evolve to populations where post-copulatory inbreeding avoidance cannot evolve. They also vary the costs of inbreeding avoidance and the costs of polyandry. The paper tackles an interesting question that extends on previous work showing that the conditions that precopulatory inbreeding avoidance can evolve in the absence of postcopulatory inbreeding avoidance are very restricted. This paper is very well written and clear, and I believe it will be of interest to the readership of JEB.
+
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO COMMENT 1
+--------------------------------------------------------------------------------
+
+We thank Reviewer 1 for their positive comments and their careful review. Below, we address their specific comments.
+
+--------------------------------------------------------------------------------
+REVIEWER 1 SPECIFIC COMMENT 1:
+--------------------------------------------------------------------------------
+
+Line 67: add for example before red junglefowl so it is clear these are not the only examples.
+
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO SPECIFIC COMMENT 1:
+--------------------------------------------------------------------------------
+
+Added 'e.g.' as suggested.
+
+--------------------------------------------------------------------------------
+REVIEWER 1 SPECIFIC COMMENT 2:
+--------------------------------------------------------------------------------
+
+Line 96-99: I’m not sure I really understand why this leads to the restricted conditions. Perhaps could be clearer.
+
+--------------------------------------------------------------------------------
+AUTHOR RESPONSE TO SPECIFIC COMMENT 1:
+--------------------------------------------------------------------------------
+
+
+
+
+Line 139-143: Surely there are both potential direct and indirect costs and benefits other than those to do with inbreeding avoidance that would influence allele frequencies. That is, it’s not just about direct costs and indirect benefits.
+Line 146-151:  I would make it clear that these are just example of the types of costs that might be incurred during precopulatory and postcopulatory choice, as its written now it sounds like these are the only possible costs. One obvious cost of postcopulatory choice is simply the cost of having to mate more than once to allow choice to occur (if mating is costly)…
+Line 208: How do you regulate density? Are individuals only allowed to breed once and then they die? – OK I see this comes later… maybe it’s worth stating “(see below)”
+Line 214-226: Why restrict your study to only model costs? To understanding the full diversity of how and when pre and postcopulatory inbreeding evolve it would also be good to look at what happens when there are other benefits too? I guess if you add benefits other than inbreeding avoidance it means you can’t tell if the strategy evolved because of those benefits or because of inbreeding? Maybe it’s worth having an explicit statement in your introduction saying why you did it this way.
+Lines 322-328: I’m still a little confused about whether individuals die after mating or not. Up above you say there are nonoverlapping generations but here you imply that not all males and females are removed after mating… or are these males and females removed before mating? In which case maybe you could say it could be interpreted as a combination of juvenile dispersal or mortality? Also, sorry if I missed it but how big were you populations? – OK I see this comes later, but I guess I was expecting the information that’s in lines 370 – 380 to come here.
+
+Line 422 – 426: So why is this result different from Duthie et al 2016 which found (when there was no post-copulatory inbreeding avoidance) pre-copulatory inbreeding avoidance evolved only under very restricted condition? Did that study not have strong inbreeding depression?
+Line 452: affect evolution of what?
+Line 535: I would have thought that disease transmission was a cost of mating, not of mate choice
+
+
+Reviewer: 2
+
+Comments to the Author
+This is a very interesting and well written manuscript where the authors have used an individual-based modelling approach to address questions on the evolution of female polyandry together with mechanisms of pre- and post-copulatory inbreeding avoidance. The authors can thereby draw conclusions on when to expect pre- and/or post-copulatory inbreeding avoidance to evolve. The results are interesting. For instance they find that the initial evolution of pre-copulatory avoidance completely precludes the evolution of post-copulatory mechanisms but not vice versa. Although the manuscript is easy to read it has some long passages. I think both the introduction and discussion could be condensed somewhat. I am also not completely happy with the modelling assumptions. I will go more into detail on that below together with some other comments and concerns.
+
+General comments:
+
+1.      The assumed costs in the model are a little bit too phenomenological to my taste. The mechanisms by which these may arise are not at all explained so that the costs are not (or cannot) at all interpreted in a meaningful way. I would have done it differently (and it is currently unclear if it would matter or not). The obvious cost of polyandry is certainly of an increased mating activity, which is also acknowledged on L 546ff. The current model is unclear on what causes the cost of polyandry in the model. Furthermore, the costs of pre- and post-copulatory inbreeding avoidance seem awkward. Now, all females do the same sampling and it is just in the randomness of mating (fertilization) that differs between females. I do not know why this should result in different costs. To me it seems much more natural to let females sample until she finds an appropriate male and let the mating probability depend on the strength of her (genetic) mating bias towards unrelated males and the relatedness of the partner. In that way the number of sampling events would translate into an actual interpretable cost. In the same way, one could model post-copulatory avoidance and here the actual number of unfertilized eggs would translate into a real cost.
+
+2.      The model is inconsistent in the sense that inbreeding depression is independent of inbreeding avoidance. If there is no inbreeding avoidance the number and frequency of deleterious recessive alleles would decrease through purging. I acknowledge that the model is still useful as we may not be interested in the intensity of inbreeding depression but I think this fact should be mentioned somewhere in the model description.
+
+3.      L527-529: It is not quite clear how large these asymmetries have to be for this effect to be apparent. Thus is this effect only apparent because one cost is set at zero? What if C[M] = 0.01, C[F] = 0.02, for instance? I think a little bit more investigation of the parameter space would be helpful.
+
+Minor comments:
+
+L38-47: At this point I do not completely understand these arguments. Principally, I do not agree that polyandry ITSELF allows for inbreeding avoidance. Either a bias in sperm use seems necessary or an increased remating propensity after an initial mating with a relative compared to a mating with an unrelated male. Polyandry itself does not allow females to mate with less related males.
+
+L201-203: This approach could have a possible downside. Modelling P as a threshold trait means that negative values of P are phenotypically not expressed creating potential for genetic drift to just drive genetic polyandry to such low values that it cannot “recover” although it is later selected for. I do not think that this is so crucial for the current paper, though. I think I would have preferred modelling it as a continuous trait between –infinity and infinity and let exp(P) represent the expected polyandry value (corresponding well to the later Poisson distribution).
+
+L460: Would it be possible to confirm this more quantitatively rather than just this qualitative comparison (i.e. by a statististcal test) ?
+
+L464-466: ditto
