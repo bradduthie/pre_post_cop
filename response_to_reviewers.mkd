@@ -32,28 +32,28 @@ AUTHOR RESPONSE TO COMMENT 1
 We thank Reviewer 1 for their positive comments and their careful review. Below, we address their specific comments.
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 1:
+REVIEWER 1 SPECIFIC COMMENT 1:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 67: add for example before red junglefowl so it is clear these are not the only examples.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 1:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 1:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Added 'e.g.' as suggested (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 2:
+REVIEWER 1 SPECIFIC COMMENT 2:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 96-99: I’m not sure I really understand why this leads to the restricted conditions. Perhaps could be clearer.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 2:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 2:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We clarify how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (LINE NUMBER). Our previous wording might have led to some confusion about what was being restricted. Specifically, it was not evolution inbreeding avoidance in Duthie et al. (2016) that was restricted, but evolution of polyandry as a mechanism for facilitating inbreeding avoidance.
+We clarify how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (LINE NUMBER). Our previous wording might have led to some confusion about what was being restricted. Specifically, it was not evolution inbreeding avoidance in Duthie et al. (2016) that was restricted, but evolution of polyandry as a mechanism for facilitating inbreeding avoidance. We fix this by clarifying in the preceding lines and being clearer in the lines indicated (LINE NUMBER & LINE NUMBER).
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 3:
