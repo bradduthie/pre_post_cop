@@ -56,49 +56,49 @@ AUTHOR RESPONSE TO SPECIFIC COMMENT 2:                               XXX XXX XXX
 We clarify how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (LINE NUMBER). Our previous wording might have led to some confusion about what was being restricted. Specifically, it was not evolution inbreeding avoidance in Duthie et al. (2016) that was restricted, but evolution of polyandry as a mechanism for facilitating inbreeding avoidance. We fix this by clarifying in the preceding lines and being clearer in the lines indicated (LINE NUMBER & LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 3:
+REVIEWER 1 SPECIFIC COMMENT 3:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 139-143: Surely there are both potential direct and indirect costs and benefits other than those to do with inbreeding avoidance that would influence allele frequencies. That is, it’s not just about direct costs and indirect benefits.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 3:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 3:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 We clarify the writing here by changing ''will depend not only on'' to ''will be affected not only by'' (LINE NUMBER). We did not mean to suggest, of course, that only direct costs and indirect benefits will influence allele frequencies. This sentence is intended to draw attention to both direct costs and indirect benefits, but not to the exclusion of all other population genetic processes.
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 4:
+REVIEWER 1 SPECIFIC COMMENT 4:                                       XXX XXX XXX  1/2
 --------------------------------------------------------------------------------
 
 Line 146-151:  I would make it clear that these are just example of the types of costs that might be incurred during precopulatory and postcopulatory choice, as its written now it sounds like these are the only possible costs. One obvious cost of postcopulatory choice is simply the cost of having to mate more than once to allow choice to occur (if mating is costly)...
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 4:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 4:                               XXX XXX XXX  1/2
 --------------------------------------------------------------------------------
 
-We now clarify that these are examples of costs that might be incurred, not the only possible costs (LINE NUMBER). We do this by inserting ''for example'' while introducing pre-copulatory and post-copulatory cost examples, as was done for the polyandry cost example in the preceding sentence. We also now state explicitly that these cost examples are how we will interpret the mechanisms of direct costs in our model (here and in the Model section, LINE NUMBER and LINE NUMBER, respectively), as it was unclear to Reviewer 2 that these were the mechanistic interpretations we used (see REVIEWER 2 GENERAL COMMENT 1).
+We now clarify that these are examples of costs that might be incurred, not the only possible costs (LINE NUMBER). We also now state explicitly that these cost examples are how we will interpret the mechanisms of direct costs in our model (here and in the Model section, LINE NUMBER and LINE NUMBER, respectively), as it was unclear to Reviewer 2 that these were the mechanistic interpretations we used (see REVIEWER 2 GENERAL COMMENT 1).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 5:
+REVIEWER 1 SPECIFIC COMMENT 5:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 208: How do you regulate density? Are individuals only allowed to breed once and then they die? – OK I see this comes later... maybe it’s worth stating “(see below)”
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 5:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 5:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 We now state ''(see below)'' as suggested (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 6:
+REVIEWER 1 SPECIFIC COMMENT 6:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 214-226: Why restrict your study to only model costs? To understanding the full diversity of how and when pre and postcopulatory inbreeding evolve it would also be good to look at what happens when there are other benefits too? I guess if you add benefits other than inbreeding avoidance it means you can’t tell if the strategy evolved because of those benefits or because of inbreeding? Maybe it’s worth having an explicit statement in your introduction saying why you did it this way.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 6:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Reviewer 1 is correct in their reasoning; if we were to include other benefits in our model, then we would not be able to determine if the strategy evolved because of those other benefits or because of inbreeding avoidance (or perhaps some combination of, or interaction between, the two). With models, as with experiments, it often is useful to isolate a particular phenomenon of interest so that it is possible to more completely understand the nature and size of its effect. This is why we designed our simulations to carefully compare allele values in the presence or absence of one particular variable, while holding all other variables constant (e.g., evolution of post-copulatory choice in Figure 1, evolution of an alternative strategy given a direct cost in Figure 3). Hence, the results of these simulatons give the reader greater conceptual understanding of the questions of interest by isolating the relevant biological mechanisms. 
@@ -106,25 +106,25 @@ Reviewer 1 is correct in their reasoning; if we were to include other benefits i
 We agree that this reasoning is important, and we have included an explicit statement about our approach in the Introduction (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 7:
+REVIEWER 1 SPECIFIC COMMENT 7:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Lines 322-328: I’m still a little confused about whether individuals die after mating or not. Up above you say there are nonoverlapping generations but here you imply that not all males and females are removed after mating... or are these males and females removed before mating? In which case maybe you could say it could be interpreted as a combination of juvenile dispersal or mortality? Also, sorry if I missed it but how big were you populations? – OK I see this comes later, but I guess I was expecting the information that’s in lines 370 – 380 to come here.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 7:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 7:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We now clarify here that all individuals die after reproduction has occurred, and density regulation applies to offspring (LINE NUMBER). Hence, since generations are non-overlapping, at the end of each generation, all females and males die and are replaced by an entirely new cohort of offspring; if the size of this new cohort is greater than carrying capacity, then density is regulated as explained on the lines indicated.
+We now clarify here that all individuals die after reproduction has occurred, and density regulation applies to offspring (LINE NUMBER END OF FERTILISATION, LINE NUMBER IN INBREEDING DEPRESSION). Hence, since generations are non-overlapping, at the end of each generation, all females and males die and are replaced by an entirely new cohort of offspring; if the size of this new cohort is greater than carrying capacity, then density is regulated as explained on the lines indicated.
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 8:
+REVIEWER 1 SPECIFIC COMMENT 8:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 422 – 426: So why is this result different from Duthie et al 2016 which found (when there was no post-copulatory inbreeding avoidance) pre-copulatory inbreeding avoidance evolved only under very restricted condition? Did that study not have strong inbreeding depression?
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 8:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 8:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 This comment relates to a misunderstanding in REVIEWER 1 SPECIFIC COMMENT 2 (see our response above). There is no contradiction between our results and those of Duthie et al. (2016) with respect to evolution of pre-copulatory inbreeding avoidance. Pre-copulatory inbreeding avoidance in Duthie et al. (2016) readily evolved given strong inbreeding depression as it does in our results. Instead, Duthie et al. (2016) found that *polyandry* evolved as a mechanism to avoid inbreeding only under very restricted conditions. This is consistent with our results, but we further show that the conditions under which polyandry evolves are greatly relaxed if post-copulatory inbreeding avoidance can also evolve (which Duthie et al. did not consider).
@@ -132,25 +132,25 @@ This comment relates to a misunderstanding in REVIEWER 1 SPECIFIC COMMENT 2 (see
 We now explain the restricted conditions in which polyandry to avoid inbreeding evolved in Duthie et al. (2016) more clearly in the Introduction to avoid this confusion (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 9:
+REVIEWER 1 SPECIFIC COMMENT 9:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 452: affect evolution of what?
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 9:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 9:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We now clarify in the subtitle that we refer to evolution of complementary inbreeding avoidance mechanisms (LINE NUMBER).
+We now clarify in the subtitle that we refer to evolution of an alternative strategy of inbreeding avoidance (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 10:
+REVIEWER 1 SPECIFIC COMMENT 10:                                      XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 535: I would have thought that disease transmission was a cost of mating, not of mate choice
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 9:
+AUTHOR RESPONSE TO SPECIFIC COMMENT 10:                              XXX XXX XXX
 --------------------------------------------------------------------------------
 
 In this line, we noted that disease transmission is a cost 'relevant to mate choice'. We believe this is accurate. However, to improve the clarity, we now generalise 'relevant to mating frequency and mate choice' (LINE NUMBER).
