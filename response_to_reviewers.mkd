@@ -220,13 +220,13 @@ AUTHOR RESPONSE TO GENERAL COMMENT 3
 How large the asymmetries need to be before the effect is apparent (and by 'apparent', we take the reviewer to mean 'observable' in any given system, empirical or simulated) will naturally be affected by any number of details of the specific system of interest (including, e.g., drift, which could overwhelm selection caused by cost asymmetries causing no effect). Our objective here is to demonstrate that -- all else being equal -- natural selection on, and subsequent evolution of, a costly inbreeding avoidance strategy is reduced when there is a less costly alternative (i.e., we introduce a potentially important effect that has not yet been considered in systems where inbreeding avoidance evolves). There is no reason to expect the *magnitude* of the cost asymmetry will affect the *nature* of this effect (of course, it almost certainly will affect the *size* of the effect). And there is nothing special about an absolute cost of zero with respect to this proposed mechanism, as the cost is just a way of controlling direct selection on inbreeding strategies. This is an important point with respect to developing inbreeding theory from our model results, so we now emphasise it (LINE NUMBER), but we also consider the smaller cost asymmetry that Reviewer 2 suggests to show (in supporting information) the same effect in a different area of parameter space.
 
 --------------------------------------------------------------------------------
-REVIEWER 2 MINOR COMMENT 1
+REVIEWER 2 MINOR COMMENT 1                                           XXX XXX XXX
 --------------------------------------------------------------------------------
 
 L38-47: At this point I do not completely understand these arguments. Principally, I do not agree that polyandry ITSELF allows for inbreeding avoidance. Either a bias in sperm use seems necessary or an increased remating propensity after an initial mating with a relative compared to a mating with an unrelated male. Polyandry itself does not allow females to mate with less related males.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 1
+AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 1                        XXX XXX XXX
 --------------------------------------------------------------------------------
 
 We agree that, all else being equal, polyandry does itself not allow for inbreeding avoidance. We emphasise that polyandry has been hypothesised to allow inbreeding avoidance ''if it allows females to mate with additional unrelated males following initial mating with a relative'' (LINE NUMBER). Note that females don't necessarily need an increased *propensity* to mate if they initially mate with a relative (though this is one mechanism of avoiding inbreeding) -- polyandrous females might also be able to avoid inbreeding if the availability of non-relatives changes after initial mate choice (see, e.g., Duthie et al., 2016,  Reid et al., 2015), hence making polyandry adaptive.
