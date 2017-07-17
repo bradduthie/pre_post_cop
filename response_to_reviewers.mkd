@@ -141,7 +141,7 @@ Line 422 – 426: So why is this result different from Duthie et al 2016 which f
 AUTHOR RESPONSE TO SPECIFIC COMMENT 8:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-This comment relates to a misunderstanding in REVIEWER 1 SPECIFIC COMMENT 2 (see our response above). There is no contradiction between our results and those of Duthie et al. (2016) with respect to evolution of pre-copulatory inbreeding avoidance. Pre-copulatory inbreeding avoidance in Duthie et al. (2016) readily evolved given strong inbreeding depression as it does in our results. Instead, Duthie et al. (2016) found that *polyandry* evolved as a mechanism to avoid inbreeding only under very restricted conditions. This is consistent with our results, but we further show that the conditions under which polyandry evolves are greatly relaxed if post-copulatory inbreeding avoidance can also evolve (which Duthie et al. did not consider).
+This comment relates to a misunderstanding in REVIEWER 1 SPECIFIC COMMENT 2 (see our response above). There is no contradiction between our results and those of Duthie et al. (2016) with respect to evolution of pre-copulatory inbreeding avoidance. Pre-copulatory inbreeding avoidance in Duthie et al. (2016) readily evolved given strong inbreeding depression as it does in our current manuscript results. Instead, Duthie et al. (2016) found that polyandry evolved as a mechanism to avoid inbreeding only under very restricted conditions. This is consistent with our current results, but we further show that the conditions under which polyandry evolves are greatly relaxed if post-copulatory inbreeding avoidance can also evolve (which Duthie et al. did not consider).
 
 We now explain the restricted conditions in which polyandry to avoid inbreeding evolved in Duthie et al. (2016) more clearly in the Introduction to avoid this confusion (LINE NUMBER).
 
@@ -180,7 +180,7 @@ This is a very interesting and well written manuscript where the authors have us
 AUTHOR RESPONSE TO REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR         XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We thank Reviewer 2 for their helpful comments. We have tried to condense the writing in the Introduction and Discussion where possible, and we address their concerns regarding model assumptions below.
+We thank Reviewer 2 for their helpful comments. We have tried to condense the writing in the Introduction and Discussion where possible, but the need for further clarification and model justification raised by Reviewer 1 has also required us to provide more information in these parts of the text. We address the concerns of Reviewer 2 regarding model assumptions below.
 
 --------------------------------------------------------------------------------
 REVIEWER 2 GENERAL COMMENT 1                                         XXX XXX XXX
