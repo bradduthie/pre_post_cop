@@ -17,16 +17,24 @@ Christoph Haag
 
 ***********************************************
 
+Dear Dr. Haag,
 
+Thank you very much for your overview and decision. Despite the initial rejection, we are grateful for the positive summaries and feedback provided by both reviewers. The main criticism of our manuscript came from Reviewer 2, who commented on the some of the assumptions that we made in our modelling decisions. We appreciate these critiques, but also emphasise that the modelling decisions that Reviewer 2 has highlighted were carefully made in the context of our modelling objectives and in line with previous modelling work. We have revisited these modelling decisions and concluded that they are the most appropriate ones for our modelling objectives, so we have retained them in our revised manuscript. Nevertheless, we acknowledge that some of our modelling decisions could have been better explained in the manuscript. We have therefore revised our manuscript to improve the justification of our modelling decisions in the areas that Reviewer 2 has helpfully highlighted. We believe that, in our revised manuscript, key assumptions and objectives, and links to previous models, are all now clearly explained. Additionally, we present a new set of simulations that Reviewer 2 has suggested to support our original conclusions regarding direct cost asymmetries. 
+
+Overall, we hope that these changes have more clearly explained and justified our approach. Unless otherwise stated, all line numbers in our response refer to lines in our revised submission.
+
+Sincerely,
+
+Manuscript Authors
 
 --------------------------------------------------------------------------------
-REVIEWER 1 GENERAL COMMENT 1:
+REVIEWER 1 GENERAL COMMENT 1:                                        XXX XXX XXX
 --------------------------------------------------------------------------------
 
 This study uses individual based simulation modelling to look at the evolution of pre and post copulatory inbreeding avoidance when both are allowed to interact. To do this they compare simulated populations in which both pre and post copulatory inbreeding can evolve to populations where post-copulatory inbreeding avoidance cannot evolve. They also vary the costs of inbreeding avoidance and the costs of polyandry. The paper tackles an interesting question that extends on previous work showing that the conditions that precopulatory inbreeding avoidance can evolve in the absence of postcopulatory inbreeding avoidance are very restricted. This paper is very well written and clear, and I believe it will be of interest to the readership of JEB.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO COMMENT 1
+AUTHOR RESPONSE TO COMMENT 1                                         XXX XXX XXX
 --------------------------------------------------------------------------------
 
 We thank Reviewer 1 for their positive comments and their careful review. Below, we address their specific comments.
@@ -53,7 +61,9 @@ Line 96-99: I’m not sure I really understand why this leads to the restricted 
 AUTHOR RESPONSE TO SPECIFIC COMMENT 2:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We clarify how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (LINE NUMBER). Our previous wording might have led to some confusion about what was being restricted. Specifically, it was not evolution inbreeding avoidance in Duthie et al. (2016) that was restricted, but evolution of polyandry as a mechanism for facilitating inbreeding avoidance. We fix this by clarifying in the preceding lines and being clearer in the lines indicated (LINE NUMBER & LINE NUMBER).
+Our previous wording might have led to some confusion about what was being restricted. Specifically, it was not evolution inbreeding avoidance in Duthie et al. (2016) that was restricted, but evolution of polyandry as a mechanism for facilitating inbreeding avoidance. We fix this by clarifying in the preceding lines and being clearer in the lines indicated (LINE NUMBER & LINE NUMBER).
+
+We have rephrased to clarify how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (LINE NUMBER).
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 3:                                       XXX XXX XXX
@@ -65,16 +75,18 @@ Line 139-143: Surely there are both potential direct and indirect costs and bene
 AUTHOR RESPONSE TO SPECIFIC COMMENT 3:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We clarify the writing here by changing ''will depend not only on'' to ''will be affected not only by'' (LINE NUMBER). We did not mean to suggest, of course, that only direct costs and indirect benefits will influence allele frequencies. This sentence is intended to draw attention to both direct costs and indirect benefits, but not to the exclusion of all other population genetic processes.
+We agree that there will be potential direct and indirect costs and benefits that would influence allele frequencies (i.e., we did not mean to suggest that only direct costs and indirect benefits will influence allele frequencies). Our objective in this sentence is intended to draw attention to both direct costs and indirect benefits of inbreeding avoidance specifically, but not to the exclusion of all other population genetic processes. 
+
+We clarify the writing here by changing ''will depend not only on'' to ''will be affected not only by'' (LINE NUMBER). 
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 4:                                       XXX XXX XXX  1/2
+REVIEWER 1 SPECIFIC COMMENT 4:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 146-151:  I would make it clear that these are just example of the types of costs that might be incurred during precopulatory and postcopulatory choice, as its written now it sounds like these are the only possible costs. One obvious cost of postcopulatory choice is simply the cost of having to mate more than once to allow choice to occur (if mating is costly)...
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 4:                               XXX XXX XXX  1/2
+AUTHOR RESPONSE TO SPECIFIC COMMENT 4:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 We now clarify that these are examples of costs that might be incurred, not the only possible costs (LINE NUMBER). We also now state explicitly that these cost examples are how we will interpret the mechanisms of direct costs in our model (here and in the Model section, LINE NUMBER and LINE NUMBER, respectively), as it was unclear to Reviewer 2 that these were the mechanistic interpretations we used (see REVIEWER 2 GENERAL COMMENT 1).
@@ -92,18 +104,20 @@ AUTHOR RESPONSE TO SPECIFIC COMMENT 5:                               XXX XXX XXX
 We now state ''(see below)'' as suggested (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 6:                                       XXX XXX XXX
+REVIEWER 1 SPECIFIC COMMENT 6:                                       XXX XXX XXX  -- FIXIT+ (poly-inbreed)
 --------------------------------------------------------------------------------
 
 Line 214-226: Why restrict your study to only model costs? To understanding the full diversity of how and when pre and postcopulatory inbreeding evolve it would also be good to look at what happens when there are other benefits too? I guess if you add benefits other than inbreeding avoidance it means you can’t tell if the strategy evolved because of those benefits or because of inbreeding? Maybe it’s worth having an explicit statement in your introduction saying why you did it this way.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX
+AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX  -- FIXIT+ (poly-inbreed)
 --------------------------------------------------------------------------------
 
-Reviewer 1 is correct in their reasoning; if we were to include other benefits in our model, then we would not be able to determine if the strategy evolved because of those other benefits or because of inbreeding avoidance (or perhaps some combination of, or interaction between, the two). With models, as with experiments, it often is useful to isolate a particular phenomenon of interest so that it is possible to more completely understand the nature and size of its effect. This is why we designed our simulations to carefully compare allele values in the presence or absence of one particular variable, while holding all other variables constant (e.g., evolution of post-copulatory choice in Figure 1, evolution of an alternative strategy given a direct cost in Figure 3). Hence, the results of these simulatons give the reader greater conceptual understanding of the questions of interest by isolating the relevant biological mechanisms. 
+We thank Reviewer 1 for raising this comment. We agree that in many biological systems, other interesting benefits might potentially arise from polyandry and pre- and post-copulatory inbreeding avoidance. However, in agreement with Reviewer 1, we also believe that there are many good reasons for retaining the more targeted focus on the costs and benefits explored in our initial model. 
 
-We agree that this reasoning is important, and we have included an explicit statement about our approach in the Introduction (LINE NUMBER).
+First, the interaction between inbreeding and polyandry is especially likely to be biologically relevant on theoretical grounds. For example, the number of males with which a female mates will necessarily affect her opportunity for post-copulatory inbreeding avoidance, and potentially her opportunity for pre-copulatory inbreeding avoidance (or, conversely, risk of pre-copulatory inbreeding). The inherent nature of the timing of pre- versus post-copulatory inbreeding avoidance also has consequences for understanding evolution of both traits because pre-copulatoring inbreeding strategy will necessarily affect the relevance of post-copulatory inbreeding strategy (e.g., if pre-copulatory inbreeding avoidance is completely successful, then there cannot be any opportunity for post-copulatory inbreeding strategy to affect net inbreeding avoidance). Further, all three traits we model are found to incur direct costs in empirical populations. We now emphasise how the benefits and costs that we model are fundamental to systems where inbreeding and polyandry occur, and thereby further justify our targeted modelling approach (LINE NUMBER).
+
+Second, we agree with Reviewer 1's reasoning concerning additional benefits. If we were to include other benefits in our model, then we would not be able to determine if the strategy evolved because of those other benefits or because of inbreeding avoidance (or perhaps some combination of, or interaction between, the two). Our approach allows us to isolate the fundamental benefits and costs of interest so that we can more completely understand the nature and size of their effects. We do this by carefully comparing allele values in the presence or absence of one particular variable, while holding all other variables constant (e.g., evolution of post-copulatory choice in Figure 1, evolution of an alternative strategy given a direct cost in Figure 3). We agree that this reasoning is important, and we have included an explicit statement about our approach in the Introduction (LINE NUMBER).
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 7:                                       XXX XXX XXX
