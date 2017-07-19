@@ -104,13 +104,13 @@ AUTHOR RESPONSE TO SPECIFIC COMMENT 5:                               XXX XXX XXX
 We now state ''(see below)'' as suggested (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 1 SPECIFIC COMMENT 6:                                       XXX XXX XXX  -- FIXIT+ (poly-inbreed)
+REVIEWER 1 SPECIFIC COMMENT 6:                                       XXX XXX XXX
 --------------------------------------------------------------------------------
 
 Line 214-226: Why restrict your study to only model costs? To understanding the full diversity of how and when pre and postcopulatory inbreeding evolve it would also be good to look at what happens when there are other benefits too? I guess if you add benefits other than inbreeding avoidance it means you can’t tell if the strategy evolved because of those benefits or because of inbreeding? Maybe it’s worth having an explicit statement in your introduction saying why you did it this way.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX  -- FIXIT+ (poly-inbreed)
+AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
 We thank Reviewer 1 for raising this comment. We agree that in many biological systems, other interesting benefits might potentially arise from polyandry and pre- and post-copulatory inbreeding avoidance. However, in agreement with Reviewer 1, we also believe that there are many good reasons for retaining the more targeted focus on the costs and benefits explored in our initial model. 
@@ -274,13 +274,13 @@ Quantitive genetic studies by Roff (1996; 1998) establish the theory beind reeme
 We now emphasise the strengths of our approach to modelling polyandry more clearly (LINE NUMBER).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 MINOR COMMENT 3
+REVIEWER 2 MINOR COMMENT 3                                           XXX XXX XXX  -- FIXIT+
 --------------------------------------------------------------------------------
 
 L460: Would it be possible to confirm this more quantitatively rather than just this qualitative comparison (i.e. by a statististcal test) ?
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 3
+AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 3                       XXX XXX XXX   -- FIXIT+
 --------------------------------------------------------------------------------
 
 We recognise the motivation for wanting a statistical test to intepret our simulation results, and we thank Reviewer 2 for raising what might at first appear to be a carelessness on our part with respect to the analysis. However, when interpreting simulation results such as ours, statistical tests are actually innappropriate. For a very helpful and clear explanation of why this is the case, see White et al. (2014), who point out that use of statistical tests raises a practical and a philosophical issue with respect to statistical interpretation of simulated data. We summarise White et al.'s (2014) points below.
