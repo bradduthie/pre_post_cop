@@ -1,0 +1,27 @@
+L7-12: This doesn't provide a very good motivation for the study. It's fine that a lot of people have hypothesised something about inbreeding, and that very few have examined some of these hypotheses in a modelling context, but this isn't a sufficient or particularly good reason for why anyone should do so. Why is the question or idea, and why is it actually important? It's not enough to say that others think it is important.
+
+L16: ''quantify'' is an odd choice of wording here -- the authors don't really quantify evolution (this wouldn't be very useful in the simulation modelling approach), but explore specific questions related to evolution of multiple traits.
+
+L35: How could evolution of post-copulatory inbreeding avoidance *not* be facilitated by polyandry? I think that this statement can be made stronger; perhaps let Doughtery et al. (2016) stand on its own as a refuting idea, or explain, explicitly, how this is possible by summarising the cited publication.
+
+L42: Okay, fair enough, but how often do we actually expect this to be the case? Are the examples above expected to be commonplace?
+
+L45: Why does this paragraph exist? It seems entirely unnecessary given that polyandry, and polyandry to avoid inbreeding, has already been introduced. Surel all of this can be shortened and combined with the previous paragraph?
+
+L51: This comes back to my concerns in the abstract. That there is little modelling or theory is not, by itself, a good motivation; the authors need to explain why the hole in that they are trying to fill is important, not just that it exists.
+
+L75: Surely this is an exaggeration -- interpreting existing theory concerning mate choice, inbreeding, selection, etc., could yield some sort of predictions with respect to the behavoiurs listed. 
+
+L81: Here too, is this paragraph really needed? These are detailed results from a very specific set of parameter values in a previous model. If the current paper relies on all of this, then perhaps the authors need to re-think how broad their own model really is; if it does not, then perhaps this is better as Discussion.
+
+L104: Does the existence or importance of degeneracy rely on the specific (and somewhat narrow) conditions described earlier in the paragraph? If not, then perhaps degeneracy should be introduced earlier with the specific conditions explained here being more a consequence of the more general phenomenon, which I think more interesting and relevant to a broad audience. Currently, 'degeneracy' seems like kind of an afterthought.
+
+L116-123: Is all of this needed? 
+
+L124: This is a lot of introduction, but it's still not clear what the point of it all is. What is the key (presumably theoretical) question and why is it important? In any system, direct costs can modulate selection on traits, so I don't think that this needs much justification unless the authors are interested in modelling a specific system wherein costs are known to make quantitative predictions.
+
+L141: Is all of this needed to introduce the point? Also, the authors have somehow jumped from questions about negative direct costs and positive indirect costs to dynamic models tracking allele frequncies without much in the way of logical explanation. Are dynamic models really the most useful tool for addressing the quesions posed by the authors; could an analytical model be more powerful for elucidating the key concepts?
+
+
+
+
