@@ -22,6 +22,8 @@ L124: This is a lot of introduction, but it's still not clear what the point of 
 
 L141: Is all of this needed to introduce the point? Also, the authors have somehow jumped from questions about negative direct costs and positive indirect costs to dynamic models tracking allele frequncies without much in the way of logical explanation. Are dynamic models really the most useful tool for addressing the quesions posed by the authors; could an analytical model be more powerful for elucidating the key concepts?
 
+L166: How does tracking all of this help answer the author's key questions? Why is this needed, and could the authors not simplify to make it easier to understand the conceptual points in the paper?
+
 
 
 

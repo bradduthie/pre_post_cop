@@ -572,7 +572,7 @@ FUNCTION {format.full.names}
               if$
               t "others" =
                 {
-                  " " * bbl.etal *
+                  " " * bbl.etal * emphasise
                 }
                 {
                   numnames #2 >
@@ -1399,13 +1399,13 @@ FUNCTION {format.lab.names}
   s num.names$ duplicate$
   #2 >
     { pop$
-      " " * bbl.etal *
+      " " * bbl.etal * emphasise
     }
     { #2 <
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             {
-              " " * bbl.etal *
+              " " * bbl.etal * emphasise
             }
             { bbl.and space.word * s #2 "{vv~}{ll}" format.name$
               * }
