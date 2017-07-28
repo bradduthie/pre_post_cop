@@ -4,15 +4,15 @@ title: Evolution of pre-copulatory and post-copulatory strategies of inbreeding 
 author: ''
 date: "21 July 2017"
 output:
-  pdf_document:
-    fig_caption: yes
-  html_document: default
   word_document:
     fig_caption: yes
     pandoc_args:
     - --csl
     - evolution.csl
     reference_docx: docx_template.docx
+  pdf_document:
+    fig_caption: yes
+  html_document: default
 header-includes:
 - \usepackage{natbib}
 - \usepackage{lineno}
