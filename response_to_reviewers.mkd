@@ -57,7 +57,7 @@ Line 67: add for example before red junglefowl so it is clear these are not the 
 AUTHOR RESPONSE TO SPECIFIC COMMENT 1:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-Added 'e.g.' as suggested (L85).
+Change made as suggested (L85).
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 2:                                       XXX XXX XXX
@@ -69,9 +69,9 @@ Line 96-99: I’m not sure I really understand why this leads to the restricted 
 AUTHOR RESPONSE TO SPECIFIC COMMENT 2:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-Our previous wording might have led to some confusion about what was being restricted. Specifically, it was not evolution of inbreeding avoidance in Duthie et al. (2016) that was restricted, but evolution of polyandry as a mechanism for facilitating inbreeding avoidance. We fix this by clarifying in the preceding lines and being clearer in the lines indicated (L50-53 & L118-122).
+Our original wording seems to have caused some confusion about what was being restricted. Specifically, it was not evolution of inbreeding avoidance that was restricted in Duthie et al. (2016), but evolution of polyandry as a mechanism for facilitating inbreeding avoidance. 
 
-We have rephrased to clarify how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (L111-L114).
+We edited this section to clarify the key points (L50-53 & L118-122). We have also clarified how the availability of mates in Duthie et al. (2016) restricted evolution of inbreeding avoidance enabled by polyandry (L111-L114).
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 3:                                       XXX XXX XXX
@@ -121,11 +121,13 @@ Line 214-226: Why restrict your study to only model costs? To understanding the 
 AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We thank Reviewer 1 for raising this comment. We agree that in many biological systems, other interesting benefits might potentially arise from polyandry and pre- and post-copulatory inbreeding avoidance. However, in agreement with Reviewer 1, we also believe that there are many good reasons for retaining the more targeted focus on the costs and benefits explored in our initial model. 
+We thank Reviewer 1 for this query. We agree that in many biological systems, other interesting benefits might potentially arise from polyandry and pre- and post-copulatory strategies. However, we also agree with Reviewer 1 that there are many good reasons for retaining the targeted focus on the costs and benefits explored in our current model; most notably, if we were to include other benefits in our model, then we would not be able to determine if the strategy evolved because of those other benefits or because of inbreeding avoidance (or perhaps some combination of, or interaction between, the two).
 
-First, the interaction between inbreeding and polyandry is especially likely to be biologically relevant on theoretical grounds. For example, the number of males with which a female mates will necessarily affect her opportunity for post-copulatory inbreeding avoidance, and potentially her opportunity for pre-copulatory inbreeding avoidance (or, conversely, risk of pre-copulatory inbreeding). The inherent order of events of pre- versus post-copulatory inbreeding avoidance also has consequences for understanding evolution of both traits because pre-copulatoring inbreeding strategy will necessarily affect the relevance of post-copulatory inbreeding strategy (e.g., if pre-copulatory inbreeding avoidance is completely successful, then there cannot be any opportunity for post-copulatory inbreeding strategy to affect net inbreeding avoidance). Further, all three traits we model are found to incur direct costs in empirical populations. We now emphasise how the benefits and costs that we model are fundamental to systems where inbreeding and polyandry occur, and thereby further justify our targeted modelling approach (L72-L75).
+Polyandry and pre-copulatory and post-copulatory choice have been hypothesised, and in some cases shown, to have have multiple possible benefits, for example encompassing selection for additive 'good genes' and avoidance of infertility and selfish genetic elements [TODO: INCLUDE REFERENCES?]. However, the hypotheses that these reproductive strategies are driven by inbreeding avoidance is equally prominent, but is surprisingly poorly underpinned by theory.
 
-Second, we agree with Reviewer 1's reasoning concerning additional benefits. If we were to include other benefits in our model, then we would not be able to determine if the strategy evolved because of those other benefits or because of inbreeding avoidance (or perhaps some combination of, or interaction between, the two). Our approach allows us to isolate the fundamental benefits and costs of interest so that we can more completely understand the nature and size of their effects. We do this by carefully comparing allele values in the presence or absence of one particular variable, while holding all other variables constant (e.g., evolution of post-copulatory choice in Figure 1, evolution of an alternative strategy given a direct cost in Figure 3). We agree that this reasoning is important, and we have included an explicit statement about our approach in the Introduction (L205-L217).
+Given this situation, we agree with Reviewer 1 that it is not readily tractable, or hence insightful, to consider multiple such processes and corresponding benefits simultaneously, at least until they are well-understood in isolation. Consequently, our current model and simulations are designed to isolate fundamental benefits and costs of interest in the context of multiple strategies of inbreeding avoidance so that we can better understand the nautre and size of their joint effects.
+
+We agree that this reasoning is important, and we have greatly explanded our Discussion on other costs and benefits (LINE NUMBER: INTRODUCTION?).
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 7:                                       XXX XXX XXX
@@ -149,7 +151,7 @@ Line 422 – 426: So why is this result different from Duthie et al 2016 which f
 AUTHOR RESPONSE TO SPECIFIC COMMENT 8:                               XXX XXX XXX
 --------------------------------------------------------------------------------
 
-This comment relates to a misunderstanding in REVIEWER 1 SPECIFIC COMMENT 2 (see our response above). There is no contradiction between our results and those of Duthie et al. (2016) with respect to evolution of pre-copulatory inbreeding avoidance. Pre-copulatory inbreeding avoidance in Duthie et al. (2016) readily evolved given strong inbreeding depression as it does in our current manuscript results. Instead, Duthie et al. (2016) found that polyandry evolved as a mechanism to avoid inbreeding only under very restricted conditions. This is consistent with our current results, but we further show that the conditions under which polyandry evolves are greatly relaxed if post-copulatory inbreeding avoidance can also evolve (which Duthie et al. did not consider).
+This comment relates to a misunderstanding in REVIEWER 1 SPECIFIC COMMENT 2 (see our response above). There is no contradiction between our results and those of Duthie et al. (2016) with respect to evolution of pre-copulatory inbreeding avoidance. Pre-copulatory inbreeding avoidance in Duthie et al. (2016) readily evolved given strong inbreeding depression as it does in our current manuscript. Instead, Duthie et al. (2016) found that polyandry evolved as a mechanism to avoid inbreeding only under very restricted conditions. This is consistent with our current results, but we further show that the conditions under which polyandry evolves are greatly relaxed if post-copulatory inbreeding avoidance can also evolve (which Duthie et al. did not consider).
 
 We now explain the restricted conditions in which polyandry to avoid inbreeding evolved in Duthie et al. (2016) more clearly in the Introduction to avoid this confusion (L111-L114, L118-L121).
 
@@ -199,7 +201,7 @@ REVIEWER 2 GENERAL COMMENT 1                                         XXX XXX XXX
 AUTHOR RESPONSE TO GENERAL COMMENT 1                                 XXX XXX XXX
 --------------------------------------------------------------------------------
 
-We thank Reviewer 2 for raising this concern regarding direct costs in our model. Although the biological mechanisms behind these direct costs were explained in the Introduction of our original manuscript, we did not make the link to these mechanisms clear in the Modelling section of the original manuscript. We acknowledge that this made the motivation behind our modelling choices a bit unclear (see REVIEWER 1 SPECIFIC COMMENT 4 and our response), and we now also explain the mechanistic interpretation of our cost in the Model subheading Costs (L288-L292).
+We thank Reviewer 2 for their careful thoughts regarding direct costs in our model. The biological mechanisms behind the forms of direct costs that we modelled were explained in the Introduction of our original manuscript, we did not make the link to these mechanisms clear in the Modelling section of the original manuscript. We acknowledge that this made the motivation behind our modelling choices a bit unclear (see REVIEWER 1 SPECIFIC COMMENT 4 and our response), and we now also explain the mechanistic interpretation of our cost in the Model subheading Costs (L288-L292).
 
 Reviewer 2 suggests a mechanistic way of modelling costs that would be relevant to myriad (though not all) specific systems, and we agree that such a modelling choice would be interesting. In fact, we considered such an implementation of costs (along with other possible implementations), but ultimately decided on the approach in our original manuscript because it was most appropriate for addressing our specific questions of interest. 
 
