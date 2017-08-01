@@ -19,9 +19,17 @@ Christoph Haag
 
 Dear Dr. Haag,
 
-Thank you very much for your overview and decision. Despite the initial rejection, we are grateful for the positive summaries and feedback provided by both reviewers. The main criticism of our manuscript came from Reviewer 2, who commented on the some of the assumptions that we made in our modelling decisions. We appreciate these critiques, but also emphasise that the modelling decisions that Reviewer 2 highlighted were carefully made in the context of our modelling objectives and in line with previous modelling work. We have revisited these modelling decisions and concluded that they are the most appropriate ones for our modelling objectives, so we have retained them in our revised manuscript. Nevertheless, we acknowledge that some of our modelling decisions could have been better explained in the manuscript. We have therefore revised our manuscript to improve the justification of our modelling decisions in the areas that Reviewer 2 has helpfully highlighted. We believe that, in our revised manuscript, key assumptions and objectives, and links to previous models, are all now clearly explained. Additionally, we present a new set of simulations that Reviewer 2 has suggested to support our original conclusions regarding direct cost asymmetries. 
+Thank you very much for your overview and decision. Despite the initial rejection, we are grateful for the positive overview of our work provided by both reviewers, and for your view that our manuscript may prove acceptable if model assumptions can be clarified and justified, and if the reviewers' minor comments can be resolved.
 
-Overall, we hope that these changes have more clearly explained and justified our approach. Unless otherwise stated, all line numbers in our response refer to lines in our revised submission.
+The main criticism of some of our modelling assumptions and decisions came from Reviewer 2. We appreciate their comments and have revisited our modelling decisions accordingly. We concluded that our original modelling decisions, which were very carefully made in the context of our current objectives and in line with previous modelling work, were indeed appropriate. We have consequently retained the original model structure in our revised manuscript. Nevertheless, we acknowledge that some modelling decisions could have been better explained and justified in our original manuscript. We have therefore carefully revised the manuscript to better explain and justify these decisions, particularly in key areas that Reviewer 2 helpfully highlighted. We believe that key assumptions and objectives, and links to previous models, are all now clearly explained.
+
+Additionally, we present a new set of simulations that Reviewer 2 suggested to support our original conclusions regarding direct cost asymmetries. 
+
+Further, we believe that we have fully attended to all minor comments made by both reviewers.
+
+We hope you will further consider our revised manuscript for publication in the Journal of Evolutionary Biology, and would welcome it being returned to the original reviewers.
+
+Unless otherwise stated, all line numbers in our response refer to lines in our revised manuscript.
 
 Sincerely,
 
