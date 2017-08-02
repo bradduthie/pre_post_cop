@@ -123,7 +123,7 @@ AUTHOR RESPONSE TO SPECIFIC COMMENT 6:                               XXX XXX XXX
 
 We thank Reviewer 1 for this query. We agree that in many biological systems, other interesting benefits might potentially arise from polyandry and pre- and post-copulatory strategies. However, we also agree with Reviewer 1 that there are many good reasons for retaining the targeted focus on the costs and benefits explored in our current model; most notably, if we were to include other benefits in our model, then we would not be able to determine if the strategy evolved because of those other benefits or because of inbreeding avoidance (or perhaps some combination of, or interaction between, the two).
 
-Polyandry and pre-copulatory and post-copulatory choice have been hypothesised, and in some cases shown, to have have multiple possible benefits, for example encompassing selection for additive 'good genes' and avoidance of infertility and selfish genetic elements [TODO: INCLUDE REFERENCES?]. However, the hypotheses that these reproductive strategies are driven by inbreeding avoidance is equally prominent, but is surprisingly poorly underpinned by theory.
+Polyandry and pre-copulatory and post-copulatory choice have been hypothesised, and in some cases shown, to have have multiple possible benefits, for example encompassing selection for additive 'good genes' and avoidance of infertility and selfish genetic elements (e.g., Kawano et al. 2009; Kokko and Mappes 2013; Taylor et al. 2014). However, the hypotheses that these reproductive strategies are driven by inbreeding avoidance is equally prominent, but is surprisingly poorly underpinned by theory.
 
 Given this situation, we agree with Reviewer 1 that it is not readily tractable, or hence insightful, to consider multiple such processes and corresponding benefits simultaneously, at least until they are well-understood in isolation. Consequently, our current model and simulations are designed to isolate fundamental benefits and costs of interest in the context of multiple strategies of inbreeding avoidance so that we can better understand the nautre and size of their joint effects.
 
@@ -313,13 +313,9 @@ Duthie, A. B., & Reid, J. M. (2016). Evolution of inbreeding avoidance and inbre
 
 Evans, J. P., & Gasparini, C. (2013). The genetic basis of female multiple mating in a polyandrous livebearing fish. Ecology and Evolution, 3(1), 61–66. https://doi.org/10.1002/ece3.435
 
-Fitzpatrick, J. L., & Evans, J. P. (2014). Postcopulatory inbreeding avoidance in guppies. Journal of Evolutionary Biology, 27, 2585–2594. https://doi.org/10.1111/jeb.12545
-
-Gasparini, C., & Pilastro, A. (2011). Cryptic female preference for genetically unrelated males is mediated by ovarian fluid in the guppy. Proceedings. Biological Sciences / The Royal Society, 278(1717), 2495–2501. https://doi.org/10.1098/rspb.2010.2369
-
 Guillaume, F., & Perrin, N. (2006). Joint evolution of dispersal and inbreeding load. Genetics, 173(1), 497–509. http://doi.org/10.1534/genetics.105.046847
 
-Koga, T., Backwell, P. R. Y., Jennions, M. D., & Christy, J. H. (1998). Elevated predation risk changes mating behaviour and courtship in a fiddler crab. Proceedings of the Royal Society B: Biological Sciences, 265(1404), 1385–1390. https://doi.org/10.1098/rspb.1998.0446
+Kawano, K. M., Yamaguchi, N., Kasuya, E., & Yahara, T. (2009). Extra-pair mate choice in the female great tit Parus major: Good males or compatible males. Journal of Ethology, 27, 349–359. http://doi.org/10.1007/s10164-008-0126-8
 
 Kokko, H., & Mappes, J. (2013). Multiple mating by females is a natural outcome of a null model of mate encounters. Entomologia Experimentalis et Applicata, 146(1), 26–37. https://doi.org/10.1111/j.1570-7458.2012.01296.x
 
@@ -330,19 +326,10 @@ Roff, D. A. (1996). The evolution of threshold traits in animals. The Quarterly 
 
 Roff, D. A. (1998). Evolution of threshold traits: the balance between directional selection, drift and mutation. Heredity, 80(1), 25–32. https://doi.org/10.1046/j.1365-2540.1998.00262.x
 
-Ronkainen, H., & Ylonen, H. (1994). Behaviour of cyclic bank voles under risk of mustelid predation: Do females avoid copulations? Oecologia, 97(3), 377–381.
-
-Rowe, L. (1988). Cost of mating for female insects: risk of predation in Photinus collustrans (Coleoptera: Lampyridae). American Naturalist, 121(1), 139–142.
-
-Rowe, L. (1994). The costs of mating and mate choice in water striders. Animal Behaviour, 48(5), 1049–1056. https://doi.org/10.1006/anbe.1994.1338
-
 Shuker, D. M., Phillimore, A. J., Burton-Chellew, M. N., Hodge, S. E., & West, S. A. (2007). The quantitative genetic basis of polyandry in the parasitoid wasp, Nasonia vitripennis. Heredity, 98(2), 69–73. https://doi.org/10.1038/sj.hdy.6800897
 
-Tuni, C., Beveridge, M., & Simmons, L. W. (2013). Female crickets assess relatedness during mate guarding and bias storage of sperm towards unrelated males. Journal of Evolutionary Biology, 26(6), 1261–1268. https://doi.org/10.1111/jeb.12118
+Taylor, M. L., Price, T. A. R., & Wedell, N. (2014). Polyandry in nature: a global analysis. Trends in Ecology & Evolution, 29(7), 376–383. http://doi.org/10.1016/j.tree.2014.04.005
 
 Wang, J., Hill, W. G., Charlesworth, D., & Charlesworth, B. (1999). Dynamics of inbreeding depression due to deleterious mutations in small populations: mutation parameters and inbreeding rate. Genetical Research, 74(2), 165–178. Retrieved from http://www.ncbi.nlm.nih.gov/pubmed/10584559
 
 White, J. W., Rassweiler, A., Samhouri, J. F., Stier, A. C., & White, C. (2014). Ecologists should not use statistical significance tests to interpret simulation model results. Oikos, 123(4), 385–388. https://doi.org/10.1111/j.1600-0706.2013.01073.x
-
-
-
