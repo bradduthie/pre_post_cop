@@ -2257,7 +2257,7 @@ xxx <- tapply(X=evo[,6],INDEX=evo[,6],FUN=mean);
 len <- dim(evo)[1];
 plot(x=xxx,y=mWP,type="n",lwd=2,ylim=c(-24,14),col="blue",xaxt="n",yaxt="n",
      xlab="",ylab="",cex.lab=2,cex.axis=1.5);
-points(x=xxx,y=mPO,type="l",lwd=2,col="red");
+points(x=xxx,y=mPO,type="l",lwd=2,col="red"g);
 points(x=xxx,y=mEP,type="l",lwd=2,col="black");
 uWP <- mWP + sWP / sqrt(sum(evo[,6]==gens));
 lWP <- mWP - sWP / sqrt(sum(evo[,6]==gens));
