@@ -292,13 +292,13 @@ Practically, statistical power in a simulation is entirely determined by replica
 We now explain that statistical tests are not appropriate for intepreting our model results, citing White et al. (2014) explicitly (L464-L468).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 MINOR COMMENT 4                                           XXX XXX XXX
+REVIEWER 2 MINOR COMMENT 4  
 --------------------------------------------------------------------------------
 
 L464-466: ditto
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 4                        XXX XXX XXX
+AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 4  
 --------------------------------------------------------------------------------
 
 Please refer to our previous comment (and see L464-468).
