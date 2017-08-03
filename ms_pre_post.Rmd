@@ -2,7 +2,7 @@
 title: Evolution of pre-copulatory and post-copulatory strategies of inbreeding avoidance
   and associated polyandry
 author: ''
-date: "21 July 2017"
+date: "3 August 2017"
 output:
   pdf_document:
     fig_caption: yes
