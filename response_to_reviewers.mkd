@@ -180,43 +180,43 @@ AUTHOR RESPONSE TO SPECIFIC COMMENT 10:
 In this line, we noted that disease transmission is a cost 'relevant to mate choice'. We believe this is accurate. However, to improve the clarity, we now generalise 'relevant to mating frequency and mate choice' (L726-728; note that this section has been moved).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR                            XXX XXX XXX
+REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR         
 --------------------------------------------------------------------------------
 
 This is a very interesting and well written manuscript where the authors have used an individual-based modelling approach to address questions on the evolution of female polyandry together with mechanisms of pre- and post-copulatory inbreeding avoidance. The authors can thereby draw conclusions on when to expect pre- and/or post-copulatory inbreeding avoidance to evolve. The results are interesting. For instance they find that the initial evolution of pre-copulatory avoidance completely precludes the evolution of post-copulatory mechanisms but not vice versa. Although the manuscript is easy to read it has some long passages. I think both the introduction and discussion could be condensed somewhat. I am also not completely happy with the modelling assumptions. I will go more into detail on that below together with some other comments and concerns.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR         XXX XXX XXX
+AUTHOR RESPONSE TO REVIEWER 2 GENERAL COMMENTS TO THE AUTHOR  
 --------------------------------------------------------------------------------
 
 We thank Reviewer 2 for their helpful comments. We have tried to condense the writing in the Introduction and Discussion where possible, but the need for further clarification and model justification raised by Reviewer 1 has also required us to provide more information in these parts of the text. We address the concerns of Reviewer 2 regarding model assumptions below.
 
 --------------------------------------------------------------------------------
-REVIEWER 2 GENERAL COMMENT 1                                         XXX XXX XXX
+REVIEWER 2 GENERAL COMMENT 1             
 --------------------------------------------------------------------------------
 
 1.      The assumed costs in the model are a little bit too phenomenological to my taste. The mechanisms by which these may arise are not at all explained so that the costs are not (or cannot) at all interpreted in a meaningful way. I would have done it differently (and it is currently unclear if it would matter or not). The obvious cost of polyandry is certainly of an increased mating activity, which is also acknowledged on L 546ff. The current model is unclear on what causes the cost of polyandry in the model. Furthermore, the costs of pre- and post-copulatory inbreeding avoidance seem awkward. Now, all females do the same sampling and it is just in the randomness of mating (fertilization) that differs between females. I do not know why this should result in different costs. To me it seems much more natural to let females sample until she finds an appropriate male and let the mating probability depend on the strength of her (genetic) mating bias towards unrelated males and the relatedness of the partner. In that way the number of sampling events would translate into an actual interpretable cost. In the same way, one could model post-copulatory avoidance and here the actual number of unfertilized eggs would translate into a real cost.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO GENERAL COMMENT 1                                 XXX XXX XXX
+AUTHOR RESPONSE TO GENERAL COMMENT 1            
 --------------------------------------------------------------------------------
 
-We thank Reviewer 2 for their careful thoughts regarding direct costs in our model. The biological mechanisms behind the forms of direct costs that we modelled were explained in the Introduction of our original manuscript. However we can see that we did not make the link to these mechanisms clear in the Modelling section and that the motivation behind our modelling choices was consequently unclear (see REVIEWER 1 SPECIFIC COMMENT 4 and our response). To clarify and justify these key decisions, we have moved biological information from the Introduction to the Model section (L288-L292).
+We thank Reviewer 2 for their careful thoughts regarding direct costs in our model. The biological mechanisms behind the forms of direct costs that we modelled were explained in the Introduction of our original manuscript. However we can see that we did not make the link to these mechanisms clear in the Modelling section and that the motivation behind our modelling choices was consequently unclear (see REVIEWER 1 SPECIFIC COMMENT 4 and our response). To clarify and justify these key decisions, we have moved biological information from the Introduction to the Model section (L264-L280).
 
 Reviewer 2 suggests a mechanistic way of modelling costs that would be relevant to myriad (though not all) specific systems, and we agree that such a modelling choice would be interesting. In fact, we considered such an implementation of costs (along with other possible implementations), but ultimately decided on the approach in our original manuscript because it was most appropriate for addressing our specific questions of interest. 
 
-This is because the approach suggested by Reviewer 2 would require us to infer (at least partially) direct costs rather than define them (because such costs could not be disassociated from the inbreeding avoidance mechanisms themselves). This would be useful for understanding evolution of pre- and post-copulatory inbreeding avoidance for a specific type of system, but a major goal of our current manuscript is to make general conclusions and derive general hypotheses for evolution across systems (L217-L219). To do so effectively, we need to be able to make pre- and post-copulatory inbreeding avoidance costs identical, and independent of any particular mechanism of inbreeding avoidance (i.e., we need to be able to set them as parameters in the model). We now explain the motivation behind these costs more carefully in the Model (L276-L279) and Discussion (L664-L671).
+This is because the approach suggested by Reviewer 2 would require us to infer (at least partially) direct costs rather than define them (because such costs could not be disassociated from the inbreeding avoidance mechanisms themselves). This would be useful for understanding evolution of pre- and post-copulatory inbreeding avoidance for a specific type of system, but a major goal of our current manuscript is to make general conclusions and derive general hypotheses for evolution across systems (L198-L204). To do so effectively, we need to be able to make pre- and post-copulatory inbreeding avoidance costs identical, and independent of any particular mechanism of inbreeding avoidance (i.e., we need to be able to set them as parameters in the model). We now explain the motivation behind these costs more carefully in the Model (L266-L269) and Discussion (L717-L722).
 
-We appreciate the alternative methods of modelling costs that Reviewer 2 suggests, which are similar to alternative costs that we considered in the initial design of our model. Their suggestions are interesting and would be useful future avenues of research for specific biological systems. In our revised Discussion, we now place greater emphasis on the motivation behind our modelling decision (L664-L666), then suggest how costs might be made more mechanistic in the modelling of specific systems of interest (L666-L693).
+We appreciate the alternative methods of modelling costs that Reviewer 2 suggests, which are similar to alternative costs that we considered in the initial design of our model. Their suggestions are interesting and would be useful future avenues of research for specific biological systems. In our revised Discussion, we now place greater emphasis on the motivation behind our modelling decision, then suggest how costs might be made more mechanistic in the modelling of specific systems of interest (L717-L748).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 GENERAL COMMENT 2                                         XXX XXX XXX
+REVIEWER 2 GENERAL COMMENT 2            
 --------------------------------------------------------------------------------
 
 2.      The model is inconsistent in the sense that inbreeding depression is independent of inbreeding avoidance. If there is no inbreeding avoidance the number and frequency of deleterious recessive alleles would decrease through purging. I acknowledge that the model is still useful as we may not be interested in the intensity of inbreeding depression but I think this fact should be mentioned somewhere in the model description.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO GENERAL COMMENT 2                                 XXX XXX XXX
+AUTHOR RESPONSE TO GENERAL COMMENT 2       
 --------------------------------------------------------------------------------
 
 We thank Reviewer 2 for highlighting the assumption that inbreeding depression and inbreeding avoidance are independent in our model (i.e., no purging). Please note, however, that this is not an inconsistency in the model per se, but rather a deliberate simplifying assumption. We did consider allowing purging in our model, but decided against it for two reasons. 
@@ -225,46 +225,46 @@ First, a related model of biparental inbreeding in a simulated population of the
 
 Second, and more importantly for the current model, to address our three key questions, we aimed for a consistent (high) magnitude of inbreeding depression -- i.e., we wanted individuals in all of our populations to be subject to the same high magnitude of inbreeding depression given the same inbreeding coefficients. Setting this consistent inbreeding depression allowed us to understand, e.g., the effect of post-copulatory inbreeding avoidance on evolution of polyandry without also having to account for different simulations having different magnitudes of realised inbreeding depression (see also REVIEWER 1 SPECIFIC COMMENT 6 and our response). Hence, given the goals of this study, we believe that controlling the magnitude of inbreeding depression makes our model more useful for delivering theoretical insights than if we instead allowed inbreeding depression to vary with inbreeding avoidance.
 
-Following Reviewer 2's query, we have revisited our original assumption and decided that it is an appropriate one to make given our current model questions. We have therefore retained it in the revised version. In our revised version, we now edit the text in the Model section to ensure that the assumption of no purging is explicitly stated (L371-L375).
+Following Reviewer 2's query, we have revisited our original assumption and decided that it is an appropriate one to make given our current model questions. We have therefore retained it in the revised version. In our revised version, we now edit the text in the Model section to ensure that the assumption of no purging is explicitly stated and carefully explained (L367-L374).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 GENERAL COMMENT 3                                         XXX XXX XXX
+REVIEWER 2 GENERAL COMMENT 3            
 --------------------------------------------------------------------------------
 
 3.      L527-529: It is not quite clear how large these asymmetries have to be for this effect to be apparent. Thus is this effect only apparent because one cost is set at zero? What if C[M] = 0.01, C[F] = 0.02, for instance? I think a little bit more investigation of the parameter space would be helpful.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO GENERAL COMMENT 3                                 XXX XXX XXX
+AUTHOR RESPONSE TO GENERAL COMMENT 3        
 --------------------------------------------------------------------------------
 
 In our original manuscript, we demonstrated a mechanism by which relative direct costs will interact to affect long-term evolution of degenerate pre-copulatory versus post-copulatory inbreeding avoidance phenotypes. We did not intend to focus on specific parameter values, but acknowledge that the specific choice of cost values might have led to some confusion regarding the broader conclusions derived from our model results.
 
-There is a practical and a conceptual way in which an effect might be described as 'apparent' in the context of natural selection. Practically, an effect might be apparent if it can be observed from data analysed in a given system (i.e., empirically collected, or simulated and observed as if it were empirically collected). Conceptually, an effect might be apparent if it causes selection to change consistently in a predictable direction (i.e., the effect follows from a mechanism that is relevant to theory and useful for developing hypotheses). Practically, it is impossible to generalise how large cost asymmetries would need to be for the effect on selection to become apparent because the ability to observe such an effect will be dependent on both details of the system being studied (e.g., confounding variables) and the quality of the data collected (e.g., sample size). Conceptually, the effect that we demonstrate should always be apparent assuming the cost asymmetry is not zero; selection against the higher cost strategy should simply weaken as cost asymmetry decreases. We now address both the practical (LINE NUMBER) and conceptual (LINE NUMBER) consequences of cost asymmetry size in the Discussion.
+There is a practical and a conceptual way in which an effect might be described as 'apparent' in the context of selection. Practically, an effect might be apparent if it can be observed from data analysed in a given system (i.e., empirically collected, or simulated and observed as if it were empirically collected). Conceptually, an effect might be apparent if it causes selection to change consistently in a predictable direction regardless of whether or not it can be easily observed in practice (i.e., the effect follows from a mechanism that is relevant to theory and potentially useful for developing hypotheses). Practically, it is impossible to generalise how large cost asymmetries would need to be for the effect on selection to become apparent because the ability to observe such an effect will be dependent on both details of the system being studied (e.g., confounding variables) and the quality of the data collected (e.g., sample size). Conceptually, the effect that we demonstrate should always be apparent assuming the cost asymmetry is not zero; selection against the higher cost strategy should simply weaken as cost asymmetry decreases. We now address the practical and conceptual consequences of cost asymmetry size more carefully in the Discussion (L684-696).
 
-We also acknowledge that readers might appreciate a demonstration of the cost asymmetry effect on additional parameter value combinations. We therefore have run additional simulations with slightly different cost asymmetries; one of set of simulation replicates includes costs of 0.01 and 0.02, as suggested by Reviewer 2, and another set of replicates includes costs of 0.01 and 0.3 (hence showing variation in both relative and absolute cost differences). Simulation results are now mentioned in the text (L439-L440, L549-L554, L652-L661) and presented in detail as supporting information.
+We also acknowledge that readers might appreciate a demonstration of the cost asymmetry effect on additional parameter value combinations. We therefore have run additional simulations with slightly different cost asymmetries; one of set of simulation replicates includes costs of 0.01 and 0.02, as suggested by Reviewer 2, and another set of replicates includes costs of 0.01 and 0.3 (hence showing variation in both relative and absolute cost differences). Simulation results are now mentioned in the text (L437-439; L550-558; L691-696) and presented in detail as supporting information.
 
 --------------------------------------------------------------------------------
-REVIEWER 2 MINOR COMMENT 1                                           XXX XXX XXX
+REVIEWER 2 MINOR COMMENT 1                   
 --------------------------------------------------------------------------------
 
 L38-47: At this point I do not completely understand these arguments. Principally, I do not agree that polyandry ITSELF allows for inbreeding avoidance. Either a bias in sperm use seems necessary or an increased remating propensity after an initial mating with a relative compared to a mating with an unrelated male. Polyandry itself does not allow females to mate with less related males.
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 1                        XXX XXX XXX
+AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 1          
 --------------------------------------------------------------------------------
 
-We agree that, all else being equal, polyandry does itself not allow for inbreeding avoidance. We emphasise that polyandry has been hypothesised to allow inbreeding avoidance ''if it allows females to mate with additional unrelated males following initial mating with a relative'' (L50-L53). Note that females don't necessarily need an increased *propensity* to mate if they initially mate with a relative (though this is one mechanism of avoiding inbreeding) -- polyandrous females might also be able to avoid inbreeding if the availability of non-relatives changes after initial mate choice (see, e.g., Duthie et al., 2016,  Reid et al., 2015), hence making polyandry adaptive.
+We agree that, all else being equal, polyandry does itself not allow for inbreeding avoidance. We emphasise that polyandry has been hypothesised to allow inbreeding avoidance ''if it allows females to mate with additional unrelated males following initial mating with a relative'' (L48-L51). Note that females don't necessarily need an increased *propensity* to mate if they initially mate with a relative (though this is one mechanism of avoiding inbreeding) -- polyandrous females might also be able to avoid inbreeding if the availability of non-relatives changes after initial mate choice (see, e.g., Duthie et al., 2016,  Reid et al., 2015), hence making polyandry adaptive.
 
-We have edited the text to make the relationship between polyandry and inbreeding avoidance clearer here (L50-L53).
+We have edited the text to make the relationship between polyandry and inbreeding avoidance clearer here (L48-L51).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 MINOR COMMENT 2                                           XXX XXX XXX
+REVIEWER 2 MINOR COMMENT 2            
 --------------------------------------------------------------------------------
 
 L201-203: This approach could have a possible downside. Modelling P as a threshold trait means that negative values of P are phenotypically not expressed creating potential for genetic drift to just drive genetic polyandry to such low values that it cannot “recover” although it is later selected for. I do not think that this is so crucial for the current paper, though. I think I would have preferred modelling it as a continuous trait between –infinity and infinity and let exp(P) represent the expected polyandry value (corresponding well to the later Poisson distribution).
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 2                        XXX XXX XXX
+AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 2     
 --------------------------------------------------------------------------------
 
 We thank Reviewer 2 for raising a potential downside of our threshold trait approach and offering an alternative approach as a suggestion. However, the potential downside scenario that Reviewer 2 raises is actually very unlikely given the 10 diploid loci genetic architecture of our model. 
@@ -273,23 +273,23 @@ The polyandry phenotype is affected by 20 alleles that combine additively, and i
 
 Quantitive genetic studies by Roff (1996; 1998) establish the theory behind reemergence of maladaptive threshold traits underlied by continuous genetic variation, and empirical studies suggest that there is additive genetic variation underlying polyandry (e.g., Shuker et al. 2007; Evans and Gasparini 2013), meaning that the threshold nature of polyandry is also biologically realistic. 
 
-We now emphasise the strengths of our approach to modelling polyandry more clearly (L246-L254, L258-L261).
+We now emphasise the strengths of our approach to modelling polyandry more clearly (L233-L241, L245-L249).
 
 --------------------------------------------------------------------------------
-REVIEWER 2 MINOR COMMENT 3                                           XXX XXX XXX
+REVIEWER 2 MINOR COMMENT 3             
 --------------------------------------------------------------------------------
 
 L460: Would it be possible to confirm this more quantitatively rather than just this qualitative comparison (i.e. by a statististcal test) ?
 
 --------------------------------------------------------------------------------
-AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 3                        XXX XXX XXX 
+AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 3      
 --------------------------------------------------------------------------------
 
 We recognise the motivation for wanting a statistical test to intepret our simulation results. However, when interpreting simulation results such as ours, statistical tests are actually inappropriate (see White et al. 2014, ''Ecologists should not use statistical significance tests to interpret simulation model results'').
 
 Practically, statistical power in a simulation is entirely determined by replication. Philosophically, simulation models such as ours violate the assumptions underlying statistical hypothesis testing. Hence, reporting the results of statistical tests would not be informative in our model, and we do not want to risk misleading readers into thinking such results would be biologically meaningful. 
 
-We now explain that statistical tests are not appropriate for intepreting our model results, citing White et al. (2014) explicitly (L464-L469).
+We now explain that statistical tests are not appropriate for intepreting our model results, citing White et al. (2014) explicitly (L464-L468).
 
 --------------------------------------------------------------------------------
 REVIEWER 2 MINOR COMMENT 4                                           XXX XXX XXX
@@ -301,7 +301,7 @@ L464-466: ditto
 AUTHOR RESPONSE TO REVIEWER 2 MINOR COMMENT 4                        XXX XXX XXX
 --------------------------------------------------------------------------------
 
-Please refer to our previous comment. In these lines too, we also now reword our conclusions to better reflect the inferences that can be made from our model results (L581-L583).
+Please refer to our previous comment (and see L464-468).
 
 --------------------------------------------------------------------------------
 AUTHOR REFERENCES
