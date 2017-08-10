@@ -87,7 +87,7 @@ Line 139-143: Surely there are both potential direct and indirect costs and bene
 AUTHOR RESPONSE TO SPECIFIC COMMENT 3:     
 --------------------------------------------------------------------------------
 
-We agree that there are various potential direct and indirect costs and benefits that could influence allele frequencies, and we did not mean to imply that inbreeding avoidance is the only driver. However, since it is inbreeding avoidance that is the focus of our current manuscript, this sentence was intended to draw attention to both direct costs and indirect benefits of inbreeding avoidance specifically, but not to the exclusion of all other population genetic processes. 
+We agree that there are various potential direct and indirect costs and benefits that could influence allele frequencies, and we did not mean to imply that inbreeding avoidance is the only driver. However, since it is inbreeding avoidance that is the focus of our current manuscript, this sentence was intended to draw attention to both direct costs and indirect benefits of inbreeding avoidance specifically, but not to the exclusion of all other potential costs and benefits. 
 
 We clarify the writing here by changing ''will depend not only on'' to ''will be affected not only by'' (L161-167). 
 
