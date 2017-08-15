@@ -21,7 +21,7 @@ Dear Dr. Haag,
 
 Thank you very much for your overview and decision. Despite the initial rejection, we are grateful for the positive overview of our work provided by both reviewers, and for your view that our manuscript may prove acceptable if model assumptions can be clarified and justified, and if the reviewers' minor comments can be resolved.
 
-The main criticism of some of our modelling assumptions and decisions came from Reviewer 2. We appreciate their comments and have revisited our modelling decisions accordingly. We concluded that our original modelling decisions, which were very carefully made in the context of our current objectives and in line with previous modelling work, were indeed appropriate. We have consequently retained the original model structure in our revised manuscript. Nevertheless, we acknowledge that some modelling decisions could have been better explained and justified in our original manuscript. We have therefore carefully revised the manuscript to better explain and justify these decisions, particularly in key areas that Reviewer 2 helpfully highlighted. We believe that key assumptions and objectives, and links to previous models, are all now clearly explained.
+The main criticism of some of our modelling assumptions and decisions came from Reviewer 2. We appreciate their comments and have revisited our modelling decisions accordingly. We concluded that our original modelling decisions, which were very carefully made in the context of our current objectives and in line with previous modelling work, were indeed appropriate in relation to our current objectives. We have consequently retained the original model structure in our revised manuscript. Nevertheless, we acknowledge that some modelling decisions could have been better explained and justified in our original manuscript. We have therefore carefully revised the manuscript to better explain and justify these decisions, particularly in key areas that Reviewer 2 helpfully highlighted. We believe that key assumptions and objectives, and links to previous models, are all now clearly explained.
 
 Additionally, we present a new set of simulations that Reviewer 2 suggested to support our original conclusions regarding direct cost asymmetries. 
 
@@ -133,7 +133,7 @@ Polyandry and pre-copulatory and post-copulatory choice have been hypothesised, 
 
 Given this situation, it is not readily tractable, or hence insightful, to consider multiple such processes and corresponding benefits simultaneously, at least until they are well-understood in isolation. Consequently, our current model and simulations are designed to isolate fundamental benefits and costs of interest in the context of multiple strategies of inbreeding avoidance so that we can better understand the nature and size of their joint effects. We now clarify this point more clearly (L198-204).
 
-We agree that this reasoning is important, so we have additionally greatly explanded our Discussion on other costs and benefits (L749-761). Please also see our response to REVIEWER 1 SPECIFIC COMMENT 3.
+We agree that this reasoning is important, so we have additionally greatly expanded our Discussion on other costs and benefits (L749-761). Please also see our response to REVIEWER 1 SPECIFIC COMMENT 3.
 
 --------------------------------------------------------------------------------
 REVIEWER 1 SPECIFIC COMMENT 7:             
@@ -301,7 +301,7 @@ Reviewer 2 notes a potential downside of our threshold trait approach and offers
 
 The polyandry phenotype is affected by 20 alleles that combine additively, and it is highly unlikely that all alleles will simultaneously drift to very low values, particularly when any genetic variation that results in a phenotype value below zero will not be visible to selection. Consequently, while some allele values will drift below zero, others will drift to positive values but be hidden from selection due to being masked by low allele values. When genomes in our model recombine, however, polyandrous phenotypes will often reappear. This was demonstrated by prior modelling of Duthie et al. (2016), who found that polyandrous phenotypes often re-emerged in a population even given sustained selection *against* polyandry. Duthie et al. (2016) suggested that the threshold nature of polyandry might be one reason for its apparent persistence in populations even where it does not appear to be adaptive. 
 
-Quantitive genetic studies by Roff (1996; 1998) establish the theory behind re-emergence of maladaptive threshold traits underlied by continuous genetic variation, and empirical studies suggest that there is additive genetic variation underlying polyandry (e.g., Shuker et al. 2007; Evans and Gasparini 2013), meaning that the threshold nature of polyandry is also biologically realistic. 
+Quantitative genetic studies by Roff (1996; 1998) establish the theory behind re-emergence of maladaptive threshold traits underpinned by continuous genetic variation, and empirical studies suggest that there is additive genetic variation underlying polyandry (e.g., Shuker et al. 2007; Evans and Gasparini 2013), meaning that the threshold nature of polyandry is also biologically realistic. 
 
 We now emphasise the strengths of our approach to modelling polyandry more clearly (L233-L241, L245-L249).
 
@@ -319,7 +319,7 @@ We acknowledge Reviewer 2's request for statistical tests to interpret our simul
 
 This is because, practically, statistical power in a simulation is entirely determined by replication. Philosophically, simulation models such as ours violate the assumptions underlying statistical hypothesis testing. Hence, reporting the results of statistical tests would not be informative in our model, and we do not want to risk misleading readers into thinking such results would be biologically meaningful. 
 
-We now explain that statistical tests are not appropriate for intepreting our model results, citing White et al. (2014) explicitly (L464-L468).
+We now explain that statistical tests are not appropriate for interpreting our model results, citing White et al. (2014) explicitly (L464-L468).
 
 --------------------------------------------------------------------------------
 REVIEWER 2 MINOR COMMENT 4  
