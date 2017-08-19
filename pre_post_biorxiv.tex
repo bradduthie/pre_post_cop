@@ -244,25 +244,7 @@ C & Description & & & Variable &
 \end{table}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 \subsection*{Mating and pre-copulatory inbreeding avoidance}
-
 
 After costs are realised, each surviving female chooses $N_{males}$ males to mate with, where $N_{males}$ is calculated by sampling from a Poisson distribution such that $N_{males} = Poisson(P_{p}) + 1$. This ensures that all surviving females choose at least one mate and generates each female's realised degree of polyandry with some stochastic variation around the expected mean $N_{males}$ of $P_{p}+1$. 
 
@@ -273,6 +255,7 @@ Most often, $N_{males}$ will be smaller than the total number of available males
 To calculate the probability that a female $i$ mates with a male $j$ to whom she is related by some kinship $k_{ij}$, each male is first assigned a perceived mate quality $Q^{m}_{ij}$. If the female has a strategy of pre-copulatory inbreeding avoidance ($M_{p}<0$), then $Q^{m}_{ij} = (-M_{p} \times k_{ij} + 1)^{-1}$, meaning that $Q^{m}_{ij}$ decreases linearly with increasingly positive values of $k_{ij}$ and increasingly negative values of $M_{p}$. If the female has a strategy of pre-copulatory inbreeding preference ($M_{p}>0$), then $Q^{m}_{ij} = M_{p} \times k_{ij} + 1$, meaning that $Q^{m}_{ij}$ increases with increasingly positive $k_{ij}$ and $M_{p}$. If $M_{p}=0$, then all males are assigned $Q^{m}_{ij}=1$.
 
 Each male's value with respect to a female $i$ is then divided by the sum of all $Q^{m}_{ij}$ values across all males with respect to that female, thereby assigning each male a relative perceived quality $q^{m}_{ij}$, which is constrained to values between zero and one. The value of $q^{m}_{ij}$ then defines the probability that female $i$ mates with male $j$. Mating is therefore stochastic, and females do not always mate with the male of the highest $q^{m}_{ij}$. For polyandrous females that choose multiple mates (i.e., $N_{mates}>1$), mates are chosen iteratively such that $Q^{m}_{ij}$ and $q^{m}_{ij}$ are re-calculated for each additional mate choice, and with $Q^{m}_{ij}$ and therefore $q^{m}_{ij}$ values of already chosen males set to zero to ensure mate sampling without replacement. In the unlikely event that a female's $N_{males}$ exceeds the total number of available males, then she simply mates with all males.
+
 
 \subsection*{Fertilisation and post-copulatory inbreeding avoidance}
 
@@ -314,26 +297,11 @@ In all simulations, we recorded mean values of $P_{a}$, $M_{a}$, and $F_{a}$ in 
 
 For all replicates, we set the maximum number of generations to 40000, which exploratory simulations and previous modelling \cite[][]{Duthie} showed to be sufficient for inferring long-term dynamics of mean allele values and therefore selection on phenotypes. For all replicates, we set $\rho=5$ immigrants, which produced a range of kin and non-kin in each generation allowing females to express inbreeding strategies, and $n=8$ offspring, which was sufficient to keep populations consistently at carrying capacities and avoid population extinction. Values of $K_{f}$ and $K_{m}$ were both set to 100 because previous modelling showed that populations of this size are small enough that mate encounters between kin occur with sufficient frequency for selection on inbreeding strategy, but not so small that selection is typically overwhelmed by drift \cite[][]{Duthie2016a}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section*{Results}
 
 \subsection*{Does evolution of post-copulatory inbreeding avoidance facilitate evolution of costly polyandry?}
 
-When post-copulatory inbreeding avoidance alleles ($F_{a}$) had no effect (i.e., $F_{g}$ values were fixed to zero), meaning that $F_{p}$ could not evolve, $P_{a}$ alleles underlying polyandry always decreased to negative values over generations (red lines, Figure 1A,C,E,G). This shows that despite strong inbreeding depression in offspring viability, there is selection against unconditional polyandry even given zero direct cost ($c_{P}=0$; Figure 1A). This is because $M_{a}$ values became negative over generations, meaning that females typically avoided inbreeding through their initial mating (blue lines, Figure 1A,C,E,G). Polyandrous females that subsequently sampled more males from the available population were consequently more likely to mate with some relatives and hence produce some inbred offspring with low viability \cite[][]{Duthie}. 
+When post-copulatory inbreeding avoidance alleles ($F_{a}$) had no effect (i.e., $F_{g}$ values were fixed to zero), meaning that $F_{p}$ could not evolve, $P_{a}$ alleles underlying polyandry decreased to negative values over generations (red lines, Figure 1A,C,E,G). This shows that despite strong inbreeding depression in offspring viability, there is selection against unconditional polyandry even given zero direct cost ($c_{P}=0$; Figure 1A). This is because $M_{a}$ values became negative over generations, meaning that females typically avoided inbreeding through their initial mating (blue lines, Figure 1A,C,E,G). Polyandrous females that subsequently sampled more males from the available population were consequently more likely to mate with some relatives and hence produce some inbred offspring with low viability \cite[see also][]{Duthie}. 
 
 \vspace{2 mm}
 {\color{Gray}
@@ -355,7 +323,7 @@ When post-copulatory inbreeding avoidance alleles ($F_{a}$) had no effect (i.e.,
 
 When post-copulatory inbreeding avoidance was allowed to evolve, mean $P_{a}$ values became substantially higher than in comparable simulations where $F_{a}$ values were fixed to zero and post-copulatory inbreeding avoidance could not evolve (Figure 1B,D,F,H). Allowing evolution of post-copulatory inbreeding avoidance alongside pre-copulatory inbreeding avoidance therefore facilitated evolution of polyandry to the degree that most females mated multiply given low costs of polyandry ($c_{P} < 0.005$; e.g., Figure 2A,B). Here, $P_{a}$ allele values increased from zero and persisted at low positive values (Figure 1B,D). Given higher costs of polyandry ($c_{P} \geq 0.005$), $P_{a}$ allele values still initially increased from zero, but then became slightly negative over generations (Figure 1F,H). Trajectories of allele values in individual simulations were typically highly stochastic, but were consistent in their long-term direction (Supporting Information Figures S1-S8). Overall, these results illustrate that post-copulatory inbreeding avoidance can facilitate evolution of polyandry as long as direct costs are sufficiently low (Figure 1B,D). However, given higher costs, evolution of polyandry is constrained even given strong inbreeding depression in offspring viability, and given resulting evolution of both pre-copulatory and post-copulatory inbreeding avoidance (Figure 1F,H).
 
-Strong post-copulatory inbreeding avoidance, manifested as very negative $F_{a}$ values, consistently evolved in all simulations where such evolution was allowed (black lines, Figure 1B,D,F,H). Evolution of post-copulatory inbreeding avoidance occurred even when $P_{a}$ values were expected to be slightly negative, and hence when there was selection against polyandry (Figure 1F,H). This reflects the threshold nature of phenotypic expression of polygenic polyandry, wherein random sampling of alleles means that polyandry is expressed by some females (i.e., $P_{g}>0$) even when mean $P_{a}$ values are negative (Figure 2). This means that, even in populations where female reproductive strategy evolves toward monandry, there is still commonly some opportunity for expression of post-copulatory inbreeding avoidance and associated selection that drives evolution of post-copulatory inbreeding avoidance.
+Strong post-copulatory inbreeding avoidance, manifested as very negative $F_{a}$ values, consistently evolved in all simulations where such evolution was allowed (black lines, Figure 1B,D,F,H). Evolution of post-copulatory inbreeding avoidance occurred even when $P_{a}$ values were expected to be slightly negative, and hence when there was selection against alleles underlying polyandry (Figure 1F,H). This reflects the threshold nature of phenotypic expression of polygenic polyandry, wherein random sampling of alleles means that polyandry is expressed by some females (i.e., $P_{g}>0$) even when mean $P_{a}$ values are negative (Figure 2). This means that, even in populations where female reproductive strategy evolves toward monandry, there is still commonly some opportunity for expression of post-copulatory inbreeding avoidance and associated selection that drives evolution of post-copulatory inbreeding avoidance.
 
 {\color{Gray}
 \begin{adjustwidth}{-2.2in}{0in}
@@ -371,6 +339,20 @@ Strong post-copulatory inbreeding avoidance, manifested as very negative $F_{a}$
 
 Strong pre-copulatory inbreeding avoidance evolved (i.e., $M_{a}<0$) in all simulations, irrespective of $c_{P}$ and irrespective of whether post-copulatory inbreeding avoidance was allowed to evolve or hence whether polyandry evolved (Figure 1). This might be expected given strong inbreeding depression in offspring viability, which imposes selection against inbreeding.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{How do cost asymmetries affect long-term persistence of reproductive strategies?}
 
