@@ -1,0 +1,55 @@
+Comments on JEB-2017-00412#
+
+This is a very interesting and well-written manuscript where the authors have used an individual-based modelling approach to address questions on the evolution of female polyandry together with mechanisms of pre- and post-copulatory inbreeding avoidance. This is a resubmission and I was already quite positive regarding the previous version. I am very satisfied with how the authors have responded to my comments. In particular, I am pleased with the reaction to my most critical comment, the cost implementation. Although the authors have retained their modelling approach, they justify and discuss the assumption in a much better way than previously. Overall, I have merely a few very minor remaining comments.
+
+------------------------------------------------------------------------------------------------------------
+Reviewer 1 Concern 1:
+------------------------------------------------------------------------------------------------------------
+
+L36: “is likely to be facilitated” sounds very weak. Compare this with the expression on line 589: [..] cannot be effectively realised if females are not polyandrous in any form...
+
+------------------------------------------------------------------------------------------------------------
+Author Response to Reviewer 1 Concern 1:
+------------------------------------------------------------------------------------------------------------
+
+We have changed the quoted passage to ''requires that'' from ''is likely to facilitated when''.
+
+------------------------------------------------------------------------------------------------------------
+Reviewer 1 Concern 2:
+------------------------------------------------------------------------------------------------------------
+
+L225: There are many things in this section that only becomes clear after having read the next ones (i.e. the phenotypic consequences of P[p], F[p] etc.) I am wondering if it wouldn’t be better to move this complete cost section to a later point (i.e. after Mating and pre-copulatory IA & Fertilisation and postcopulatory IA, but before mutation)?
+
+------------------------------------------------------------------------------------------------------------
+Author Response to Reviewer 1 Concern 2:
+------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------
+Reviewer 1 Concern 3:
+------------------------------------------------------------------------------------------------------------
+
+L269: I cannot find a description how kinship k[ij] is calculated and what values it can take?
+
+------------------------------------------------------------------------------------------------------------
+Author Response to Reviewer 1 Concern 3:
+------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------
+Reviewer 1 Concern 4:
+------------------------------------------------------------------------------------------------------------
+
+L405: yes I agree, but it would be possible to use statistical inferences to compare effect sizes. To cite the White et al.-paper: “While we contend that a focus on statistical significance is inappropriate, we also argue that quantitative evaluation of differences in effect size among model scenarios is entirely appropriate.” My original comment referred to the statement on line 507. Although I acknowledge that by comparing figure 4A and figure 1B (which have mean+-SD of the simulations) the reader gets all the information needed. Alternatively (or in addition), one could also state the range (or any other dispersion measure) of mean simulation values.
+
+------------------------------------------------------------------------------------------------------------
+Author Response to Reviewer 1 Concern 4:
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
