@@ -48,6 +48,10 @@ L405: yes I agree, but it would be possible to use statistical inferences to com
 Author Response to Reviewer 1 Concern 4:
 ------------------------------------------------------------------------------------------------------------
 
+We are grateful for the clarification here, and we agree that statistical inferences measures (rather than statistical hypothesis testing) are still appropriate.
+
+We now report the standard errors on the line indicated (now L509) along with the mean values to facilitate comparison between Figure 4A and Figure 1B.
+
 
 
 
