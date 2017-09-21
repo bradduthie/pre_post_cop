@@ -35,6 +35,8 @@ L269: I cannot find a description how kinship k[ij] is calculated and what value
 Author Response to Reviewer 1 Concern 3:
 ------------------------------------------------------------------------------------------------------------
 
+We now more explicitly state that kinship can range from 0-1 (L222), and that it is calculated directly from the pedigree using standard iterative algorithms (L223).
+
 
 ------------------------------------------------------------------------------------------------------------
 Reviewer 1 Concern 4:

@@ -106,7 +106,7 @@ Alleles combine additively to determine genotypic values ($P_{g}$, $M_{g}$, and 
 
 In contrast, individuals' phenotypic values for tendency for polyandry ($P_{p}$) cannot map directly onto their genotypic values ($P_{g}$) because $P_{g}$ can evolve to be negative, but females cannot mate with a negative number of additional males \cite[e.g.,][]{Shuker2007, Evans2013b}. Rather, we considered polyandry ``threshold trait'', whereby continuous genotypic variation translates into expression of discrete phenotypic value(s) at some threshold \cite[][]{Lynch1998, Roff1996, Roff1998, Duthie}. Accordingly, we allow individuals' phenotypic values for tendency for polyandry to equal genotypic values ($P_{p} = P_{g}$) if $P_{g} \geq 0$, but set $P_{p} = 0$ if $P_{g} < 0$. A negative $P_{g}$ value therefore generates a female that is phenotypically monandrous, while a positive $P_{g}$ value generates a female that can express some degree of polyandry (see details below). Polyandry is therefore influenced by continuous genetic variation but only expressed when $P_{g} > 0$. One important general property of such threshold traits is that deleterious traits are occasionally expressed despite sustained negative selection because recombination among deleterious alleles can cause the underlying genotypic value to exceed the threshold for expression \cite[][]{Roff1996, Roff1998}.
 
-In overview, each model generation proceeds with females paying costs associated with their reproductive strategy traits, and expressing polyandry, mating, and fertilisation. Offspring inherit a randomly sampled allele from each parent at each locus. Alleles can then mutate and offspring express inbreeding depression in viability. Immigrants arrive in the population and density regulation limits population growth (see below). We record the population pedigree and directly calculate the coefficient of kinship ($k$) between all potential mates in each generation (defined as the probability that two homologous alleles will be identical-by-descent), allowing individual pre-copulatory and post-copulatory inbreeding strategies to be enacted. Key individual traits, parameter values, and variables are described in Table 1.
+In overview, each model generation proceeds with females paying costs associated with their reproductive strategy traits, and expressing polyandry, mating, and fertilisation. Offspring inherit a randomly sampled allele from each parent at each locus. Alleles can then mutate and offspring express inbreeding depression in viability. Immigrants arrive in the population and density regulation limits population growth (see below). We record the population pedigree and directly calculate the coefficient of kinship ($k$) between all potential mates in each generation (defined as the probability that two homologous alleles will be identical-by-descent, \textcolor{blue}{therefore ranging from 0-1}), allowing individual pre-copulatory and post-copulatory inbreeding strategies to be enacted. \textcolor{blue}{Values of $k$ are calculated directly from the pedigree using a standard iterative algorithm \cite[e.g.,][]{Boyce1983, Duthie}}. Key individual traits, parameter values, and variables are described in Table 1.
 
 \subsection*{Costs}
 
@@ -277,6 +277,11 @@ Bocedi, G. \& Reid, J.~M. 2014.
 \newblock {Evolution of female multiple mating: a quantitative model of the
   ``sexually-selected sperm'' hypothesis}.
 \newblock \textit{Evolution} \textbf{69}:39--58.
+
+\bibitem[{Boyce(1983)}]{Boyce1983}
+Boyce, A. 1983.
+\newblock {Computation of inbreeding and kinship coefficients on extended pedigrees}
+\newblock \textit{J. Hered.} \textbf{74}:400--404.
 
 \bibitem[{Bretman \textit{et~al.}(2009)Bretman, Newcombe, \& Tregenza}]{Bretman2009}
 Bretman, A., Newcombe, D. \& Tregenza, T. 2009.
