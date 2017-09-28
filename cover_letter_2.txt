@@ -10,7 +10,7 @@ Sincerely,
 
 Manuscript Authors
 
-====================================================================================================
+=======================================================================
 
 ------------------------------------------------------------------------------------------------------------
 Reviewer 1 General Comments:
@@ -48,9 +48,9 @@ Author Response to Reviewer 1 Concern 2:
 
 We appreciate this comment because we had similar thoughts regarding the order of Model subsections in earlier versions of this manuscript. The problem with moving the cost subsection as suggested is that the broader Model section would then no longer reflect the order of biological events in the individual-based model; in fact, the cost subsection would then be the only subsection out of place with respect to the order at which events occur. We fear that such a restructuring would cause confusion about when costs are paid in the model, so we think it is important to keep the cost subsection where it was in our previous submission.
 
-Some key details of the phenotypic consequences of P_p, M_p, and F_p, are provided in the previous section under the general 'Model' heading (L192-L214). We also note that the implementation of costs does not actually depend on any of the subsequently explained details of mating and fertilisation; it only depends on their phenotypic values, which have already been introduced. Nevertheless, we acknowledge that readers might be confused by the lack of further detail of the effects of phenotypes on mating and fertilisation prior to an explanation of costs. 
+Some key details of the phenotypic consequences of P_p, M_p, and F_p, are provided in the previous section under the general 'Model' heading (L191-L213). We also note that the implementation of costs does not actually depend on any of the subsequently explained details of mating and fertilisation; it only depends on their phenotypic values, which have already been introduced. Nevertheless, we acknowledge that readers might be confused by the lack of further detail of the effects of phenotypes on mating and fertilisation prior to an explanation of costs. 
 
-To address this, we now highlight the reasoning for explaining costs first while alerting readers to subsequent explanation of mating and fertilisation details (L230). 
+To address this, we now highlight the reasoning for explaining costs first while alerting readers to subsequent explanation of mating and fertilisation details (L229). 
 
 ------------------------------------------------------------------------------------------------------------
 Reviewer 1 Concern 3:
@@ -62,7 +62,7 @@ L269: I cannot find a description how kinship k[ij] is calculated and what value
 Author Response to Reviewer 1 Concern 3:
 ------------------------------------------------------------------------------------------------------------
 
-We now more explicitly state that kinship can range from 0-1 (L222), and that it is calculated directly from the pedigree using standard iterative algorithms (L223-L225).
+We now more explicitly state that kinship can range from 0-1 (L221), and that it is calculated directly from the pedigree using standard iterative algorithms (L222-L224).
 
 ------------------------------------------------------------------------------------------------------------
 Reviewer 1 Concern 4:
@@ -76,12 +76,5 @@ Author Response to Reviewer 1 Concern 4:
 
 We are grateful for Reviewer 1's clarification here, and we agree that statistical inferences measures (rather than statistical hypothesis testing) are still appropriate to report.
 
-We now report the standard errors on the line indicated (now L511) along with the mean values to facilitate comparison between Figure 4A and Figure 1B.
-
-
-
-
-
-
-
+We now report the standard errors on the line indicated (now L510) along with the mean values to facilitate comparison between Figure 4A and Figure 1B.
 
