@@ -1,0 +1,22 @@
+1. The ORCID identify is correct for A. B. Duthie
+
+2. The given and surnames have been identified correctly
+
+3. (+44) 01786 467843. The email is also incorrect; it should be 'alexander.duthie@stir.ac.uk'
+
+4. This is incorrect. Reid 2015 is a single author paper. Somehow the first word of the paper (''What'') seems to have changed to a surname. The correct version should be retained as below:
+
+Reid, J.M. 2015. What can we really say about relatedness and extrapair paternity: a comment on Arct et al. Behav. Ecol. 26:969–970.
+
+5. This is correct.
+
+6. Kokko et al. (2003) should be deleted from the reference list.
+
+7. Sending EPS
+
+8. Sending EPS
+
+
+Additional comments:
+
+P2L23-col2: Why is there a hyphen in 'one-first'?
