@@ -10,7 +10,64 @@ runtime: shiny
 ---
 
 
-## Introduction
+## Inbreeding depression
+
+
+##
+
+```{r lmSim, fig.show='animate', echo = FALSE}
+inputPanel(
+  sliderInput("Imm", label = "Immigrants", width="100%",
+              min = 0.0, max = 1, value = 0, step = 0.05), 
+  sliderInput("ID", label = "Inbreeding Depression", width="100%",
+              min = 0.0, max = 1, value = 0, step = 0.05), 
+  sliderInput("cost", label = "Strategy Cost", width="100%",
+              min = 0.0, max = 1, value = 0, step = 0.05), 
+  sliderInput("mu", label = "Mutation Rate", width="100%",
+              min = 0.0, max = 1, value = 0, step = 0.05), 
+  actionButton("mate", "New Generation"),
+  actionButton("reset", "Reset")
+)
+
+ts    <- reactiveValues();
+ts$df <- data.frame(gen = numeric(0), val = numeric(0));
+
+Ds    <- observeEvent(input$mate, {
+        new   <- isolate(c(dim(ts$df)[1] + 1, runif(1, 0, 1)));
+        isolate(ts$df <- rbind(ts$df, new));
+})
+
+rs    <- observeEvent(input$reset, {
+       ts$df <- data.frame(gen = numeric(0), val = numeric(0)); 
+})
+
+renderPlot({
+  par(bg = 'transparent');
+  last <- dim(ts$df)[1];
+  if(last < 6){
+      plot(x = 0:10, y = 0:10, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "k", bg = "transparent");
+      points(x = ts$df[,1], y = ts$df[,2], pch = 20, cex = 1.5, type = "b",
+             lwd = 2);
+  }else{
+      x0 <- last - 5;
+      x1 <- last + 5;
+      plot(x = x0:x1, y = x0:x1, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "k");
+      points(x = ts$df[x0:x1,1], y = ts$df[x0:x1,2], pch = 20, cex = 1.5, type = "b",
+             lwd = 2);
+  }
+})
+```
+
+
+## Inbreeding tolerance
+
+## Inbreeding avoidance
+
+## Inbreeding preference
+
+## Parker's model
 
 
 
