@@ -144,7 +144,127 @@ mateselect <- function(ID, Rmat_new){
     return(ID);
 }
 
-new_gen <- function(ID, Rmat, cost, imm, beta, mu, Kf = 100, Km = 100, nn = 6){
+make_offspring <- function(ID, Rmat_new, nn = 6){
+    start_ID <- max(ID[,1]) + 1;
+    for(i in 1:dim(ID)[1]){
+        if(ID[i, 2] == 0 & ID[i, 9] > 0 & ID[i, 5] == 0){
+            mum    <- ID[i,];
+            dadpos <- which(ID[,1] == ID[i, 9]);
+            dad    <- ID[dadpos,];
+            offs   <- matrix(data = 0, nrow = nn, ncol = dim(ID)[2]);
+            offs[,1] <- start_ID:(start_ID+nn-1);
+            start_ID <- start_ID + nn;
+            offs[,2] <- rbinom(n = nn, size = 1, prob = 0.5);
+            offs[,3] <- mum[3];
+            offs[,4] <- mum[4];
+            offs[,6] <- mum[1];
+            offs[,7] <- dad[1];
+            mrpos    <- which(Rmat_new[,1] == mum[1]);
+            drpos    <- which(Rmat_new[,1] == dad[1]);
+            offs[,8] <- Rmat_new[mrpos, drpos+1];
+            offs[,11:30] <- mum[11:30];
+            dum_vec  <- rbinom(n = length(offs[,11:30]), size = 1, prob = 0.5);
+            dummy    <- matrix(data = dum_vec, nrow = dim(offs)[1]);
+            dummy[dummy > 0] <- NA;
+            
+        }
+    }
+}
+
+produce_offs <- function(ID, Rmat_new, nn){
+    # NOTE: This toy model has unrealistic recombination between parents!
+    mums  <- sum(ID[,2] == 0 & ID[, 5] == 0 & ID[, 9] != 0);
+    offs  <- matrix(data = 0, nrow = mums * nn, ncol = dim(ID)[2]);
+    start <- 1;
+    for(i in 1:dim(ID)[1]){  # Unrealistic recombination saves some time.
+        if(ID[i,2] == 0 & ID[i, 5] == 0 & ID[i, 9] != 0){
+            her_off     <- matrix(data = ID[i,], nrow = nn, ncol = dim(ID)[2], 
+                                  byrow = TRUE);
+            her_off[,2] <- rbinom(n = nn, size = 1, prob = 0.5);
+            her_off[,6] <- ID[i,1];
+            her_off[,7] <- ID[i,9];
+            mum_p       <- which(Rmat_new[,1] == ID[i,1]);
+            dad_p       <- which(Rmat_new[,1] == ID[i,9]);
+            her_off[,8] <- Rmat_new[mum_p, dad_p + 1];
+            dad_o       <- which(ID[,1] == ID[i,9]);
+            dad_overlay <- matrix(data = ID[dad_o,], nrow = nn, 
+                                  ncol = dim(ID)[2], byrow = TRUE);
+            to_vec      <- rbinom(n = nn*dim(ID)[2], size = 1, prob = 0.5);
+            to_overlay  <- matrix(data = to_vec, nrow = nn);
+            to_overlay[,1:10] <- 1;
+            her_off[to_overlay < 1] <- NA;
+            her_off[is.na(her_off)] <- dad_overlay[is.na(her_off)];
+            offs[start:(start+(nn-1)), 1:dim(ID)[2]] <- her_off;
+            start <- start + nn;
+        }
+    }
+    max_ID   <- max(ID[,1]);
+    offs[,1] <- (max_ID + 1):(max_ID + dim(offs)[1]); 
+    return(offs);
+}
+
+mortality <- function(offs, beta){
+    depression        <- exp(-1 * beta * offs[,8]);
+    alive             <- rbinom(n = dim(offs)[1], size = 1, prob = depression);
+    offs[alive < 1,5] <- -1;
+    offs              <- offs[offs[,5] > -1,];
+    return(offs);
+}
+
+mutation  <- function(offs, mu){
+    mutations <- rbinom(n = 20*dim(offs)[1], size = 1, prob = mu);
+    tot_mut   <- sum(mutations);
+    mut_mat   <- matrix(data = mutations, nrow = dim(offs)[1]);
+    mu_eff    <- rnorm(n = tot_mut, mean = 0, sd = 2);
+    mut_mat[mut_mat > 0] <- mu_eff;
+    offs[,11:30] <- offs[,11:30] + mut_mat;
+    return(offs);
+}
+
+retain <- function(ID, offs){
+    retainers <- rep(x = 0, times = dim(ID)[1]);
+    for(i in 1:dim(ID)[1]){
+        ID_num <- ID[i, 1];
+        ismum  <- sum(offs[,6] == ID_num);
+        isdad  <- sum(offs[,7] == ID_num);
+        ispar  <- ismum + isdad;
+        if(ispar < 1){
+            retainers[i] <- 1;
+        }
+    }
+    to_remove <- which(retainers == 1);
+    ID <- ID[-to_remove,];
+    return(ID);
+}
+
+get_stats <- function(ID){
+    mean_inbr <- mean(ID[,8]);
+    mean_aval <- mean(ID[,11:20]);
+    sd_aval   <- sd(ID[,11:20]);
+    mean_nval <- mean(ID[,21:30]);
+    sd_nval   <- sd(ID[,21:30]);
+    stat_vec  <- c(mean_inbr, mean_aval, sd_aval, mean_nval, sd_nval);
+    return(stat_vec);
+}
+
+immigration <- function(ID, imm, IDst){
+    max_ID     <- max(ID[,1]);
+    immigrants <- initialise_inds(N = imm);
+    avalues    <- rnorm(n = 10 * imm, mean = IDst[2], sd = IDst[3]);
+    nvalues    <- rnorm(n = 10 * imm, mean = IDst[4], sd = IDst[5]);
+    a_mat      <- matrix(data = avalues, nrow = imm);
+    n_mat      <- matrix(data = nvalues, nrow = imm);
+    immigrants[,2]     <- 1;
+    immigrants[,11:20] <- a_mat;
+    immigrants[,21:30] <- n_mat;
+    imm_IDs            <- (max_ID + 1):(max_ID + imm);
+    immigrants[,1]     <- imm_IDs;
+    ID <- rbind(ID, immigrants);
+    return(ID);
+}
+
+new_gen <- function(ID, Rmat, cost = 0, imm = 5, beta = 1, 
+                    mu = 0.01, Kf = 100, Km = 100, nn = 6){
     N       <- dim(ID)[1];
     death   <- rep(x = 0, times = N);
     females <- sum(ID[,2] == 0 & ID[,5] <= 1);
@@ -174,7 +294,58 @@ new_gen <- function(ID, Rmat, cost, imm, beta, mu, Kf = 100, Km = 100, nn = 6){
     Rmat_new <- initialise_Rmat(ID);
     Rmat_new <- Rbuild(Rmat, ID, Rmat_new);
     
+    ID   <- mateselect(ID, Rmat_new);
+    offs <- produce_offs(ID, Rmat_new, nn);
+    offs <- mortality(offs, beta);
+    offs <- mutation(offs, mu);
+    IDst <- get_stats(ID);
+    
+    ID[ID[,5] >= 0, 5] <- ID[ID[,5] >= 0,5] + 1;
+    ID[ID[,5] > 0, 5]  <- -1;
+    
+    ID <- retain(ID, offs);
+    ID <- rbind(ID, offs);
+    
+    ID <- immigration(ID, imm, IDst);
+    
+    results <- list(ID = ID, Rmat = Rmat_new, stats = IDst);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ID   <- initialise_inds(N = 30);
+Rmat <- initialise_Rmat(ID);
+
+
+
+gen  <- new_gen(ID = ID, Rmat = Rmat, Kf = 40, Km = 40, beta = 8);
+
+ID   <- gen$ID;
+Rmat <- gen$Rmat;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
