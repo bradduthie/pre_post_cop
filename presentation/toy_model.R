@@ -186,6 +186,7 @@ produce_offs <- function(ID, Rmat_new, nn){
             mum_p       <- which(Rmat_new[,1] == ID[i,1]);
             dad_p       <- which(Rmat_new[,1] == ID[i,9]);
             her_off[,8] <- Rmat_new[mum_p, dad_p + 1];
+            her_off[,9] <- -1;
             dad_o       <- which(ID[,1] == ID[i,9]);
             dad_overlay <- matrix(data = ID[dad_o,], nrow = nn, 
                                   ncol = dim(ID)[2], byrow = TRUE);
@@ -300,15 +301,17 @@ new_gen <- function(ID, Rmat, cost = 0, imm = 5, beta = 1,
     offs <- mutation(offs, mu);
     IDst <- get_stats(ID);
     
-    ID[ID[,5] >= 0, 5] <- ID[ID[,5] >= 0,5] + 1;
-    ID[ID[,5] > 0, 5]  <- -1;
+    lgn  <- ID[ID[,5] == 0,];
+    
+    ID[ID[,5] >= 0, 5] <- -1;
     
     ID <- retain(ID, offs);
     ID <- rbind(ID, offs);
     
     ID <- immigration(ID, imm, IDst);
     
-    results <- list(ID = ID, Rmat = Rmat_new, stats = IDst);
+    results <- list(ID = ID, Rmat = Rmat_new, stats = IDst, last_gen = lgn);
+    return(results);
 }
 
 
@@ -332,37 +335,75 @@ plot(x = 0, y = 0, xlim = c(-2, 2), ylim = c(-2, 2), xaxt = "n",
 points(x = 2 * cos(distrb), y = 2 * sin(distrb), pch = pchs, col = cols, 
        cex = 3);
 
-
-
 mate_connect <- function(ID){
     living     <- ID[ID[,5] == 0,];
     fem_count  <- sum(living[,2] == 0);
+    mal_count  <- sum(living[,2] == 1);
     livsor     <- living[order(living[,2]),];
     livsor[,3] <- 1:dim(livsor)[1];
-    pointpairs <- matrix(data = 0, nrow = fem_count, ncol = 4);
+    pointpairs <- matrix(data = 0, nrow = dim(livsor)[1], ncol = 8);
+    pointpairs[,1] <- livsor[,1];
     for(i in 1:dim(livsor)[1]){
         if(livsor[i, 2] == 0){
             femID <- livsor[i, 1];
             malID <- livsor[i, 9];
             femps <- i;
             malps <- which(livsor[,1] == malID);
-            pointpairs[i, 1] <- femID;
             pointpairs[i, 2] <- malID;
-            pointpairs[i, 3] <- femps;
         }
     }
-    uniquem <- unique(pointpairs[,2]);
+    pointpairs[,3] <- 1:dim(pointpairs)[1];
+    distr <- seq(from = 0, to = 2*pi, length.out = dim(pointpairs)[1]);
     for(i in 1:dim(pointpairs)[1]){
-        pointpairs[i, 4] <- which(uniquem == pointpairs[i, 2]) + fem_count;
+        xplace            <- 2 * cos(distr[pointpairs[i, 3]]);
+        yplace            <- 2 * sin(distr[pointpairs[i, 3]]);
+        pointpairs[i, 5]  <- xplace;
+        pointpairs[i, 6]  <- yplace;
+    }
+    for(i in 1:dim(pointpairs)[1]){
+        if(i <= fem_count){
+            matepos           <- which(pointpairs[,1] == pointpairs[i, 2]);
+            pointpairs[i, 4]  <- matepos;
+            pointpairs[i, 7]  <- pointpairs[matepos, 5];
+            pointpairs[i, 8]  <- pointpairs[matepos, 6];
+        }
     }
     return(pointpairs);
 }
 
 
+dat <- mate_connect(lgn);
 
 
 
 
+    femrow <- 1:sum(dat[,2] > 0);
+    malrow <- (sum(dat[,2] > 0) + 1):dim(dat)[1];
+    plot(x = dat[, 5], y = dat[, 6], pch = 15, col = "blue", cex = 3,
+         xlim = c(-2, 2), ylim = c(-2, 2), xaxt = "n", yaxt = "n", xlab = "",
+         ylab = "", type = "n");
+    points(x = dat[femrow, 5], y = dat[femrow, 6], pch = 15, col = "blue", cex = 3);
+    points(x = dat[malrow, 5], y = dat[malrow, 6], pch = 15, col = "red", cex = 3);
+    arrows(x0 = dat[femrow,5], x1 = dat[femrow,7], y0 = dat[femrow,6], 
+           y1 = dat[femrow,8], length = 0, lwd = 2);
+
+
+
+
+
+dat <- mate_connect(ID);
+plot_mate_con(dat);
+
+
+
+
+
+pointpairs[,3]
+
+
+
+ID   <- initialise_inds(N = 10);
+Rmat <- initialise_Rmat(ID);
 
 
 
@@ -405,6 +446,19 @@ Rmat <- initialise_Rmat(ID);
 gen  <- new_gen(ID = ID, Rmat = Rmat, Kf = 10, Km = 10, beta = 0, imm = 1);
 ID   <- gen$ID;
 Rmat <- gen$Rmat;
+lgn  <- gen$last_gen;
+
+
+dat <- mate_connect(ID);
+plot(x = dat[, 7], y = dat[, 8], pch = 15, col = "blue", cex = 3,
+     xlim = c(-2, 2), ylim = c(-2, 2), xaxt = "n", yaxt = "n", xlab = "",
+     ylab = "");
+arrows(x0 = dat[,7], x1 = dat[,9], y0 = dat[,8], y1 = dat[,10], length = 0,
+       lwd = 2);
+points(x = dat[, 7], y = dat[, 8], pch = 15, col = "blue", cex = 3);
+points(x = dat[, 9], y = dat[, 10], pch = 15, col = "red", cex = 3);
+
+
 
 tmat <- Rmat[,2:dim(Rmat)[1]]
 diag(tmat) <- diag(tmat)/2;
