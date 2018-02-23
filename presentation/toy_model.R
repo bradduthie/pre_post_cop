@@ -329,16 +329,25 @@ Rmat <- initialise_Rmat(ID);
 
 
 
-gen  <- new_gen(ID = ID, Rmat = Rmat, Kf = 40, Km = 40, beta = 8);
-
+gen  <- new_gen(ID = ID, Rmat = Rmat, Kf = 60, Km = 60, beta = 8, imm = 1);
 ID   <- gen$ID;
 Rmat <- gen$Rmat;
 
+tmat <- Rmat[,2:dim(Rmat)[1]]
+diag(tmat) <- NA;
+hist(tmat, xlim = c(0, 1), ylim = c(0, 40), freq = FALSE, col = "black");
 
 
 
 
 
+
+hist(ID[,11:20]);
+
+
+
+
+which(Rmat[,2:dim(Rmat)[1]] > 1)
 
 
 
