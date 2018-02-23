@@ -319,23 +319,111 @@ new_gen <- function(ID, Rmat, cost = 0, imm = 5, beta = 1,
 
 
 
+females  <- sum(ID[,2] == 0 & ID[,5] == 0);
+males    <- sum(ID[,2] == 1 & ID[,5] == 0);
+distrb   <- seq(from = 0, to = 2*pi, length.out = females + males + 1);
+pchs     <- c(rep(15, females), rep(16, males));
+cols     <- c(rep("blue", females), rep("red", males));
+
+
+plot(x = 0, y = 0, xlim = c(-2, 2), ylim = c(-2, 2), xaxt = "n",
+     yaxt = "n", xlab = "", ylab = "", type = "n");
+
+points(x = 2 * cos(distrb), y = 2 * sin(distrb), pch = pchs, col = cols, 
+       cex = 3);
+
+
+
+mate_connect <- function(ID){
+    living     <- ID[ID[,5] == 0,];
+    fem_count  <- sum(living[,2] == 0);
+    livsor     <- living[order(living[,2]),];
+    livsor[,3] <- 1:dim(livsor)[1];
+    pointpairs <- matrix(data = 0, nrow = fem_count, ncol = 4);
+    for(i in 1:dim(livsor)[1]){
+        if(livsor[i, 2] == 0){
+            femID <- livsor[i, 1];
+            malID <- livsor[i, 9];
+            femps <- i;
+            malps <- which(livsor[,1] == malID);
+            pointpairs[i, 1] <- femID;
+            pointpairs[i, 2] <- malID;
+            pointpairs[i, 3] <- femps;
+        }
+    }
+    uniquem <- unique(pointpairs[,2]);
+    for(i in 1:dim(pointpairs)[1]){
+        pointpairs[i, 4] <- which(uniquem == pointpairs[i, 2]) + fem_count;
+    }
+    return(pointpairs);
+}
 
 
 
 
 
-ID   <- initialise_inds(N = 30);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+iallofem <- c(rep(1, females), rep(2, males));
+lallofem <- 2 * pi * (1:length(iallofem)) / length(iallofem);
+xallofem <- cos(allofem);
+yallofem <- sin(allofem);
+
+points(x = xallofem, y = yallofem);
+
+
+
+
+
+
+sc3 <- seq(from = 0, to = 2*pi, by = 0.001);
+points(x = 2 * cos(sc3), y = 2 * sin(sc3), lwd = 1.5, type = "l");
+
+
+
+ID   <- initialise_inds(N = 10);
 Rmat <- initialise_Rmat(ID);
 
 
 
-gen  <- new_gen(ID = ID, Rmat = Rmat, Kf = 60, Km = 60, beta = 8, imm = 1);
+gen  <- new_gen(ID = ID, Rmat = Rmat, Kf = 10, Km = 10, beta = 0, imm = 1);
 ID   <- gen$ID;
 Rmat <- gen$Rmat;
 
 tmat <- Rmat[,2:dim(Rmat)[1]]
-diag(tmat) <- NA;
-hist(tmat, xlim = c(0, 1), ylim = c(0, 40), freq = FALSE, col = "black");
+diag(tmat) <- diag(tmat)/2;
+
+
+par(mfrow = c(1,1));
+
+
+
+plot(x = x0:x1, y = x0:x1, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+     cex.lab = 1.5, xlab = "Generation", ylab = "k");
+points(x = ts$df[x0:x1,1], y = ts$df[x0:x1,2], pch = 20, cex = 1.5, type = "b",
+       lwd = 2);
+
+par(mar = c(4, 1, 1, 1));
+hist(tmat, xlim = c(0, 1), ylim = c(0, 40), freq = FALSE, col = "black",
+     yaxt = "n", ylab = "", main = "", xlab = "", 
+     breaks = seq(from = 0, to = 1, by = 0.01));
+title(xlab = "Kinship (k)", line = 2);
 
 
 
