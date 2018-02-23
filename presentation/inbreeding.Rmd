@@ -350,6 +350,7 @@ iter    <- reactiveValues();
 gen$dat  <- list(ID = NULL, Rmat = NULL);
 iter$all <- 0;
 iter$nue <- 0;
+iter$kva <- 0;
 
 Ds    <- observeEvent(input$mate, {
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
@@ -362,6 +363,13 @@ Ds    <- observeEvent(input$mate, {
                                 mu = input$mu);
             iter$all <- c(iter$all, mean(gen$dat$ID[,11:20]));
             iter$nue <- c(iter$nue, mean(gen$dat$ID[,21:30]));
+            kvalues  <- gen$dat$Rmat;
+            kvalues  <- kvalues[,-1];
+            if(dim(kvalues)[1] > 80){
+                kvalues <- kvalues[1:80, 1:80];
+            }
+            diag(kvalues) <- NA ;#diag(kvalues) * 0.5;
+            iter$kva <- kvalues;
         }
 })
 
@@ -369,6 +377,7 @@ rs    <- observeEvent(input$reset, {
        gen$dat <- list(ID = NULL, Rmat = NULL);
        iter$all <- 0;
        iter$nue <- 0;
+       iter$kva <- 0;
 })
 
 renderPlot({
@@ -377,13 +386,14 @@ renderPlot({
   mneut <- iter$nue
   gens  <- 1:length(iter$all);
   if(length(gens) < 6){
-      plot(x = 0:10, y = 0:10, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
+      par(mfrow = c(1, 2));
+      plot(x = 0:5, y = 0:5, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
            cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
            bg = "transparent");
       abline(h = 0, lty = "dotted", lwd = 0.8);
-      polygon(x=c(-0.125, 2.5, 2.5, -0.125), y=c(0.825, 0.825, 1.1, 1.1), 
+      polygon(x=c(-0.125, 2.65, 2.65, -0.125), y=c(0.825, 0.825, 1.1, 1.1), 
               border=NA, col="black");
-      polygon(x=c(-0.125, 2.5, 2.5, -0.125), y=c(-0.825, -0.825, -1.1, -1.1), 
+      polygon(x=c(-0.125, 2.65, 2.65, -0.125), y=c(-0.825, -0.825, -1.1, -1.1), 
               border=NA, col="black");
       abline(v = -0.125, lwd = 4);
       text(x = 0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
@@ -393,17 +403,24 @@ renderPlot({
       if(length(gens) > 0){
           points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
                  lwd = 2, col = "black");
+          par(mar = c(7, 5, 5, 5));
+          hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
+               yaxt = "n", ylab = "", main = "", xlab = "", 
+               breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
+          title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
+          box(lwd = 3);
       }
   }else{
       x0 <- length(gens) - 5;
-      x1 <- length(gens) + 5;
-      plot(x = x0:x1, y = 0:10, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
+      x1 <- length(gens) + 0;
+      par(mfrow = c(1, 2));
+      plot(x = x0:x1, y = 0:5, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
            cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
            bg = "transparent");
       abline(h = 0, lty = "dotted", lwd = 0.8);
-      polygon(x=c(x0-0.125, x0+2.5, x0+2.5, x0-0.125), 
+      polygon(x=c(x0-0.125, x0+2.65, x0+2.65, x0-0.125), 
               y=c(0.825, 0.825, 1.1, 1.1), border=NA, col="black");
-      polygon(x=c(x0-0.125, x0+2.5, x0+2.5, x0-0.125), 
+      polygon(x=c(x0-0.125, x0+2.65, x0+2.65, x0-0.125), 
               y=c(-0.825, -0.825, -1.1, -1.1), border=NA, col="black");
       abline(v = x0-0.125, lwd = 4);
       text(x = x0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
@@ -412,12 +429,123 @@ renderPlot({
            col = "white", pos = 4);
       points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
                  lwd = 2, col = "black");
+      par(mar = c(7, 5, 5, 5));
+      hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
+           yaxt = "n", ylab = "", main = "", xlab = "", 
+           breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
+      title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
+      box(lwd = 3);
   }
 })
 ```
 
 
 ## Inbreeding tolerance
+
+
+##
+
+```{r lmSim2, fig.show='animate', echo = FALSE}
+inputPanel(
+  sliderInput("Imm2", label = "Immigrants", width="100%",
+              min = 0.0, max = 10, value = 0, step = 1), 
+  sliderInput("ID2", label = "Inbreeding Depression", width="100%",
+              min = 0.0, max = 10, value = 0, step = 0.5), 
+  sliderInput("cost2", label = "Strategy Cost", width="100%",
+              min = 0.0, max = 0.1, value = 0, step = 0.01), 
+  sliderInput("mu2", label = "Mutation Rate", width="100%",
+              min = 0.0, max = 0.1, value = 0, step = 0.01), 
+  actionButton("mate2", "New Generation"),
+  actionButton("reset2", "Reset")
+)
+
+Ds    <- observeEvent(input$mate2, {
+        if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
+            gen$dat$ID   <- initialise_inds(N = 8);
+            gen$dat$Rmat <- initialise_Rmat(gen$dat$ID);
+        }else{
+            gen$dat  <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
+                                Kf = 40, Km = 40, beta = input$ID2, 
+                                imm = input$Imm2, cost = input$cost2, 
+                                mu = input$mu2);
+            iter$all <- c(iter$all, mean(gen$dat$ID[,11:20]));
+            iter$nue <- c(iter$nue, mean(gen$dat$ID[,21:30]));
+            kvalues  <- gen$dat$Rmat;
+            kvalues  <- kvalues[,-1];
+            if(dim(kvalues)[1] > 80){
+                kvalues <- kvalues[1:80, 1:80];
+            }
+            diag(kvalues) <- NA ;#diag(kvalues) * 0.5;
+            iter$kva <- kvalues;
+        }
+})
+
+rs    <- observeEvent(input$reset2, {
+       gen$dat <- list(ID = NULL, Rmat = NULL);
+       iter$all <- 0;
+       iter$nue <- 0;
+       iter$kva <- 0;
+})
+
+renderPlot({
+  par(bg = 'transparent');
+  malle <- iter$all;
+  mneut <- iter$nue
+  gens  <- 1:length(iter$all);
+  if(length(gens) < 6){
+      par(mfrow = c(1, 2));
+      plot(x = 0:5, y = 0:5, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
+           bg = "transparent");
+      abline(h = 0, lty = "dotted", lwd = 0.8);
+      polygon(x=c(-0.125, 2.65, 2.65, -0.125), y=c(0.825, 0.825, 1.1, 1.1), 
+              border=NA, col="black");
+      polygon(x=c(-0.125, 2.65, 2.65, -0.125), y=c(-0.825, -0.825, -1.1, -1.1), 
+              border=NA, col="black");
+      abline(v = -0.125, lwd = 4);
+      text(x = 0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
+           col = "white", pos = 4);
+      text(x = 0, y = -0.95, labels = "Inbreeding Avoidance", cex = 1.5, 
+           col = "white", pos = 4);
+      if(length(gens) > 0){
+          points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
+          par(mar = c(7, 5, 5, 5));
+          hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
+               yaxt = "n", ylab = "", main = "", xlab = "", 
+               breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
+          title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
+          box(lwd = 3);
+      }
+  }else{
+      x0 <- length(gens) - 5;
+      x1 <- length(gens) + 0;
+      par(mfrow = c(1, 2));
+      plot(x = x0:x1, y = 0:5, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
+           bg = "transparent");
+      abline(h = 0, lty = "dotted", lwd = 0.8);
+      polygon(x=c(x0-0.125, x0+2.65, x0+2.65, x0-0.125), 
+              y=c(0.825, 0.825, 1.1, 1.1), border=NA, col="black");
+      polygon(x=c(x0-0.125, x0+2.65, x0+2.65, x0-0.125), 
+              y=c(-0.825, -0.825, -1.1, -1.1), border=NA, col="black");
+      abline(v = x0-0.125, lwd = 4);
+      text(x = x0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
+           col = "white", pos = 4);
+      text(x = x0, y = -0.95, labels = "Inbreeding Avoidance", cex = 1.5, 
+           col = "white", pos = 4);
+      points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
+      par(mar = c(7, 5, 5, 5));
+      hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
+           yaxt = "n", ylab = "", main = "", xlab = "", 
+           breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
+      title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
+      box(lwd = 3);
+  }
+})
+```
+
 
 ## Inbreeding avoidance
 
