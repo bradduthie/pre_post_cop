@@ -198,6 +198,7 @@ produce_offs <- function(ID, Rmat_new, nn){
             mum_p       <- which(Rmat_new[,1] == ID[i,1]);
             dad_p       <- which(Rmat_new[,1] == ID[i,9]);
             her_off[,8] <- Rmat_new[mum_p, dad_p + 1];
+            her_off[,9] <- -1;
             dad_o       <- which(ID[,1] == ID[i,9]);
             dad_overlay <- matrix(data = ID[dad_o,], nrow = nn, 
                                   ncol = dim(ID)[2], byrow = TRUE);
@@ -312,21 +313,58 @@ new_gen <- function(ID, Rmat, cost = 0, imm = 5, beta = 1,
     offs <- mutation(offs, mu);
     IDst <- get_stats(ID);
     
-    ID[ID[,5] >= 0, 5] <- ID[ID[,5] >= 0,5] + 1;
-    ID[ID[,5] > 0, 5]  <- -1;
+    lgn  <- ID[ID[,5] == 0,];
+    
+    ID[ID[,5] >= 0, 5] <- -1;
     
     ID <- retain(ID, offs);
     ID <- rbind(ID, offs);
     
     ID <- immigration(ID, imm, IDst);
     
-    results <- list(ID = ID, Rmat = Rmat_new, stats = IDst);
+    results <- list(ID = ID, Rmat = Rmat_new, stats = IDst, last_gen = lgn);
+    return(results);
+}
+
+mate_connect <- function(ID){
+    living     <- ID[ID[,5] == 0,];
+    fem_count  <- sum(living[,2] == 0);
+    mal_count  <- sum(living[,2] == 1);
+    livsor     <- living[order(living[,2]),];
+    livsor[,3] <- 1:dim(livsor)[1];
+    pointpairs <- matrix(data = 0, nrow = dim(livsor)[1], ncol = 8);
+    pointpairs[,1] <- livsor[,1];
+    for(i in 1:dim(livsor)[1]){
+        if(livsor[i, 2] == 0){
+            femID <- livsor[i, 1];
+            malID <- livsor[i, 9];
+            femps <- i;
+            malps <- which(livsor[,1] == malID);
+            pointpairs[i, 2] <- malID;
+        }
+    }
+    pointpairs[,3] <- 1:dim(pointpairs)[1];
+    distr <- seq(from = 0, to = 2*pi, length.out = dim(pointpairs)[1]);
+    for(i in 1:dim(pointpairs)[1]){
+        xplace            <- 2 * cos(distr[pointpairs[i, 3]]);
+        yplace            <- 2 * sin(distr[pointpairs[i, 3]]);
+        pointpairs[i, 5]  <- xplace;
+        pointpairs[i, 6]  <- yplace;
+    }
+    for(i in 1:dim(pointpairs)[1]){
+        if(i <= fem_count){
+            matepos           <- which(pointpairs[,1] == pointpairs[i, 2]);
+            pointpairs[i, 4]  <- matepos;
+            pointpairs[i, 7]  <- pointpairs[matepos, 5];
+            pointpairs[i, 8]  <- pointpairs[matepos, 6];
+        }
+    }
+    return(pointpairs);
 }
 ```
 
 
 ## Inbreeding depression
-
 
 ##
 
@@ -346,11 +384,14 @@ inputPanel(
 
 gen     <- reactiveValues();
 iter    <- reactiveValues();
+mtt     <- reactiveValues();
 
-gen$dat  <- list(ID = NULL, Rmat = NULL);
+gen$dat  <- list(ID = NULL, Rmat = NULL, lgn = NULL);
 iter$all <- 0;
 iter$nue <- 0;
 iter$kva <- 0;
+iter$mkv <- 0;
+mtt$dat  <- NULL;
 
 Ds    <- observeEvent(input$mate, {
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
@@ -370,6 +411,9 @@ Ds    <- observeEvent(input$mate, {
             }
             diag(kvalues) <- NA ;#diag(kvalues) * 0.5;
             iter$kva <- kvalues;
+            iter$mkv <- c(iter$mkv, mean(kvalues, na.rm = TRUE));
+            mtID     <- gen$dat$last_gen;
+            mtt$dat  <- mate_connect(mtID);
         }
 })
 
@@ -378,69 +422,165 @@ rs    <- observeEvent(input$reset, {
        iter$all <- 0;
        iter$nue <- 0;
        iter$kva <- 0;
+       iter$mkv <- 0;
 })
 
 renderPlot({
   par(bg = 'transparent');
   malle <- iter$all;
   mneut <- iter$nue
+  mkval <- iter$mkv
   gens  <- 1:length(iter$all);
   if(length(gens) < 6){
       par(mfrow = c(1, 2));
-      plot(x = 0:5, y = 0:5, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
-           cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
-           bg = "transparent");
-      abline(h = 0, lty = "dotted", lwd = 0.8);
-      polygon(x=c(-0.125, 2.65, 2.65, -0.125), y=c(0.825, 0.825, 1.1, 1.1), 
-              border=NA, col="black");
-      polygon(x=c(-0.125, 2.65, 2.65, -0.125), y=c(-0.825, -0.825, -1.1, -1.1), 
-              border=NA, col="black");
-      abline(v = -0.125, lwd = 4);
-      text(x = 0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
-           col = "white", pos = 4);
-      text(x = 0, y = -0.95, labels = "Inbreeding Avoidance", cex = 1.5, 
-           col = "white", pos = 4);
-      if(length(gens) > 0){
-          points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
+      if(length(gens) > 1){
+          dat <- mtt$dat;
+          femrow <- 1:sum(dat[,2] > 0);
+          malrow <- (sum(dat[,2] > 0) + 1):dim(dat)[1];
+          plot(x = dat[, 5], y = dat[, 6], pch = 15, col = "blue", cex = 1.25,
+               xlim = c(-2, 2), ylim = c(-2, 2), xaxt = "n", yaxt = "n", xlab = "",
+               ylab = "", type = "n", bty = "n");
+          text(x = -2, y = -2, pos = 4, col = "red", labels = "Males", cex = 1.75);
+          text(x = -2, y =  2, pos = 4, col = "blue", labels = "Females", cex = 1.75);
+          arrows(x0 = dat[femrow,5], x1 = dat[femrow,7], y0 = dat[femrow,6], 
+              y1 = dat[femrow,8], length = 0, lwd = 2);
+          points(x = dat[femrow, 5], y = dat[femrow, 6], pch = 15, col = "blue", cex = 1.25);
+          points(x = dat[malrow, 5], y = dat[malrow, 6], pch = 16, col = "red", cex = 1.25);
+          plot(x = 0:5, y = 0:5, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+               cex.lab = 1.5, xlab = "Generation", ylab = "Mean Kinship", 
+               bg = "transparent");
+          points(x = gens, y = mkval, pch = 20, cex = 1.5, type = "b",
                  lwd = 2, col = "black");
+      }else{
+          plot.new();
+      }
+  }else{
+      par(mfrow = c(1, 2));
+      dat <- mtt$dat;
+      femrow <- 1:sum(dat[,2] > 0);
+      malrow <- (sum(dat[,2] > 0) + 1):dim(dat)[1];
+      plot(x = dat[, 5], y = dat[, 6], pch = 15, col = "blue", cex = 1.25,
+           xlim = c(-2, 2), ylim = c(-2, 2), xaxt = "n", yaxt = "n", xlab = "",
+           ylab = "", type = "n", bty = "n");
+           arrows(x0 = dat[femrow,5], x1 = dat[femrow,7], y0 = dat[femrow,6], 
+           y1 = dat[femrow,8], length = 0, lwd = 2);
+      text(x = -2, y = -2, pos = 4, col = "red", labels = "Males", cex = 1.75);
+      text(x = -2, y =  2, pos = 4, col = "blue", labels = "Females", cex = 1.75);
+      points(x = dat[femrow, 5], y = dat[femrow, 6], pch = 15, col = "blue", cex = 1.25);
+      points(x = dat[malrow, 5], y = dat[malrow, 6], pch = 15, col = "red", cex = 1.25);
+      x0 <- length(gens) - 5;
+      x1 <- length(gens) + 0;
+      plot(x = x0:x1, y = 0:5, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "Mean Kinship", 
+           bg = "transparent");
+      points(x = gens, y = mkval, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
+  }
+})
+```
+
+
+
+## Inbreeding tolerance
+
+
+##
+
+```{r lmSim3, fig.show='animate', echo = FALSE}
+inputPanel(
+  sliderInput("Imm3", label = "Immigrants", width="100%",
+              min = 0.0, max = 10, value = 0, step = 1), 
+  sliderInput("ID3", label = "Inbreeding Depression", width="100%",
+              min = 0.0, max = 10, value = 0, step = 0.5), 
+  sliderInput("cost3", label = "Strategy Cost", width="100%",
+              min = 0.0, max = 0.1, value = 0, step = 0.01), 
+  sliderInput("mu3", label = "Mutation Rate", width="100%",
+              min = 0.0, max = 0.1, value = 0, step = 0.01), 
+  actionButton("mate3", "New Generation"),
+  actionButton("reset3", "Reset")
+)
+
+gen     <- reactiveValues();
+iter    <- reactiveValues();
+
+gen$dat  <- list(ID = NULL, Rmat = NULL);
+iter$all <- 0;
+iter$nue <- 0;
+iter$kva <- 0;
+iter$mkv <- 0;
+
+Ds    <- observeEvent(input$mate3, {
+        if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
+            gen$dat$ID   <- initialise_inds(N = 8);
+            gen$dat$Rmat <- initialise_Rmat(gen$dat$ID);
+        }else{
+            gen$dat  <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
+                                Kf = 40, Km = 40, beta = input$ID3, 
+                                imm = input$Imm3, cost = input$cost3, 
+                                mu = input$mu3);
+            iter$all <- c(iter$all, mean(gen$dat$ID[,11:20]));
+            iter$nue <- c(iter$nue, mean(gen$dat$ID[,21:30]));
+            kvalues  <- gen$dat$Rmat;
+            kvalues  <- kvalues[,-1];
+            if(dim(kvalues)[1] > 80){
+                kvalues <- kvalues[1:80, 1:80];
+            }
+            diag(kvalues) <- NA ;#diag(kvalues) * 0.5;
+            iter$kva <- kvalues;
+            iter$mkv <- c(iter$mkv, mean(kvalues, na.rm = TRUE));
+        }
+})
+
+rs    <- observeEvent(input$reset3, {
+       gen$dat <- list(ID = NULL, Rmat = NULL);
+       iter$all <- 0;
+       iter$nue <- 0;
+       iter$kva <- 0;
+       iter$mkv <- 0;
+})
+
+renderPlot({
+  par(bg = 'transparent');
+  malle <- iter$all;
+  mneut <- iter$nue
+  mkval <- iter$mkv
+  gens  <- 1:length(iter$all);
+  if(length(gens) < 6){
+      par(mfrow = c(1, 2));
+      if(length(gens) > 0){
           par(mar = c(7, 5, 5, 5));
           hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
                yaxt = "n", ylab = "", main = "", xlab = "", 
                breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
           title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
           box(lwd = 3);
+          plot(x = 0:5, y = 0:5, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+               cex.lab = 1.5, xlab = "Generation", ylab = "Mean Kinship", 
+               bg = "transparent");
+          points(x = gens, y = mkval, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
+      }else{
+          plot.new();
       }
   }else{
       x0 <- length(gens) - 5;
       x1 <- length(gens) + 0;
-      par(mfrow = c(1, 2));
-      plot(x = x0:x1, y = 0:5, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
-           cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
-           bg = "transparent");
-      abline(h = 0, lty = "dotted", lwd = 0.8);
-      polygon(x=c(x0-0.125, x0+2.65, x0+2.65, x0-0.125), 
-              y=c(0.825, 0.825, 1.1, 1.1), border=NA, col="black");
-      polygon(x=c(x0-0.125, x0+2.65, x0+2.65, x0-0.125), 
-              y=c(-0.825, -0.825, -1.1, -1.1), border=NA, col="black");
-      abline(v = x0-0.125, lwd = 4);
-      text(x = x0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
-           col = "white", pos = 4);
-      text(x = x0, y = -0.95, labels = "Inbreeding Avoidance", cex = 1.5, 
-           col = "white", pos = 4);
-      points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
-                 lwd = 2, col = "black");
-      par(mar = c(7, 5, 5, 5));
+      par(mfrow = c(1, 2), mar = c(7, 5, 5, 5));
       hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
            yaxt = "n", ylab = "", main = "", xlab = "", 
            breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
       title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
       box(lwd = 3);
+      plot(x = x0:x1, y = 0:5, type = "n", ylim = c(0, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "Mean Kinship", 
+           bg = "transparent");
+      points(x = gens, y = mkval, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
   }
 })
 ```
 
-
-## Inbreeding tolerance
+## More tolerance
 
 
 ##
@@ -477,6 +617,7 @@ Ds    <- observeEvent(input$mate2, {
             }
             diag(kvalues) <- NA ;#diag(kvalues) * 0.5;
             iter$kva <- kvalues;
+            iter$mkv <- c(iter$mkv, mean(kvalues, na.rm = TRUE));
         }
 })
 
@@ -485,6 +626,7 @@ rs    <- observeEvent(input$reset2, {
        iter$all <- 0;
        iter$nue <- 0;
        iter$kva <- 0;
+       iter$mkv <- 0;
 })
 
 renderPlot({
