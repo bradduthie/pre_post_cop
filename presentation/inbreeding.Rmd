@@ -333,57 +333,86 @@ new_gen <- function(ID, Rmat, cost = 0, imm = 5, beta = 1,
 ```{r lmSim, fig.show='animate', echo = FALSE}
 inputPanel(
   sliderInput("Imm", label = "Immigrants", width="100%",
-              min = 0.0, max = 1, value = 0, step = 0.05), 
+              min = 0.0, max = 10, value = 0, step = 1), 
   sliderInput("ID", label = "Inbreeding Depression", width="100%",
-              min = 0.0, max = 1, value = 0, step = 0.05), 
+              min = 0.0, max = 10, value = 0, step = 0.5), 
   sliderInput("cost", label = "Strategy Cost", width="100%",
-              min = 0.0, max = 1, value = 0, step = 0.05), 
+              min = 0.0, max = 0.1, value = 0, step = 0.01), 
   sliderInput("mu", label = "Mutation Rate", width="100%",
-              min = 0.0, max = 1, value = 0, step = 0.05), 
+              min = 0.0, max = 0.1, value = 0, step = 0.01), 
   actionButton("mate", "New Generation"),
   actionButton("reset", "Reset")
 )
 
 gen     <- reactiveValues();
+iter    <- reactiveValues();
 
-gen$dat <- list(ID = NULL, Rmat = NULL);
+gen$dat  <- list(ID = NULL, Rmat = NULL);
+iter$all <- 0;
+iter$nue <- 0;
 
 Ds    <- observeEvent(input$mate, {
-    
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
             gen$dat$ID   <- initialise_inds(N = 8);
             gen$dat$Rmat <- initialise_Rmat(gen$dat$ID);
         }else{
-            gen$dat <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
-                               Kf = 40, Km = 40, beta = 8, imm = 1);
+            gen$dat  <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
+                                Kf = 40, Km = 40, beta = input$ID, 
+                                imm = input$Imm, cost = input$cost, 
+                                mu = input$mu);
+            iter$all <- c(iter$all, mean(gen$dat$ID[,11:20]));
+            iter$nue <- c(iter$nue, mean(gen$dat$ID[,21:30]));
         }
 })
 
 rs    <- observeEvent(input$reset, {
        gen$dat <- list(ID = NULL, Rmat = NULL);
+       iter$all <- 0;
+       iter$nue <- 0;
 })
 
 renderPlot({
   par(bg = 'transparent');
-  kval <- gen$dat$Rmat;
-  kval <- as.matrix(kval);
-  kval <- kval[,-1];
-  diag(kval) <- diag(kval)/2;
-  hist(kval);
-  #size <- hist(gen$dat$ID)[1];
-  #if(5 < 6){
-  #    plot(x = 0:10, y = 0:10, type = "n", ylim = c(0, 400), cex.axis = 1.5,
-  #         cex.lab = 1.5, xlab = "Generation", ylab = "k", bg = "transparent");
-  #    points(x = 2, y = size, pch = 20, cex = 1.5, type = "b",
-  #           lwd = 2);
-  #}#else{
-#      x0 <- last - 5;
-#      x1 <- last + 5;
-#      plot(x = x0:x1, y = x0:x1, type = "n", ylim = c(0, 1), cex.axis = 1.5,
-#           cex.lab = 1.5, xlab = "Generation", ylab = "k");
-#      points(x = ts$df[x0:x1,1], y = ts$df[x0:x1,2], pch = 20, cex = 1.5, type = "b",
-#             lwd = 2);
-#  }
+  malle <- iter$all;
+  mneut <- iter$nue
+  gens  <- 1:length(iter$all);
+  if(length(gens) < 6){
+      plot(x = 0:10, y = 0:10, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
+           bg = "transparent");
+      abline(h = 0, lty = "dotted", lwd = 0.8);
+      polygon(x=c(-0.125, 2.5, 2.5, -0.125), y=c(0.825, 0.825, 1.1, 1.1), 
+              border=NA, col="black");
+      polygon(x=c(-0.125, 2.5, 2.5, -0.125), y=c(-0.825, -0.825, -1.1, -1.1), 
+              border=NA, col="black");
+      abline(v = -0.125, lwd = 4);
+      text(x = 0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
+           col = "white", pos = 4);
+      text(x = 0, y = -0.95, labels = "Inbreeding Avoidance", cex = 1.5, 
+           col = "white", pos = 4);
+      if(length(gens) > 0){
+          points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
+      }
+  }else{
+      x0 <- length(gens) - 5;
+      x1 <- length(gens) + 5;
+      plot(x = x0:x1, y = 0:10, type = "n", ylim = c(-1, 1), cex.axis = 1.5,
+           cex.lab = 1.5, xlab = "Generation", ylab = "Inbreeding strategy", 
+           bg = "transparent");
+      abline(h = 0, lty = "dotted", lwd = 0.8);
+      polygon(x=c(x0-0.125, x0+2.5, x0+2.5, x0-0.125), 
+              y=c(0.825, 0.825, 1.1, 1.1), border=NA, col="black");
+      polygon(x=c(x0-0.125, x0+2.5, x0+2.5, x0-0.125), 
+              y=c(-0.825, -0.825, -1.1, -1.1), border=NA, col="black");
+      abline(v = x0-0.125, lwd = 4);
+      text(x = x0, y = 0.95, labels = "Inbreeding Preference", cex = 1.5, 
+           col = "white", pos = 4);
+      text(x = x0, y = -0.95, labels = "Inbreeding Avoidance", cex = 1.5, 
+           col = "white", pos = 4);
+      points(x = gens, y = malle, pch = 20, cex = 1.5, type = "b",
+                 lwd = 2, col = "black");
+  }
 })
 ```
 
