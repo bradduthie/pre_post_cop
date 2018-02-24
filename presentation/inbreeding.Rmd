@@ -588,9 +588,9 @@ renderPlot({
 ```{r lmSim2, fig.show='animate', echo = FALSE}
 inputPanel(
   sliderInput("Imm2", label = "Immigrants", width="100%",
-              min = 0.0, max = 10, value = 0, step = 1), 
+              min = 0.0, max = 10, value = 2, step = 1), 
   sliderInput("ID2", label = "Inbreeding Depression", width="100%",
-              min = 0.0, max = 10, value = 0, step = 0.5), 
+              min = 0.0, max = 10, value = 8, step = 0.5), 
   sliderInput("cost2", label = "Strategy Cost", width="100%",
               min = 0.0, max = 0.1, value = 0, step = 0.01), 
   sliderInput("mu2", label = "Mutation Rate", width="100%",
