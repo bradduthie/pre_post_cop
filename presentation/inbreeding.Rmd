@@ -9,6 +9,35 @@ output:
 runtime: shiny
 ---
 
+<style>
+div.footnotes {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.6em;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+    $('footnote').each(function(index) {
+      var text  = $(this).html();
+      var fnNum = (index+1).toString().sup();
+      $(this).html(text + fnNum);
+
+      var footnote   = fnNum + ': ' + $(this).attr('content') + '<br/>';
+      var oldContent = $(this).parents('slide').children('div.footnotes').html();
+      var newContent = oldContent + footnote;
+      $(this).parents('slide').children('div.footnotes').html(newContent);
+    });
+  });
+</script>
+
 ```{r, echo = FALSE}
 initialise_inds <- function(N = 200){
     ID      <- matrix(data = 0, nrow = N, ncol = 30);
@@ -364,7 +393,74 @@ mate_connect <- function(ID){
 ```
 
 
+## Inbreeding
+
+- Define relatedness
+
 ## Inbreeding depression
+
+- What inbreeding depression is, exactly.
+
+## Inbreeding depression
+
+- What are the consequences of inbreeding depression.
+
+## Inbreeding behaviour
+
+- What do we exect to see given inbreeding depression?
+
+- inbreeding avoidance
+- inbreeding preference
+- inbreeding tolerance
+
+## Inbreeding theory
+
+Describe Parker's model
+
+- Resource and mate limited sexes
+- Mate encounter, opportunity to outbreed assumed
+
+## Inbreeding theory
+
+<div class = "columns-2">
+
+```{r echo = FALSE, fig.height = 4, fig.width = 5}
+inputPanel(
+  sliderInput("rr", label = "Relatedness", width="100%",
+              min = 0.0, max = 1, value = 0, step = 0.05), 
+  sliderInput("dd", label = "Inbreeding Depression", width="100%",
+              min = 0.0, max = 1, value = 0, step = 0.1)
+)
+par(bg = 'transparent', mar = c(0.5, 0.5, 0.5, 0.5));
+plot(x = 1:10, y = 1:10, xaxt = "n", yaxt = "n", xlab = "", ylab = "");
+# Add see-saw function here to animate the balance
+```
+
+<br><br>
+
+- Parker's model
+- Add a see-saw plot that weighs relatedness versus inbreeding depression
+
+$$\frac{n}{2} (1 + r)(1 - \delta) > \frac{n}{2}$$
+
+Is inclusive fitness from inbreeding (left) greater than inclusive fitness from outbreeding?
+
+$$\delta < \frac{r}{1+r}$$
+
+
+</div>
+
+
+## Interpreting Parker's model
+
+Some key takeaways:
+
+- Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression
+- Inbreeding depression thresholds differ between females and males causing sexual conflict
+- Females should prefer inbreeding below their inbreeding depression threshold (resource limited) <footnote content="The first awesoem footnote!">here</footnote>:
+- Males should *tolerate* inbreeding below their threshold, but *never prefer* (sis will be fine)
+
+
 
 ##
 
@@ -395,7 +491,7 @@ mtt$dat  <- NULL;
 
 Ds    <- observeEvent(input$mate, {
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
-            gen$dat$ID   <- initialise_inds(N = 8);
+            gen$dat$ID   <- initialise_inds(N = 80);
             gen$dat$Rmat <- initialise_Rmat(gen$dat$ID);
         }else{
             gen$dat  <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
@@ -480,10 +576,6 @@ renderPlot({
 ```
 
 
-
-## Inbreeding tolerance
-
-
 ##
 
 ```{r lmSim3, fig.show='animate', echo = FALSE}
@@ -511,7 +603,7 @@ iter$mkv <- 0;
 
 Ds    <- observeEvent(input$mate3, {
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
-            gen$dat$ID   <- initialise_inds(N = 8);
+            gen$dat$ID   <- initialise_inds(N = 80);
             gen$dat$Rmat <- initialise_Rmat(gen$dat$ID);
         }else{
             gen$dat  <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
@@ -580,8 +672,6 @@ renderPlot({
 })
 ```
 
-## More tolerance
-
 
 ##
 
@@ -601,7 +691,7 @@ inputPanel(
 
 Ds    <- observeEvent(input$mate2, {
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
-            gen$dat$ID   <- initialise_inds(N = 8);
+            gen$dat$ID   <- initialise_inds(N = 80);
             gen$dat$Rmat <- initialise_Rmat(gen$dat$ID);
         }else{
             gen$dat  <- new_gen(ID = gen$dat$ID, Rmat = gen$dat$Rmat, 
@@ -687,16 +777,6 @@ renderPlot({
   }
 })
 ```
-
-
-## Inbreeding avoidance
-
-## Inbreeding preference
-
-## Parker's model
-
-
-
 
 ##
 
