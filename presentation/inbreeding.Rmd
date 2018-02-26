@@ -20,22 +20,21 @@ div.footnotes {
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 <script>
-  $(document).ready(function() {
-    $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
 
-    $('footnote').each(function(index) {
-      var text  = $(this).html();
-      var fnNum = (index+1).toString().sup();
-      $(this).html(text + fnNum);
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
 
-      var footnote   = fnNum + ': ' + $(this).attr('content') + '<br/>';
-      var oldContent = $(this).parents('slide').children('div.footnotes').html();
-      var newContent = oldContent + footnote;
-      $(this).parents('slide').children('div.footnotes').html(newContent);
-    });
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
   });
+});
 </script>
 
 ```{r, echo = FALSE}
@@ -457,10 +456,17 @@ Some key takeaways:
 
 - Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression
 - Inbreeding depression thresholds differ between females and males causing sexual conflict
-- Females should prefer inbreeding below their inbreeding depression threshold (resource limited) <footnote content="The first awesoem footnote!">here</footnote>:
+- Females should prefer inbreeding below their inbreeding depression threshold (resource limited)<footnote content="The first awesoem footnote!">here</footnote>:
 - Males should *tolerate* inbreeding below their threshold, but *never prefer* (sis will be fine)
 
+## Extensions of Parker's model
 
+## Limitations of this modelling approach
+
+## Individual-based modelling
+
+- Much different assumptions
+- See if we can get a similar answer
 
 ##
 
