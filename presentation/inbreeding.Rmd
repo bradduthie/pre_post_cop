@@ -419,6 +419,8 @@ Describe Parker's model
 - Resource and mate limited sexes
 - Mate encounter, opportunity to outbreed assumed
 
+<!---
+
 ## Inbeeding theory
 
 <div class = "columns-2">
@@ -468,8 +470,8 @@ renderPlot({
     text(x = 0.8, y = -0.75, labels = "0", cex = 3);
     text(x = -1, y = 0, labels = expression(frac(n,2)), cex = 3);
     points(x = 0, y = 0, cex = 3, pch = 20, col = "red");
-    arrows(x0 = 0, x1 = -0.9, y0 = 0, y1 = 0, lwd = 3, col = "red");
     arrows(x0 = 0, x1 = fx, y0 = 0, y1 = fy, lwd = 3, col = "black");
+    arrows(x0 = 0, x1 = -0.9, y0 = 0, y1 = 0, lwd = 3, col = "red");
 })
 ```
 
@@ -487,6 +489,7 @@ $$\delta < \frac{r}{1+r}$$
 
 </div>
 
+--->
 
 ## Interpreting Parker's model
 
@@ -508,7 +511,7 @@ Some key takeaways:
 
 ##
 
-```{r lmSim, fig.show='animate', echo = FALSE}
+```{r IBM_1, fig.show='animate', echo = FALSE}
 inputPanel(
   sliderInput("Imm", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 0, step = 1), 
@@ -619,10 +622,11 @@ renderPlot({
 })
 ```
 
+## Again
 
 ##
 
-```{r lmSim3, fig.show='animate', echo = FALSE}
+```{r IBM_3, fig.show = 'animate', echo = FALSE}
 inputPanel(
   sliderInput("Imm3", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 0, step = 1), 
@@ -716,10 +720,11 @@ renderPlot({
 })
 ```
 
+## Again
 
 ##
 
-```{r lmSim2, fig.show='animate', echo = FALSE}
+```{r IBM_2, fig.show = 'animate', echo = FALSE}
 inputPanel(
   sliderInput("Imm2", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 2, step = 1), 
@@ -732,6 +737,15 @@ inputPanel(
   actionButton("mate2", "New Generation"),
   actionButton("reset2", "Reset")
 )
+
+gen     <- reactiveValues();
+iter    <- reactiveValues();
+
+gen$dat  <- list(ID = NULL, Rmat = NULL);
+iter$all <- 0;
+iter$nue <- 0;
+iter$kva <- 0;
+iter$mkv <- 0;
 
 Ds    <- observeEvent(input$mate2, {
         if( is.null(gen$dat$ID) == TRUE | is.null(gen$dat$ID) == TRUE){
