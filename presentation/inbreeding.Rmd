@@ -419,20 +419,58 @@ Describe Parker's model
 - Resource and mate limited sexes
 - Mate encounter, opportunity to outbreed assumed
 
-## Inbreeding theory
+## Inbeeding theory
 
 <div class = "columns-2">
 
-```{r echo = FALSE, fig.height = 4, fig.width = 5}
+```{r echo = FALSE}
+mbox <- function(x0, x1, y0, y1){
+    xx <- seq(from=x0, to=x1, length.out = 100);
+    yy <- seq(from=y0, to=y1, length.out = 100);
+    xd <- c(rep(x0, 100), xx, rep(x1,100), rev(xx));
+    yd <- c(yy, rep(y1,100), rev(yy), rep(y0, 100));
+    return(list(x=xd, y=yd));
+}
 inputPanel(
   sliderInput("rr", label = "Relatedness", width="100%",
               min = 0.0, max = 1, value = 0, step = 0.05), 
   sliderInput("dd", label = "Inbreeding Depression", width="100%",
               min = 0.0, max = 1, value = 0, step = 0.1)
 )
-par(bg = 'transparent', mar = c(0.5, 0.5, 0.5, 0.5));
-plot(x = 1:10, y = 1:10, xaxt = "n", yaxt = "n", xlab = "", ylab = "");
-# Add see-saw function here to animate the balance
+renderPlot({
+    par(bg = 'transparent', mar = c(0.5, 0.5, 0.5, 0.5));
+    plot(x = -1:1, y = -1:1, xaxt = "n", yaxt = "n", xlab = "", ylab = "Fitness", 
+         type = "n", xlim = c(-1, 1), ylim = c(-1, 1), bty = "n");
+    points(x = 0, y = 0, cex = 5, pch = 20, col = "black");
+    val <- seq(from = (-1 * pi)/4, to = (1 * pi)/4, length = 1000);
+    hx  <- cos(val);
+    hy  <- sin(val);
+    fva <- seq(from = 0, to = 1, length = 1000);
+    fit <- 0.5*(1 + input$rr)*(1 - input$dd);
+    sqd <- (fva - fit)*(fva - fit);
+    clf <- which(sqd == min(sqd));
+    fx  <- cos(val[clf]);
+    fy  <- sin(val[clf]);
+    points(x = hx, y = hy, lwd = 2, type = "l");
+    points(x = seq(from = 0, to = 1, length = 100), y = rep(0, 100), 
+           type = "l", lty = "dotted", col = "red");
+    ia_box <- mbox(x0 = -1.1, x1 = -0.1, y0 = -0.9, y1 = -1.1);
+    polygon(x=ia_box$x, y=ia_box$y, lwd=3, border="black", col="black");
+    ip_box <- mbox(x0 = 0.1, x1 = 1.1, y0 = -0.9, y1 = -1.1);
+    polygon(x=ip_box$x, y=ip_box$y, lwd=3, border="black", col="black");
+    points(x = seq(from = -1, to = 1, length = 100), y = rep(-0.85, 100), 
+           lwd = 6, type = "l");
+    points(x = rep(0, 100), y = seq(from = -0.85, to = 0, length = 100), 
+           lwd = 6, type = "l");
+    text(x = -0.6, y = -1, labels = "Avoid inbreeding", cex = 1.75, col = "red");
+    text(x = 0.6, y = -1, labels = "Inbreeding", cex = 1.75, col = "white");
+    text(x = 0.8, y = 0.75, labels = "n", cex = 3);
+    text(x = 0.8, y = -0.75, labels = "0", cex = 3);
+    text(x = -1, y = 0, labels = expression(frac(n,2)), cex = 3);
+    points(x = 0, y = 0, cex = 3, pch = 20, col = "red");
+    arrows(x0 = 0, x1 = -0.9, y0 = 0, y1 = 0, lwd = 3, col = "red");
+    arrows(x0 = 0, x1 = fx, y0 = 0, y1 = fy, lwd = 3, col = "black");
+})
 ```
 
 <br><br>
@@ -456,8 +494,8 @@ Some key takeaways:
 
 - Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression
 - Inbreeding depression thresholds differ between females and males causing sexual conflict
-- Females should prefer inbreeding below their inbreeding depression threshold (resource limited)<footnote content="The first awesoem footnote!">here</footnote>:
-- Males should *tolerate* inbreeding below their threshold, but *never prefer* (sis will be fine)
+- Females should prefer inbreeding below their inbreeding depression threshold (resource limited)<footnote content="foot1">[here](http://google.com)</footnote>:
+- Males should *tolerate* inbreeding below their threshold, but *never prefer*<footnote content="foot1">[Puurtinen](http://google.com)</footnote> (sis will be fine)
 
 ## Extensions of Parker's model
 
