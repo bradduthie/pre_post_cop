@@ -9,6 +9,7 @@ output:
 runtime: shiny
 ---
 
+<!---
 <style>
 div.footnotes {
   position: absolute;
@@ -36,6 +37,8 @@ $(document).ready(function() {
   });
 });
 </script>
+--->
+
 
 ```{r, echo = FALSE}
 initialise_inds <- function(N = 200){
@@ -419,11 +422,36 @@ Describe Parker's model
 - Resource and mate limited sexes
 - Mate encounter, opportunity to outbreed assumed
 
+## Inbreeding theory
+
+<center>
+![](images/fem_choice_1.png)
+</center>
+
+## Inbreeding theory
+
+<center>
+![](images/fem_choice_2.png)
+</center>
+
+## Inbreeding theory
+
+<center>
+![](images/fem_choice_3.png)
+</center>
+
+## Inbreeding theory
+
+<center>
+![](images/fem_choice_4.png)
+</center>
+
+
 ## Inbeeding theory
 
 <div class = "columns-2">
 
-```{r echo = FALSE}
+```{r, echo = FALSE, fig.width = 3}
 mbox <- function(x0, x1, y0, y1){
     xx <- seq(from=x0, to=x1, length.out = 100);
     yy <- seq(from=y0, to=y1, length.out = 100);
@@ -441,7 +469,6 @@ renderPlot({
     par(bg = 'transparent', mar = c(0.5, 0.5, 0.5, 0.5));
     plot(x = -1:1, y = -1:1, xaxt = "n", yaxt = "n", xlab = "", ylab = "Fitness", 
          type = "n", xlim = c(-1, 1), ylim = c(-1, 1), bty = "n");
-    points(x = 0, y = 0, cex = 5, pch = 20, col = "black");
     val <- seq(from = (-1 * pi)/4, to = (1 * pi)/4, length = 1000);
     hx  <- cos(val);
     hy  <- sin(val);
@@ -467,11 +494,11 @@ renderPlot({
     text(x = 0.8, y = 0.75, labels = "n", cex = 3);
     text(x = 0.8, y = -0.75, labels = "0", cex = 3);
     text(x = -1, y = 0, labels = expression(frac(n,2)), cex = 3);
-    points(x = 0, y = 0, cex = 3, pch = 20, col = "red");
     arrows(x0 = 0, x1 = fx, y0 = 0, y1 = fy, lwd = 3, col = "black");
     arrows(x0 = 0, x1 = -0.9, y0 = 0, y1 = 0, lwd = 3, col = "red");
+    points(x = 0, y = 0, cex = 5, pch = 20, col = "black");
+    points(x = 0, y = 0, cex = 3, pch = 20, col = "red");
 })
-browser();
 ```
 
 <br><br>
@@ -495,8 +522,12 @@ Some key takeaways:
 
 - Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression
 - Inbreeding depression thresholds differ between females and males causing sexual conflict
-- Females should prefer inbreeding below their inbreeding depression threshold (resource limited)<footnote content="foot1">[here](http://google.com)</footnote>:
-- Males should *tolerate* inbreeding below their threshold, but *never prefer*<footnote content="foot1">[Puurtinen](http://google.com)</footnote> (sis will be fine)
+- Females should prefer inbreeding below their inbreeding depression threshold (resource limited):
+- Males should *tolerate* inbreeding below their threshold, but *never prefer* [1] (sis will be fine)
+
+<hr>
+
+Puurtinen's paper
 
 ## Extensions of Parker's model
 
@@ -509,7 +540,7 @@ Some key takeaways:
 
 ##
 
-```{r IBM_1, fig.show='animate', echo = FALSE, fig.width = 4}
+```{r, echo = FALSE, fig.width = 4}
 inputPanel(
   sliderInput("Imm", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 0, step = 1), 
@@ -620,11 +651,9 @@ renderPlot({
 })
 ```
 
-## Again
-
 ##
 
-```{r IBM_3, fig.show = 'animate', echo = FALSE}
+```{r, echo = FALSE, fig.width = 4}
 inputPanel(
   sliderInput("Imm3", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 0, step = 1), 
@@ -721,7 +750,7 @@ renderPlot({
 
 ##
 
-```{r IBM_2, fig.show = 'animate', echo = FALSE}
+```{r, echo = FALSE, fig.width = 4}
 inputPanel(
   sliderInput("Imm2", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 2, step = 1), 
