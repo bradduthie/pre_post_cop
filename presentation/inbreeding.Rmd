@@ -419,8 +419,6 @@ Describe Parker's model
 - Resource and mate limited sexes
 - Mate encounter, opportunity to outbreed assumed
 
-<!---
-
 ## Inbeeding theory
 
 <div class = "columns-2">
@@ -473,6 +471,7 @@ renderPlot({
     arrows(x0 = 0, x1 = fx, y0 = 0, y1 = fy, lwd = 3, col = "black");
     arrows(x0 = 0, x1 = -0.9, y0 = 0, y1 = 0, lwd = 3, col = "red");
 })
+browser();
 ```
 
 <br><br>
@@ -489,7 +488,6 @@ $$\delta < \frac{r}{1+r}$$
 
 </div>
 
---->
 
 ## Interpreting Parker's model
 
@@ -511,7 +509,7 @@ Some key takeaways:
 
 ##
 
-```{r IBM_1, fig.show='animate', echo = FALSE}
+```{r IBM_1, fig.show='animate', echo = FALSE, fig.width = 4}
 inputPanel(
   sliderInput("Imm", label = "Immigrants", width="100%",
               min = 0.0, max = 10, value = 0, step = 1), 
@@ -720,7 +718,6 @@ renderPlot({
 })
 ```
 
-## Again
 
 ##
 
