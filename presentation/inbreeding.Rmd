@@ -394,18 +394,108 @@ mate_connect <- function(ID){
 }
 ```
 
+## Biparental inbreeding theory
 
-## Inbreeding
+<div class = "columns-2">
 
-- Define relatedness
+![](images/female.png)
 
-## Inbreeding depression
+![](images/male.png)
 
-- What inbreeding depression is, exactly.
+</div>
 
-## Inbreeding depression
+<br><br>
 
-- What are the consequences of inbreeding depression.
+<hr>
+
+Monster images: [http://cliparts.co](http://cliparts.co)
+
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_1.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_2.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_3.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_4.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_5.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_6.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_7.png)
+</center>
+
+## Pedigrees and coefficients affecting inbreeding
+
+<center>
+![](images/pedigree_8.png)
+</center>
+
+## Inbreeding depression ($\delta$) slopes ($\beta$)
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4}
+fcoeff   <- seq(from = 0, to = 1, length = 1000);
+survB0   <- rep(1, 1000);
+survB0p2 <- exp(-1*0.2*fcoeff);
+survB1   <- exp(-1*1*fcoeff);
+survB2   <- exp(-1*2*fcoeff);
+survB5   <- exp(-1*5*fcoeff);
+par(mar = c(5, 5, 1, 0.5));
+plot(x = 0, y = 0, type = "n", xlab = "Inbreeding coefficient (f)",
+     ylab = expression(paste("Pr. offspring survival (1 - ",delta,")")),
+     xlim = c(0, 1), ylim = c(0, 1), cex.lab = 1.5, cex.axis = 1.5);
+points(x = fcoeff, y = survB0, type = "l", lwd = 3);
+points(x = fcoeff, y = survB0p2, type = "l", lwd = 3);
+points(x = fcoeff, y = survB1, type = "l", lwd = 3);
+points(x = fcoeff, y = survB2, type = "l", lwd = 3);
+points(x = fcoeff, y = survB5, type = "l", lwd = 3);
+text(x = 0.8, y = 0.94, labels = expression(beta == 0), cex = 1.5);
+text(x = 0.8, y = 0.79, labels = expression(beta == 0.2), cex = 1.5, srt = -8);
+text(x = 0.7, y = 0.43, labels = expression(beta == 1), cex = 1.5, srt = -24);
+text(x = 0.5, y = 0.30, labels = expression(beta == 2), cex = 1.5, srt = -32);
+text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
+```
+
+<br>
+
+- Inbreeding depression ($\delta$) generally increases with inbreeding coefficient ($f$)
+
+- Offspring fitness ($1 - \delta$) consequently decreases with $f$
+
+- Slope of decrease in offspring fitness defines $\beta$
+
+</div>
+
 
 ## Inbreeding behaviour
 
@@ -536,7 +626,62 @@ Puurtinen's paper
 ## Individual-based modelling
 
 - Much different assumptions
+- Stochasticity
 - See if we can get a similar answer
+
+## Individuals
+
+<center>
+![](images/individuals.png)
+</center>
+
+## Individuals
+
+<center>
+![](images/individuals_1.png)
+</center>
+
+## Individuals
+
+<center>
+![](images/individuals_2.png)
+</center>
+
+
+## Individual interactions
+
+<center>
+![](images/ibm_general_1.png)
+</center>
+
+## Individual interactions
+
+<center>
+![](images/ibm_general_2.png)
+</center>
+
+## Individual interactions
+
+<center>
+![](images/ibm_general_3.png)
+</center>
+
+## Individual-based modelling questions
+
+- **When should we predict selection for a mutant allele causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+
+- **Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
+
+- **How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
+
+<br><br><br><br>
+
+<hr>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). <br>
+2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
+3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
+</span>
 
 ##
 
@@ -747,6 +892,32 @@ renderPlot({
 })
 ```
 
+
+## Simulated kinships vs. Mandarte song sparrows
+
+<div class = "columns-2">
+
+<br>
+
+```{r, echo = FALSE, fig.width = 4}
+renderPlot({
+  par(bg = 'transparent');
+  malle <- iter$all;
+  mneut <- iter$nue
+  mkval <- iter$mkv
+  gens  <- 1:length(iter$all);
+  par(mar = c(7, 5, 5, 5));
+  hist(iter$kva, xlim = c(0, 1), ylim = c(0, 20), freq = FALSE, col = "black",
+        yaxt = "n", ylab = "", main = "", xlab = "", 
+        breaks = seq(from = 0, to = 1, by = 0.05), cex.axis = 1.5);
+  title(xlab = "Kinship (k)", line = 4, cex.axis = 1.5, cex.lab = 1.5);
+  box(lwd = 3);
+})
+```
+
+![](images/sparrow_pedigree.png)
+
+</div>
 
 ##
 
