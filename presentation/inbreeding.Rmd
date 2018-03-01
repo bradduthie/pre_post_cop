@@ -9,6 +9,12 @@ output:
 runtime: shiny
 ---
 
+<style type="text/css">
+body p {
+  color: #000000;
+}
+</style>
+
 <!---
 <style>
 div.footnotes {
@@ -394,6 +400,23 @@ mate_connect <- function(ID){
 }
 ```
 
+## Inbreeding and its consequences for evolution {.smaller}
+
+![](images/opening.png)
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+1. [Wibowo Djatmiko](https://commons.wikimedia.org/wiki/User:Wie146). 2. [George Shuklin](https://commons.wikimedia.org/wiki/User:George_Shuklin). 3. [Natalie Pilakouta](https://www.nataliepilakouta.com/). 4. [Neale Monks](https://en.wikipedia.org/wiki/User:Neale_Monks). 5. [Jane Reid](https://www.abdn.ac.uk/ibes/profiles/jane.reid). 6. [André Karwath](https://commons.wikimedia.org/wiki/User:Aka). 7. [Benjamin Twist](https://commons.wikimedia.org/wiki/User:Benjamint444) 8. [Heinz Seehagel](https://de.wikipedia.org/wiki/Benutzer:HaSee). 
+</span></div>
+
+<!---
+<hr>
+<span style="font-size: 14px;">
+1. *Poecilia reticula* image: [Wibowo_Djatmiko](https://commons.wikimedia.org/wiki/User:Wie146) <br>
+</span>
+--->
+
+
 ## Biparental inbreeding theory
 
 <div class = "columns-2">
@@ -488,7 +511,7 @@ text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
 
 <br>
 
-- Inbreeding depression ($\delta$) generally increases with inbreeding coefficient ($f$)
+- Inbreeding depression ($\delta$) increases with inbreeding coefficient ($f$)
 
 - Offspring fitness ($1 - \delta$) consequently decreases with $f$
 
@@ -666,6 +689,11 @@ Puurtinen's paper
 ![](images/ibm_general_3.png)
 </center>
 
+## General individual-based model assumptions
+
+- Non-overlapping generations
+
+
 ## Individual-based modelling questions
 
 - **When should we predict selection for a mutant allele causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
@@ -682,6 +710,7 @@ Puurtinen's paper
 2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
 3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
+
 
 ##
 
