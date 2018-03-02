@@ -1227,25 +1227,6 @@ text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
 </center>
 
 
-## Individual interactions
-
-<center>
-![](images/ibm_general_1.png)
-</center>
-
-## Individual interactions
-
-<center>
-![](images/ibm_general_2.png)
-</center>
-
-## Individual interactions
-
-<center>
-![](images/ibm_general_3.png)
-</center>
-
-
 ## Individual-based modelling questions
 
 - **When should we predict selection for a mutant allele causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
@@ -1263,8 +1244,85 @@ text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
 3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
 
-## General modelling steps
+## General individual-based model overview
 
+<center>
+![](images/ibm_steps_1.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_2.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_3.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_4a.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_4b.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_5a.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_5b.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
+
+## General individual-based model overview
+
+<center>
+![](images/ibm_steps_6.png)
+</center>
+
+<span style="font-size: 18px;">
+Code [available on GitHub](https://github.com/bradduthie/PolyInbreed)
+</span>
 
 ##
 
