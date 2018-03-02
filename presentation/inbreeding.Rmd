@@ -697,9 +697,9 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression
+- Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression [1,2]
 
-- Inbreeding depression thresholds differ between females and males causing sexual conflict
+- Inbreeding depression thresholds differ between females and males causing sexual conflict [1,2]
 
 </div>
 
@@ -707,7 +707,8 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 
 <div align="left" style="line-height: 0.6em;">
 <span style="font-size: 14px;">
-Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785). <br> Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+[1] Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). <br>
+[2] Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785). 
 </span></div>
 
 ## Key conceptual take-aways
@@ -757,13 +758,7 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding tolerance increases with lower encounter rates (Kokko & Ots 2006)
-
-- Dispersal has effects (Lehmann & Perrin 2003)
-
-- Thresholds change given subsequent mating decisions of relatives (Duthie & Reid 2015)
-
-- Thresholds change given modulation of parental investment (Duthie et al. 2016)
+- Inbreeding tolerance increases with lower encounter rates [1].
 
 </div>
 
@@ -771,12 +766,405 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 
 <div align="left" style="line-height: 0.6em;">
 <span style="font-size: 14px;">
-Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785). <br> Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+[1] Kokko, H & I Ots (2006) *Evolution* [**60**:467-475](http://onlinelibrary.wiley.com/doi/10.1111/j.0014-3820.2006.tb01128.x/abstract).
+</span></div>
+
+## Key conceptual take-aways
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
+
+- Inbreeding tolerance increases with lower encounter rates [1].
+
+- Inbreeding avoidance or preference can affect dispersal [2].
+
+
+
+</div>
+
+<hr>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+[1] Kokko, H & I Ots (2006) *Evolution* [**60**:467-475](http://onlinelibrary.wiley.com/doi/10.1111/j.0014-3820.2006.tb01128.x/abstract).
+[2] Lehmann, L & N Perrin (2003) *Am. Nat.* [**162**:638-652](https://www.journals.uchicago.edu/doi/10.1086/378823). <br>
+</span></div>
+
+## Key conceptual take-aways
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
+
+- Inbreeding tolerance increases with lower encounter rates [1].
+
+- Inbreeding avoidance or preference can affect dispersal [2].
+
+- Thresholds change given mating decisions of avoided relatives [3].
+
+
+</div>
+
+<hr>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+[1] Kokko, H & I Ots (2006) *Evolution* [**60**:467-475](http://onlinelibrary.wiley.com/doi/10.1111/j.0014-3820.2006.tb01128.x/abstract).
+[2] Lehmann, L & N Perrin (2003) *Am. Nat.* [**162**:638-652](https://www.journals.uchicago.edu/doi/10.1086/378823). <br>
+[3] Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+</span></div>
+
+## Key conceptual take-aways
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
+
+- Inbreeding tolerance increases with lower encounter rates [1].
+
+- Inbreeding avoidance or preference can affect dispersal [2].
+
+- Thresholds change given mating decisions of avoided relatives [3].
+
+- Thresholds change if parental investment can be modulated [4].
+
+</div>
+
+<hr>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+[1] Kokko, H & I Ots (2006) *Evolution* [**60**:467-475](http://onlinelibrary.wiley.com/doi/10.1111/j.0014-3820.2006.tb01128.x/abstract).
+[2] Lehmann, L & N Perrin (2003) *Am. Nat.* [**162**:638-652](https://www.journals.uchicago.edu/doi/10.1086/378823). <br>
+[3] Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+[4] Duthie, AB et. al (2016) *Proc. R. Soc. B.* [**282**:20161845](https://bradduthie.github.io/Duthie%26Reid2015.pdf).
+</span></div>
+
+## Key conceptual take-aways
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
+
+- Inbreeding tolerance increases with lower encounter rates [1].
+
+- Inbreeding avoidance or preference can affect dispersal [2].
+
+- Thresholds change given mating decisions of avoided relatives [3].
+
+- Thresholds change if parental investment can be modulated [4].
+
+- Thresholds change if there are male opportunity costs [5]
+
+</div>
+
+<hr>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+[1] Kokko, H & I Ots (2006) *Evolution* [**60**:467-475](http://onlinelibrary.wiley.com/doi/10.1111/j.0014-3820.2006.tb01128.x/abstract).
+[2] Lehmann, L & N Perrin (2003) *Am. Nat.* [**162**:638-652](https://www.journals.uchicago.edu/doi/10.1086/378823). <br>
+[3] Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+[4] Duthie, AB et. al (2016) *Proc. R. Soc. B.* [**282**:20161845](https://bradduthie.github.io/Duthie%26Reid2015.pdf). <br>
+[5] Waser PM, et. al. (1986) *Am. Nat.* [**128**:529-537](https://www.journals.uchicago.edu/doi/abs/10.1086/284585).
 </span></div>
 
 ## Limitations of this modelling approach
 
+<div class = "columns-2">
 
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
+- Focuses on selection to the exclusion of drift, mutation, immigration
+
+</div>
+
+
+## Limitations of this modelling approach
+
+<div class = "columns-2">
+
+
+![](images/real_pedigree.png)
+
+
+- Focuses on selection to the exclusion of drift, mutation, immigration
+
+- Does not consider realistic distributions of kinship
+
+
+</div>
+
+
+## Limitations of this modelling approach
+
+<div class = "columns-2">
+
+![](images/polyandry_eg.png)
+
+
+- Focuses on selection to the exclusion of drift, mutation, immigration
+
+- Does not consider realistic distributions of kinship
+
+- Does not consider complex strategies such as female multiple mating (polyandry) [but see 1]
+
+
+</div>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+[1] Lehtonen, J & H Kokko (2015) *Proc. R. Soc. B* [**282**:20142716](http://rspb.royalsocietypublishing.org/content/282/1801/20142716).
+</span></div>
+
+## Limitations of this modelling approach
+
+<div class = "columns-2">
+
+![](images/polyandry_eg.png)
+
+
+- Focuses on selection to the exclusion of drift, mutation, immigration
+
+- Does not consider realistic distributions of kinship
+
+- Does not consider complex strategies such as female multiple mating (polyandry) [but see 1]
+
+- Does not account for post-copulatory inbreeding avoidance or preference
+
+
+</div>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+[1] Lehtonen, J & H Kokko (2015) *Proc. R. Soc. B* [**282**:20142716](http://rspb.royalsocietypublishing.org/content/282/1801/20142716).
+</span></div>
+
+## Individual-based modelling approach
+
+<div class = "columns-2">
+
+![](images/ibm_approach.png)
+
+
+- Models discrete individual females and males in a finite population
+
+- Explicitly tracks pedigree to calculate kinship between individuals
+
+- Allows for simultaneous evolution of inbreeding behaviour and polyandry
+
+- Allows for the evolution of pre- and post-copulatory inbreeding behaviour
+
+
+</div>
+
+
+<!--- 
 ## Inbreeding depression ($\delta$) slopes ($\beta$)
 
 <div class = "columns-2">
@@ -814,25 +1202,25 @@ text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
 
 </div>
 
-## Individual-based modelling
+--->
 
-- Much different assumptions
-- Stochasticity
-- See if we can get a similar answer
+## The polyinbreeding team
 
-## Individuals
+![](images/polyinbreeders.png)
+
+## Individual traits and genomes
 
 <center>
 ![](images/individuals.png)
 </center>
 
-## Individuals
+## Individual traits and genomes
 
 <center>
 ![](images/individuals_1.png)
 </center>
 
-## Individuals
+## Individual traits and genomes
 
 <center>
 ![](images/individuals_2.png)
@@ -857,10 +1245,6 @@ text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
 ![](images/ibm_general_3.png)
 </center>
 
-## General individual-based model assumptions
-
-- Non-overlapping generations
-
 
 ## Individual-based modelling questions
 
@@ -878,6 +1262,8 @@ text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
 2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
 3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
+
+## General modelling steps
 
 
 ##
