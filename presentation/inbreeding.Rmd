@@ -406,16 +406,29 @@ mate_connect <- function(ID){
 
 <div align="left" style="line-height: 0.6em;">
 <span style="font-size: 14px;">
-1. [Wibowo Djatmiko](https://commons.wikimedia.org/wiki/User:Wie146). 2. [George Shuklin](https://commons.wikimedia.org/wiki/User:George_Shuklin). 3. [Natalie Pilakouta](https://www.nataliepilakouta.com/). 4. [Neale Monks](https://en.wikipedia.org/wiki/User:Neale_Monks). 5. [Jane Reid](https://www.abdn.ac.uk/ibes/profiles/jane.reid). 6. [André Karwath](https://commons.wikimedia.org/wiki/User:Aka). 7. [Benjamin Twist](https://commons.wikimedia.org/wiki/User:Benjamint444) 8. [Heinz Seehagel](https://de.wikipedia.org/wiki/Benutzer:HaSee). 
+1. [Wibowo Djatmiko](https://commons.wikimedia.org/wiki/User:Wie146). 2. [George Shuklin](https://commons.wikimedia.org/wiki/User:George_Shuklin). 3. [Natalie Pilakouta](https://www.nataliepilakouta.com/). 4. [Neale Monks](https://en.wikipedia.org/wiki/User:Neale_Monks). 5. [Jane Reid](https://www.abdn.ac.uk/ibes/profiles/jane.reid). 6. [André Karwath](https://commons.wikimedia.org/wiki/User:Aka). <br> 7. [Benjamin Twist](https://commons.wikimedia.org/wiki/User:Benjamint444) (benjamint444@gmail.com) 8. [Heinz Seehagel](https://de.wikipedia.org/wiki/Benutzer:HaSee). 9. [Adam Hayward](https://adhayward.wordpress.com/)
 </span></div>
 
-<!---
-<hr>
-<span style="font-size: 14px;">
-1. *Poecilia reticula* image: [Wibowo_Djatmiko](https://commons.wikimedia.org/wiki/User:Wie146) <br>
-</span>
---->
+## **Avoidance** of breeding with relatives
 
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016).
+</span></div>
+
+## **Preference** for breeding with relatives
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016).
+</span></div>
+
+## No inbreeding avoidance/preference (**Tolerance**)
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016).
+</span></div>
 
 ## Biparental inbreeding theory
 
@@ -482,85 +495,94 @@ Monster images: [http://cliparts.co](http://cliparts.co)
 ![](images/pedigree_8.png)
 </center>
 
-## Inbreeding depression ($\delta$) slopes ($\beta$)
+## Pedigrees and coefficients affecting inbreeding
 
-<div class = "columns-2">
+<center>
+![](images/pedigree_9.png)
+</center>
 
-```{r, echo = FALSE, fig.width = 4}
-fcoeff   <- seq(from = 0, to = 1, length = 1000);
-survB0   <- rep(1, 1000);
-survB0p2 <- exp(-1*0.2*fcoeff);
-survB1   <- exp(-1*1*fcoeff);
-survB2   <- exp(-1*2*fcoeff);
-survB5   <- exp(-1*5*fcoeff);
-par(mar = c(5, 5, 1, 0.5));
-plot(x = 0, y = 0, type = "n", xlab = "Inbreeding coefficient (f)",
-     ylab = expression(paste("Pr. offspring survival (1 - ",delta,")")),
-     xlim = c(0, 1), ylim = c(0, 1), cex.lab = 1.5, cex.axis = 1.5);
-points(x = fcoeff, y = survB0, type = "l", lwd = 3);
-points(x = fcoeff, y = survB0p2, type = "l", lwd = 3);
-points(x = fcoeff, y = survB1, type = "l", lwd = 3);
-points(x = fcoeff, y = survB2, type = "l", lwd = 3);
-points(x = fcoeff, y = survB5, type = "l", lwd = 3);
-text(x = 0.8, y = 0.94, labels = expression(beta == 0), cex = 1.5);
-text(x = 0.8, y = 0.79, labels = expression(beta == 0.2), cex = 1.5, srt = -8);
-text(x = 0.7, y = 0.43, labels = expression(beta == 1), cex = 1.5, srt = -24);
-text(x = 0.5, y = 0.30, labels = expression(beta == 2), cex = 1.5, srt = -32);
-text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
-```
+## Pedigrees and coefficients affecting inbreeding
 
-<br>
+<center>
+![](images/pedigree_10.png)
+</center>
 
-- Inbreeding depression ($\delta$) increases with inbreeding coefficient ($f$)
+## Pedigrees and coefficients affecting inbreeding
 
-- Offspring fitness ($1 - \delta$) consequently decreases with $f$
-
-- Slope of decrease in offspring fitness defines $\beta$
-
-</div>
+<center>
+![](images/pedigree_11.png)
+</center>
 
 
-## Inbreeding behaviour
 
-- What do we exect to see given inbreeding depression?
-
-- inbreeding avoidance
-- inbreeding preference
-- inbreeding tolerance
-
-## Inbreeding theory
-
-Describe Parker's model
-
-- Resource and mate limited sexes
-- Mate encounter, opportunity to outbreed assumed
-
-## Inbreeding theory
+## Encounter between relatives
 
 <center>
 ![](images/fem_choice_1.png)
 </center>
 
-## Inbreeding theory
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
+
+## Encounter between relatives
 
 <center>
 ![](images/fem_choice_2.png)
 </center>
 
-## Inbreeding theory
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
+
+## Encounter between relatives
 
 <center>
 ![](images/fem_choice_3.png)
 </center>
 
-## Inbreeding theory
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
+
+## Encounter between relatives
 
 <center>
 ![](images/fem_choice_4.png)
 </center>
 
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
 
-## Inbeeding theory
+## Encounter between relatives
+
+<center>
+![](images/fem_choice_5.png)
+
+</center>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
+
+## Encounter between relatives
+
+<center>
+![](images/fem_choice_6.png)
+
+</center>
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
+
+## When to inbreed versus avoid inbreeding?
 
 <div class = "columns-2">
 
@@ -614,37 +636,183 @@ renderPlot({
 })
 ```
 
-<br><br>
+<br><br><br><br>
 
-- Parker's model
-- Add a see-saw plot that weighs relatedness versus inbreeding depression
+Is inclusive fitness from avoiding inbreeding (left side) less than inbreeding (right side)?
 
-$$\frac{n}{2} (1 + r)(1 - \delta) > \frac{n}{2}$$
+$$\frac{n}{2} < \frac{n}{2} (1 + r)(1 - \delta)$$
 
-Is inclusive fitness from inbreeding (left) greater than inclusive fitness from outbreeding?
+More generally, is inclusive fitness from inbreeding (left) greater than inclusive fitness from outbreeding?
 
 $$\delta < \frac{r}{1+r}$$
-
 
 </div>
 
 
-## Interpreting Parker's model
 
-Some key takeaways:
+## Key conceptual take-aways
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
 
 - Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression
+
 - Inbreeding depression thresholds differ between females and males causing sexual conflict
-- Females should prefer inbreeding below their inbreeding depression threshold (resource limited):
-- Males should *tolerate* inbreeding below their threshold, but *never prefer* [1] (sis will be fine)
+
+</div>
 
 <hr>
 
-Puurtinen's paper
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785). <br> Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+</span></div>
 
-## Extensions of Parker's model
+## Key conceptual take-aways
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4.5}
+ri <- matrix(data=c(1,0.5,0,0.5,1,0,0,0,1),nrow=3,byrow=TRUE);
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,mate]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+rs <- seq(from=0,to=1,by=0.0001);
+dl <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dl[i] <- Inbreed(focal=1,mate=2,alt=3);
+}
+par(mar=c(5,5,1,1));
+plot(x=rs,y=dl,type="l",lwd=2,
+  xlab=expression(paste("Relatedness (",italic(r),")")),
+  ylab=expression(paste(italic(delta)," threshold")),
+  cex.lab=1.5,cex.axis=1.25,ylim=c(0,1));
+Inbreed <- function(focal,mate,alt){
+  Inb <- ri[focal,focal] + ri[focal,mate];
+  Out <- ri[focal,focal]  + ri[focal,alt];
+  DEL <- 1 - (Out/Inb);
+  return(DEL);
+}
+dk <- rep(x=0,length=length(rs));
+for(i in 1:length(rs)){
+  ri <- matrix(data=c(1,rs[i],0,rs[i],1,0,0,0,1),nrow=3,byrow=TRUE);
+  dk[i] <- Inbreed(focal=2,mate=1,alt=3);
+}
+points(x=rs,y=dk,type="l",lwd=2,
+  cex.lab=1.25,cex.axis=1.5,ylim=c(0,1));
+polygon(x=c(rs,rev(rs)),y=c(dk,rev(dl)),col="black");
+polygon(x=c(rs,rev(rs)),y=c(rep(0,length(dk)),rev(dk)),col="grey40");
+points(x=seq(from=0,to=1,by=0.1),y=rep(1,11),type="l");
+points(y=seq(from=0,to=1,by=0.1),x=rep(1,11),type="l");
+text(x=0.75,y=0.16,labels=expression(paste(italic(Female))),cex=1.75, col = "black");
+arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=2);
+text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
+arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
+```
+
+
+- Inbreeding tolerance increases with lower encounter rates (Kokko & Ots 2006)
+
+- Dispersal has effects (Lehmann & Perrin 2003)
+
+- Thresholds change given subsequent mating decisions of relatives (Duthie & Reid 2015)
+
+- Thresholds change given modulation of parental investment (Duthie et al. 2016)
+
+</div>
+
+<hr>
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785). <br> Duthie, AB & JM Reid (2015) *PLoS One* [**10**:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf). 
+</span></div>
 
 ## Limitations of this modelling approach
+
+
+## Inbreeding depression ($\delta$) slopes ($\beta$)
+
+<div class = "columns-2">
+
+```{r, echo = FALSE, fig.width = 4}
+fcoeff   <- seq(from = 0, to = 1, length = 1000);
+survB0   <- rep(1, 1000);
+survB0p2 <- exp(-1*0.2*fcoeff);
+survB1   <- exp(-1*1*fcoeff);
+survB2   <- exp(-1*2*fcoeff);
+survB5   <- exp(-1*5*fcoeff);
+par(mar = c(5, 5, 1, 0.5));
+plot(x = 0, y = 0, type = "n", xlab = "Inbreeding coefficient (f)",
+     ylab = expression(paste("Pr. offspring survival (1 - ",delta,")")),
+     xlim = c(0, 1), ylim = c(0, 1), cex.lab = 1.5, cex.axis = 1.5);
+points(x = fcoeff, y = survB0, type = "l", lwd = 3);
+points(x = fcoeff, y = survB0p2, type = "l", lwd = 3);
+points(x = fcoeff, y = survB1, type = "l", lwd = 3);
+points(x = fcoeff, y = survB2, type = "l", lwd = 3);
+points(x = fcoeff, y = survB5, type = "l", lwd = 3);
+text(x = 0.8, y = 0.94, labels = expression(beta == 0), cex = 1.5);
+text(x = 0.8, y = 0.79, labels = expression(beta == 0.2), cex = 1.5, srt = -8);
+text(x = 0.7, y = 0.43, labels = expression(beta == 1), cex = 1.5, srt = -24);
+text(x = 0.5, y = 0.30, labels = expression(beta == 2), cex = 1.5, srt = -32);
+text(x = 0.3, y = 0.14, labels = expression(beta == 5), cex = 1.5, srt = -40);
+```
+
+<br>
+
+- Inbreeding depression ($\delta$) increases with inbreeding coefficient ($f$)
+
+- Offspring fitness ($1 - \delta$) consequently decreases with $f$
+
+- Slope of decrease in offspring fitness defines $\beta$
+
+</div>
 
 ## Individual-based modelling
 
