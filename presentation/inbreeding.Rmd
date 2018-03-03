@@ -683,9 +683,10 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression [1,2]
+Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression [1,2]
 
-- Inbreeding depression thresholds differ between females and males causing sexual conflict [1,2]
+Inbreeding depression thresholds differ between females and males causing sexual conflict [1,2]
+
 
 </div>
 
@@ -744,13 +745,13 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression [1,2]
+Inbreeding avoidance is predicted given a sufficiently high threshold of inbreeding depression [1,2]
 
-- Inbreeding depression thresholds differ between females and males causing sexual conflict [1,2]
+Inbreeding depression thresholds differ between females and males causing sexual conflict [1,2]
 
-- **Above** thresholds we predict inbreeding avoidance 
+**Above** thresholds we predict inbreeding avoidance 
 
-- **Below** thresholds we predict inbreeding preference (females) or tolerance (males) [3,4]
+**Below** thresholds we predict inbreeding preference (females) or tolerance (males) [3,4]
 
 </div>
 
@@ -812,7 +813,7 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
  
 
-- Inbreeding tolerance increases with lower encounter rates [1].
+Inbreeding tolerance increases with lower encounter rates [1].
 
 </div>
 
@@ -870,9 +871,9 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding tolerance increases with lower encounter rates [1].
+Inbreeding tolerance increases with lower encounter rates [1].
 
-- Inbreeding avoidance or preference can affect dispersal [2].
+Inbreeding avoidance or preference can affect dispersal [2].
 
 
 
@@ -933,11 +934,11 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding tolerance increases with lower encounter rates [1].
+Inbreeding tolerance increases with lower encounter rates [1].
 
-- Inbreeding avoidance or preference can affect dispersal [2].
+Inbreeding avoidance or preference can affect dispersal [2].
 
-- Thresholds change given mating decisions of avoided relatives [3].
+Thresholds change given mating decisions of avoided relatives [3].
 
 
 </div>
@@ -998,13 +999,13 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding tolerance increases with lower encounter rates [1].
+Inbreeding tolerance increases with lower encounter rates [1].
 
-- Inbreeding avoidance or preference can affect dispersal [2].
+Inbreeding avoidance or preference can affect dispersal [2].
 
-- Thresholds change given mating decisions of avoided relatives [3].
+Thresholds change given mating decisions of avoided relatives [3].
 
-- Thresholds change if parental investment can be modulated [4].
+Thresholds change if parental investment can be modulated [4].
 
 </div>
 
@@ -1065,15 +1066,15 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ```
 
 
-- Inbreeding tolerance increases with lower encounter rates [1].
+Inbreeding tolerance increases with lower encounter rates [1].
 
-- Inbreeding avoidance or preference can affect dispersal [2].
+Inbreeding avoidance or preference can affect dispersal [2].
 
-- Thresholds change given mating decisions of avoided relatives [3].
+Thresholds change given mating decisions of avoided relatives [3].
 
-- Thresholds change if parental investment can be modulated [4].
+Thresholds change if parental investment can be modulated [4].
 
-- Thresholds change if there are male opportunity costs [5]
+Thresholds change if there are male opportunity costs [5]
 
 </div>
 
@@ -1134,7 +1135,7 @@ text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "blac
 arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
 ```
 
-- Focuses on selection to the exclusion of drift, mutation, immigration
+Focuses on selection to the exclusion of drift, mutation, immigration
 
 </div>
 
@@ -1147,9 +1148,9 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ![](images/real_pedigree.png)
 
 
-- Focuses on selection to the exclusion of drift, mutation, immigration
+Focuses on selection to the exclusion of drift, mutation, immigration
 
-- Does not consider realistic distributions of kinship
+Does not consider realistic distributions of kinship
 
 
 </div>
@@ -1162,11 +1163,11 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ![](images/polyandry_eg.png)
 
 
-- Focuses on selection to the exclusion of drift, mutation, immigration
+Focuses on selection to the exclusion of drift, mutation, immigration
 
-- Does not consider realistic distributions of kinship
+Does not consider realistic distributions of kinship
 
-- Does not consider complex genetic architecture
+Does not consider complex genetic architecture
 
 
 </div>
@@ -1180,13 +1181,13 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ![](images/polyandry_eg.png)
 
 
-- Focuses on selection to the exclusion of drift, mutation, immigration
+Focuses on selection to the exclusion of drift, mutation, immigration
 
-- Does not consider realistic distributions of kinship
+Does not consider realistic distributions of kinship
 
-- Does not consider complex genetic architecture
+Does not consider complex genetic architecture
 
-- Does not account for post-copulatory inbreeding avoidance or preference
+Does not account for post-copulatory inbreeding avoidance or preference
 
 
 </div>
@@ -1199,13 +1200,13 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 ![](images/ibm_approach.png)
 
 
-- Models discrete individual females and males in a finite population
+Models discrete individual females and males in a finite population
 
-- Explicitly tracks pedigree to calculate kinship between individuals
+Explicitly tracks pedigree to calculate kinship between individuals
 
-- Account for complex genetic architecture underlying phenotypes
+Account for complex genetic architecture underlying phenotypes
 
-- Allows for the evolution of pre- and post-copulatory inbreeding, and polyandry
+Allows for the evolution of pre- and post-copulatory inbreeding, and polyandry
 
 
 </div>
@@ -1706,11 +1707,11 @@ renderPlot({
 
 ## Individual-based modelling questions
 
-- **When should we predict selection for a alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+**When should we predict selection for a alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
 
-- **Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
+**Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
 
-- **How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
+**How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
 
 <br><br><br><br>
 
@@ -1722,31 +1723,115 @@ renderPlot({
 </span>
 
 
-## Mutant allele underlying inbreeding avoidance
+## Mutant allele underlying inbreeding avoidance {.smaller}
 
 <div class = "columns-2">
 
 ![](images/avoid_over_time.png)
 
-- Fact one of simulation
-- Fact two
+Compared frequency of a mutant allele underlying inbreeding avoidance to a mutant neutral allele after 3000 generations. 
+
+**100 simulation replicates across multiple parameter values:**
+
+- Selection against deleterious recessives
+- Dominance coefficient of deleterious recessives
+- Direct selection against inbreeding avoidance
+- Offspring produced per female
+- Maximum mates per male
+- Immigrants per generation
+- Female and male carrying capacity
+- Allele mutation rate (forward & back)
+- Effect strength of inbreeding avoidance allele
+
+
+
 
 </div>
 <span style="font-size: 18px;">
 1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
 </span>
 
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
+![](images/F_A.png)
+
+1000 loci with deleterious recessive alleles (homozygotes 2\% survival cost)
+
+Inbreeding depression slope $\beta \approx 1$
+
+$\delta \approx 0.22$ for full siblings
+
+$\delta \approx 0.12$ for half siblings
+
+$\delta \approx 0.06$ for first cousins
+
+
+</div>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
+
+
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
+![](images/F_A_c0pt01.png)
+
+**Selection for inbreeding avoidance is no longer predicted given a direct fitness cost of 1% for carrying the allele.**
+
+</div>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
+
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
+![](images/F_A_alpha20.png)
+
+Selection for inbreeding avoidance is no longer predicted given a direct fitness cost of 1% for carrying the allele.
+
+**Selection for inbreeding avoidance increases when the *effect* of the allele is strengthened (i.e., relatives are avoided at higher probability)**
+
+</div>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
+
+
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
+![](images/M_A.png)
+
+Selection for inbreeding avoidance is no longer predicted given a direct fitness cost of 1% for carrying the allele.
+
+Selection for inbreeding avoidance increases when the *effect* of the allele is strengthened (i.e., relatives are avoided at higher probability)
+
+**Selection for inbreeding avoidance comparable when males rather than females chose mates** (*Note:* Males were mate-limited)
+
+</div>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
+
+
+
+
 ## What to do
 
-Histograms -- females and males, versus neutral, add costs.
+Add effective population size plot to females before showing males
 
-Emphasis on stochasticity
+After briefly showing males, then move on to showing inbreeding preference
 
-Population size important
+Note that inbreeding preference is predicted for females, not males
 
-Selection coefficients, inbreeding coefficients, and delta on a half-sib or cousin
-
-Agreement with an infinite alleles model with 10 loci.
+Move on to different genetic architecture where inbreeding avoidance/preference in same sim
 
 ##
 
