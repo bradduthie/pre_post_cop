@@ -411,23 +411,32 @@ mate_connect <- function(ID){
 
 ## **Avoidance** of breeding with relatives
 
+![](images/terms_ia.png)
+
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
-Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016).
+<span style="font-size: 14px;"><br>
+Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016). 
+Images: [A. C. Duthie](catherineduthiearts@gmail.com)
 </span></div>
 
 ## **Preference** for breeding with relatives
 
+![](images/terms_ip.png)
+
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
+<span style="font-size: 14px;"><br>
 Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016).
+Images: [A. C. Duthie](catherineduthiearts@gmail.com)
 </span></div>
 
 ## No inbreeding avoidance/preference (**Tolerance**)
 
+![](images/terms_it.png)
+
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
+<span style="font-size: 14px;"><br>
 Szulkin M, et al. (2013) *Trends Ecol. Evol.* [**28**:205–211](https://doi.org/10.1016/j.tree.2012.10.016).
+Images: [A. C. Duthie](catherineduthiearts@gmail.com)
 </span></div>
 
 ## Biparental inbreeding theory
@@ -522,7 +531,7 @@ Monster images: [http://cliparts.co](http://cliparts.co)
 </center>
 
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
+<span style="font-size: 14px;"><br>
 Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
 </span></div>
 
@@ -533,7 +542,7 @@ Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 12
 </center>
 
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
+<span style="font-size: 14px;"><br>
 Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
 </span></div>
 
@@ -541,33 +550,10 @@ Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 12
 
 <center>
 ![](images/fem_choice_3.png)
-</center>
-
-<div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
-Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
-</span></div>
-
-## Encounter between relatives
-
-<center>
-![](images/fem_choice_4.png)
-</center>
-
-<div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
-Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
-</span></div>
-
-## Encounter between relatives
-
-<center>
-![](images/fem_choice_5.png)
 
 </center>
-
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
+<span style="font-size: 14px;"><br>
 Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
 </span></div>
 
@@ -578,7 +564,7 @@ Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 12
 
 </center>
 <div align="left" style="line-height: 0.6em;">
-<span style="font-size: 14px;">
+<span style="font-size: 14px;"><br>
 Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
 </span></div>
 
@@ -1217,7 +1203,7 @@ arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=
 
 - Explicitly tracks pedigree to calculate kinship between individuals
 
-- Account for complex genetic architecture undelrying phenotypes
+- Account for complex genetic architecture underlying phenotypes
 
 - Allows for the evolution of pre- and post-copulatory inbreeding, and polyandry
 
@@ -1720,7 +1706,7 @@ renderPlot({
 
 ## Individual-based modelling questions
 
-- **When should we predict selection for a mutant allele causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+- **When should we predict selection for a alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
 
 - **Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
 
@@ -1735,6 +1721,34 @@ renderPlot({
 3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
 
+
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
+![](images/avoid_over_time.png)
+
+- Fact one of simulation
+- Fact two
+
+</div>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
+
+## What to do
+
+Histograms -- females and males, versus neutral, add costs.
+
+Emphasis on stochasticity
+
+Population size important
+
+Selection coefficients, inbreeding coefficients, and delta on a half-sib or cousin
+
+Agreement with an infinite alleles model with 10 loci.
+
+##
 
 
 ##
