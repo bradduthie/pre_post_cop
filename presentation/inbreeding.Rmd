@@ -13,6 +13,16 @@ runtime: shiny
 body p {
   color: #000000;
 }
+ul {
+  color: black;
+}
+ol {
+  color: black;
+}
+a {
+    color: darkblue;
+    text-decoration: none
+}
 </style>
 
 <!---
@@ -875,8 +885,6 @@ Inbreeding tolerance increases with lower encounter rates [1].
 
 Inbreeding avoidance or preference can affect dispersal [2].
 
-
-
 </div>
 
 <hr>
@@ -997,7 +1005,6 @@ arrows(x0=0.75,y0=0.2,x1=0.6,y1=0.375, length = 0.15, angle = 30, code = 2, lwd=
 text(x=0.75,y=0.84,labels=expression(paste(italic(Male))),cex=1.75, col  = "black");
 arrows(x0=0.75,y0=0.8,x1=0.6,y1=0.625, length = 0.15, angle = 30, code = 2, lwd=2);
 ```
-
 
 Inbreeding tolerance increases with lower encounter rates [1].
 
@@ -1707,7 +1714,7 @@ renderPlot({
 
 ## Individual-based modelling questions
 
-**When should we predict selection for a alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+**When should we predict selection for alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
 
 **Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
 
@@ -1733,22 +1740,73 @@ Compared frequency of a mutant allele underlying inbreeding avoidance to a mutan
 
 **100 simulation replicates across multiple parameter values:**
 
-- Selection against deleterious recessives
-- Dominance coefficient of deleterious recessives
-- Direct selection against inbreeding avoidance
-- Offspring produced per female
-- Maximum mates per male
-- Immigrants per generation
-- Female and male carrying capacity
-- Allele mutation rate (forward & back)
-- Effect strength of inbreeding avoidance allele
+1. Selection against deleterious recessives
+2. Direct selection against inbreeding avoidance
+3. Kin discrimination ability (all vs. only sibs)
+4. Effect strength of inbreeding avoidance allele
+5. Female and male carrying capacity
+6. Dominance coefficient of deleterious recessives
+7. Offspring produced per female
+8. Maximum mates per male
+9. Immigrants per generation
+10. Allele mutation rate (forward & back)
 
+</div>
+<span style="font-size: 18px;">
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
 
+## Mutant allele underlying inbreeding avoidance {.smaller}
+
+<div class = "columns-2">
+
+![](images/avoid_over_time.png)
+
+Compared frequency of a mutant allele underlying inbreeding avoidance to a mutant neutral allele after 3000 generations. 
+
+**100 simulation replicates across multiple parameter values:**
+
+1. [Selection against deleterious recessives](https://bradduthie.github.io/Duthie_Reid2016.pdf#page=7)
+2. [Direct selection against inbreeding avoidance](https://bradduthie.github.io/Duthie_Reid2016.pdf#page=7)
+3. [Kin discrimination ability (all vs. only sibs)](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=11)
+4. [Effect strength of inbreeding avoidance allele](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=19)
+5. [Female and male carrying capacity](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=17)
+6. Dominance coefficient of deleterious recessives
+7. Offspring produced per female
+8. Maximum mates per male
+9. Immigrants per generation
+10. Allele mutation rate (forward & back)
 
 
 </div>
 <span style="font-size: 18px;">
-1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+</span>
+
+## Mutant allele underlying inbreeding avoidance {.smaller}
+
+<div class = "columns-2">
+
+![](images/neutrals.png)
+
+Compared frequency of a mutant allele underlying inbreeding avoidance to a mutant neutral allele after 3000 generations. 
+
+**100 simulation replicates across multiple parameter values:**
+
+1. [Selection against deleterious recessives](https://bradduthie.github.io/Duthie_Reid2016.pdf#page=7)
+2. [Direct selection against inbreeding avoidance](https://bradduthie.github.io/Duthie_Reid2016.pdf#page=7)
+3. [Kin discrimination ability (all vs. only sibs)](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=11)
+4. [Effect strength of inbreeding avoidance allele](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=19)
+5. [Female and male carrying capacity](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=17)
+6. Dominance coefficient of deleterious recessives
+7. Offspring produced per female
+8. Maximum mates per male
+9. Immigrants per generation
+10. Allele mutation rate (forward & back)
+
+</div>
+<span style="font-size: 18px;">
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixA.pdf). From [Appendix A](https://bradduthie.github.io/Duthie_Reid2016_AppendixA.pdf)
 </span>
 
 ## Mutant allele underlying inbreeding avoidance
@@ -1761,16 +1819,16 @@ Compared frequency of a mutant allele underlying inbreeding avoidance to a mutan
 
 Inbreeding depression slope $\beta \approx 1$
 
-$\delta \approx 0.22$ for full siblings
+$\delta \approx 0.22$ for offspring of full siblings
 
-$\delta \approx 0.12$ for half siblings
+$\delta \approx 0.12$ for offspring of half siblings
 
-$\delta \approx 0.06$ for first cousins
+$\delta \approx 0.06$ for offspring of first cousins
 
 
 </div>
 <span style="font-size: 18px;">
-1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016).
 </span>
 
 
@@ -1784,7 +1842,22 @@ $\delta \approx 0.06$ for first cousins
 
 </div>
 <span style="font-size: 18px;">
-1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf).
+</span>
+
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
+![](images/F_A_sib.png)
+
+Selection for inbreeding avoidance is no longer predicted given a direct fitness cost of 1% for carrying the allele.
+
+**Selection for inbreeding avoidance was limited when females could only identify siblings as kin.**
+
+</div>
+<span style="font-size: 18px;">
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). 
 </span>
 
 ## Mutant allele underlying inbreeding avoidance
@@ -1795,11 +1868,13 @@ $\delta \approx 0.06$ for first cousins
 
 Selection for inbreeding avoidance is no longer predicted given a direct fitness cost of 1% for carrying the allele.
 
-**Selection for inbreeding avoidance increases when the *effect* of the allele is strengthened (i.e., relatives are avoided at higher probability)**
+Selection for inbreeding avoidance was limited when females could only identify siblings as kin.
+
+**Selection for inbreeding avoidance increases when the *effect* of the allele is strengthened (i.e., relatives are avoided at higher probability).**
 
 </div>
 <span style="font-size: 18px;">
-1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). 
 </span>
 
 
@@ -1807,33 +1882,117 @@ Selection for inbreeding avoidance is no longer predicted given a direct fitness
 
 <div class = "columns-2">
 
-![](images/M_A.png)
+![](images/F_A_Ne.png)
 
 Selection for inbreeding avoidance is no longer predicted given a direct fitness cost of 1% for carrying the allele.
 
-Selection for inbreeding avoidance increases when the *effect* of the allele is strengthened (i.e., relatives are avoided at higher probability)
+Selection for inbreeding avoidance was limited when females could only identify siblings as kin.
 
-**Selection for inbreeding avoidance comparable when males rather than females chose mates** (*Note:* Males were mate-limited)
+Selection for inbreeding avoidance increases when the *effect* of the allele is strengthened (i.e., relatives are avoided at higher probability).
+
+**Selection was stronger at *lower* N<sub>e</sub> due to *increased* inbreeding risk.**
 
 </div>
 <span style="font-size: 18px;">
-1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf). From [Appendix B](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf)
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). 
 </span>
 
 
+## Mutant allele underlying inbreeding preference
+
+<div class = "columns-2">
+
+![](images/F_P.png)
 
 
-## What to do
+1000 loci with deleterious recessive alleles (homozygotes 0.4\% survival cost)
 
-Add effective population size plot to females before showing males
+Inbreeding depression slope $\beta \approx 0.5$
 
-After briefly showing males, then move on to showing inbreeding preference
+$\delta \approx 0.12$ for offspring of full siblings
 
-Note that inbreeding preference is predicted for females, not males
+$\delta \approx 0.06$ for offspring of half siblings
 
-Move on to different genetic architecture where inbreeding avoidance/preference in same sim
+$\delta \approx 0.03$ for offspring of first cousins
 
-##
+</div>
+<span style="font-size: 18px;">
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016).
+</span>
+
+
+## Population genetic model conclusions
+
+**Overall, selection for a mutant allele underlying inbreeding avoidance:**
+
+1. **Increased** given [stronger selection against deleterious recessives](https://bradduthie.github.io/Duthie_Reid2016.pdf#page=7)
+2. **Decreased** given [direct selection against inbreeding avoidance](https://bradduthie.github.io/Duthie_Reid2016.pdf#page=7)
+3. **Decreased** given restricted [kin discrimination ability (all vs. only sibs)](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=11)
+4. **Increased** given an increasing [effect strength of inbreeding avoidance allele](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=19)
+5. **Decreased** given increased [female and male carrying capacity](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=17) (and consequent increase in effective population size)
+
+<br><br><br><br>
+
+</div>
+<span style="font-size: 18px;">
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016).
+</span>
+
+
+## Population genetic model conclusions
+
+**Additional conclusions:**
+
+- [Comparable selection](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf\page=11) for inbreeding avoidance alleles was observed when males chose (*note*, males were mate limited when choosing).
+- Weak inbreeding depression caused selection for inbreeding preference when *females* chose, but not when *males* chose mates.
+- [No evidence of purging](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=5) in simulations with mutant alleles underlying inbreeding avoidance or preference.
+
+<br><br><br><br><br><br>
+
+</div>
+<span style="font-size: 18px;">
+Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016).
+</span>
+
+## Multi-locus model with infinite alleles
+
+<div class = "columns-2">
+
+![](images/beta_slopes.png)
+
+Multi-locus genetic architecture:
+
+- Fixed inbreeding depression for individual *f*
+- Allele values at 10 loci increase (positive) or decrease (negative) inbreeding
+- Allele values sum additively to determine overall inbreeding behaviour phenotype
+
+</div>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+
+## Multi-locus model with infinite alleles
+
+<div class = "columns-2">
+
+![](images/IA_quant.png)
+
+Multi-locus genetic architecture:
+
+- Fixed inbreeding depression for individual *f*
+- Allele values at 10 loci increase (positive) or decrease (negative) inbreeding
+- Allele values sum additively to determine overall inbreeding behaviour phenotype
+
+</div>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+
+## Inbreeding adjustment through multiple mating {.smaller}
 
 
 ##
