@@ -1992,7 +1992,38 @@ Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.githu
 </span>
 
 
+## Selection against inbreeding
+
+<div class = "columns-2">
+
+![](images/par_vs_off.png)
+
+**Selection against being inbred does not necessarily imply selection against inbreeding**
+
+</div>
+
+<span style="font-size: 18px;">
+Reid, JM et al. (2015). *Evolution* [69:2846-2861](https://doi.org/10.5061/dryad.0015b).
+</span>
+
+
+
 ## Inbreeding adjustment through multiple mating {.smaller}
+
+
+## Other stuff to do
+
+Make point about inbreeding adjustment given strong constraints
+
+Make point that it's hard to detect through a change in kinship (and subject to bias)
+
+Make point that pre, post and polyandry evolve given strong ID and no costs
+
+Make point that opportunity for post-cop greatly increases polyandry selection
+
+Make point that selection tends to go with the least costly IA route
+
+
 
 
 ##
