@@ -2,7 +2,7 @@
 title: "When, why, and how to avoid, prefer, or tolerate inbreeding"
 subtitle: "https://bradduthie.shinyapps.io/inbreeding"
 author: "Brad Duthie"
-date: "6 March 2018"
+date: "3 April 2018"
 output: 
   ioslides_presentation: 
     widescreen: yes
