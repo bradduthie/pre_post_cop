@@ -1729,6 +1729,13 @@ renderPlot({
 3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
 
+## Mutant allele underlying inbreeding avoidance {.smaller}
+
+<center>
+![](images/pop_gen_inds.png)
+</center>
+
+
 
 ## Mutant allele underlying inbreeding avoidance {.smaller}
 
@@ -1956,6 +1963,13 @@ Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.gith
 
 ## Multi-locus model with infinite alleles
 
+<center>
+![](images/quant_inds.png)
+</center>
+
+
+## Multi-locus model with infinite alleles
+
 <div class = "columns-2">
 
 ![](images/beta_slopes.png)
@@ -2006,9 +2020,11 @@ Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.githu
 Reid, JM et al. (2015). *Evolution* [69:2846-2861](https://doi.org/10.5061/dryad.0015b).
 </span>
 
-
-
 ## Inbreeding adjustment through multiple mating {.smaller}
+
+<center>
+![](images/poly_inds.png)
+
 
 
 ## Other stuff to do
