@@ -1983,9 +1983,6 @@ Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.gith
 </center>
 
 
-
-
-
 ## Multi-locus model with infinite alleles
 
 <div class = "columns-2">
@@ -2018,6 +2015,27 @@ Selection against being inbred does not necessarily imply selection against inbr
 <span style="font-size: 18px;">
 Reid, JM et al. (2015). *Evolution* [69:2846-2861](https://doi.org/10.5061/dryad.0015b).
 </span>
+
+## Inbreeding adjustment through multiple mating {.smaller}
+
+<center>
+![](images/poly_motivation.png)
+
+</center>
+
+## Inbreeding adjustment through multiple mating {.smaller}
+
+<center>
+![](images/fem_poly_1.png)
+
+</center>
+
+## Inbreeding adjustment through multiple mating {.smaller}
+
+<center>
+![](images/fem_poly_2.png)
+
+</center>
 
 ## Inbreeding adjustment through multiple mating {.smaller}
 
@@ -2084,6 +2102,10 @@ Reid, JM et al. (2015). *Evolution* [69:2846-2861](https://doi.org/10.5061/dryad
 
 </center>
 
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
 ## Inbreeding adjustment through multiple mating {.smaller}
 
 <center>
@@ -2091,9 +2113,79 @@ Reid, JM et al. (2015). *Evolution* [69:2846-2861](https://doi.org/10.5061/dryad
 
 </center>
 
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+## Inbreeding adjustment through multiple mating {.smaller}
+
+<center>
+![](images/inbr_adjust_res0.png)
+
+</center>
+
+## Inbreeding adjustment through multiple mating {.smaller}
+
+<center>
+![](images/inbr_adjust_res.png)
+
+</center>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+
+## Inbreeding adjustment conclusions
+
+1. Selection for females to increase or decrease pre-copulatory inbreeding through multiple mating, [depending on inbreeding depression](https://bradduthie.github.io/DuthieEtAl2016b.pdf#page=11) ($\beta$).
+2. Realised inbreeding adjustment ($k_{adj}$) often [small and difficult to detect](https://bradduthie.github.io/DuthieEtAl2016b.pdf#page=11).
+
+<br><br><br><br>
+
+</div>
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+
+## Post-copulatory inbreeding avoidance {.smaller}
+
+<center>
+![](images/pre_post_1.png)
+
+</center>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+## Post-copulatory inbreeding avoidance {.smaller}
+
+<center>
+![](images/pre_post_2.png)
+
+</center>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+## Post-copulatory inbreeding avoidance {.smaller}
+
+<center>
+![](images/pre_post_3.png)
+
+</center>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+</span>
+
+
+
 ## Other stuff to do
 
-Make point about inbreeding adjustment given strong constraints
 
 Make point that it's hard to detect through a change in kinship (and subject to bias)
 
