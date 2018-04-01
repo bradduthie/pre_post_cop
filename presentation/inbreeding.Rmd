@@ -578,72 +578,17 @@ Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 12
 Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
 </span></div>
 
-## When to inbreed versus avoid inbreeding?
 
-<div class = "columns-2">
+## Encounter between relatives
 
-```{r, echo = FALSE, fig.width = 3}
-mbox <- function(x0, x1, y0, y1){
-    xx <- seq(from=x0, to=x1, length.out = 100);
-    yy <- seq(from=y0, to=y1, length.out = 100);
-    xd <- c(rep(x0, 100), xx, rep(x1,100), rev(xx));
-    yd <- c(yy, rep(y1,100), rev(yy), rep(y0, 100));
-    return(list(x=xd, y=yd));
-}
-inputPanel(
-  sliderInput("rr", label = "Relatedness", width="100%",
-              min = 0.0, max = 1, value = 0, step = 0.05), 
-  sliderInput("dd", label = "Inbreeding Depression", width="100%",
-              min = 0.0, max = 1, value = 0, step = 0.1)
-)
-renderPlot({
-    par(bg = 'transparent', mar = c(0.5, 0.5, 0.5, 0.5));
-    plot(x = -1:1, y = -1:1, xaxt = "n", yaxt = "n", xlab = "", ylab = "Fitness", 
-         type = "n", xlim = c(-1, 1), ylim = c(-1, 1), bty = "n");
-    val <- seq(from = (-1 * pi)/4, to = (1 * pi)/4, length = 1000);
-    hx  <- cos(val);
-    hy  <- sin(val);
-    fva <- seq(from = 0, to = 1, length = 1000);
-    fit <- 0.5*(1 + input$rr)*(1 - input$dd);
-    sqd <- (fva - fit)*(fva - fit);
-    clf <- which(sqd == min(sqd));
-    fx  <- cos(val[clf]);
-    fy  <- sin(val[clf]);
-    points(x = hx, y = hy, lwd = 2, type = "l");
-    points(x = seq(from = 0, to = 1, length = 100), y = rep(0, 100), 
-           type = "l", lty = "dotted", col = "red");
-    ia_box <- mbox(x0 = -1.1, x1 = -0.1, y0 = -0.9, y1 = -1.1);
-    polygon(x=ia_box$x, y=ia_box$y, lwd=3, border="black", col="black");
-    ip_box <- mbox(x0 = 0.1, x1 = 1.1, y0 = -0.9, y1 = -1.1);
-    polygon(x=ip_box$x, y=ip_box$y, lwd=3, border="black", col="black");
-    points(x = seq(from = -1, to = 1, length = 100), y = rep(-0.85, 100), 
-           lwd = 6, type = "l");
-    points(x = rep(0, 100), y = seq(from = -0.85, to = 0, length = 100), 
-           lwd = 6, type = "l");
-    text(x = -0.6, y = -1, labels = "Avoid inbreeding", cex = 1.75, col = "red");
-    text(x = 0.6, y = -1, labels = "Inbreeding", cex = 1.75, col = "white");
-    text(x = 0.8, y = 0.75, labels = "n", cex = 3);
-    text(x = 0.8, y = -0.75, labels = "0", cex = 3);
-    text(x = -1, y = 0, labels = expression(frac(n,2)), cex = 3);
-    arrows(x0 = 0, x1 = fx, y0 = 0, y1 = fy, lwd = 3, col = "black");
-    arrows(x0 = 0, x1 = -0.9, y0 = 0, y1 = 0, lwd = 3, col = "red");
-    points(x = 0, y = 0, cex = 5, pch = 20, col = "black");
-    points(x = 0, y = 0, cex = 3, pch = 20, col = "red");
-})
-```
+<center>
+![](images/fem_choice_7.png)
 
-<br><br><br><br>
-
-Is inclusive fitness from avoiding inbreeding (left side) less than inbreeding (right side)?
-
-$$\frac{n}{2} < \frac{n}{2} (1 + r)(1 - \delta)$$
-
-More generally, is inclusive fitness from inbreeding (right) greater than inclusive fitness from outbreeding (left)?
-
-$$\delta < \frac{r}{1+r}$$
-
-</div>
-
+</center>
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;"><br>
+Parker (1979) *Sexual selection and reproductive competition in insects* (pp. 123–166). Parker (2006) *Philos. Trans. Royal Soc. B.* [**361**:235-259](https://doi.org/10.1098/rstb.2005.1785).
+</span></div>
 
 
 ## Key conceptual take-aways
@@ -697,6 +642,13 @@ Inbreeding avoidance is predicted given a sufficiently high threshold of inbreed
 
 Inbreeding depression thresholds differ between females and males causing sexual conflict [1,2]
 
+**Female threshold:**
+
+$$1 > (1+r)(1-\delta)$$
+
+**Male threshold:**
+
+$$r > (1+r)(1-\delta)$$
 
 </div>
 
@@ -1820,6 +1772,16 @@ Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.gith
 
 <div class = "columns-2">
 
+![](images/hist_blank.png)
+<br><br><br><br><br><br><br><br>
+
+</div>
+
+
+## Mutant allele underlying inbreeding avoidance
+
+<div class = "columns-2">
+
 ![](images/F_A.png)
 
 1000 loci with deleterious recessive alleles (homozygotes 2\% survival cost)
@@ -1954,7 +1916,7 @@ Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.gith
 - Weak inbreeding depression caused selection for inbreeding preference when *females* chose, but not when *males* chose mates.
 - [No evidence of purging](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf#page=5) in simulations with mutant alleles underlying inbreeding avoidance or preference.
 
-<br><br><br><br><br><br>
+<br><br><br><br><br>
 
 </div>
 <span style="font-size: 18px;">
@@ -2141,7 +2103,7 @@ Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.githu
 1. Selection for females to increase or decrease pre-copulatory inbreeding through multiple mating, [depending on inbreeding depression](https://bradduthie.github.io/DuthieEtAl2016b.pdf#page=11) ($\beta$).
 2. Realised inbreeding adjustment ($k_{adj}$) often [small and difficult to detect](https://bradduthie.github.io/DuthieEtAl2016b.pdf#page=11).
 
-<br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 
 </div>
 <span style="font-size: 18px;">
@@ -2152,48 +2114,125 @@ Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.githu
 ## Post-copulatory inbreeding avoidance {.smaller}
 
 <center>
+![](images/pre_post_inds.png)
+
+</center>
+
+## Effect of post-copulatory selection on polyandry {.smaller}
+
+<center>
 ![](images/pre_post_1.png)
 
 </center>
 
+<br>
+
 <span style="font-size: 18px;">
-Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf).
 </span>
 
-## Post-copulatory inbreeding avoidance {.smaller}
+## Effect of post-copulatory selection on polyandry {.smaller}
 
 <center>
 ![](images/pre_post_2.png)
 
 </center>
 
+<br>
+
 <span style="font-size: 18px;">
-Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf).
 </span>
 
-## Post-copulatory inbreeding avoidance {.smaller}
+## Effect of post-copulatory selection on polyandry {.smaller}
 
 <center>
 ![](images/pre_post_3.png)
 
 </center>
 
+<br>
+
 <span style="font-size: 18px;">
-Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf).
+Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf).
+</span>
+
+## Effect of post-copulatory selection on polyandry {.smaller}
+
+<center>
+![](images/pre_post_cost_comp.png)
+</center>
+
+<br>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf).
+</span>
+
+## Post-copulatory inbreeding avoidance conclusions
+
+1. Post-copulatory inbreeding avoidance can [greatly strengthen for polyandry](https://bradduthie.github.io/DuthieEtAl2017.pdf#page=8)
+2. How inbreeding is avoided is affected by the [relative cost of pre-copulatory versus post-copulatory choice](https://bradduthie.github.io/DuthieEtAl2017.pdf#page=10)
+
+<br><br><br><br><br><br><br><br><br>
+
+<span style="font-size: 18px;">
+Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf).
+</span>
+
+## Individual-based models: general conclusions
+
+**When should we predict selection for alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+
+**Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
+
+**How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
+
+<br><br><br><br>
+
+<hr>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). <br>
+2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
+3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
+</span>
+
+## Individual-based models: general conclusions
+
+**When should we predict selection for alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+
+
+<hr>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). <br>
+
+</span>
+
+## Individual-based models: general conclusions
+
+**Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
+
+
+<br><br><br><br>
+
+<hr>
+<span style="font-size: 18px;">
+2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
+</span>
+
+## Individual-based models: general conclusions
+
+**How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
+
+<br><br><br><br>
+
+<hr>
+<span style="font-size: 18px;">
+3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
 
 
-
-## Other stuff to do
-
-
-Make point that it's hard to detect through a change in kinship (and subject to bias)
-
-Make point that pre, post and polyandry evolve given strong ID and no costs
-
-Make point that opportunity for post-cop greatly increases polyandry selection
-
-Make point that selection tends to go with the least costly IA route
+## Modulating parental investment and inbreeding
 
 
 
