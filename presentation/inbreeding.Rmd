@@ -2180,13 +2180,38 @@ Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.gith
 Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf).
 </span>
 
-## Individual-based models: general conclusions
+
+## Individual-based models: general conclusions {.smaller}
 
 **When should we predict selection for alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
 
+- Inbreeding depression strong (avoidance) or very weak (preference)
+- Low direct costs of non-random mating
+- Small population size where risk of inbreeding is high
+
+<br><br><br><br>
+
+<br><br><br><br>
+
+<hr>
+<span style="font-size: 18px;">
+1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). <br>
+</span>
+
+
+
+## Individual-based models: general conclusions {.smaller}
+
+**When should we predict selection for alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
+
+- Inbreeding depression strong (avoidance) or very weak (preference)
+- Low direct costs of non-random mating
+- Small population size where risk of inbreeding is high
+
 **Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
 
-**How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
+- Strong constraints on initial mate choice
+- Opportunity for post-copulatory inbreeding adjustment
 
 <br><br><br><br>
 
@@ -2194,48 +2219,138 @@ Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.gith
 <span style="font-size: 18px;">
 1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). <br>
 2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
-3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
 
-## Individual-based models: general conclusions
+
+## Individual-based models: general conclusions {.smaller}
 
 **When should we predict selection for alleles causing pre-copulatory inbreeding avoidance or inbreeding preference? [1]**
 
+- Inbreeding depression strong (avoidance) or very weak (preference)
+- Low direct costs of non-random mating
+- Small population size where risk of inbreeding is high
+
+**Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
+
+- Strong constraints on initial mate choice
+- Opportunity for post-copulatory inbreeding adjustment
+
+**How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
+
+- Selection for less costly way to avoid inbreeding
+- Polyandry modulates importance of pre-copulatory versus post-copulatory inbreeding avoidance
 
 <hr>
 <span style="font-size: 18px;">
 1. Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf). <br>
-
-</span>
-
-## Individual-based models: general conclusions
-
-**Why should we predict females will mate multiply to adjust the degree to which they inbreed? [2]**
-
-
-<br><br><br><br>
-
-<hr>
-<span style="font-size: 18px;">
 2. Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf). <br>
-</span>
-
-## Individual-based models: general conclusions
-
-**How should we predict females to avoid inbreeding (pre- versus post-copulatory avoidance)? [3]**
-
-<br><br><br><br>
-
-<hr>
-<span style="font-size: 18px;">
 3. Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf). <br>
 </span>
 
 
 ## Modulating parental investment and inbreeding
 
+![](images/opening.png)
+
+<div align="left" style="line-height: 0.6em;">
+<span style="font-size: 14px;">
+1. [Wibowo Djatmiko](https://commons.wikimedia.org/wiki/User:Wie146). 2. [George Shuklin](https://commons.wikimedia.org/wiki/User:George_Shuklin). 3. [Natalie Pilakouta](https://www.nataliepilakouta.com/). 4. [Neale Monks](https://en.wikipedia.org/wiki/User:Neale_Monks). 5. [Jane Reid](https://www.abdn.ac.uk/ibes/profiles/jane.reid). 6. [André Karwath](https://commons.wikimedia.org/wiki/User:Aka). <br> 7. [Benjamin Twist](https://commons.wikimedia.org/wiki/User:Benjamint444) (benjamint444@gmail.com) 8. [Heinz Seehagel](https://de.wikipedia.org/wiki/Benutzer:HaSee). 9. [Adam Hayward](https://adhayward.wordpress.com/)
+</span></div>
+
+## What parental investment is, specifically
+
+**Anything that a parent does to increase its offspring's viability *at the expense of its other actual or potential offspring*** [1]
 
 
+<br><br><br>
+
+(Includes, but is not limited to, behaviour)
+
+<br><br><br><br><br><br>
+
+<hr>
+<span style="font-size: 18px;">
+1. Trivers R. (1974) *Am. Zool.* [**14**:249–264](https://doi.org/10.1093/icb/14.1.249) <br>
+</span>
+
+## Why parental investment is important
+
+<div class = "columns-2">
+
+- Models of inbreeding assume no concurrent modulation of parental investment or offspring production
+
+- Parents might be able to increase the viability of their inbred offspring through parental investment [1]
+
+- Parents are more closely related to inbred offspring than outbred offspring
+
+
+![](images/N_vespilloides_1.jpg)
+
+</div>
+<br>
+<hr>
+<span style="font-size: 18px;">
+1. Pilakouta, N et al. (2015) *PNAS* [**112**:201500658](http://www.pnas.org/content/112/26/8031). <br>
+</span>
+
+
+## Parental investment and offspring number
+
+<div class = "columns-2">
+```{r, echo = FALSE, fig.width = 5}
+M <- 10;
+m <- seq(from = 0, to = 4, by = 0.1);
+n <- M/m;
+par(mar = c(5, 5, 1, 1));
+plot(x = m, y = n, type = "l", lwd = 3, cex.lab = 1.5, cex.axis = 1.5,
+     xlab = "Parental investment (m)", ylab = "Offspring produced (n)",
+     ylim = c(0, 20));
+text(x = 3.25, y = 16, labels = expression(paste(n == frac(M,m))), cex = 2.5);
+```
+
+- Offspring produced (n) decreases with investment per offspring (m)
+
+## Parental investment and offspring number
+
+<div class = "columns-2">
+```{r, echo = FALSE, fig.width = 5}
+V <- 1 * (1 - exp(-1 * (m - 1)));
+V[V<0] <- NA;
+par(mar = c(5, 5, 1, 1));
+plot(x = m, y = V, type = "l", lwd = 3, cex.lab = 1.5, cex.axis = 1.5,
+     xlab = "Parental investment (m)", 
+     ylab = expression(paste("Offspring viability (",upsilon,")")),
+     ylim = c(0, 1));
+text(x = 1.2, y = 0.9, labels = expression(upsilon == 1 - e^{-c(m - m[min])}), 
+     cex = 1.75);
+```
+
+- Offspring produced ($n$) decreases with investment per offspring ($m$)
+- Offspring viability ($\upsilon$) increases with investment per offspring
+
+
+## Parental investment and offspring number
+
+<div class = "columns-2">
+```{r, echo = FALSE, fig.width = 5}
+V <- 1 * (1 - exp(-1 * (m - 1)));
+V[V<0] <- NA;
+par(mar = c(5, 5, 1, 1));
+plot(x = m, y = V, type = "l", lwd = 3, cex.lab = 1.5, cex.axis = 1.5,
+     xlab = "Parental investment (m)", 
+     ylab = expression(paste("Offspring viability (",upsilon,")")),
+     ylim = c(0, 1));
+text(x = 1.2, y = 0.9, labels = expression(upsilon == 1 - e^{-c(m - m[min])}), 
+     cex = 1.75);
+abline(a = 0, b = 2*0.3410784 / 2.146197, lty = "dashed");
+arrows(x0=2.146197,y0=0.3,x1=2.146197,y1=0,
+       length = 0.15,angle=30,code=2,lwd=3);
+text(x=2.146197,y=0.4,labels=expression(paste(italic(m)^"*")),cex=2);
+```
+
+- Offspring produced ($n$) decreases with investment per offspring ($m$)
+- Offspring viability ($\upsilon$) increases with investment per offspring
+- Highest rate of viable offspring production defines optimal parental investment ($m^{*}$) 
 
 ##
 
