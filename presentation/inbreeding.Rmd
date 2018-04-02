@@ -2308,6 +2308,8 @@ plot(x = m, y = n, type = "l", lwd = 3, cex.lab = 1.5, cex.axis = 1.5,
 text(x = 3.25, y = 16, labels = expression(paste(n == frac(M,m))), cex = 2.5);
 ```
 
+<br><br><br>
+
 - Offspring produced (n) decreases with investment per offspring (m)
 
 </div>
@@ -2327,6 +2329,8 @@ text(x = 1.2, y = 0.9, labels = expression(upsilon == 1 - e^{-c(m - m[min])}),
      cex = 1.75);
 ```
 
+<br><br><br>
+
 - Offspring produced ($n$) decreases with investment per offspring ($m$)
 - Offspring viability ($\upsilon$) increases with investment per offspring
 
@@ -2351,9 +2355,13 @@ arrows(x0=2.146197,y0=0.3,x1=2.146197,y1=0,
 text(x=2.146197,y=0.4,labels=expression(paste(italic(m)^"*")),cex=2);
 ```
 
+<br><br><br>
+
 - Offspring produced ($n$) decreases with investment per offspring ($m$)
 - Offspring viability ($\upsilon$) increases with investment per offspring
 - Highest rate of viable offspring production defines optimal parental investment ($m^{*}$)
+
+</div>
 
 ## Parental investment and offspring number
 
@@ -2373,6 +2381,8 @@ arrows(x0=2.146197,y0=0.3,x1=2.146197,y1=0,
        length = 0.15,angle=30,code=2,lwd=3);
 text(x=2.146197,y=0.4,labels=expression(paste(italic(m)^"*")),cex=2);
 ```
+
+<br><br><br>
 
 - Offspring produced ($n$) decreases with investment per offspring ($m$)
 - Offspring viability ($\upsilon$) increases with investment per offspring
@@ -2519,9 +2529,37 @@ renderPlot({
 })
 ```
 
-## Acknowledgements
+##
+
+<div class = "columns-2">
+
+**Coauthors**
+
+- [Greta Bocedi](https://www.abdn.ac.uk/sbs/people/profiles/greta.bocedi)
+- [Ryan Germain](http://ryanrgermain.wixsite.com/ecol-evol)
+- [Aline Lee](https://www.ntnu.edu/employees/aline.m.lee)
+- [Jane Reid](https://www.abdn.ac.uk/ibes/profiles/jane.reid)
+- [Matthew Wolak](https://matthewwolak.github.io/)
+ 
+**Maxwell computing cluster**
+
+- Naveed Khan
 
 
+![](images/leverhulme.png)
+
+![](images/LOGO-ERC.jpg)
+
+<br>
+![](images/aberdeen.png)
+
+<br>
+
+![](images/UoS_logo.png)
+
+
+
+</div>
 
 ## General conclusions {.smaller}
 
@@ -2543,7 +2581,9 @@ renderPlot({
 
 **Increased mate relatedness and inbreeding depression will cause optimal parental investment to increase**
 
-
+<span style="font-size: 14px;">
+Duthie, AB & JM Reid (2015) *PLoS One* [10:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf) [SI](https://bradduthie.github.io/Duthie%26Reid2015SI.pdf); Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf) [A1](https://bradduthie.github.io/Duthie_Reid2016_AppendixA.pdf) [A2](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf) [SI](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf); Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf) [SI-1](https://bradduthie.github.io/DuthieEtAl2016_SI1.pdf) [SI-2](https://bradduthie.github.io/DuthieEtAl2016_SI2.pdf); Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf) [SI](https://bradduthie.github.io/DuthieEtAl2017_SI.pdf);  Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf) [SI](https://bradduthie.github.io/DuthieEtAl2016c_SI.pdf)
+</span>
 
 
 
