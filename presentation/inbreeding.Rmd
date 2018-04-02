@@ -2310,6 +2310,8 @@ text(x = 3.25, y = 16, labels = expression(paste(n == frac(M,m))), cex = 2.5);
 
 - Offspring produced (n) decreases with investment per offspring (m)
 
+</div>
+
 ## Parental investment and offspring number
 
 <div class = "columns-2">
@@ -2328,6 +2330,7 @@ text(x = 1.2, y = 0.9, labels = expression(upsilon == 1 - e^{-c(m - m[min])}),
 - Offspring produced ($n$) decreases with investment per offspring ($m$)
 - Offspring viability ($\upsilon$) increases with investment per offspring
 
+</div>
 
 ## Parental investment and offspring number
 
@@ -2350,7 +2353,84 @@ text(x=2.146197,y=0.4,labels=expression(paste(italic(m)^"*")),cex=2);
 
 - Offspring produced ($n$) decreases with investment per offspring ($m$)
 - Offspring viability ($\upsilon$) increases with investment per offspring
-- Highest rate of viable offspring production defines optimal parental investment ($m^{*}$) 
+- Highest rate of viable offspring production defines optimal parental investment ($m^{*}$)
+
+## Parental investment and offspring number
+
+<div class = "columns-2">
+```{r, echo = FALSE, fig.width = 5}
+V <- 1 * (1 - exp(-1 * (m - 1)));
+V[V<0] <- NA;
+par(mar = c(5, 5, 1, 1));
+plot(x = m, y = V, type = "l", lwd = 3, cex.lab = 1.5, cex.axis = 1.5,
+     xlab = "Parental investment (m)", 
+     ylab = expression(paste("Offspring viability (",upsilon,")")),
+     ylim = c(0, 1));
+text(x = 1.2, y = 0.9, labels = expression(upsilon == 1 - e^{-c(m - m[min])}), 
+     cex = 1.75);
+abline(a = 0, b = 2*0.3410784 / 2.146197, lty = "dashed");
+arrows(x0=2.146197,y0=0.3,x1=2.146197,y1=0,
+       length = 0.15,angle=30,code=2,lwd=3);
+text(x=2.146197,y=0.4,labels=expression(paste(italic(m)^"*")),cex=2);
+```
+
+- Offspring produced ($n$) decreases with investment per offspring ($m$)
+- Offspring viability ($\upsilon$) increases with investment per offspring
+- Highest rate of viable offspring production defines optimal parental investment ($m^{*}$)
+- Optimally investing parents produce $W = n \times \upsilon^{*}$ offspring
+
+</div>
+
+## Synthesis of inbreeding and parental investment
+
+<center>
+![](images/In_PI_1.png)
+</center>
+
+<span style="font-size: 18px;">
+1. Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf). <br>
+</span>
+
+## Synthesis of inbreeding and parental investment
+
+<center>
+![](images/In_PI_2.png)
+</center>
+
+<span style="font-size: 18px;">
+1. Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf). <br>
+</span>
+
+## Synthesis of inbreeding and parental investment
+
+<center>
+![](images/In_PI_3.png)
+</center>
+
+<span style="font-size: 18px;">
+1. Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf). <br>
+</span>
+
+## Synthesis of inbreeding and parental investment
+
+<center>
+![](images/In_PI_4.png)
+</center>
+
+<span style="font-size: 18px;">
+1. Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf). [SI-1](https://bradduthie.github.io/DuthieEtAl2016c_SI.pdf) <br>
+</span>
+
+## Synthesis of inbreeding and parental investment
+
+<center>
+![](images/In_PI_5.png)
+</center>
+
+
+<span style="font-size: 18px;">
+1. Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf). [SI-1](https://bradduthie.github.io/DuthieEtAl2016c_SI.pdf) <br>
+</span>
 
 ##
 
@@ -2438,3 +2518,35 @@ renderPlot({
        srt=rmg,cex=2,col="blue");
 })
 ```
+
+## Acknowledgements
+
+
+
+## General conclusions {.smaller}
+
+**Predict selection for an allele causing inbreeding avoidance or preference when:**
+
+- Inbreeding depression strong (avoidance) or very weak (preference)
+- Low direct costs of non-random mating
+- Small population size where risk of inbreeding is high
+
+**Females should mate multiply to adjust inbreeding given:**
+
+- Strong constraints on initial mate choice
+- Opportunity for post-copulatory inbreeding adjustment
+
+**Multiple factors affecting how to avoid inbreeding, including:**
+
+- Direct costs on pre- versus post-copulatory inbreeding avoidance
+- Polyandry modulates selection on pre- versus post-copulatory inbreeding avoidance
+
+**Increased mate relatedness and inbreeding depression will cause optimal parental investment to increase**
+
+
+
+
+
+
+
+
