@@ -2557,8 +2557,6 @@ renderPlot({
 
 ![](images/UoS_logo.png)
 
-
-
 </div>
 
 ## General conclusions {.smaller}
@@ -2579,10 +2577,10 @@ renderPlot({
 - Direct costs on pre- versus post-copulatory inbreeding avoidance
 - Polyandry modulates selection on pre- versus post-copulatory inbreeding avoidance
 
-**Increased mate relatedness and inbreeding depression will cause optimal parental investment to increase**
+**Higher mate relatedness & inbreeding depression causes optimal parental investment to increase**
 
 <span style="font-size: 14px;">
-Duthie, AB & JM Reid (2015) *PLoS One* [10:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf) [SI](https://bradduthie.github.io/Duthie%26Reid2015SI.pdf); Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf) [A1](https://bradduthie.github.io/Duthie_Reid2016_AppendixA.pdf) [A2](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf) [SI](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf); Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf) [SI-1](https://bradduthie.github.io/DuthieEtAl2016_SI1.pdf) [SI-2](https://bradduthie.github.io/DuthieEtAl2016_SI2.pdf); Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf) [SI](https://bradduthie.github.io/DuthieEtAl2017_SI.pdf);  Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf) [SI](https://bradduthie.github.io/DuthieEtAl2016c_SI.pdf)
+Duthie, AB & JM Reid (2015) *PLoS One* [10:e0125140](https://bradduthie.github.io/Duthie%26Reid2015.pdf) [SI](https://bradduthie.github.io/Duthie%26Reid2015SI.pdf) [[code]](https://github.com/bradduthie/Duthie_and_Reid_2015_Figs); Duthie, AB & JM Reid (2016) *Am. Nat.* [**188**:651-667](https://bradduthie.github.io/Duthie_Reid2016.pdf) [A1](https://bradduthie.github.io/Duthie_Reid2016_AppendixA.pdf) [A2](https://bradduthie.github.io/Duthie_Reid2016_AppendixB.pdf) [SI](https://bradduthie.github.io/Duthie_Reid2016_SM.pdf) [[code]](https://github.com/bradduthie/Inbreeding); Duthie, AB et al. (2016) *Evolution* [**70**:1927-1943](https://bradduthie.github.io/DuthieEtAl2016b.pdf) [SI-1](https://bradduthie.github.io/DuthieEtAl2016_SI1.pdf) [SI-2](https://bradduthie.github.io/DuthieEtAl2016_SI2.pdf) [[code]](https://github.com/bradduthie/PolyInbreed); Duthie, AB et al. (2018) *J. Evol. Biol.* [**31**:31-45](https://bradduthie.github.io/DuthieEtAl2017.pdf) [SI](https://bradduthie.github.io/DuthieEtAl2017_SI.pdf) [[code]](https://github.com/bradduthie/pre_post_cop);  Duthie, AB et al. (2016) *Proc. R. Soc. B* [**282**:20161845](https://bradduthie.github.io/DuthieEtAl2016c.pdf) [SI](https://bradduthie.github.io/DuthieEtAl2016c_SI.pdf) [[code]](https://github.com/bradduthie/Inbreeding_Care); Reid, JM et al. (2015) *Evolution* [**70**:1512-1529](https://bradduthie.github.io/ReidEtAl2015c.pdf); Reid, JM et al. (2016) *Evolution* [**69**:2846-2861](https://bradduthie.github.io/ReidEtAl2015c.pdf); <br> Reid, JM et al. (2015) *J. Anim. Ecol.* [84:1029-1040](https://bradduthie.github.io/ReidEtAl2015b.pdf); Reid, JM et al. (2015) *Evolution* [69:59-74](https://bradduthie.github.io/ReidEtAl2015.pdf)
 </span>
 
 
